@@ -1,0 +1,9 @@
+env/
+*.d
+*.so
+*.pyc
+*.root
+*.png
+*.eps
+.giosave*
+
