@@ -6,4 +6,8 @@ env/
 *.png
 *.eps
 .giosave*
-
+*.pybundle
+*.tar.gz
+*.tar.bz2
+.asetup.save
+repos/pip
