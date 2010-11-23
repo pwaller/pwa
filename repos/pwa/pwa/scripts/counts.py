@@ -36,7 +36,7 @@ def ordered_axes(axes, ordering):
             result.append(axis)
     return result    
 
-def do_cutflow_one_file(f, cuts):
+def do_cutflow_one_file(f, cuts, options):
     ph_cands = make_cut_histogram(f.photon_counts)
     projax = ph_cands
     
@@ -57,8 +57,10 @@ def do_cutflow_one_file(f, cuts):
                 continue
             projax = projax(cut)
             thisno = projax.true
-            #row.append("%.2f" % round(thisno / prevno * 100, 2) if prevno else 0)
-            row.append(thisno)
+            if options.percentage:
+                row.append("%.2f" % round(thisno / prevno * 100, 2) if prevno else 0)
+            else:
+                row.append(thisno)
             prevno = thisno
             projax = projax.project_out()
                 
@@ -66,8 +68,7 @@ def do_cutflow_one_file(f, cuts):
     
     return rows
 
-def do_cutflow(files, cuts):
-    cuts = cuts.split()
+def do_cutflow(files, cuts, options):
     header = ["cut", "all"] + [aliases.get(a, a) for a in cuts]
 
     import pyfiglet
@@ -87,11 +88,13 @@ def main():
     from IPython.Shell import IPShellEmbed; ip = IPShellEmbed(["-pdb"])
 
     parser = OptionParser()
+    parser.add_option("-p", "--percentage", action="store_true", help="Show percentage change instead of absolute numbers")
     options, input_filenames = parser.parse_args()
     
     files = [R.TFile(filename) for filename in input_filenames]
     
     #do_all(files)
-    do_cutflow(files, "grl oq pv isolated loose robust_nontight robust_tight high_pt pt_gt100")
+    cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100".split()
+    result = do_cutflow(files, cuts, options)
     
 
