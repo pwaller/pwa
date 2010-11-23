@@ -10,6 +10,10 @@ from minty.utils.table_printer import pprint_table
 
 import ROOT as R
 
+
+import pyfiglet
+fig = pyfiglet.Figlet("/usr/share/figlet", font="standard", justify="center")
+
 aliases = dict(
     high_pt="pt_gt40",
 )
@@ -35,6 +39,19 @@ def ordered_axes(axes, ordering):
         if title in axes_dict:
             result.append(axis)
     return result    
+
+def link_targetify(text, center=False):
+    return '<a name="%s"></a>%s' % (text, text.center(80) if center else text)
+
+def linkify(text):
+    return '<a href="#%s">%s</a>' % (text, text)
+
+def print_heading(text):
+    print "-"*80
+    print fig.renderText(text)
+    print link_targetify(text, True)
+    print "-"*80
+    
 
 def do_cutflow_one_file(f, cuts, options):
     ph_cands = make_cut_histogram(f.photon_counts)
@@ -71,17 +88,32 @@ def do_cutflow_one_file(f, cuts, options):
 def do_cutflow(files, cuts, options):
     header = ["cut", "all"] + [aliases.get(a, a) for a in cuts]
 
-    import pyfiglet
-    fig = pyfiglet.Figlet("/usr/share/figlet", font="standard", justify="center")
+    result = []
 
     for f in files:
         period = basename(f.GetName())
-        print "-"*80
-        print fig.renderText(period)
-        print period.center(80)
-        print "-"*80
-        table = do_cutflow_one_file(f, cuts)
+        print_heading(period)
+        table = do_cutflow_one_file(f, cuts, options)
+        result.append((period, table))
         pprint_table([header] + table)
+        
+    return result
+
+def do_by_cut(flow_result, cuts, options):
+    header = ["period", "all"] + [aliases.get(a, a) for a in cuts]
+    
+    periods, tables = zip(*flow_result)
+    periods = ["period %s" % period.split(".")[0][-1] for period in periods]
+    table_rows_by_period = zip(*tables)
+    for table_part in table_rows_by_period:
+        columns = zip(*table_part)
+        cut = columns[0][0]
+        columns = zip(*([periods] + columns[1:]))
+        print_heading(cut)
+        pprint_table([header] + columns)
+        
+        #for period, part in zip(periods, columns):
+            
 
 def main():
 
@@ -89,12 +121,17 @@ def main():
 
     parser = OptionParser()
     parser.add_option("-p", "--percentage", action="store_true", help="Show percentage change instead of absolute numbers")
+    parser.add_option("-c", "--by-cut", action="store_true", help="Show by cut")
     options, input_filenames = parser.parse_args()
     
     files = [R.TFile(filename) for filename in input_filenames]
     
+    print "<pre>"
     #do_all(files)
     cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100".split()
     result = do_cutflow(files, cuts, options)
+    do_by_cut(result, cuts, options)
+    print "</pre>"
+            
     
 
