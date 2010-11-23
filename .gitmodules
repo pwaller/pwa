@@ -1,0 +1,12 @@
+[submodule "repos/pytuple"]
+	path = repos/pytuple
+	url = lx:repos/bare/pytuple
+[submodule "repos/OQMaps"]
+	path = repos/OQMaps
+	url = lx:repos/bare/OQMaps
+[submodule "repos/PhotonIDTool"]
+	path = repos/PhotonIDTool
+	url = lx:repos/bare/PhotonIDTool
+[submodule "repos/minty"]
+	path = repos/minty
+	url = lx:repos/bare/minty

@@ -1,2 +1,0 @@
-[epilog.sh]
-source ${TestArea}/env/bin/activate
