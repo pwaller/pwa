@@ -24,12 +24,24 @@ def do_all(files):
         print filename
         print "\n".join("  %20s %12s %12s" % (a.title, comma_num(a.true), comma_num(a.total)) for a in ph_cands.axes_objs)
 
+def ordered_axes(axes, ordering):
+    axes_titles = [(a.title, a) for a in axes]
+    axes_dict = dict(axes_titles)
+    result = []
+    for title in ordering:
+        result.append(axes_dict[title])
+        del axes_dict[title]
+    for title, axis in axes_titles:
+        if title in axes_dict:
+            result.append(axis)
+    return result    
+
 def do_cutflow_one_file(f, cuts):
     ph_cands = make_cut_histogram(f.photon_counts)
     projax = ph_cands
     
     rows = []
-    for axis in [None] + ph_cands.axes_objs:
+    for axis in [None] + ordered_axes(ph_cands.axes_objs, cuts):
         if axis:
             title = aliases.get(axis.title, axis.title)
             prevno = axis.true
