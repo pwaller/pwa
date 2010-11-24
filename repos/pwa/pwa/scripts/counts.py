@@ -6,7 +6,7 @@ import minty
 
 from minty.histograms.cuts_histogram import make_cut_histogram
 from minty.utils import comma_num
-from minty.utils.table_printer import pprint_table
+from minty.utils.table_printer import pprint_table, compute_col_paddings
 
 import ROOT as R
 
@@ -40,11 +40,17 @@ def ordered_axes(axes, ordering):
             result.append(axis)
     return result    
 
-def link_targetify(text, center=False):
-    return '<a name="%s"></a>%s' % (text, text.center(80) if center else text)
-
 def linkify(text):
-    return '<a href="#%s">%s</a>' % (text, text)
+    def thunk(pad, ljust):
+        link = '<a href="#%s">%s</a>' % (text, text) 
+        if len(text) < pad:
+            padding = " " * (pad - len(text))
+            if ljust:
+                link = link + padding
+            else:
+                link = padding + link
+        return link
+    return thunk
 
 def linkify_first_column(table_rows, options):
     if not options.htmlify:
@@ -52,17 +58,17 @@ def linkify_first_column(table_rows, options):
     table_columns = zip(*table_rows)
     first_column = [linkify(row) for row in table_columns[0]]
     table_rows = zip(*([first_column] + table_columns[1:]))
-    
     return table_rows
 
 def if_htmlify(func, options):
     return func if options.htmlify else (lambda s, *_: s)
 
 def print_heading(text, options):
-    _link_targetify = if_htmlify(link_targetify, options)
+    if options.htmlify:
+        print '<a name="%s"></a>' % text
     print "-"*80
     print fig.renderText(text)
-    print _link_targetify(text, True)
+    print text.center(80)
     print "-"*80
 
 def do_cutflow_one_file(f, cuts, options):
@@ -99,24 +105,38 @@ def do_cutflow_one_file(f, cuts, options):
     return rows
 
 def do_cutflow(files, cuts, options):
-    _linkify = if_htmlify(linkify, options)
     
-    header = ["cut", "all"] + [_linkify(aliases.get(a, a)) for a in cuts]
+    header = ["cut", "all"] + [aliases.get(a, a) for a in cuts]
 
     result = []
 
     for f in files:
         period = basename(f.GetName())
-        print_heading(period, options)
         table = do_cutflow_one_file(f, cuts, options)
         result.append((period, table))
-        table = linkify_first_column(table, options)
-        pprint_table([header] + table)
         
     return result
 
+def print_tables(firstpart, cuts, tables, options):
+    _linkify = if_htmlify(linkify, options)
+    
+    aliased_cuts = [aliases.get(cut, cut) for cut in cuts]
+    header = [firstpart, "all"] + aliased_cuts
+    
+    headings, _tables = zip(*tables)
+    _tables += ([header],)
+    col_paddings = compute_col_paddings(reduce(list.__add__, _tables, []))
+    
+    header = [firstpart, "all"] + map(_linkify, aliased_cuts)
+    
+    for heading, table in tables:
+        print_heading(heading, options)
+        table = linkify_first_column(table, options)
+        pprint_table([header] + table, col_paddings=col_paddings)    
+
 def do_by_cut(flow_result, cuts, options):
-    header = ["period", "all"] + [aliases.get(a, a) for a in cuts]
+    
+    result = []
     
     periods, tables = zip(*flow_result)
     periods = ["period %s" % period.split(".")[0][-1] for period in periods]
@@ -124,12 +144,11 @@ def do_by_cut(flow_result, cuts, options):
     for table_part in table_rows_by_period:
         columns = zip(*table_part)
         cut = columns[0][0]
-        columns = zip(*([periods] + columns[1:]))
-        print_heading(cut, options)
-        pprint_table([header] + columns)
-        
-        #for period, part in zip(periods, columns):
-            
+        table = zip(*([periods] + columns[1:]))
+    
+        result.append((cut, table))
+    
+    return result            
 
 def main():
 
@@ -148,8 +167,11 @@ def main():
     #do_all(files)
     cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100".split()
     result = do_cutflow(files, cuts, options)
+    print_tables("cut", cuts, result, options)
+    
     if options.by_cut:
-        do_by_cut(result, cuts, options)
+        result = do_by_cut(result, cuts, options)
+        print_tables("period", cuts, result, options)
         
     if options.htmlify:        
         print "</pre>"
