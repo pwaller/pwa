@@ -93,10 +93,13 @@ def do_cutflow_one_file(f, cuts, options):
                 continue
             projax = projax(cut)
             thisno = projax.true
+            
             if options.percentage:
-                row.append("%.2f" % round(thisno / prevno * 100, 2) if prevno else 0)
+                perc = round(thisno / prevno * 100, 2) if prevno else 0
+                row.append("%.2f" % perc)
             else:
                 row.append(thisno)
+                
             prevno = thisno
             projax = projax.project_out()
                 
@@ -139,7 +142,6 @@ def do_by_cut(flow_result, cuts, options):
     result = []
     
     periods, tables = zip(*flow_result)
-    periods = ["period %s" % period.split(".")[0][-1] for period in periods]
     table_rows_by_period = zip(*tables)
     for table_part in table_rows_by_period:
         columns = zip(*table_part)
@@ -165,7 +167,7 @@ def main():
     if options.htmlify:
         print "<pre>"
     #do_all(files)
-    cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100".split()
+    cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100 isolated".split()
     result = do_cutflow(files, cuts, options)
     print_tables("cut", cuts, result, options)
     
