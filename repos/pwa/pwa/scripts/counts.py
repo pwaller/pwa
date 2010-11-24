@@ -46,17 +46,29 @@ def link_targetify(text, center=False):
 def linkify(text):
     return '<a href="#%s">%s</a>' % (text, text)
 
-def print_heading(text):
+def linkify_first_column(table_rows, options):
+    if not options.htmlify:
+        return table_rows
+    table_columns = zip(*table_rows)
+    first_column = [linkify(row) for row in table_columns[0]]
+    table_rows = zip(*([first_column] + table_columns[1:]))
+    
+    return table_rows
+
+def if_htmlify(func, options):
+    return func if options.htmlify else (lambda s, *_: s)
+
+def print_heading(text, options):
+    _link_targetify = if_htmlify(link_targetify, options)
     print "-"*80
     print fig.renderText(text)
-    print link_targetify(text, True)
+    print _link_targetify(text, True)
     print "-"*80
-    
 
 def do_cutflow_one_file(f, cuts, options):
     ph_cands = make_cut_histogram(f.photon_counts)
     projax = ph_cands
-    
+        
     rows = []
     for axis in [None] + ordered_axes(ph_cands.axes_objs, cuts):
         if axis:
@@ -66,6 +78,7 @@ def do_cutflow_one_file(f, cuts, options):
         else:
             title = "all"
             prevno = ph_cands.hist.GetEntries()
+        
         row = [title, prevno]
             
         for cut in cuts:
@@ -86,15 +99,18 @@ def do_cutflow_one_file(f, cuts, options):
     return rows
 
 def do_cutflow(files, cuts, options):
-    header = ["cut", "all"] + [aliases.get(a, a) for a in cuts]
+    _linkify = if_htmlify(linkify, options)
+    
+    header = ["cut", "all"] + [_linkify(aliases.get(a, a)) for a in cuts]
 
     result = []
 
     for f in files:
         period = basename(f.GetName())
-        print_heading(period)
+        print_heading(period, options)
         table = do_cutflow_one_file(f, cuts, options)
         result.append((period, table))
+        table = linkify_first_column(table, options)
         pprint_table([header] + table)
         
     return result
@@ -109,7 +125,7 @@ def do_by_cut(flow_result, cuts, options):
         columns = zip(*table_part)
         cut = columns[0][0]
         columns = zip(*([periods] + columns[1:]))
-        print_heading(cut)
+        print_heading(cut, options)
         pprint_table([header] + columns)
         
         #for period, part in zip(periods, columns):
@@ -122,16 +138,21 @@ def main():
     parser = OptionParser()
     parser.add_option("-p", "--percentage", action="store_true", help="Show percentage change instead of absolute numbers")
     parser.add_option("-c", "--by-cut", action="store_true", help="Show by cut")
+    parser.add_option("-H", "--htmlify", action="store_true", help="Use HTML")
     options, input_filenames = parser.parse_args()
     
     files = [R.TFile(filename) for filename in input_filenames]
     
-    print "<pre>"
+    if options.htmlify:
+        print "<pre>"
     #do_all(files)
     cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100".split()
     result = do_cutflow(files, cuts, options)
-    do_by_cut(result, cuts, options)
-    print "</pre>"
+    if options.by_cut:
+        do_by_cut(result, cuts, options)
+        
+    if options.htmlify:        
+        print "</pre>"
             
     
 
