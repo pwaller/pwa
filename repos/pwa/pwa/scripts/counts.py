@@ -33,8 +33,10 @@ def ordered_axes(axes, ordering):
     axes_dict = dict(axes_titles)
     result = []
     for title in ordering:
-        result.append(axes_dict[title])
-        del axes_dict[title]
+        ts = title.split("&")
+        for t in ts:
+            result.append(axes_dict[t])
+            del axes_dict[t]
     for title, axis in axes_titles:
         if title in axes_dict:
             result.append(axis)
@@ -88,10 +90,13 @@ def do_cutflow_one_file(f, cuts, options):
         row = [title, prevno]
             
         for cut in cuts:
-            if axis and cut == axis.title:
-                row.append("-")
-                continue
-            projax = projax(cut)
+            cut_parts = set(cut.split("&"))
+            if axis:
+                cut_parts.discard(axis.title)
+                if not cut_parts:
+                    row.append("-")
+                    continue
+            projax = projax(*cut_parts)
             thisno = projax.true
             
             if options.percentage:
