@@ -172,7 +172,10 @@ def main():
     if options.htmlify:
         print "<pre>"
     #do_all(files)
-    cuts = "grl oq pv loose robust_nontight robust_tight high_pt pt_gt100 isolated".split()
+    #cuts = "grl&oq&pv "
+    cuts = "grl oq pv".split()
+    
+    cuts += "fiducial loose robust_nontight robust_tight high_pt pt_gt100 isolated".split()
     result = do_cutflow(files, cuts, options)
     print_tables("cut", cuts, result, options)
     
