@@ -73,43 +73,53 @@ def print_heading(text, options):
     print text.center(80)
     print "-"*80
 
+def do_cutflow_one_cut(total_hist, axis, cuts, options):
+    if axis:
+        title = aliases.get(axis.title, axis.title)
+        prevno = axis.true
+        cumulated_cuts = [axis.title]
+    else:
+        title = "all"
+        #prevno = ph_cands.hist.GetEntries()
+        a = total_hist.axes_objs[0]
+        prevno = a.total
+        cumulated_cuts = []
+    
+    row = [title, prevno]
+    
+    for cut in cuts:
+        cut_parts = set(cut.split("&"))
+        if axis:
+            cut_parts.discard(axis.title)
+            if not cut_parts:
+                row.append("-")
+                continue
+        
+        cumulated_cuts.extend(cut_parts)
+        projax = total_hist(*cumulated_cuts)
+        thisno = projax.true
+        
+        if options.percentage:
+            perc = round(thisno / prevno * 100, 2) if prevno else 0
+            row.append("%.2f" % perc)
+        else:
+            row.append(thisno)
+            
+        prevno = thisno
+            
+    return row
+
 def do_cutflow_one_file(f, cuts, options):
     ph_cands = make_cut_histogram(f.photon_counts)
-    projax = ph_cands
-        
+    #ph_cands = ph_cands.isConv.project_out(True)
+    if options.apply_cut:
+        cut, value = options.apply_cut.split(":")
+        ph_cands = getattr(ph_cands, cut).project_out(int(value))
+    
     rows = []
     for axis in [None] + ordered_axes(ph_cands.axes_objs, cuts):
-        if axis:
-            title = aliases.get(axis.title, axis.title)
-            prevno = axis.true
-            projax = axis.project_out()
-        else:
-            title = "all"
-            prevno = ph_cands.hist.GetEntries()
+        rows.append(do_cutflow_one_cut(ph_cands, axis, cuts, options))
         
-        row = [title, prevno]
-            
-        for cut in cuts:
-            cut_parts = set(cut.split("&"))
-            if axis:
-                cut_parts.discard(axis.title)
-                if not cut_parts:
-                    row.append("-")
-                    continue
-            projax = projax(*cut_parts)
-            thisno = projax.true
-            
-            if options.percentage:
-                perc = round(thisno / prevno * 100, 2) if prevno else 0
-                row.append("%.2f" % perc)
-            else:
-                row.append(thisno)
-                
-            prevno = thisno
-            projax = projax.project_out()
-                
-        rows.append(row)
-    
     return rows
 
 def do_cutflow(files, cuts, options):
@@ -165,6 +175,7 @@ def main():
     parser.add_option("-p", "--percentage", action="store_true", help="Show percentage change instead of absolute numbers")
     parser.add_option("-c", "--by-cut", action="store_true", help="Show by cut")
     parser.add_option("-H", "--htmlify", action="store_true", help="Use HTML")
+    parser.add_option("-a", "--apply-cut", help="Apply a cut. Syntax: <cutname>:value")
     options, input_filenames = parser.parse_args()
     
     files = [R.TFile(filename) for filename in input_filenames]
