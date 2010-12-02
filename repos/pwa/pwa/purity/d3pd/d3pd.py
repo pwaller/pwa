@@ -182,7 +182,7 @@ def fill_trigger_object_counts(ana, event):
         ana.h.get(("photon_count_trigphot_tight", trig_name), b=[(15, 0, 15)])(sum(1 for o in objects if o.tight))
         
         ana.h.get(("photon_count_allphot_nocut",  trig_name), b=[(15, 0, 15)])(len(event.photons))
-        ana.h.get(("photon_count_allphot_tight",  trig_name), b=[(15, 0, 15)])(len(1 for o in event.photons if o.tight))
+        ana.h.get(("photon_count_allphot_tight",  trig_name), b=[(15, 0, 15)])(sum(1 for o in event.photons if o.tight))
         
         for i, obj in enumerate(objects):
             if not i:
