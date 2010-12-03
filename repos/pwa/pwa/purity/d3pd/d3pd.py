@@ -32,7 +32,7 @@ def counts(ana, event):
     fill_ev_counts(*ev_cuts)
           
     cuts = ("loose;nontight;tight;robust_nontight;robust_tight;"
-        "high_pt;pt_gt100;isolated;nonisolated;"
+        "pt_gt40;pt_gt100;pt_gt200;pt_gt500;isolated;nonisolated;"
         "fiducial;oq;isConv;"
         ) + ev_cuts_string
     cut_binning = ((2, 0, 2),) * len(cuts.split(";"))
@@ -41,7 +41,8 @@ def counts(ana, event):
     
     for o in event.photons:
         fill_counts(o.loose, o.nontight, o.tight, o.robust_nontight, o.robust_tight, 
-                    o.high_pt, o.cl.pt > 100000, o.isolated, o.nonisolated,
+                    o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
+                    o.isolated, o.nonisolated,
                     o.pass_fiducial, o.good_oq, o.isConv,
                     *ev_cuts)
 
