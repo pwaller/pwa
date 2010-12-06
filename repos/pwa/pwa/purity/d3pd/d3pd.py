@@ -6,6 +6,13 @@ from minty.treedefs.egamma import Photon, Electron
 
 from math import cosh
 
+def pairs(inputs):
+    if len(inputs) < 2:
+        return
+    for i, o1 in enumerate(inputs):
+        for o2 in inputs[i+1:]:
+            yield o1, o2
+
 def counts(ana, event):
     """
     Fill a sparse histogram for counting cuts (allows one
@@ -45,6 +52,26 @@ def counts(ana, event):
                     o.isolated, o.nonisolated,
                     o.pass_fiducial, o.good_oq, o.isConv,
                     *ev_cuts)
+    
+    diph_cuts = "good_oq;pass_fiducial;loose;robust_nontight;robust_tight;nonisolated;isolated;isConv".split(";")
+    
+    cuts = []
+    for c in diph_cuts:
+        cuts.append(c + "_1")
+        cuts.append(c + "_2")
+    
+    all_cuts = ";".join([ev_cuts_string] + cuts)
+    cut_binning = ((2, 0, 2),) * (len(ev_cuts) + len(cuts))
+    fill_counts = ana.h.get("diphoton_counts", b=cut_binning, 
+                            t="Diphoton counts passing cuts;%s;" % all_cuts)
+        
+    ph_by_pt = sorted(event.photons, key=lambda p: p.pt)
+    for o1, o2 in pairs(ph_by_pt):
+        values = list(ev_cuts)
+        for cut in diph_cuts:
+            values.append(getattr(o1, cut))
+            values.append(getattr(o2, cut))
+        fill_counts(*values)
 
 TITLE_SMEAR = "p_{T} smearing matrix;Truth p_{T} [MeV];Measured p_{T} [MeV]"
 TITLE_SMEAR_CLUS = "p_{T} smearing matrix;Truth p_{T} [MeV];Measured (cluster) p_{T} [MeV]"
