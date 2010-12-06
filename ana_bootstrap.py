@@ -1238,20 +1238,6 @@ def create_bootstrap_script(extra_text, python_version=''):
                + content)
     return content.replace('##EXT' 'END##', extra_text)
 
-
-import os, subprocess
-_install_my_packages = False
-def after_install(options, home_dir):
-    if _install_my_packages:
-        subprocess.call([join(home_dir, 'bin', 'pip'), 'install', '-erepos/minty', '-erepos/OQMaps', '-erepos/PhotonIDTool', '-erepos/pytuple', '-epwa'])
-
-def adjust_options(options, args):
-    if "inst" in args:
-        global _install_my_packages
-        _install_my_packages = True
-    args[:] = ["env"]
-
-
 ##file site.py
 SITE_PY = """
 eJzVPP1z2zaWv/OvQOXJUEplOh/dzo5T98ZJnNZ7buJt0mluXY+WkiCJNUWyBGlZe3P3t9/7AECA
