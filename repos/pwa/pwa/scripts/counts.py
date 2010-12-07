@@ -186,7 +186,7 @@ def main():
     #cuts = "grl&oq&pv "
     cuts = "grl oq pv".split()
     
-    cuts += "fiducial loose robust_nontight robust_tight high_pt pt_gt100 isolated".split()
+    cuts += "fiducial loose robust_nontight robust_tight pt_gt40 pt_gt100 isolated".split()
     result = do_cutflow(files, cuts, options)
     print_tables("cut", cuts, result, options)
     
