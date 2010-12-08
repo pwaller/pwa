@@ -10,3 +10,6 @@
 [submodule "repos/minty"]
 	path = repos/minty
 	url = lx:repos/bare/minty
+[submodule "docs/talks/smdp_highpt_showershape"]
+	path = docs/talks/smdp_highpt_showershape
+	url = lx:repos/bare/talks/smdp_highpt_showershape.git
