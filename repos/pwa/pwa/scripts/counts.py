@@ -2,6 +2,8 @@ from optparse import OptionParser
 from pprint import pprint
 from os.path import basename
 
+from pyfiglet import print_figlet
+
 import minty
 
 from minty.histograms.cuts_histogram import make_cut_histogram
@@ -10,9 +12,6 @@ from minty.utils.table_printer import pprint_table, compute_col_paddings
 
 import ROOT as R
 
-
-import pyfiglet
-fig = pyfiglet.Figlet("/usr/share/figlet", font="standard", justify="center")
 
 aliases = dict(
     high_pt="pt_gt40",
@@ -69,7 +68,7 @@ def print_heading(text, options):
     if options.htmlify:
         print '<a name="%s"></a>' % text
     print "-"*80
-    print fig.renderText(text)
+    print_figlet(text)
     print text.center(80)
     print "-"*80
 
