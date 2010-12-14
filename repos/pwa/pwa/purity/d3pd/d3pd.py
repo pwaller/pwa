@@ -191,7 +191,8 @@ def plot_objects_multi_cuts(ana, name, obj):
 
     plot_object(ana, (name, "loose"), obj)
     if obj.robust_tight:
-        assert obj.robust_nontight, "Found a tight object which isn't nontight!"
+        if obj.particle != "electron":
+            assert obj.robust_nontight, "Found a tight object which isn't nontight!"
     
     if obj.particle == "photon":
         if not obj.robust_nontight: return
