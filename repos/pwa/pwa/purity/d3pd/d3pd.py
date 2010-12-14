@@ -244,11 +244,8 @@ def plots(ana, event):
     # but left it expanded as two loops just to get an idea what it looks like
     
     pv = any(v.nTracks >= 3 for v in event.vertices)
-    
-    any_trigger = any((event.EF.g10_loose, event.EF.g20_loose, 
-                       event.EF.g30_loose, event.EF.g40_loose))
                        
-    if not all((pv, event.is_grl, any_trigger)): return
+    if not all((pv, event.is_grl, event.EF.g40_loose)): return
     
     fill_trigger_object_counts(ana, event)
     
