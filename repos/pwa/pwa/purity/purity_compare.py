@@ -178,7 +178,7 @@ def showershapes(t1, t2):
     )
             
     for var in variables:
-        plot("shower_etconeshape_norm10", "%s (p_{T} > 100GeV) Data vs JF70" % var, var, 
+        plot("showershape_norm_%s" % sname, "%s (p_{T} > 100GeV%s) Data vs JF70" % (var, desc), var, 
              t1.ptcl_gt100.rtight, t2.ptcl_gt100.rtight, normalize=True,
              pos=positioning.get(var, "RT"),
              x_range=ranges.get(var),
