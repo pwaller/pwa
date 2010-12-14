@@ -122,28 +122,39 @@ def plot_pts(ana, name, bins, obj):
 def plot_isolation(ana, name, obj):
     hget = ana.h.get
     
-    hget(name, "et",        b=[ana.ptbins],     t=";E_{T} [MeV]"        )(obj.et)
-    hget(name, "etas2",     b=[ana.etabins],    t=";#eta_{s2}"          )(obj.etas2)
-    hget(name, "Rhad",      b=[(100, -0.5, 0.75)],   t=";raphad"        )(obj.Rhad)
-    hget(name, "Rhad1",     b=[(100, -0.1, 0.10)],   t=";raphad1"       )(obj.Rhad1)
+    B = [ana.ptbins_wide, ana.etabins]
+    V = obj.cl.pt, obj.etas2
+    T = ";E_{T} [MeV];#eta_{s2}"
     
-    hget(name, "reta",      b=[(20, 0.9, 1)] ,  t=";R_{#eta}"           )(obj.reta)
-    hget(name, "rphi",      b=[(15, 0.8, 1)],   t=";R_{#phi}"           )(obj.rphi)
+    hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"+T          )(obj.et)
+    hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"+T          )(obj.pt)
+    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]"+T)(obj.cl.pt)
     
-    hget(name, "Eratio",    b=[(15, 0.7, 1)],   t=";E_{ratio}"          )(obj.Eratio)
-    hget(name, "DeltaE",    b=[(15, 0, 500)],   t=";#DeltaE [MeV]"      )(obj.deltaE)
+    hget(name, "eta",       b=[ana.etabins], t=";#eta"+T                )(obj.eta)
+    hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"+T           )(obj.etas2)
     
-    hget(name, "wstot",     b=[(15, 0, 5)],     t=";ws_{tot}"    )(obj.wstot)
-    hget(name, "ws3",       b=[(15, 0, 1)],     t=";w_{s3}"      )(obj.ws3)
-    hget(name, "fside",     b=[(20, 0, 1.25)],  t=";F_{side}"    )(obj.fside)
+    hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins],    t=";#eta_{s2}"+T         )(obj.etas2)
     
-    hget(name, "EtCone20",  b=[(100, -5000, 50000)], t=";E_{T}^{cone20} [MeV]")(obj.EtCone20)
-    hget(name, "EtCone30",  b=[(100, -5000, 50000)], t=";E_{T}^{cone30} [MeV]")(obj.EtCone30)
-    hget(name, "EtCone40",  b=[(100, -5000, 50000)], t=";E_{T}^{cone40} [MeV]")(obj.EtCone40)
+    hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
+    hget(name, "Rhad1",     b=[(100, -0.1, 0.10)]+B,   t=";raphad1"+T      )(obj.Rhad1, *V)
     
-    hget(name, "EtCone20_corrected",  b=[(100, -5000, 50000)], t=";E_{T}^{cone20 (corrected)} [MeV]")(obj.EtCone20_corrected)
-    hget(name, "EtCone30_corrected",  b=[(100, -5000, 50000)], t=";E_{T}^{cone30 (corrected)} [MeV]")(obj.EtCone30_corrected)
-    hget(name, "EtCone40_corrected",  b=[(100, -5000, 50000)], t=";E_{T}^{cone40 (corrected)} [MeV]")(obj.EtCone40_corrected)
+    hget(name, "reta",      b=[(20, 0.9, 1)]+B,  t=";R_{#eta}"+T          )(obj.reta, *V)
+    hget(name, "rphi",      b=[(15, 0.8, 1)]+B,   t=";R_{#phi}"+T          )(obj.rphi, *V)
+    
+    hget(name, "Eratio",    b=[(15, 0.7, 1)]+B,   t=";E_{ratio}"+T         )(obj.Eratio, *V)
+    hget(name, "DeltaE",    b=[(15, 0, 500)]+B,   t=";#DeltaE [MeV]"+T     )(obj.deltaE, *V)
+    
+    hget(name, "wstot",     b=[(15, 0, 5)]+B,     t=";ws_{tot}"+T   )(obj.wstot, *V)
+    hget(name, "ws3",       b=[(15, 0, 1)]+B,     t=";w_{s3}"+T     )(obj.ws3, *V)
+    hget(name, "fside",     b=[(20, 0, 1.25)]+B,  t=";F_{side}"+T   )(obj.fside, *V)
+    
+    hget(name, "EtCone20",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20} [MeV]"+T)(obj.EtCone20, *V)
+    hget(name, "EtCone30",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30} [MeV]"+T)(obj.EtCone30, *V)
+    hget(name, "EtCone40",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40} [MeV]"+T)(obj.EtCone40, *V)
+    
+    hget(name, "EtCone20_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.EtCone20_corrected, *V)
+    hget(name, "EtCone30_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.EtCone30_corrected, *V)
+    hget(name, "EtCone40_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.EtCone40_corrected, *V)
 
 
 def plot_object(ana, name, obj):
@@ -151,21 +162,10 @@ def plot_object(ana, name, obj):
     Plot histograms for one object (electron, photon)
     """
     
-    #plot_pts(ana, (name, "eta_all"), ana.ptbins,      obj)
-    #plot_pts(ana, (name, "fine"),    ana.ptbins_fine, obj)
-    
     plot_isolation(ana, name, obj)
-    
-    # Make pt plots in bins of eta
-    for i, (elow, ehi) in enumerate(zip(ana.etabins_sym[1:], ana.etabins_sym[2:])):
-        if not elow <= obj.etas2 < ehi:
-            continue
-        name_eta = (name, "eta_%i" % i)
-        plot_pts(ana, name_eta, ana.ptbins, obj)
-        plot_isolation(ana, name_eta, obj)
 
     # Make plots in bins of author
-    name_auth = (name, "auth_%i" % obj.author)
+    name_auth = (name, "auth/auth_%i" % obj.author)
     plot_pts(ana, name_auth, ana.ptbins_fine, obj)
     plot_isolation(ana, name_auth, obj)
     
@@ -174,22 +174,13 @@ def plot_objects_multi_cuts(ana, name, obj):
     plot_object(ana, (name, "loose"), obj)
     if obj.robust_tight:
         assert obj.robust_nontight, "Found a tight object which isn't nontight!"
-        
-    if not obj.robust_nontight: return
-    plot_object(ana, (name, "nontight"), obj)
+    
+    if obj.particle == "photon":
+        if not obj.robust_nontight: return
+        plot_object(ana, (name, "nontight"), obj)
     
     if not obj.robust_tight: return
     plot_object(ana, (name, "rtight"), obj)
-
-def plot_objects_multi_pt(ana, name, obj):
-    plot_objects_multi_cuts(ana, (name, "ptcl_all"), obj)
-    
-    if obj.cl.pt > 100000:
-        plot_objects_multi_cuts(ana, (name, "ptcl_gt100"), obj)
-    elif obj.cl.pt > 40000:
-        plot_objects_multi_cuts(ana, (name, "ptcl_gt40"), obj)
-    else:
-        plot_objects_multi_cuts(ana, (name, "ptcl_lte40"), obj)
 
 def fill_trigger_object_counts(ana, event):
     
@@ -206,16 +197,17 @@ def fill_trigger_object_counts(ana, event):
             continue
         objects = getattr(EF, "%s_objects" % trig_name)
         
-        ana.h.get(("photon_count_trigphot_nocut", trig_name), b=[(15, 0, 15)])(len(objects))
-        ana.h.get(("photon_count_trigphot_tight", trig_name), b=[(15, 0, 15)])(sum(1 for o in objects if o.tight))
+        ana.h.get(("photon/counts/trigphot_nocut", trig_name), b=[(15, 0, 15)])(len(objects))
+        ana.h.get(("photon/counts/trigphot_tight", trig_name), b=[(15, 0, 15)])(sum(1 for o in objects if o.tight))
         
-        ana.h.get(("photon_count_allphot_nocut",  trig_name), b=[(15, 0, 15)])(len(event.photons))
-        ana.h.get(("photon_count_allphot_tight",  trig_name), b=[(15, 0, 15)])(sum(1 for o in event.photons if o.tight))
+        ana.h.get(("photon/counts/allphot_nocut",  trig_name), b=[(15, 0, 15)])(len(event.photons))
+        ana.h.get(("photon/counts/allphot_tight",  trig_name), b=[(15, 0, 15)])(sum(1 for o in event.photons if o.tight))
         
         for i, obj in enumerate(objects):
             if not i:
-                plot_objects_multi_pt(ana, ("photontrigonlyfirst", trig_name), obj)
-            plot_objects_multi_pt(ana, ("photontrig", trig_name), obj)
+                plot_objects_multi_cuts(ana, ("photon/trigonlyfirst", trig_name), obj)
+            plot_objects_multi_cuts(ana, ("photon/trig", trig_name), obj)
+
 
 def plots(ana, event):
     """
@@ -235,15 +227,13 @@ def plots(ana, event):
     
     for ph in event.photons:
         if not (ph.pass_fiducial and ph.loose and ph.good_oq): continue
-        if ana.obj_selection and not ana.obj_selection(ph):
-            continue
         
-        plot_objects_multi_pt(ana, "photon", ph)
+        plot_objects_multi_cuts(ana, "photon", ph)
         
         if ph.isConv:
-            plot_objects_multi_pt(ana, "convphoton", ph)
+            plot_objects_multi_cuts(ana, "photon/conv", ph)
         else:
-            plot_objects_multi_pt(ana, "unconvphoton", ph)
+            plot_objects_multi_cuts(ana, "photon/unconv", ph)
             
 
 class PurityAnalysis(AnalysisBase):
@@ -254,6 +244,10 @@ class PurityAnalysis(AnalysisBase):
         self.ptbins = ("var", 15, 20, 25, 30, 35, 40, 50, 60, 100, 140, 180, 
                        220, 300, 380, 460, 620, 1000)
         self.ptbins = scale_bins(self.ptbins, 1000)
+        
+        self.ptbins_wide = ("var", 15, 45, 60, 80, 120, 200, 400, 1000)
+        self.ptbins_wide = scale_bins(self.ptbins, 1000)
+        
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
         self.etabins = mirror_bins(self.etabins_sym)
         
