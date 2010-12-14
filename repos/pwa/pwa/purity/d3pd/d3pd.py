@@ -12,6 +12,16 @@ def pairs(inputs):
     for i, o1 in enumerate(inputs):
         for o2 in inputs[i+1:]:
             yield o1, o2
+            
+def pairs_with_sum(inputs):
+    if len(inputs) < 2:
+        return
+    for i, o1 in enumerate(inputs):
+        for o2 in inputs[i+1:]:
+            yield o1+o2, (o1, o2)
+            
+def by_pt(objects):
+    return sorted(objects, key=lambda o: o.pt)
 
 def counts(ana, event):
     """
@@ -45,6 +55,8 @@ def counts(ana, event):
     cut_binning = ((2, 0, 2),) * len(cuts.split(";"))
     fill_counts = ana.h.get("photon_counts", b=cut_binning, 
                             t="Photon counts passing cuts;%s;" % cuts)
+    el_fill_counts = ana.h.get("electron_counts", b=cut_binning, 
+                               t="Electron counts passing cuts;%s;" % cuts)
     
     for o in event.photons:
         fill_counts(o.loose, o.nontight, o.tight, o.robust_nontight, o.robust_tight, 
@@ -52,6 +64,13 @@ def counts(ana, event):
                     o.isolated, o.nonisolated,
                     o.pass_fiducial, o.good_oq, o.isConv,
                     *ev_cuts)
+                    
+    for o in event.electrons:
+        el_fill_counts(o.loose, 0, o.tight, 0, o.robust_tight, 
+            o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
+            o.isolated, o.nonisolated,
+            o.pass_fiducial, o.good_oq, 0,
+            *ev_cuts)
     
     diph_cuts = "good_oq;pass_fiducial;loose;robust_nontight;robust_tight;nonisolated;isolated;isConv".split(";")
     
@@ -235,6 +254,12 @@ def plots(ana, event):
         else:
             plot_objects_multi_cuts(ana, "photon/unconv", ph)
             
+    for el in event.electrons:
+        if not (el.pass_fiducial and el.loose and el.good_oq): continue
+        good_els.append(el)
+        
+        plot_objects_multi_cuts(ana, "electron", el)   
+
 
 class PurityAnalysis(AnalysisBase):
     def __init__(self, tree, options):
