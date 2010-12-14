@@ -185,37 +185,6 @@ def showershapes(t1, t2):
              rebin = 2 if "Cone" in var else None,
              logy = var == "et",
         )
-             
-    return
-    for var in etcone_vars:
-        plot("shower_etconeshape", "%s vs tightness" % var, var, 
-             ptall.loose, ptall.nontight, ptall.rtight, logy=False, normalize=5,
-             pos=positioning.get(var, "RT"))
-             
-        plot("shower_etconeshape_norm10", "%s vs tightness" % var, var, 
-             ptall.loose, ptall.nontight, ptall.rtight, logy=False, normalize=10,
-             pos=positioning.get(var, "RT"))
-
-    for var in variables:
-        plot("shower_vstight", "%s vs tightness" % var, var, 
-             ptall.loose, ptall.nontight, ptall.rtight, logy=False, 
-             pos=positioning.get(var, "RT"), normalize=True)
-             
-    for var in variables:
-        
-        var_hist_params = dict(
-            normalize=True if not var.startswith("EtCone") else 10,
-            pos=positioning.get(var, "RT"),
-            x_range=ranges.get(var),
-        )
-                 
-        plot("shower_tight_vspt_lin", "%s vs pt" % var, var, 
-             ht.ptcl_lte40.rtight, ht.ptcl_gt40.rtight, ht.ptcl_gt100.rtight, 
-             logy=False, fallthrough=1, legend_header="Candidates", **var_hist_params)
-             
-        plot("shower_tight_vspt_log", "%s vs pt" % var, var,
-             ht.ptcl_lte40.rtight, ht.ptcl_gt40.rtight, ht.ptcl_gt100.rtight, 
-             logy=True, fallthrough=1, legend_header="Candidates", **var_hist_params)
 
 def make_tree(f, name):
     
