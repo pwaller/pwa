@@ -83,9 +83,8 @@ def counts(ana, event):
     cut_binning = ((2, 0, 2),) * (len(ev_cuts) + len(cuts))
     fill_counts = ana.h.get("diphoton_counts", b=cut_binning, 
                             t="Diphoton counts passing cuts;%s;" % all_cuts)
-        
-    ph_by_pt = sorted(event.photons, key=lambda p: p.pt)
-    for o1, o2 in pairs(ph_by_pt):
+    
+    for o1, o2 in event.diphotons:
         values = list(ev_cuts)
         for cut in diph_cuts:
             values.append(getattr(o1, cut))
@@ -227,6 +226,15 @@ def fill_trigger_object_counts(ana, event):
                 plot_objects_multi_cuts(ana, ("photon/trigonlyfirst", trig_name), obj)
             plot_objects_multi_cuts(ana, ("photon/trig", trig_name), obj)
 
+def plot_combined(ana, name, combined):
+    hget = ana.h.get
+    
+    c = combined
+    hget("boson", name, "pt",  b=[ana.ptbins]           )(c.pt)
+    hget("boson", name, "eta", b=[ana.etabins_fine]     )(c.eta)
+    hget("boson", name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
+    hget("boson", name, "m",  b=[(100, 0, 200000)]      )(c.m)
+    hget("boson", name, "pz",  b=[(100, 0, 200000)]     )(c.pz)    
 
 def plots(ana, event):
     """
@@ -244,8 +252,12 @@ def plots(ana, event):
     
     fill_trigger_object_counts(ana, event)
     
+    good_phs, good_els = [], []
+    
     for ph in event.photons:
         if not (ph.pass_fiducial and ph.loose and ph.good_oq): continue
+        
+        good_phs.append(ph)
         
         plot_objects_multi_cuts(ana, "photon", ph)
         
@@ -259,6 +271,16 @@ def plots(ana, event):
         good_els.append(el)
         
         plot_objects_multi_cuts(ana, "electron", el)   
+        
+    for comb, (el1, el2) in pairs_with_sum(by_pt(good_els)):
+        plot_combined(ana, "els", comb)
+        
+    for comb, (ph1, ph2) in pairs_with_sum(by_pt(good_phs)):
+        plot_combined(ana, "els", comb)
+        
+    for comb, (o1, o2)   in pairs_with_sum(by_pt(good_phs + good_els)):
+        plot_combined(ana, "els", comb)
+        
 
 
 class PurityAnalysis(AnalysisBase):
