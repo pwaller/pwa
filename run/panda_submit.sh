@@ -2,7 +2,7 @@
 
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
-PASS=19
+PASS=20
 
 DS=mc09_7TeV.105814.JF70_pythia_jet_filter.merge.NTUP_PROMPTPHOT.e585_s765_s767_r1305_r1306_p231/
 DSS=JF70
