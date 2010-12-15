@@ -9,7 +9,7 @@ prun                                                         \
     --outputs output.root                                                        \
     --nGBPerJob=3                                                              \
     --writeInputToTxt=IN:inputs.txt                                              \
-    --exec './ana_run.sh inputs.txt' \
+    --exec './ana_run.sh --run-specific-output inputs.txt' \
     --tmpDir /tmp/pwaller/pass.$PASS/                                 \
     --athenaTag=16.0.2                                                           \
     $@ > /dev/null
