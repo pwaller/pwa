@@ -4,7 +4,7 @@ source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda
 
 PASS=20
 
-echo {B..I} |
+echo A |
 tr ' ' $'\n' | 
 xargs -I{} -n1 -P10 prun                                                         \
     --inDS group10.phys-sm.data10_7TeV.period{}.NoGRL.NTUP_PROMPTPHOT.p231/      \
