@@ -232,10 +232,11 @@ def plot_combined(ana, name, combined):
     
     c = combined
     hget("boson", name, "pt",  b=[ana.ptbins]           )(c.pt)
-    hget("boson", name, "eta", b=[ana.etabins_fine]     )(c.eta)
+    hget("boson", name, "eta", b=[ana.etabins_boson]          )(c.eta)
+    hget("boson", name, "eta_fine", b=[ana.etabins_boson_fine])(c.eta)
     hget("boson", name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
-    hget("boson", name, "m",  b=[(100, 0, 200000)]      )(c.m)
-    hget("boson", name, "pz",  b=[(100, 0, 200000)]     )(c.pz)    
+    hget("boson", name, "m",   b=[(100, 0, 2000000)]    )(c.m)
+    hget("boson", name, "pz",  b=[(100, -1000000, 1000000)]     )(c.pz)    
 
 def plot_phs_els_comb(ana, what, event):
     good_phs, good_els = [], []
@@ -295,14 +296,17 @@ class PurityAnalysis(AnalysisBase):
                        220, 300, 380, 460, 620, 1000)
         self.ptbins = scale_bins(self.ptbins, 1000)
         
-        self.ptbins_wide = ("var", 15, 45, 60, 80, 120, 200, 400, 1000)
-        self.ptbins_wide = scale_bins(self.ptbins, 1000)
+        self.ptbins_wide = "var", 15, 45, 60, 80, 120, 200, 400, 1000
+        self.ptbins_wide = scale_bins(self.ptbins_wide, 1000)
         
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
+        
         self.etabins = mirror_bins(self.etabins_sym)
+        self.etabins_boson = mirror_bins(self.etabins_sym + (3., 3.6, 4.2, 5.))
         
         self.ptbins_fine  = double_bins(self.ptbins,  4)
         self.etabins_fine = double_bins(self.etabins, 4)
+        self.etabins_boson_fine = double_bins(self.etabins_boson, 4)
         
         # Tasks to run in order
         self.tasks.extend([
