@@ -142,7 +142,7 @@ def plot_isolation(ana, name, obj):
     
     B = [ana.ptbins_wide, ana.etabins]
     V = obj.cl.pt, obj.etas2
-    T = ";E_{T} [MeV];#eta_{s2}"
+    T = ";p_{T} (cluster) [MeV];#eta_{s2}"
     
     hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"+T          )(obj.et)
     hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"+T          )(obj.pt)
@@ -231,12 +231,12 @@ def plot_combined(ana, name, combined):
     hget = ana.h.get
     
     c = combined
-    hget("boson", name, "pt",  b=[ana.ptbins]           )(c.pt)
-    hget("boson", name, "eta", b=[ana.etabins_boson]          )(c.eta)
-    hget("boson", name, "eta_fine", b=[ana.etabins_boson_fine])(c.eta)
-    hget("boson", name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
-    hget("boson", name, "m",   b=[(100, 0, 2000000)]    )(c.m)
-    hget("boson", name, "pz",  b=[(100, -1000000, 1000000)]     )(c.pz)    
+    hget(name, "pt",  b=[ana.ptbins]           )(c.pt)
+    hget(name, "eta", b=[ana.etabins_boson]          )(c.eta)
+    hget(name, "eta_fine", b=[ana.etabins_boson_fine])(c.eta)
+    hget(name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
+    hget(name, "m",   b=[(100, 0, 2000000)]    )(c.m)
+    hget(name, "pz",  b=[(100, -1000000, 1000000)]     )(c.pz)    
 
 def plot_phs_els_comb(ana, what, event):
     good_phs, good_els = [], []
@@ -248,26 +248,31 @@ def plot_phs_els_comb(ana, what, event):
         
         plot_objects_multi_cuts(ana, (what, "photon"), ph)
         
+        if ana.info.have_truth:
+            if ph.truth.isPhotonFromHardProc:
+                plot_objects_multi_cuts(ana, (what, "photon/sig"), ph)
+            else:
+                plot_objects_multi_cuts(ana, (what, "photon/bkg"), ph)
+        
         if ph.isConv:
             plot_objects_multi_cuts(ana, (what, "photon/conv"), ph)
         else:
             plot_objects_multi_cuts(ana, (what, "photon/unconv"), ph)
-            
+    
     for el in event.electrons:
         if not (el.pass_fiducial and el.loose and el.good_oq): continue
         good_els.append(el)
         
         plot_objects_multi_cuts(ana, (what, "electron"), el)
-        
-        
+    
     for comb, (ph1, ph2) in pairs_with_sum(by_pt(good_phs)):
-        plot_combined(ana, (what, "phs"), comb)
+        plot_combined(ana, (what, "boson/phs"), comb)
         
     for comb, (el1, el2) in pairs_with_sum(by_pt(good_els)):
-        plot_combined(ana, (what, "els"), comb)
+        plot_combined(ana, (what, "boson/els"), comb)
         
     for comb, (o1, o2)   in pairs_with_sum(by_pt(good_phs + good_els)):
-        plot_combined(ana, (what, "both"), comb)
+        plot_combined(ana, (what, "boson/both"), comb)
 
 def plots(ana, event):
     """
