@@ -237,19 +237,7 @@ def plot_combined(ana, name, combined):
     hget("boson", name, "m",  b=[(100, 0, 200000)]      )(c.m)
     hget("boson", name, "pz",  b=[(100, 0, 200000)]     )(c.pz)    
 
-def plots(ana, event):
-    """
-    Make plots for the event
-    """
-    # Could do a loop over [("electron", ph.electrons), ("photon", ph.photons)]
-    # but left it expanded as two loops just to get an idea what it looks like
-    
-    pv = any(v.nTracks >= 3 for v in event.vertices)
-                       
-    if not all((pv, event.is_grl, event.EF.g40_loose)): return
-    
-    fill_trigger_object_counts(ana, event)
-    
+def plot_phs_els_comb(ana, what, event):
     good_phs, good_els = [], []
     
     for ph in event.photons:
@@ -257,28 +245,45 @@ def plots(ana, event):
         
         good_phs.append(ph)
         
-        plot_objects_multi_cuts(ana, "photon", ph)
+        plot_objects_multi_cuts(ana, (what, "photon"), ph)
         
         if ph.isConv:
-            plot_objects_multi_cuts(ana, "photon/conv", ph)
+            plot_objects_multi_cuts(ana, (what, "photon/conv"), ph)
         else:
-            plot_objects_multi_cuts(ana, "photon/unconv", ph)
+            plot_objects_multi_cuts(ana, (what, "photon/unconv"), ph)
             
     for el in event.electrons:
         if not (el.pass_fiducial and el.loose and el.good_oq): continue
         good_els.append(el)
         
-        plot_objects_multi_cuts(ana, "electron", el)   
+        plot_objects_multi_cuts(ana, (what, "electron"), el)
         
-    for comb, (el1, el2) in pairs_with_sum(by_pt(good_els)):
-        plot_combined(ana, "els", comb)
         
     for comb, (ph1, ph2) in pairs_with_sum(by_pt(good_phs)):
-        plot_combined(ana, "els", comb)
+        plot_combined(ana, (what, "phs"), comb)
+        
+    for comb, (el1, el2) in pairs_with_sum(by_pt(good_els)):
+        plot_combined(ana, (what, "els"), comb)
         
     for comb, (o1, o2)   in pairs_with_sum(by_pt(good_phs + good_els)):
-        plot_combined(ana, "els", comb)
+        plot_combined(ana, (what, "both"), comb)
+
+def plots(ana, event):
+    """
+    Make plots for the event
+    """
+    
+    pv = any(v.nTracks >= 3 for v in event.vertices)
+                       
+    if not (pv and event.is_grl):
+        # Drop these events
+        return
+    
+    if event.EF.g10_loose:
+        plot_phs_els_comb(ana, "g10_loose", event)
         
+    if event.EF.g40_loose:
+        plot_phs_els_comb(ana, "g40_loose", event)
 
 
 class PurityAnalysis(AnalysisBase):
