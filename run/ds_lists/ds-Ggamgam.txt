@@ -1,0 +1,16 @@
+group10.phys-sm.mc09_7TeV.106643.Pythia_Ggammagamma_001_1000.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105841.Pythia_Ggammagamma_01_1250.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.106623.Pythia_Ggammagamma_001_800.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105835.Pythia_Ggammagamma_005_700.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105833.Pythia_Ggammagamma_003_800.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105838.Pythia_Ggammagamma_01_800.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105842.Pythia_Ggammagamma_01_1500.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105834.Pythia_Ggammagamma_003_1000.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.106644.Pythia_Ggammagamma_003_500.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105623.Pythia_Ggammagamma_001_500.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105324.Pythia_Ggammagamma_005_1250.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105836.Pythia_Ggammagamma_005_1000.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105837.Pythia_Ggammagamma_005_1500.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.106684.Pythia_Ggammagamma_001_300.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105839.Pythia_Ggammagamma_01_1000.merge.AOD.e536_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+

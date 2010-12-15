@@ -1,0 +1,3 @@
+group10.phys-sm.mc09_7TeV.105802.JF17_pythia_jet_filter.merge.AOD.e575_s765_s767_r1302_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105807.JF35_pythia_jet_filter.merge.AOD.e505_s765_s767_r1305_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
+group10.phys-sm.mc09_7TeV.105814.JF70_pythia_jet_filter.merge.AOD.e585_s765_s767_r1305_r1306.NTUP.rel15_6_12_2.PAU-00-02-27.v0/
