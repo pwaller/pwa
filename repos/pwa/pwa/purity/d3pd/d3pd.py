@@ -42,9 +42,9 @@ def counts(ana, event):
         "g10_loose;g20_loose;g30_loose;g40_loose;"
         "2g10_loose;2g15_loose;2g20_loose;")
     
-    cut_binning = ((2, 0, 2),) * len(ev_cuts_string.split(";"))
+    cut_binning = ((2, 0, 2),) * ev_cuts_string.count(";")
     fill_ev_counts = ana.h.get("event_counts", b=cut_binning, 
-                            t="Event counts passing cuts;%s;" % ev_cuts_string)
+                            t="Event counts passing cuts;%s" % ev_cuts_string)
 
     fill_ev_counts(*ev_cuts)
     
@@ -54,13 +54,13 @@ def counts(ana, event):
         ) + ev_cuts_string
     cut_binning = ((2, 0, 2),) * cuts.count(";")
     fill_counts = ana.h.get("photon_counts", b=cut_binning, 
-                            t="Photon counts passing cuts;%s;" % cuts)
+                            t="Photon counts passing cuts;%s" % cuts)
     
     for o in event.photons:
         fill_counts(o.loose, o.nontight, o.tight, o.robust_nontight, o.robust_tight, 
                     o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
                     o.isolated, o.nonisolated,
-                    o.pass_fiducial, o.good_oq, o.isConv, o.isPhotonFromHardProc,
+                    o.pass_fiducial, o.good_oq, o.isConv, o.truth.isPhotonFromHardProc,
                     *ev_cuts)
     
     cuts = ("loose;nontight;tight;robust_nontight;robust_tight;"
@@ -75,7 +75,7 @@ def counts(ana, event):
         el_fill_counts(o.loose, 0, o.tight, 0, o.robust_tight, 
             o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
             o.isolated, o.nonisolated,
-            o.pass_fiducial, o.good_oq, 0, o.truth.match,
+            o.pass_fiducial, o.good_oq, 0, o.truth.matched,
             *ev_cuts)
     
     diph_cuts = "good_oq;pass_fiducial;loose;robust_nontight;robust_tight;nonisolated;isolated;isConv".split(";")
@@ -269,7 +269,7 @@ def plot_phs_els_comb(ana, what, event):
         if not (el.pass_fiducial and el.loose and el.good_oq): continue
         good_els.append(el)
         
-        if el.truth.match:
+        if el.truth.matched:
             plot_objects_multi_cuts(ana, (what, "electron/sig"), el)
         else:
             plot_objects_multi_cuts(ana, (what, "electron/bkg"), el)
