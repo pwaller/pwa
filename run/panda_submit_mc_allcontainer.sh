@@ -2,7 +2,7 @@
 
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
-export PASS=22
+export PASS=23
 
 prun                                                                      \
     --inDS user10.PeterWaller.pau.all_mc/                                 \
