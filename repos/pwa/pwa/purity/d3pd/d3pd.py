@@ -162,15 +162,15 @@ def plot_isolation(ana, name, obj):
     hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
     hget(name, "Rhad1",     b=[(100, -0.1, 0.10)]+B,   t=";raphad1"+T      )(obj.Rhad1, *V)
     
-    hget(name, "reta",      b=[(20, 0.9, 1)]+B,  t=";R_{#eta}"+T          )(obj.reta, *V)
-    hget(name, "rphi",      b=[(15, 0.8, 1)]+B,   t=";R_{#phi}"+T          )(obj.rphi, *V)
+    hget(name, "reta",      b=[(60, 0.9, 1)]+B,   t=";R_{#eta}"+T          )(obj.reta, *V)
+    hget(name, "rphi",      b=[(60, 0.8, 1)]+B,   t=";R_{#phi}"+T          )(obj.rphi, *V)
     
-    hget(name, "Eratio",    b=[(15, 0.7, 1)]+B,   t=";E_{ratio}"+T         )(obj.Eratio, *V)
-    hget(name, "DeltaE",    b=[(15, 0, 500)]+B,   t=";#DeltaE [MeV]"+T     )(obj.deltaE, *V)
+    hget(name, "Eratio",    b=[(60, 0.7, 1)]+B,   t=";E_{ratio}"+T         )(obj.Eratio, *V)
+    hget(name, "DeltaE",    b=[(60, 0, 500)]+B,   t=";#DeltaE [MeV]"+T     )(obj.deltaE, *V)
     
-    hget(name, "wstot",     b=[(15, 0, 5)]+B,     t=";ws_{tot}"+T   )(obj.wstot, *V)
-    hget(name, "ws3",       b=[(15, 0, 1)]+B,     t=";w_{s3}"+T     )(obj.ws3, *V)
-    hget(name, "fside",     b=[(20, 0, 1.25)]+B,  t=";F_{side}"+T   )(obj.fside, *V)
+    hget(name, "wstot",     b=[(60, 0, 5)]+B,     t=";ws_{tot}"+T   )(obj.wstot, *V)
+    hget(name, "ws3",       b=[(60, 0, 1)]+B,     t=";w_{s3}"+T     )(obj.ws3, *V)
+    hget(name, "fside",     b=[(80, 0, 1.25)]+B,  t=";F_{side}"+T   )(obj.fside, *V)
     
     hget(name, "EtCone20",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20} [MeV]"+T)(obj.EtCone20, *V)
     hget(name, "EtCone30",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30} [MeV]"+T)(obj.EtCone30, *V)
@@ -241,7 +241,7 @@ def plot_combined(ana, name, combined):
     hget(name, "eta", b=[ana.etabins_boson]          )(c.eta)
     hget(name, "eta_fine", b=[ana.etabins_boson_fine])(c.eta)
     hget(name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
-    hget(name, "m",   b=[(100, 0, 2000000)]    )(c.m)
+    hget(name, "m",   b=[(400, 0, 2000000)]    )(c.m)
     hget(name, "pz",  b=[(100, -1000000, 1000000)]     )(c.pz)    
 
 def plot_phs_els_comb(ana, what, event):
