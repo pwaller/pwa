@@ -40,31 +40,37 @@ def counts(ana, event):
         "grl;pv;"
         # Trigger:
         "g10_loose;g20_loose;g30_loose;g40_loose;"
-        "2g10_loose;2g15_loose;2g20_loose")
+        "2g10_loose;2g15_loose;2g20_loose;")
     
     cut_binning = ((2, 0, 2),) * len(ev_cuts_string.split(";"))
     fill_ev_counts = ana.h.get("event_counts", b=cut_binning, 
                             t="Event counts passing cuts;%s;" % ev_cuts_string)
 
     fill_ev_counts(*ev_cuts)
-          
+    
     cuts = ("loose;nontight;tight;robust_nontight;robust_tight;"
         "pt_gt40;pt_gt100;pt_gt200;pt_gt500;isolated;nonisolated;"
-        "fiducial;oq;isConv;"
+        "fiducial;oq;isConv;isPhotonFromHardProc;"
         ) + ev_cuts_string
-    cut_binning = ((2, 0, 2),) * len(cuts.split(";"))
+    cut_binning = ((2, 0, 2),) * cuts.count(";")
     fill_counts = ana.h.get("photon_counts", b=cut_binning, 
                             t="Photon counts passing cuts;%s;" % cuts)
-    el_fill_counts = ana.h.get("electron_counts", b=cut_binning, 
-                               t="Electron counts passing cuts;%s;" % cuts)
     
     for o in event.photons:
         fill_counts(o.loose, o.nontight, o.tight, o.robust_nontight, o.robust_tight, 
                     o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
                     o.isolated, o.nonisolated,
-                    o.pass_fiducial, o.good_oq, o.isConv,
+                    o.pass_fiducial, o.good_oq, o.isConv, o.isPhotonFromHardProc,
                     *ev_cuts)
-                    
+    
+    cuts = ("loose;nontight;tight;robust_nontight;robust_tight;"
+        "pt_gt40;pt_gt100;pt_gt200;pt_gt500;isolated;nonisolated;"
+        "fiducial;oq;isConv;isPhotonFromHardProc;"
+        ) + ev_cuts_string
+    cut_binning = ((2, 0, 2),) * cuts.count(";")
+    el_fill_counts = ana.h.get("electron_counts", b=cut_binning, 
+                               t="Electron counts passing cuts;%s" % cuts)
+                               
     for o in event.electrons:
         el_fill_counts(o.loose, 0, o.tight, 0, o.robust_tight, 
             o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
@@ -144,14 +150,14 @@ def plot_isolation(ana, name, obj):
     V = obj.cl.pt, obj.etas2
     T = ";p_{T} (cluster) [MeV];#eta_{s2}"
     
-    hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"+T          )(obj.et)
-    hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"+T          )(obj.pt)
-    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]"+T)(obj.cl.pt)
+    hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
+    hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"          )(obj.pt)
+    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
     
-    hget(name, "eta",       b=[ana.etabins], t=";#eta"+T                )(obj.eta)
-    hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"+T           )(obj.etas2)
+    hget(name, "eta",       b=[ana.etabins], t=";#eta"                )(obj.eta)
+    hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"           )(obj.etas2)
     
-    hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins],    t=";#eta_{s2}"+T         )(obj.etas2)
+    hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
     
     hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
     hget(name, "Rhad1",     b=[(100, -0.1, 0.10)]+B,   t=";raphad1"+T      )(obj.Rhad1, *V)
