@@ -65,7 +65,7 @@ def counts(ana, event):
     
     cuts = ("loose;nontight;tight;robust_nontight;robust_tight;"
         "pt_gt40;pt_gt100;pt_gt200;pt_gt500;isolated;nonisolated;"
-        "fiducial;oq;isConv;isPhotonFromHardProc;"
+        "fiducial;oq;isConv;matchMC;"
         ) + ev_cuts_string
     cut_binning = ((2, 0, 2),) * cuts.count(";")
     el_fill_counts = ana.h.get("electron_counts", b=cut_binning, 
@@ -75,7 +75,7 @@ def counts(ana, event):
         el_fill_counts(o.loose, 0, o.tight, 0, o.robust_tight, 
             o.cl.pt > 40000, o.cl.pt > 100000, o.cl.pt > 200000, o.cl.pt > 500000, 
             o.isolated, o.nonisolated,
-            o.pass_fiducial, o.good_oq, 0,
+            o.pass_fiducial, o.good_oq, 0, o.truth.match,
             *ev_cuts)
     
     diph_cuts = "good_oq;pass_fiducial;loose;robust_nontight;robust_tight;nonisolated;isolated;isConv".split(";")
