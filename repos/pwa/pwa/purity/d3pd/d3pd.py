@@ -146,8 +146,8 @@ def plot_pts(ana, name, bins, obj):
 def plot_isolation(ana, name, obj):
     hget = ana.h.get
     
-    B = [ana.ptbins_wide, ana.etabins]
-    V = obj.cl.pt, obj.etas2
+    B = [ana.ptbins_wide, ana.etabins_sym]
+    V = obj.cl.pt, abs(obj.etas2)
     T = ";p_{T} (cluster) [MeV];#eta_{s2}"
     
     hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
