@@ -269,7 +269,10 @@ def plot_phs_els_comb(ana, what, event):
         if not (el.pass_fiducial and el.loose and el.good_oq): continue
         good_els.append(el)
         
-        plot_objects_multi_cuts(ana, (what, "electron"), el)
+        if el.truth.match:
+            plot_objects_multi_cuts(ana, (what, "electron/sig"), el)
+        else:
+            plot_objects_multi_cuts(ana, (what, "electron/bkg"), el)
     
     for comb, (ph1, ph2) in pairs_with_sum(by_pt(good_phs)):
         plot_combined(ana, (what, "boson/phs"), comb)
