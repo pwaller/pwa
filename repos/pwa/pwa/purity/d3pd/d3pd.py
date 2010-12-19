@@ -252,18 +252,18 @@ def plot_phs_els_comb(ana, what, event):
         
         good_phs.append(ph)
         
-        plot_objects_multi_cuts(ana, (what, "photon"), ph)
+        # All photons
+        plot_objects_multi_cuts(ana, (what, "photon/all"), ph)
         
-        if ana.info.have_truth:
-            if ph.truth.isPhotonFromHardProc:
-                plot_objects_multi_cuts(ana, (what, "photon/sig"), ph)
-            else:
-                plot_objects_multi_cuts(ana, (what, "photon/bkg"), ph)
+        photon_type = (
+            what,
+            "photon",
+            "sig" if ph.truth.isPhotonFromHardProc else "bkg",
+            "conv" if ph.isConv else "unconv",
+        )
         
-        if ph.isConv:
-            plot_objects_multi_cuts(ana, (what, "photon/conv"), ph)
-        else:
-            plot_objects_multi_cuts(ana, (what, "photon/unconv"), ph)
+        # Photons separated by sig/bkg and conversions
+        plot_objects_multi_cuts(ana, photon_type, ph)
     
     for el in event.electrons:
         if not (el.pass_fiducial and el.loose and el.good_oq): continue
