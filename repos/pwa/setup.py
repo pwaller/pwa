@@ -7,7 +7,8 @@ setup(
         "console_scripts" : [
             "pwa_except = pwa.scripts.check_except:main",
             "pwa_counts = pwa.scripts.counts:main",
-            "pwa_purity = pwa:purity_main",
+            "pwa_purity = pwa.purity:purity_main",
+            "pwa_shapes = pwa.showershapes:main",
         ]
     }
 )
