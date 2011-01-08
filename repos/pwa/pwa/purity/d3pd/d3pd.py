@@ -80,21 +80,33 @@ def counts(ana, event):
     
     diph_cuts = "good_oq;pass_fiducial;loose;robust_nontight;robust_tight;nonisolated;isolated;isConv".split(";")
     
-    cuts = []
+    each_ph_cuts = []
     for c in diph_cuts:
-        cuts.append(c + "_1")
-        cuts.append(c + "_2")
+        each_ph_cuts.append(c + "_1")
+        each_ph_cuts.append(c + "_2")
     
-    all_cuts = ";".join([ev_cuts_string] + cuts)
-    cut_binning = ((2, 0, 2),) * (len(ev_cuts) + len(cuts))
+    cut_binning = [(2, 0, 2)] * (len(ev_cuts) + len(each_ph_cuts))
+    
+    mass_binning = "var", 0, 1000, 10000, 50000, 100000, 200000
+    cut_binning.append(mass_binning)
+    
+    all_cuts = ";".join([ev_cuts_string] + each_ph_cuts + ["first", "mass"])
+    
     fill_counts = ana.h.get("diphoton_counts", b=cut_binning, 
                             t="Diphoton counts passing cuts;%s;" % all_cuts)
     
-    for o1, o2 in event.diphotons:
+    for i, (o1, o2) in enumerate(event.diphotons):
         values = list(ev_cuts)
         for cut in diph_cuts:
             values.append(getattr(o1, cut))
             values.append(getattr(o2, cut))
+            
+        first = i == 0
+        values.append(first)
+        
+        comb = o1 + o2
+        values.append(comb.m)
+        
         fill_counts(*values)
 
 TITLE_SMEAR = "p_{T} smearing matrix;Truth p_{T} [MeV];Measured p_{T} [MeV]"
