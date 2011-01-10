@@ -207,7 +207,11 @@ def plot_object(ana, name, obj):
     
 def plot_objects_multi_cuts(ana, name, obj):
 
-    plot_object(ana, (name, "loose"), obj)
+    plot_object(ana, (name, "all"), obj)
+
+    if obj.loose:
+        plot_object(ana, (name, "loose"), obj)
+    
     if obj.robust_tight:
         if obj.particle != "electron":
             assert obj.robust_nontight, "Found a tight object which isn't nontight!"
@@ -260,7 +264,7 @@ def plot_phs_els_comb(ana, what, event):
     good_phs, good_els = [], []
     
     for ph in event.photons:
-        if not (ph.pass_fiducial and ph.loose and ph.good_oq): continue
+        if not (ph.pass_fiducial and ph.good_oq): continue
         
         good_phs.append(ph)
         
@@ -278,7 +282,7 @@ def plot_phs_els_comb(ana, what, event):
         plot_objects_multi_cuts(ana, photon_type, ph)
     
     for el in event.electrons:
-        if not (el.pass_fiducial and el.loose and el.good_oq): continue
+        if not (el.pass_fiducial and el.good_oq): continue
         good_els.append(el)
         
         if el.truth.matched:
