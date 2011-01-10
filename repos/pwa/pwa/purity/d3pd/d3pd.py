@@ -85,7 +85,7 @@ def counts(ana, event):
         each_ph_cuts.append(c + "_1")
         each_ph_cuts.append(c + "_2")
     
-    cut_binning = [(2, 0, 2)] * (len(ev_cuts) + len(each_ph_cuts))
+    cut_binning = [(2, 0, 2)] * (len(ev_cuts) + len(each_ph_cuts) + 1)
     
     mass_binning = "var", 0, 1000, 10000, 50000, 100000, 200000
     cut_binning.append(mass_binning)
