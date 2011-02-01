@@ -2,7 +2,7 @@ env/
 *.d
 *.so
 *.pyc
-*.root
+*.root*
 *.png
 *.eps
 .giosave*
@@ -11,3 +11,13 @@ env/
 *.tar.bz2
 .asetup.save
 repos/pip
+*.egg-info/
+minty
+/pwa
+env
+*env
+*junk*
+*plot*
+most_recent
+talks
+
