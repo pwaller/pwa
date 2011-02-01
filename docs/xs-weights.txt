@@ -1,0 +1,88 @@
+#! /usr/bin/env bash
+
+# mc09_7TeV.105298.Pythia_Gee_001_300.evgen.EVNT.e522
+minty-rescale 0.002105 PMC-R105298.root PMC-R105298-rescaled.root
+# mc09_7TeV.105299.Pythia_Gee_001_800.evgen.EVNT.e522
+minty-rescale 0.000012 PMC-R105299.root PMC-R105299-rescaled.root
+# mc09_7TeV.105324.Pythia_Ggammagamma_005_1250.evgen.EVNT.e536
+minty-rescale 0.000036 PMC-R105324.root PMC-R105324-rescaled.root
+# mc09_7TeV.105562.Pythia_Gee_003_500.evgen.EVNT.e522
+minty-rescale 0.001474 PMC-R105562.root PMC-R105562-rescaled.root
+# mc09_7TeV.105563.Pythia_Gee_003_800.evgen.EVNT.e522
+minty-rescale 0.000108 PMC-R105563.root PMC-R105563-rescaled.root
+# mc09_7TeV.105564.Pythia_Gee_003_1000.evgen.EVNT.e522
+minty-rescale 0.000028 PMC-R105564.root PMC-R105564-rescaled.root
+# mc09_7TeV.105586.Pythia_Gee_001_500.evgen.EVNT.e522
+minty-rescale 0.000165 PMC-R105586.root PMC-R105586-rescaled.root
+# mc09_7TeV.105587.Pythia_Gee_001_1000.evgen.EVNT.e522
+minty-rescale 0.000003 PMC-R105587.root PMC-R105587-rescaled.root
+# mc09_7TeV.105588.Pythia_Gee_010_1000.evgen.EVNT.e522
+minty-rescale 0.000308 PMC-R105588.root PMC-R105588-rescaled.root
+# mc09_7TeV.105802.JF17_pythia_jet_filter.evgen.EVNT.e505
+minty-rescale 390.828096 PMC-R105802.root PMC-R105802-rescaled.root
+# mc09_7TeV.105807.JF35_pythia_jet_filter.evgen.EVNT.e505
+minty-rescale 68.895946 PMC-R105807.root PMC-R105807-rescaled.root
+# mc09_7TeV.105814.JF70_pythia_jet_filter.evgen.EVNT.e585
+minty-rescale 27.535090 PMC-R105814.root PMC-R105814-rescaled.root
+# mc09_7TeV.105830.JF17_herwig_jet_filter.evgen.EVNT.e507
+minty-rescale 302.779217 PMC-R105830.root PMC-R105830-rescaled.root
+# mc09_7TeV.105831.JF35_herwig_jet_filter.evgen.EVNT.e507
+minty-rescale 50.964245 PMC-R105831.root PMC-R105831-rescaled.root
+# mc09_7TeV.105833.Pythia_Ggammagamma_003_800.evgen.EVNT.e536
+minty-rescale 0.000218 PMC-R105833.root PMC-R105833-rescaled.root
+# mc09_7TeV.105834.Pythia_Ggammagamma_003_1000.evgen.EVNT.e536
+minty-rescale 0.000055 PMC-R105834.root PMC-R105834-rescaled.root
+# mc09_7TeV.105835.Pythia_Ggammagamma_005_700.evgen.EVNT.e536
+minty-rescale 0.001318 PMC-R105835.root PMC-R105835-rescaled.root
+# mc09_7TeV.105836.Pythia_Ggammagamma_005_1000.evgen.EVNT.e536
+minty-rescale 0.000156 PMC-R105836.root PMC-R105836-rescaled.root
+# mc09_7TeV.105837.Pythia_Ggammagamma_005_1500.evgen.EVNT.e536
+minty-rescale 0.000011 PMC-R105837.root PMC-R105837-rescaled.root
+# mc09_7TeV.105838.Pythia_Ggammagamma_01_800.evgen.EVNT.e536
+minty-rescale 0.002404 PMC-R105838.root PMC-R105838-rescaled.root
+# mc09_7TeV.105839.Pythia_Ggammagamma_01_1000.evgen.EVNT.e536
+minty-rescale 0.000610 PMC-R105839.root PMC-R105839-rescaled.root
+# mc09_7TeV.105841.Pythia_Ggammagamma_01_1250.evgen.EVNT.e536
+minty-rescale 0.000144 PMC-R105841.root PMC-R105841-rescaled.root
+# mc09_7TeV.105842.Pythia_Ggammagamma_01_1500.evgen.EVNT.e536
+minty-rescale 0.000042 PMC-R105842.root PMC-R105842-rescaled.root
+# mc09_7TeV.105898.Pythia_Gee_005_700.evgen.EVNT.e522
+minty-rescale 0.000652 PMC-R105898.root PMC-R105898-rescaled.root
+# mc09_7TeV.105937.Pythia_Gee_01_800.evgen.EVNT.e522
+minty-rescale 0.001188 PMC-R105937.root PMC-R105937-rescaled.root
+# mc09_7TeV.105938.Pythia_Gee_01_1250.evgen.EVNT.e522
+minty-rescale 0.000074 PMC-R105938.root PMC-R105938-rescaled.root
+# mc09_7TeV.105939.Pythia_Gee_01_1500.evgen.EVNT.e522
+minty-rescale 0.000021 PMC-R105939.root PMC-R105939-rescaled.root
+# mc09_7TeV.105982.Pythia_Gee_005_1000.evgen.EVNT.e522
+minty-rescale 0.000079 PMC-R105982.root PMC-R105982-rescaled.root
+# mc09_7TeV.105983.Pythia_Gee_005_1250.evgen.EVNT.e522
+minty-rescale 0.000018 PMC-R105983.root PMC-R105983-rescaled.root
+# mc09_7TeV.105984.Pythia_Gee_005_1500.evgen.EVNT.e522
+minty-rescale 0.000005 PMC-R105984.root PMC-R105984-rescaled.root
+# mc09_7TeV.106046.PythiaZee_no_filter.evgen.EVNT.e468
+minty-rescale 0.006458 PMC-R106046.root PMC-R106046-rescaled.root
+# mc09_7TeV.108081.PythiaPhotonJet_Unbinned35.evgen.EVNT.e505
+minty-rescale 0.209217 PMC-R108081.root PMC-R108081-rescaled.root
+# mc09_7TeV.108082.PythiaPhotonJet_Unbinned70.evgen.EVNT.e505
+minty-rescale 0.040346 PMC-R108082.root PMC-R108082-rescaled.root
+# mc09_7TeV.108083.PythiaPhotonJet_Unbinned140.evgen.EVNT.e505
+minty-rescale 0.002667 PMC-R108083.root PMC-R108083-rescaled.root
+# mc09_7TeV.108085.PythiaPhotonJet_Unbinned7.evgen.EVNT.e534
+minty-rescale 557.592110 PMC-R108085.root PMC-R108085-rescaled.root
+# mc09_7TeV.108087.PythiaPhotonJet_Unbinned17.evgen.EVNT.e505
+minty-rescale 0.834187 PMC-R108087.root PMC-R108087-rescaled.root
+# mc09_7TeV.108090.HerwigPhotonJet_Unbinned17.evgen.EVNT.e507
+minty-rescale 0.731343 PMC-R108090.root PMC-R108090-rescaled.root
+# mc09_7TeV.108091.HerwigPhotonJet_Unbinned35.evgen.EVNT.e507
+minty-rescale 0.177785 PMC-R108091.root PMC-R108091-rescaled.root
+# mc09_7TeV.108092.HerwigPhotonJet_Unbinned70.evgen.EVNT.e507
+minty-rescale 0.033451 PMC-R108092.root PMC-R108092-rescaled.root
+# mc09_7TeV.108093.HerwigPhotonJet_Unbinned140.evgen.EVNT.e507
+minty-rescale 0.002164 PMC-R108093.root PMC-R108093-rescaled.root
+# mc09_7TeV.115040.Pythia_photos_diphotons100.evgen.EVNT.e552
+minty-rescale 0.000165 PMC-R115040.root PMC-R115040-rescaled.root
+# mc09_7TeV.115802.DP17_pythia_photon_filter.evgen.EVNT.e576
+minty-rescale 8.396157 PMC-R115802.root PMC-R115802-rescaled.root
+# mc09_7TeV.115872.DP17_herwig_photon_filter.evgen.EVNT.e576
+minty-rescale 3.952998 PMC-R115872.root PMC-R115872-rescaled.root
