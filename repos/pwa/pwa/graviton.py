@@ -108,7 +108,7 @@ def plot_combined(ana, name, combined):
     hget(name, "eta", b=[ana.etabins_boson]          )(c.eta)
     hget(name, "eta_fine", b=[ana.etabins_boson_fine])(c.eta)
     hget(name, "phi", b=[(50, -3.141, 3.141)]  )(c.phi)
-    hget(name, "m;M_{#gamma#gamma}",   b=[(800, 0, 2000000)]    )(c.m)
+    hget(name, "m",   b=[(800, 0, 2000000)], t=";M_{#gamma#gamma} [MeV]")(c.m)
     hget(name, "pz",  b=[(100, -1000000, 1000000)]     )(c.pz)
 
 S_leading, S_leading_er = 0.1, 0.2
@@ -132,6 +132,9 @@ def apply_correction(ph):
     ph.E += DeltaE0
     return sigma0, DeltaE0
 
+def combine(ph1, ph2):
+    return ph1 + ph2
+
 def plot_phs_els_comb(ana, event):
 
     if not event.is_grl or not any(v.nTracks >= 3 and v.zvertex < 150. for v in event.vertices):
@@ -144,27 +147,27 @@ def plot_phs_els_comb(ana, event):
     hm = ana.h.get
     
     ph1, ph2 = good_phs[:2]
-                
+    
     pos = ph1.region_character + ph2.region_character
-    comb = ph1 + ph2
+    comb = combine(ph1, ph2)
 
     plot_combined(ana, "boson/phs/all", comb)
     plot_combined(ana, "boson/phs/%s" % pos, comb)
 
     m1b, m2b, comb_pre = ph1.m, ph2.m, comb.m
 
-    s1, c1 = apply_correction(ph1)
-    s2, c2 = apply_correction(ph2)
+    s1, c1 = apply_correction(ph1.cl)
+    s2, c2 = apply_correction(ph2.cl)
     
-    comb = ph1 + ph2
+    comb = combine(ph1, ph2)
     m1d, m2d, comb_delta = m1b - ph1.m, m2b - ph2.m, comb_pre - comb.m
     
-    hm("s1", "S1;S1", b=[(101, -600000, 600000)])(s1)
-    hm("c1", "C1;C1", b=[(101, -150000, 150000)])(c1)
-    hm("s2", "S2;S2", b=[(101, -600000, 600000)])(s2)
-    hm("c2", "C2;C2", b=[(101, -150000, 150000)])(c2)
+    hm("s1", t="S1;S1", b=[(101, -600000, 600000)])(s1)
+    hm("c1", t="C1;C1", b=[(101, -150000, 150000)])(c1)
+    hm("s2", t="S2;S2", b=[(101, -600000, 600000)])(s2)
+    hm("c2", t="C2;C2", b=[(101, -150000, 150000)])(c2)
     #hm.get("m1d", "Mass Delta;M_{#gamma#gamma} (corr) - M_{#gamma#gamma}", b=[(101, -600000, 600000)])
-    hm.get("mdelta", "Mass Delta;M_{#gamma#gamma} (corr) - M_{#gamma#gamma}", b=[(101, -300000, 300000)])
+    hm("mdelta", "Mass Delta;M_{#gamma#gamma} (corr) - M_{#gamma#gamma}", b=[(101, -300000, 300000)])
     
     ana.tup.Fill(s1, c1, m1d, s2, c2, m2d, comb_delta)
     #raise RuntimeError("s1 %.2e, c1 %.2e, m1d %.2e, s2 %.2e, s2c %.2e, m2d %.2e = " % (s1, c1, m1d, c2, s2, m2d))
