@@ -43,37 +43,40 @@ def counts(ana, event):
     
     good_photons = event.photons
     
+    if len(good_photons) < 2: return
+    counts(4)
+    
     # Pass nphot
     good_photons = [ph for ph in good_photons if ph.pass_fiducial]
-    if len(event.photons) < 2: return
-    counts(4)
+    if len(good_photons) < 2: return
+    counts(5)
     
     # Pass jet cleaning
     good_photons = [ph for ph in good_photons if ph.good_jet_quality]
     
     if len(good_photons) < 2: return
-    counts(5)
+    counts(6)
     
     # Pass object quality
     good_photons = [ph for ph in good_photons if ph.good_oq]
     if len(good_photons) < 2: return
-    counts(6)
+    counts(7)
 
     # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
-    counts(7)
+    counts(8)
     
     # Pass tightness
     if sum(1 for ph in good_photons if ph.robust_tight) >= 2:
-        counts(8)
+        counts(9)
     
     ph1, ph2 = good_photons[:2]
     
     comb = ph1 + ph2
     #print comb.m
     
-    ana.h.get("mass", b=[(100, 100, 500)])(comb.m)
+    ana.h.get("mass", b=[(100, 100, 500)])(comb.m/1000)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
