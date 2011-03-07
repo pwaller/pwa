@@ -9,6 +9,7 @@ setup(
             "pwa_counts = pwa.scripts.counts:main",
             "pwa_purity = pwa.purity:purity_main",
             "pwa_graviton = pwa.graviton:graviton_main",
+            "pwa_graviton_counts = pwa.graviton_counts:graviton_main",
             "pwa_shapes = pwa.showershapes:main",
         ]
     }
