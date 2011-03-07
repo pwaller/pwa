@@ -2,7 +2,7 @@
 
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
-PASS=1
+PASS=26
 
 prun                                                                             \
     --inDS user.PeterWaller.PeriodDtoI.NTUP_PROMPTPHOT.p404/                   \
