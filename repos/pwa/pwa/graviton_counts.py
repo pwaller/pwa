@@ -71,7 +71,9 @@ def counts(ana, event):
     ph1, ph2 = good_photons[:2]
     
     comb = ph1 + ph2
-    print comb.m
+    #print comb.m
+    
+    ana.h.get("mass", b=[(100, 100, 500)])(comb.m)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
