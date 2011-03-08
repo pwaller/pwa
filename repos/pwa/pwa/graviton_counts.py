@@ -52,14 +52,14 @@ def counts(ana, event):
     if len(good_photons) < 2: return
     counts(5)
     
-    # Pass jet cleaning
-    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
-    
+    # Pass object quality
+    good_photons = [ph for ph in good_photons if ph.good_oq]
     if len(good_photons) < 2: return
     counts(6)
     
-    # Pass object quality
-    good_photons = [ph for ph in good_photons if ph.good_oq]
+    # Pass jet cleaning
+    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
+    
     if len(good_photons) < 2: return
     counts(7)
 
