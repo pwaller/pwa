@@ -66,6 +66,7 @@ def do_cutflow(ana, event):
     
     # Pass Trigger
     if event.RunNumber < 160889:
+        # The above cut (event.RunNumber < 160889) also catches MC.
         trigger = any(ph.L1_e > 14 for ph in event.photons)
         #event.L1.EM14
     else:
