@@ -2,11 +2,11 @@
 
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
-PASS=26
+PASS=27
 
 prun                                                                             \
     --inDS user.PeterWaller.PeriodDtoI.NTUP_PROMPTPHOT.p231/                   \
-    --outDS user.PeterWaller.purity.paudata.pass_$PASS.good.period.A.to.I/       \
+    --outDS user.PeterWaller.purity.pau.v15.pass_$PASS.good.period.A.to.I/       \
     --noBuild                                                                    \
     --outputs output\*.root\*                                                    \
     --nGBPerJob=5                                                                \
