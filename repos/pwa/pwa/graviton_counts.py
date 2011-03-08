@@ -16,8 +16,10 @@ def pairs_with_sum(inputs):
         for o2 in inputs[i+1:]:
             yield o1+o2, (o1, o2)
     
-def counts(ana, event):
-    counts = ana.h.get("cutflow", b=[(9, 0, 9)])
+CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "fidphot", 
+           "oq", "jetclean", "loose", "tight")
+def do_cutflow(ana, event):
+    counts = ana.h.get("cutflow", b=[CUTFLOW])
     
     # Total
     counts(0)
@@ -76,17 +78,30 @@ def counts(ana, event):
     
     comb = ph1 + ph2
     #print comb.m
+    H = ana.h.get
+    H("boson/mass", b=[(1000, 0, 500)])(comb.m/1000)
+    H("boson/eta",  b=[(100, -8, 8)])(comb.eta)
+    H("boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.eta)
     
-    ana.h.get("mass", b=[(100, 100, 500)])(comb.m/1000)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
     
         super(GravitonAnalysis, self).__init__(tree, options)
         
+        self.ptbins = ("var", 15, 20, 25, 30, 35, 40, 50, 60, 100, 140, 180, 
+                       220, 300, 380, 460, 620, 1000)
+        self.ptbins = scale_bins(self.ptbins, 1000)
+        
+        self.ptbins_wide = "var", 15, 45, 60, 80, 120, 200, 400, 1000
+        self.ptbins_wide = scale_bins(self.ptbins_wide, 1000)
+        
+        self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
+        self.etabins = mirror_bins(self.etabins_sym)
+        
         # Tasks to run in order
         self.tasks.extend([
-            counts,
+            do_cutflow,
         ])
 
     def finalize(self):
