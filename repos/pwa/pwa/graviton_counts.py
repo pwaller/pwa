@@ -15,6 +15,46 @@ def pairs_with_sum(inputs):
     for i, o1 in enumerate(inputs):
         for o2 in inputs[i+1:]:
             yield o1+o2, (o1, o2)
+
+def plot_isolation(ana, name, obj):
+    hget = ana.h.get
+    
+    B = [ana.ptbins_wide, ana.etabins_sym]
+    V = obj.cl.pt, abs(obj.etas2)
+    T = ";p_{T} (cluster) [MeV];#eta_{s2}"
+    
+    hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
+    hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"          )(obj.pt)
+    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
+    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
+    
+    hget(name, "eta",       b=[ana.etabins], t=";#eta"                )(obj.eta)
+    
+    hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"           )(obj.etas2)
+    hget(name, "phi",       b=[(100, -3.1415, 3.1415)], t=";#phi"     )(obj.phi)
+    
+    hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
+    
+    hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
+    hget(name, "Rhad1",     b=[(100, -0.1, 0.10)]+B,   t=";raphad1"+T      )(obj.Rhad1, *V)
+    
+    hget(name, "reta",      b=[(60, 0.9, 1)]+B,   t=";R_{#eta}"+T          )(obj.reta, *V)
+    hget(name, "rphi",      b=[(60, 0.8, 1)]+B,   t=";R_{#phi}"+T          )(obj.rphi, *V)
+    
+    hget(name, "Eratio",    b=[(60, 0.7, 1)]+B,   t=";E_{ratio}"+T         )(obj.Eratio, *V)
+    hget(name, "DeltaE",    b=[(60, 0, 500)]+B,   t=";#DeltaE [MeV]"+T     )(obj.deltaE, *V)
+    
+    hget(name, "wstot",     b=[(60, 0, 5)]+B,     t=";ws_{tot}"+T   )(obj.wstot, *V)
+    hget(name, "ws3",       b=[(60, 0, 1)]+B,     t=";w_{s3}"+T     )(obj.ws3, *V)
+    hget(name, "fside",     b=[(80, 0, 1.25)]+B,  t=";F_{side}"+T   )(obj.fside, *V)
+    
+    hget(name, "EtCone20",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20} [MeV]"+T)(obj.EtCone20, *V)
+    hget(name, "EtCone30",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30} [MeV]"+T)(obj.EtCone30, *V)
+    hget(name, "EtCone40",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40} [MeV]"+T)(obj.EtCone40, *V)
+    
+    hget(name, "EtCone20_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.EtCone20_corrected, *V)
+    hget(name, "EtCone30_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.EtCone30_corrected, *V)
+    hget(name, "EtCone40_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.EtCone40_corrected, *V)
     
 CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "fidphot", 
            "oq", "jetclean", "loose", "tight")
@@ -65,6 +105,9 @@ def do_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(7)
 
+    for ph in good_photons:
+        plot_isolation(ana, "good_phs", ph)
+
     # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
@@ -75,6 +118,9 @@ def do_cutflow(ana, event):
         counts(9)
     
     ph1, ph2 = good_photons[:2]
+    
+    plot_isolation(ana, "ph1", ph1)
+    plot_isolation(ana, "ph2", ph2)
     
     comb = ph1 + ph2
     #print comb.m
