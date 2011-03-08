@@ -37,7 +37,8 @@ def counts(ana, event):
     counts(2)
     
     # Pass vertex
-    if not any(v.nTracks >= 3 and v.zvertex < 150. for v in event.vertices):
+    # Requirement for other paper: and v.zvertex < 150. 
+    if not any(v.nTracks >= 3 for v in event.vertices):
         return
     counts(3)
     
