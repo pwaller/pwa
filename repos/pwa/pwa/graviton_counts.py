@@ -26,11 +26,12 @@ def plot_isolation(ana, name, obj):
     hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
     hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"          )(obj.pt)
     hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
-    hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
+    hget(name, "cl_pt_many",     b=[(500, 0, 200)], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
     
     hget(name, "eta",       b=[ana.etabins], t=";#eta"                )(obj.eta)
     
     hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"           )(obj.etas2)
+    hget(name, "etas2_many",     b=[ana.etabins_many], t=";#eta_{s2}"           )(obj.etas2)
     hget(name, "phi",       b=[(100, -3.1415, 3.1415)], t=";#phi"     )(obj.phi)
     
     hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
@@ -55,7 +56,19 @@ def plot_isolation(ana, name, obj):
     hget(name, "EtCone20_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.EtCone20_corrected, *V)
     hget(name, "EtCone30_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.EtCone30_corrected, *V)
     hget(name, "EtCone40_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.EtCone40_corrected, *V)
+
+def make_plots(name, ph1, ph2):
     
+    plot_isolation(ana, (name, "ph1"), ph1)
+    plot_isolation(ana, (name, "ph2"), ph2)
+    
+    comb = ph1 + ph2
+    #print comb.m
+    H = ana.h.get
+    H(name, "boson/mass", b=[(1000, 0, 500)])(comb.m/1000)
+    H(name, "boson/eta",  b=[(100, -8, 8)])(comb.eta)
+    H(name, "boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.phi)
+
 CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "fidphot", 
            "oq", "jetclean", "loose", "tight")
 def do_cutflow(ana, event):
@@ -119,17 +132,10 @@ def do_cutflow(ana, event):
         counts(9)
     
     ph1, ph2 = good_photons[:2]
+    make_plots("default", ph1, ph2)
     
-    plot_isolation(ana, "ph1", ph1)
-    plot_isolation(ana, "ph2", ph2)
-    
-    comb = ph1 + ph2
-    #print comb.m
-    H = ana.h.get
-    H("boson/mass", b=[(1000, 0, 500)])(comb.m/1000)
-    H("boson/eta",  b=[(100, -8, 8)])(comb.eta)
-    H("boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.eta)
-    
+    ph1C, ph2C = ph1.v15_vertex_correction, ph2.v15_vertex_correction
+    make_plots("corrected", ph1C, ph2C)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
@@ -145,6 +151,7 @@ class GravitonAnalysis(AnalysisBase):
         
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
         self.etabins = mirror_bins(self.etabins_sym)
+        self.etabins_many = double_bins(self.etabins_sym, 3)
         
         # Tasks to run in order
         self.tasks.extend([
