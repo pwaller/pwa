@@ -11,7 +11,7 @@ prun                                                                            
     --outputs output\*.root\*                                                    \
     --nGBPerJob=MAX                                                                \
     --writeInputToTxt=IN:inputs.txt                                              \
-    --exec './ana_run.sh --run-specific-output  -Gdata10_7TeV.pro05.merged_LBSUMM_eg_standard_7TeV.xml inputs.txt' \
+    --exec './ana_run.sh --run-specific-output  -Gdata10_7TeV.pro04.merged_LBSUMM_eg_standard_7TeV.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.$PASS/                                            \
     --athenaTag=16.0.2                                                           \
     $@ 
