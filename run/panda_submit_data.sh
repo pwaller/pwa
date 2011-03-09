@@ -9,7 +9,7 @@ prun                                                                            
     --outDS user.PeterWaller.purity.pau.v15.pass_$PASS.good.period.A.to.I/       \
     --noBuild                                                                    \
     --outputs output\*.root\*                                                    \
-    --nGBPerJob=5                                                                \
+    --nGBPerJob=MAX                                                                \
     --writeInputToTxt=IN:inputs.txt                                              \
     --exec './ana_run.sh --run-specific-output  -Gdata10_7TeV.pro05.merged_LBSUMM_eg_standard_7TeV.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.$PASS/                                            \
