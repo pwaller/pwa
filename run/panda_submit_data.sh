@@ -11,7 +11,7 @@ PASS=$(cat bundle_tag)
 
 prun                                                                             \
     --inDS user.PeterWaller.PeriodDtoI.NTUP_PROMPTPHOT.p231/                   \
-    --outDS user.PeterWaller.purity.pau.v15.${PASS}.good.period.A.to.I/       \
+    --outDS user.PeterWaller.purity.pau.v15.${PASS}.good.period.D.to.I/       \
     --noBuild                                                                    \
     --outputs output\*.root\*                                                    \
     --nGBPerJob=MAX                                                                \
