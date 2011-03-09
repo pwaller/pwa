@@ -16,7 +16,20 @@ def pairs_with_sum(inputs):
         for o2 in inputs[i+1:]:
             yield o1+o2, (o1, o2)
 
-def plot_isolation(ana, name, obj):
+def plot_kinematics(ana, name, obj):
+    hget = ana.h.get
+
+    hget(name, "E",         b=[ana.ptbins],    t=";E [MeV]"       )(obj.E)
+    
+    hget(name, "pt",         b=[ana.ptbins],    t=";p_{T} [MeV]"       )(obj.pt)
+    hget(name, "pt_many",    b=[(500, 0, 200e3)], t=";p_{T} [MeV]"       )(obj.pt)
+    
+    hget(name, "eta",        b=[ana.etabins], t=";#eta"                )(obj.eta)
+    hget(name, "eta_many",   b=[ana.etabins_many], t=";#eta"           )(obj.eta)
+    
+    hget(name, "phi",        b=[(100, -3.1415, 3.1415)], t=";#phi"     )(obj.phi)
+
+def plot_shower(ana, name, obj):
     hget = ana.h.get
     
     B = [ana.ptbins_wide, ana.etabins_sym]
@@ -24,17 +37,13 @@ def plot_isolation(ana, name, obj):
     T = ";p_{T} (cluster) [MeV];#eta_{s2}"
     
     hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
-    hget(name, "pt",        b=[ana.ptbins], t=";p_{T} [MeV]"          )(obj.pt)
     hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
-    hget(name, "cl_pt_many",     b=[(500, 0, 200)], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
-    
-    hget(name, "eta",       b=[ana.etabins], t=";#eta"                )(obj.eta)
+    hget(name, "cl_pt_many",     b=[(500, 0, 200e3)], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
     
     hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"           )(obj.etas2)
     hget(name, "etas2_many",     b=[ana.etabins_many], t=";#eta_{s2}"           )(obj.etas2)
-    hget(name, "phi",       b=[(100, -3.1415, 3.1415)], t=";#phi"     )(obj.phi)
     
-    hget(name, "et_vs_eta", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
+    hget(name, "clpt_vs_etas2", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
     
     hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
     hget(name, "Rhad1",     b=[(100, -0.1, 0.10)]+B,   t=";raphad1"+T      )(obj.Rhad1, *V)
@@ -57,11 +66,7 @@ def plot_isolation(ana, name, obj):
     hget(name, "EtCone30_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.EtCone30_corrected, *V)
     hget(name, "EtCone40_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.EtCone40_corrected, *V)
 
-def make_plots(name, ph1, ph2):
-    
-    plot_isolation(ana, (name, "ph1"), ph1)
-    plot_isolation(ana, (name, "ph2"), ph2)
-    
+def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
     #print comb.m
     H = ana.h.get
@@ -120,7 +125,8 @@ def do_cutflow(ana, event):
     counts(7)
 
     for ph in good_photons:
-        plot_isolation(ana, "good_phs", ph)
+        plot_kinematics(ana, "good_phs", ph)
+        plot_shower(ana, "good_phs", ph)
 
     # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
@@ -132,10 +138,21 @@ def do_cutflow(ana, event):
         counts(9)
     
     ph1, ph2 = good_photons[:2]
-    make_plots("default", ph1, ph2)
     
-    ph1C, ph2C = ph1.v15_vertex_correction, ph2.v15_vertex_correction
-    make_plots("corrected", ph1C, ph2C)
+    plot_kinematics(ana, "default/ph1", ph1)
+    plot_kinematics(ana, "default/ph2", ph2)
+    plot_boson(ana, "default", ph1, ph2)
+    plot_shower(ana, "default/ph1", ph1)
+    plot_shower(ana, "default/ph2", ph2)
+    
+    vertex_z = event.vertices[0].zvertex
+    
+    ph1C = ph1.v15_vertex_correction(vertex_z)
+    ph2C = ph2.v15_vertex_correction(vertex_z)
+    
+    plot_kinematics(ana, "corrected/ph1", ph1C)
+    plot_kinematics(ana, "corrected/ph2", ph2C)
+    plot_boson(ana, "corrected", ph1C, ph2C)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
@@ -151,7 +168,7 @@ class GravitonAnalysis(AnalysisBase):
         
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
         self.etabins = mirror_bins(self.etabins_sym)
-        self.etabins_many = double_bins(self.etabins_sym, 3)
+        self.etabins_many = double_bins(self.etabins, 3)
         
         # Tasks to run in order
         self.tasks.extend([
