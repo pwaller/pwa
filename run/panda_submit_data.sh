@@ -8,10 +8,11 @@ if ! ./prepare_submit.sh; then
 fi;
 
 PASS=$(cat bundle_tag)
+EXTRA=$1
 
 prun                                                                             \
     --inDS user.PeterWaller.PeriodDtoI.NTUP_PROMPTPHOT.p231/                   \
-    --outDS user.PeterWaller.purity.pau.v15.${PASS}.good.period.D.to.I/       \
+    --outDS user.PeterWaller.purity.pau.v15.${PASS}${EXTRA}.good.period.D.to.I/       \
     --noBuild                                                                    \
     --outputs output\*.root\*                                                    \
     --nGBPerJob=MAX                                                                \
