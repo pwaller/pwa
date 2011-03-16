@@ -172,18 +172,23 @@ class GravitonAnalysis(AnalysisBase):
         self.etabins = mirror_bins(self.etabins_sym)
         self.etabins_many = double_bins(self.etabins, 3)
         
-        self.loose_events = set()
-        
         # Tasks to run in order
         self.tasks.extend([
             do_cutflow,
         ])
 
-    def flush(self):
-        
-        self.h.write_object("loose_event_indexes", self.loose_events)
-        super(GravitonAnalysis, self).flush()
+    def initialize_counters(self):
         self.loose_events = set()
+        self.interesting_indexes = []
+        
+        super(GravitonAnalysis, self).initialize_counters()
+        
+    def flush(self):
+        self.h.write_object("loose_event_indexes", self.loose_events)
+        self.h.write_object("interesting", self.interesting_indexes)
+        
+        super(GravitonAnalysis, self).flush()
+
 
     def finalize(self):
     
