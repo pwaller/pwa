@@ -133,6 +133,8 @@ def do_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(8)
     
+    ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
+    
     # Pass tightness
     if sum(1 for ph in good_photons if ph.robust_tight) >= 2:
         counts(9)
@@ -170,10 +172,18 @@ class GravitonAnalysis(AnalysisBase):
         self.etabins = mirror_bins(self.etabins_sym)
         self.etabins_many = double_bins(self.etabins, 3)
         
+        self.loose_events = set()
+        
         # Tasks to run in order
         self.tasks.extend([
             do_cutflow,
         ])
+
+    def flush(self):
+        
+        self.h.write_object("loose_event_indexes", self.loose_events)
+        super(GravitonAnalysis, self).flush()
+        self.loose_events = set()
 
     def finalize(self):
     
