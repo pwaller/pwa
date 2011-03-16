@@ -20,4 +20,11 @@ env
 *plot*
 most_recent
 talks
+/run/bundle_tag
+.__afs*
+/DataQuality/
+/DiPhotonResonance
+/InstallArea/
+/PAU
+/bertrand_code/
 
