@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 
+from logging import getLogger; log = getLogger("pwa.graviton_counts")
+
 from math import cosh, sqrt
 
 from ROOT import gRandom, TNtuple
