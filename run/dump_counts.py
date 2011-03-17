@@ -22,7 +22,7 @@ def main():
     for p in ["all"] + list("DEFGHI"):
         if p != "all":
             period = "period-%s" % p
-        fname = "/data1/pwaller/v15/passes/31/%s.root" % period
+        fname = "/data1/pwaller/v15/passes/32/%s.root" % period
         print fname
         f15 = TFile(fname)
         dump_counts(f15)

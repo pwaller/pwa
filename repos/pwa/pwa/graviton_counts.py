@@ -72,7 +72,7 @@ def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
     #print comb.m
     H = ana.h.get
-    H(name, "boson/mass", b=[(1000, 0, 500)])(comb.m/1000)
+    H(name, "boson/mass", b=[(1000, 0, 500)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
     H(name, "boson/eta",  b=[(100, -8, 8)])(comb.eta)
     H(name, "boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.phi)
 
