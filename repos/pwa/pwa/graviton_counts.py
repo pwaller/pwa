@@ -10,7 +10,7 @@ from minty.base import AnalysisBase
 from minty.histograms import double_bins, mirror_bins, scale_bins
 from minty.main import make_main
 from minty.treedefs.egamma import Photon, Electron
-           
+
 def pairs_with_sum(inputs):
     if len(inputs) < 2:
         return
@@ -151,8 +151,12 @@ def do_cutflow(ana, event):
     
     vertex_z = event.vertices[0].zvertex
     
-    ph1C = ph1.v15_vertex_correction(vertex_z)
-    ph2C = ph2.v15_vertex_correction(vertex_z)
+    if ana.release_16:
+        ph1C = ph1.v16_corrections()
+        ph2C = ph2.v16_corrections()
+    else:
+        ph1C = ph1.v15_corrections(vertex_z)
+        ph2C = ph2.v15_corrections(vertex_z)
     
     plot_kinematics(ana, "corrected/ph1", ph1C)
     plot_kinematics(ana, "corrected/ph2", ph2C)
