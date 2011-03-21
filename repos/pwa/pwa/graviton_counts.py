@@ -76,6 +76,13 @@ def plot_boson(ana, name, ph1, ph2):
     H(name, "boson/eta",  b=[(100, -8, 8)])(comb.eta)
     H(name, "boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.phi)
 
+def plot_boson_wconv(ana, name, ph1, ph2):
+    plot_boson(ana, name, ph1, ph2)
+    if ph1.isConv or ph2.isConv:
+        plot_boson(ana, (name, "conveither"), ph1, ph2)
+    if ph1.isConv and ph2.isConv:
+        plot_boson(ana, (name, "convboth"), ph1, ph2)
+
 CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "fidphot", 
            "oq", "jetclean", "loose", "tight")
 def do_cutflow(ana, event):
@@ -145,7 +152,7 @@ def do_cutflow(ana, event):
     
     plot_kinematics(ana, "default/ph1", ph1)
     plot_kinematics(ana, "default/ph2", ph2)
-    plot_boson(ana, "default", ph1, ph2)
+    plot_boson_wconv(ana, "default", ph1, ph2)
     plot_shower(ana, "default/ph1", ph1)
     plot_shower(ana, "default/ph2", ph2)
     
@@ -160,7 +167,7 @@ def do_cutflow(ana, event):
     
     plot_kinematics(ana, "corrected/ph1", ph1C)
     plot_kinematics(ana, "corrected/ph2", ph2C)
-    plot_boson(ana, "corrected", ph1C, ph2C)
+    plot_boson_wconv(ana, "corrected", ph1C, ph2C)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
