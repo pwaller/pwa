@@ -83,7 +83,7 @@ def plot_boson_wconv(ana, name, ph1, ph2):
     if ph1.isConv and ph2.isConv:
         plot_boson(ana, (name, "convboth"), ph1, ph2)
 
-CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "fidphot", 
+CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "eta", "pt", 
            "oq", "jetclean", "loose", "tight")
 def do_cutflow(ana, event):
     counts = ana.h.get("cutflow", b=[CUTFLOW])
@@ -91,47 +91,51 @@ def do_cutflow(ana, event):
     # Total
     counts(0)
     
+    # Pass GRL
+    if not event.is_grl: return
+    counts(1)
+    
+    # Pass vertex
+    # Requirement for other paper: and v.zvertex < 150. 
+    if not any(v.nTracks >= 3 for v in event.vertices):
+        return
+    counts(2)
+    
     # Pass Trigger
     if event.RunNumber < 160889:
         # The above cut (event.RunNumber < 160889) also catches MC.
         trigger = any(ph.L1_e >= 14000 for ph in event.photons)
         #event.L1.EM14
     else:
-        trigger = event.EF._2g15_loose
+        trigger = event.EF._2g15_loose or event.EF.e20_loose
     
     if not trigger: return
-    counts(1)
-    
-    # Pass GRL
-    if not event.is_grl: return
-    counts(2)
-    
-    # Pass vertex
-    # Requirement for other paper: and v.zvertex < 150. 
-    if not any(v.nTracks >= 3 for v in event.vertices):
-        return
     counts(3)
     
     good_photons = event.photons
     
+    # Pass nphot
     if len(good_photons) < 2: return
     counts(4)
     
-    # Pass nphot
-    good_photons = [ph for ph in good_photons if ph.pass_fiducial]
+    good_photons = [ph for ph in good_photons if ph.pass_fiducial_eta]
     if len(good_photons) < 2: return
     counts(5)
     
-    # Pass object quality
-    good_photons = [ph for ph in good_photons if ph.good_oq]
+    good_photons = [ph for ph in good_photons if ph.pass_fiducial_pt]
     if len(good_photons) < 2: return
     counts(6)
     
-    # Pass jet cleaning
-    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
+    # Pass object quality
+    good_photons = [ph for ph in good_photons if ph.good_oq]
     
     if len(good_photons) < 2: return
     counts(7)
+    
+    # Pass jet cleaning
+    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
+    if len(good_photons) < 2: return
+    counts(8)
 
     for ph in good_photons:
         plot_kinematics(ana, "good_phs", ph)
@@ -140,13 +144,13 @@ def do_cutflow(ana, event):
     # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
-    counts(8)
+    counts(9)
     
     ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
     
     # Pass tightness
     if sum(1 for ph in good_photons if ph.robust_tight) >= 2:
-        counts(9)
+        counts(10)
     
     ph1, ph2 = good_photons[:2]
     
