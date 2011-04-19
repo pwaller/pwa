@@ -25,7 +25,7 @@ def counts(ana, event):
     """
            
     # There exists a vertex with at least 3 tracks and Pz < 150mm
-    pv = any(v.nTracks >= 3 and v.zvertex < 150. for v in event.vertices)
+    pv = any(v.nTracks >= 3 and v.z < 150. for v in event.vertices)
     good_phs = [ph for ph in event.photons if ph.graviton2011_fiducial]
     
     
@@ -137,7 +137,7 @@ def combine(ph1, ph2):
 
 def plot_phs_els_comb(ana, event):
 
-    if not event.is_grl or not any(v.nTracks >= 3 and v.zvertex < 150. for v in event.vertices):
+    if not event.is_grl or not any(v.nTracks >= 3 and v.z < 150. for v in event.vertices):
         return
 
     good_phs = by_pt(ph for ph in event.photons if ph.graviton2011_fiducial)
