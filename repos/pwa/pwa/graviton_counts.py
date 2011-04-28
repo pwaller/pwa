@@ -134,7 +134,7 @@ def do_cutflow(ana, event):
     counts(7)
     
     # Pass jet cleaning
-    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
+    good_photons = [ph for ph in good_photons if True] #ph.good_jet_quality]
     if len(good_photons) < 2: return
     counts(8)
 
