@@ -143,13 +143,20 @@ def do_cutflow(ana, event):
     counts(8)
 
     for ph in good_photons:
-        plot_kinematics(ana, "good_phs", ph)
-        plot_shower(ana, "good_phs", ph)
+        plot_kinematics(ana, "all_phs/pre_loose", ph)
+        plot_shower    (ana, "all_phs/pre_loose", ph)
 
     # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
     counts(9)
+    
+    for ph in good_photons:
+        plot_kinematics(ana, "all_phs/post_loose", ph)
+        plot_shower    (ana, "all_phs/post_loose", ph)
+        if ph.isConv:
+            plot_kinematics(ana, "all_phs/post_loose/conv", ph)
+            plot_shower    (ana, "all_phs/post_loose/conv", ph)
     
     ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
     
@@ -159,11 +166,11 @@ def do_cutflow(ana, event):
     
     ph1, ph2 = good_photons[:2]
     
-    plot_kinematics(ana, "default/ph1", ph1)
-    plot_kinematics(ana, "default/ph2", ph2)
+    plot_kinematics (ana, "default/ph1", ph1)
+    plot_kinematics (ana, "default/ph2", ph2)
+    plot_shower     (ana, "default/ph1", ph1)
+    plot_shower     (ana, "default/ph2", ph2)
     plot_boson_wconv(ana, "default", ph1, ph2)
-    plot_shower(ana, "default/ph1", ph1)
-    plot_shower(ana, "default/ph2", ph2)
     
     vertex_z = event.vertices[0].z
     
@@ -174,9 +181,15 @@ def do_cutflow(ana, event):
         ph1C = ph1.v15_corrections(vertex_z)
         ph2C = ph2.v15_corrections(vertex_z)
     
-    plot_kinematics(ana, "corrected/ph1", ph1C)
-    plot_kinematics(ana, "corrected/ph2", ph2C)
+    plot_kinematics (ana, "corrected/ph1", ph1C)
+    plot_kinematics (ana, "corrected/ph2", ph2C)
     plot_boson_wconv(ana, "corrected", ph1C, ph2C)
+    
+    if ph1.robust_tight and ph2.robust_tight:
+        plot_kinematics (ana, "corrected/robtight/ph1", ph1C)
+        plot_kinematics (ana, "corrected/robtight/ph2", ph2C)
+        plot_boson_wconv(ana, "corrected/robtight", ph1C, ph2C)  
+        
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
