@@ -80,10 +80,14 @@ def plot_boson(ana, name, ph1, ph2):
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
-    if ph1.isConv or ph2.isConv:
-        plot_boson(ana, (name, "conveither"), ph1, ph2)
     if ph1.isConv and ph2.isConv:
         plot_boson(ana, (name, "convboth"), ph1, ph2)
+    elif ph1.isConv:
+        plot_boson(ana, (name, "conv1"), ph1, ph2)
+    elif ph2.isConv:
+        plot_boson(ana, (name, "conv2"), ph1, ph2)
+    else:
+        plot_boson(ana, (name, "convneither"), ph1, ph2)
 
 CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "eta", "pt", 
            "oq", "jetclean", "loose", "tight")
