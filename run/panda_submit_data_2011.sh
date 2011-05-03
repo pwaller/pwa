@@ -17,7 +17,7 @@ prun                                                                            
     --outputs output\*.root\*                                                   \
     --nGBPerJob=MAX                                                             \
     --writeInputToTxt=IN:inputs.txt                                             \
-    --exec './ana_run.sh --run-specific-output -Ggrls/most_recent.xml inputs.txt' \
+    --exec './ana_run.sh --run-specific-output --v16 -Ggrls/most_recent.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
     --athenaTag=16.6.3                                                          \
     $@ 
