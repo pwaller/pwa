@@ -711,14 +711,24 @@ def change_prefix(filename, dst_prefix):
     assert False, "Filename %s does not start with any of these prefixes: %s" % \
         (filename, prefixes)
 
-def copy_required_modules(dst_prefix):
+def try_import_from_sysprefix(modname):
+    """
+    Addition to prevent failure in case of weird path problems. Try to copy the
+    required modules from the system prefix before trying the full sys.path.
+    """
     import imp
+    try:
+        return imp.find_module(modname, [join(sys.prefix, "lib", py_version)])
+    except ImportError:
+        return imp.find_module(modname)
+
+def copy_required_modules(dst_prefix):
     for modname in REQUIRED_MODULES:
         if modname in sys.builtin_module_names:
             logger.info("Ignoring built-in bootstrap module: %s" % modname)
             continue
         try:
-            f, filename, _ = imp.find_module(modname)
+            f, filename, _ = try_import_from_sysprefix(modname)
         except ImportError:
             logger.info("Cannot import bootstrap module: %s" % modname)
         else:
