@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
-if minty-runperiod-mapping -c; then
-    echo "Refusing to continue"
+if ! minty-runperiod-mapping -c; then
+    echo "Refusing to continue, period mapping out of date"
     exit
 fi
 
