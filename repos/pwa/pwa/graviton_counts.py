@@ -96,25 +96,27 @@ def do_cutflow(ana, event):
     
     # Total
     counts(0)
+        
+    # Pass Trigger
     
+    # 2010 requirements:
+    # The above cut (event.RunNumber < 160889) also catches MC.
+    #trigger = any(ph.L1_e >= 14000 for ph in event.photons)
+    # Evan's cut:
+    #trigger = event.EF._2g15_loose or event.EF.e20_loose
+    trigger = event.EF.2g20_loose
+    
+    if not trigger: return
+    counts(1)
+
     # Pass GRL
     if not event.is_grl: return
-    counts(1)
+    counts(2)
     
     # Pass vertex
     # Requirement for other paper: and v.z < 150. 
     if not any(v.nTracks >= 3 for v in event.vertices):
         return
-    counts(2)
-    
-    # Pass Trigger
-    if 150000 < event.RunNumber < 160889:
-        # The above cut (event.RunNumber < 160889) also catches MC.
-        trigger = any(ph.L1_e >= 14000 for ph in event.photons)
-    else:
-        trigger = event.EF._2g15_loose or event.EF.e20_loose
-    
-    if not trigger: return
     counts(3)
     
     good_photons = event.photons
@@ -223,7 +225,6 @@ class GravitonAnalysis(AnalysisBase):
         self.h.write_object("interesting", self.interesting_indexes)
         
         super(GravitonAnalysis, self).flush()
-
 
     def finalize(self):
     
