@@ -104,7 +104,7 @@ def do_cutflow(ana, event):
     #trigger = any(ph.L1_e >= 14000 for ph in event.photons)
     # Evan's cut:
     #trigger = event.EF._2g15_loose or event.EF.e20_loose
-    trigger = event.EF.2g20_loose
+    trigger = event.EF._2g20_loose
     
     if not trigger: return
     counts(1)
