@@ -134,7 +134,7 @@ def do_cutflow(ana, event):
     counts(6)
     
     # Pass object quality
-    good_photons = [ph for ph in good_photons if ph.good_oq]
+    good_photons = [ph for ph in good_photons if ph.my_oq]
     
     if len(good_photons) < 2: return
     counts(7)
@@ -149,7 +149,7 @@ def do_cutflow(ana, event):
         plot_shower    (ana, "all_phs/pre_loose", ph)
 
     # Pass looseness
-    good_photons = [ph for ph in good_photons if ph.loose]
+    good_photons = [ph for ph in good_photons if ph.my_loose]
     if len(good_photons) < 2: return
     counts(9)
     
@@ -163,7 +163,7 @@ def do_cutflow(ana, event):
     ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
     
     # Pass tightness
-    if sum(1 for ph in good_photons if ph.robust_tight) >= 2:
+    if sum(1 for ph in good_photons if ph.my_tight) >= 2:
         counts(10)
     
     ph1, ph2 = good_photons[:2]
