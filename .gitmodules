@@ -13,3 +13,6 @@
 [submodule "docs/talks/smdp_highpt_showershape"]
 	path = docs/talks/smdp_highpt_showershape
 	url = lx:repos/bare/talks/smdp_highpt_showershape.git
+[submodule "repos/commando"]
+	path = repos/commando
+	url = https://github.com/philips/commando.git
