@@ -10,6 +10,7 @@ from minty.base import AnalysisBase
 from minty.histograms import double_bins, mirror_bins, scale_bins
 from minty.main import make_main
 from minty.treedefs.egamma import Photon, Electron
+from minty.utils import delta_r
 
 def pairs_with_sum(inputs):
     if len(inputs) < 2:
@@ -76,10 +77,11 @@ def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
     #print comb.m
     H = ana.h.get
-    H(name, "boson/mass", b=[(1000, 0, 500)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "boson/mass",      b=[(1000, 0, 500)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
     H(name, "boson/mass_wide", b=[(4000, 0, 2000)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
-    H(name, "boson/eta",  b=[(100, -8, 8)])(comb.eta)
-    H(name, "boson/phi",  b=[(100, -3.1415, 3.1415)])(comb.phi)
+    H(name, "boson/eta",       b=[(100, -8, 8)])(comb.eta)
+    H(name, "boson/phi",       b=[(100, -3.1415, 3.1415)])(comb.phi)
+    H(name, "boson/deltar",    b=[(100, -3.1415, 3.1415)])(delta_r(ph1, ph2))
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
