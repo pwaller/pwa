@@ -1,0 +1,23 @@
+#! /usr/bin/env bash 
+
+source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
+
+if ! ./prepare_submit.sh; then
+  echo "Prepare submit failed."
+  exit 1
+fi;
+
+PASS=$(cat bundle_tag)
+EXTRA=$1
+
+prun                                                                            \
+    --inDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555/                       \
+    --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555.gravcount.${PASS}/    \
+    --noBuild                                                                   \
+    --outputs output\*.root\*                                                   \
+    --nGBPerJob=MAX                                                             \
+    --writeInputToTxt=IN:inputs.txt                                             \
+    --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
+    --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
+    --athenaTag=16.6.3                                                          \
+    $@ 
