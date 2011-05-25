@@ -18,19 +18,22 @@ def pairs_with_sum(inputs):
         for o2 in inputs[i+1:]:
             yield o1+o2, (o1, o2)
 
+PHIBINS = 100, -3.1415, 3.1415
 def plot_kinematics(ana, name, obj):
     hget = ana.h.get
 
     hget(name, "E",            b=[ana.ptbins],       t=";E [MeV]"       )(obj.E)
     
-    hget(name, "pt",           b=[ana.ptbins],       t=";p_{T} [MeV]"       )(obj.pt)
-    hget(name, "pt_many",      b=[(500,  0, 200e3)], t=";p_{T} [MeV]"       )(obj.pt)
-    hget(name, "pt_many_wide", b=[(2500, 0,   1e6)], t=";p_{T} [MeV]"       )(obj.pt)
+    hget(name, "pt",           b=[ana.ptbins],       t=";p_{T} [MeV]"   )(obj.pt)
+    hget(name, "pt_many",      b=[(500,  0, 200e3)], t=";p_{T} [MeV]"   )(obj.pt)
+    hget(name, "pt_many_wide", b=[(2500, 0,   1e6)], t=";p_{T} [MeV]"   )(obj.pt)
     
-    hget(name, "eta",          b=[ana.etabins], t=";#eta"                )(obj.eta)
-    hget(name, "eta_many",     b=[ana.etabins_many], t=";#eta"           )(obj.eta)
+    hget(name, "eta",          b=[ana.etabins],      t=";#eta"          )(obj.eta)
+    hget(name, "eta_many",     b=[ana.etabins_many], t=";#eta"          )(obj.eta)
     
-    hget(name, "phi",          b=[(100, -3.1415, 3.1415)], t=";#phi"     )(obj.phi)
+    
+    hget(name, "phi",          b=[PHIBINS],          t=";#phi"          )(obj.phi)
+    hget(name, "eta_vs_phi",   b=[ana.etabins, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
 
 def plot_shower(ana, name, obj):
     hget = ana.h.get
