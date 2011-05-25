@@ -11,6 +11,7 @@ setup(
             "pwa_graviton = pwa.graviton:graviton_main",
             "pwa_graviton_counts = pwa.graviton_counts:graviton_main",
             "pwa_shapes = pwa.showershapes:main",
+            "pwa = pwa:main",
         ]
     }
 )
