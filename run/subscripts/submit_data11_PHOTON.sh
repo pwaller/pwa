@@ -15,7 +15,7 @@ prun                                                                            
     --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555.gravcount.${PASS}/    \
     --noBuild                                                                   \
     --outputs output\*.root\*                                                   \
-    --nGBPerJob=MAX                                                             \
+    --nGBPerJob=4                                                             \
     --writeInputToTxt=IN:inputs.txt                                             \
     --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
