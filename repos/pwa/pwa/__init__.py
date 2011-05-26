@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from minty.main import make_main
-
 import sys
-from commando import Application, command, subcommand, version, store, true
+
+from pprint import pprint
+
+from commando import Application, command, subcommand, version, store, true, param
+
+from minty.main import make_main
 
 
 class Engine(Application):
@@ -20,14 +23,28 @@ class Engine(Application):
         """
         pass
 
-    @subcommand('start', help='Get it up and running')
-    @true('-f', '--force', default=False)
-    def start(self, params):
-        """
-        Start the engine.
-        """
-        print params.key
-        print params.force
-
+    @subcommand('mergeall', help='Merge all of the files contained in a tgz')
+    @param('-f', '--file')
+    def mergeall(self, params):
+        from hmerge import merge_files
+        from tarfile import open as tarfile_open
+        from contextlib import closing
+        
+        with closing(tarfile_open(params.file)) as tar:
+            files = set(f.path for f in tar.getmembers())
+        
+        for f in files:
+            print "Building", f
+            merge_files(f, [params.file], pattern=f)
+            
+    @subcommand('dump', help='Dump basic information')
+    @param('files', nargs="+")
+    def dump(self, params):
+        from ROOT import TFile
+        for f in params.files:
+            f = TFile.Open(f)
+            h = f.cutflow; xa = h.GetXaxis()
+            pprint([(h[i], xa.GetBinLabel(i)) for i in xrange(1, xa.GetNbins()+1)])
+        
 def main():
     Engine().run()
