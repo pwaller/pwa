@@ -1,8 +1,5 @@
 #! /usr/bin/env bash 
 
-set -u
-set -e
-
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
 if ! ./prepare_submit.sh; then
