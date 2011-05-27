@@ -102,7 +102,7 @@ CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "eta", "pt",
            "oq", "jetclean", "loose", "tight")
 def do_cutflow(ana, event):
     counts = ana.h.get("cutflow", b=[CUTFLOW])
-    
+        
     # Total
     counts(0)
         
@@ -201,6 +201,15 @@ def do_cutflow(ana, event):
         plot_kinematics (ana, "corrected/mytight/ph2", ph2C)
         plot_boson_wconv(ana, "corrected/mytight", ph1C, ph2C)
         
+    
+    # Final tight plots
+    for ph in good_photons:
+        if ph.my_tight:
+        plot_kinematics(ana, "all_phs/post_tight", ph)
+        plot_shower    (ana, "all_phs/post_tight", ph)
+        if ph.isConv:
+            plot_kinematics(ana, "all_phs/post_tight/conv", ph)
+            plot_shower    (ana, "all_phs/post_tight/conv", ph)    
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
