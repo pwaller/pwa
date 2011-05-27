@@ -1,5 +1,8 @@
 #! /usr/bin/env bash 
 
+set -u
+set -e
+
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
 if ! ./prepare_submit.sh; then
@@ -8,7 +11,6 @@ if ! ./prepare_submit.sh; then
 fi;
 
 PASS=$(cat bundle_tag)
-EXTRA=$1
 
 prun                                                                            \
     --inDS user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_v0003-v0004/    \

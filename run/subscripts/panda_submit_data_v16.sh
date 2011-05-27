@@ -1,5 +1,8 @@
 #! /usr/bin/env bash 
 
+set -u
+set -e
+
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
 if ! ./prepare_submit.sh; then
@@ -8,11 +11,10 @@ if ! ./prepare_submit.sh; then
 fi;
 
 PASS=$(cat bundle_tag)
-EXTRA=$1
 
 prun                                                                             \
     --inDS user.PeterWaller.PeriodDtoI.NTUP_PROMPTPHOT.p404/                   \
-    --outDS user.PeterWaller.purity.pau.v16.${PASS}${EXTRA}.good.period.D.to.I/       \
+    --outDS user.PeterWaller.purity.pau.v16.${PASS}.good.period.D.to.I/       \
     --extFile=./analysis.pybundle                                                 \
     --noBuild                                                                   \
     --outputs dumped_events.root,output\*.root\*                                \
