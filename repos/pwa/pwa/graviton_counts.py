@@ -81,7 +81,7 @@ def plot_boson(ana, name, ph1, ph2):
     H(name, "boson/mass_wide", b=[(4000, 0, 2000)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
     H(name, "boson/eta",       b=[(100, -8, 8)])(comb.eta)
     H(name, "boson/phi",       b=[(100, -3.1415, 3.1415)])(comb.phi)
-    H(name, "boson/deltar",    b=[(100, -3.1415, 3.1415)])(delta_r(ph1, ph2))
+    H(name, "boson/deltar",    b=[(100, 0, 6.282)])(delta_r(ph1, ph2))
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
@@ -192,10 +192,10 @@ def do_cutflow(ana, event):
     plot_kinematics (ana, "corrected/ph2", ph2C)
     plot_boson_wconv(ana, "corrected", ph1C, ph2C)
     
-    if ph1.robust_tight and ph2.robust_tight:
-        plot_kinematics (ana, "corrected/robtight/ph1", ph1C)
-        plot_kinematics (ana, "corrected/robtight/ph2", ph2C)
-        plot_boson_wconv(ana, "corrected/robtight", ph1C, ph2C)  
+    if ph1.my_tight and ph2.my_tight:
+        plot_kinematics (ana, "corrected/mytight/ph1", ph1C)
+        plot_kinematics (ana, "corrected/mytight/ph2", ph2C)
+        plot_boson_wconv(ana, "corrected/mytight", ph1C, ph2C)
         
     
 class GravitonAnalysis(AnalysisBase):
