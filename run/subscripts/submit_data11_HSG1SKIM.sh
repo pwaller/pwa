@@ -14,14 +14,13 @@ PASS=$(cat bundle_tag)
 EXTRA=$1
 
 prun                                                                            \
-    --inDS user.PeterWaller.skims.Xabier.D4.NTUP_PHOTON.f368_m806_p541.DR_Skim_v2/                       \
-    --outDS user.PeterWaller.skims.Xabier.D4.NTUP_PHOTON.f368_m806_p541.DR_Skim_v2.gravcount.${PASS}/    \
+    --inDS user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_v0003-v0004/    \
+    --outDS user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_v0003-v0004.gravcount.${PASS}/   \
     --extFile=./analysis.pybundle                                                 \
-    --noBuild                                                                   \
     --outputs dumped_events.root,output\*.root\*                                \
-    --nGBPerJob=1                                                             \
+    --nGBPerJob=4                                                               \
     --writeInputToTxt=IN:inputs.txt                                             \
-    --exec './ana_run.sh --run-specific-output -Ggrls/most_recent.xml inputs.txt' \
+    --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
     --athenaTag=16.6.3                                                          \
     --mergeOutput                                                               \

@@ -1,5 +1,8 @@
 #! /usr/bin/env bash 
 
+set -u
+set -e
+
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
 if ! ./prepare_submit.sh; then
@@ -15,7 +18,7 @@ prun                                                                            
     --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555.gravcount.${PASS}/  \
     --extFile=analysis.pybundle                                                 \
     --noBuild                                                                   \
-    --outputs output\*.root\*                                                   \
+    --outputs dumped_events.root,output\*.root\*                                \
     --nGBPerJob=4                                                               \
     --writeInputToTxt=IN:inputs.txt                                             \
     --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
