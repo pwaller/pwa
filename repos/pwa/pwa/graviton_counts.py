@@ -77,6 +77,10 @@ def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
     #print comb.m
     H = ana.h.get
+    if comb.m > 200000:
+        # Keep all high mass events!
+        ana.should_dump = True
+        
     H(name, "boson/mass",      b=[(1000, 0, 500)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
     H(name, "boson/mass_wide", b=[(4000, 0, 2000)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
     H(name, "boson/eta",       b=[(100, -8, 8)])(comb.eta)
