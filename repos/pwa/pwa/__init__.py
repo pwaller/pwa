@@ -40,9 +40,9 @@ class Engine(Application):
             with closing(tarfile_open(f)) as tar:
                 fileset |= set(rootfile.path for rootfile in tar.getmembers())
         
-        for f in sorted(fileset):
-            print "Building", f
-            merge_files(f, params.files, pattern=f)
+        from multiprocessing import Pool
+        pool = Pool(4)
+        pool.map(mp_merge, [(f, params.files, f) for f in sorted(fileset)])
     
     @subcommand('reduce', help="Reduce many output- files to files by period.")
     @store('-d', '--dummy')
