@@ -22,6 +22,6 @@ prun                                                                            
     --writeInputToTxt=IN:inputs.txt                                             \
     --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
-    --athenaTag=16.6.3                                                          \
-    --mergeOutput                                                               \
-    $@ 
+    --athenaTag=16.6.3                                                          #\
+    #--mergeOutput                                                               \
+    #$@ 

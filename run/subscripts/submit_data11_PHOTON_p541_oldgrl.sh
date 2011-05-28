@@ -13,14 +13,14 @@ fi;
 PASS=$(cat bundle_tag)
 
 prun                                                                            \
-    --inDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555/                     \
-    --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555.gravcount.grl_v13.${PASS}/  \
+    --inDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p541/                     \
+    --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p541.gravcount.NoGRL.${PASS}/  \
     --extFile=./analysis.pybundle                                                 \
     --noBuild                                                                   \
     --outputs dumped_events.root,output\*.root\*                                \
     --nGBPerJob=4                                                               \
     --writeInputToTxt=IN:inputs.txt                                             \
-    --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml inputs.txt' \
+    --exec './ana_run.sh --run-specific-output --release=rel16 --project=data11  -Ggrls/data11_7TeV.periodAllYear_DetStatus-v13-pro08-02_Eg_standard.xml inputs.txt' \
     --tmpDir /tmp/pwaller/pass.${PASS}/                                         \
     --athenaTag=16.6.3                                                          \
     --mergeOutput                                                               \
