@@ -16,6 +16,7 @@ prun                                                                            
     --inDS user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_v0003-v0004/    \
     --outDS user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_v0003-v0004.gravcount.${PASS}/   \
     --extFile=./analysis.pybundle                                                 \
+    --noBuild                                                                   \
     --outputs dumped_events.root,output\*.root\*                                \
     --nGBPerJob=4                                                               \
     --writeInputToTxt=IN:inputs.txt                                             \
