@@ -15,7 +15,7 @@ PASS=$(cat bundle_tag)
 prun                                                                            \
     --inDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555/                     \
     --outDS user.PeterWaller.data11_7TeV.Egamma_PHOTON.p555.gravcount.grl_v13.${PASS}/  \
-    --extFile=analysis.pybundle                                                 \
+    --extFile=./analysis.pybundle                                                 \
     --noBuild                                                                   \
     --outputs dumped_events.root,output\*.root\*                                \
     --nGBPerJob=4                                                               \
