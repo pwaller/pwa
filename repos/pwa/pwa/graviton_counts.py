@@ -176,6 +176,10 @@ def do_cutflow(ana, event):
     
     ph1, ph2 = good_photons[:2]
     
+    # Pass tightness
+    if ph1.my_tight and ph2.my_tight:
+        counts(10)
+    
     plot_kinematics (ana, "default/ph1", ph1)
     plot_kinematics (ana, "default/ph2", ph2)
     plot_shower     (ana, "default/ph1", ph1)

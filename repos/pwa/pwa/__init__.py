@@ -61,6 +61,9 @@ class Engine(Application):
         for f in files:
             by_subperiod.setdefault(get_period(f), []).append(f)
             
+        from pprint import pprint
+        pprint(by_subperiod)
+            
         from multiprocessing import Pool
         pool = Pool(4)
         
@@ -69,7 +72,9 @@ class Engine(Application):
         by_period = {}
         for p, files in sorted(by_subperiod.iteritems()):
             by_period.setdefault(p[0], []).append("period%s.root" % p)
-              
+        
+        pprint(by_period)
+        
         pool.map(mp_merge, [("period%s.root" % p, files) for p, files in by_period.iteritems()])
         
         from hmerge import merge_files
