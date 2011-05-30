@@ -45,9 +45,9 @@ def dsupdate(self, params):
         datasets = dq2_ls(ds_info["pattern"])
         expanded = dq2_expand_containers(datasets)
         
-        with open(ds_filename, "w"):
+        with open(ds_filename, "w") as fd:
             ds_datasets = dict(datasets=datasets, datasets_expanded=expanded)
-            dump_all([ds_info, ds_datasets])
+            fd.write(dump_all([ds_info, ds_datasets]))
 
 def dq2_expand_containers(cs):
     p = Popen(["xargs", "-P4", "-n1", "dq2-list-datasets-container"], stdin=PIPE, stdout=PIPE)
