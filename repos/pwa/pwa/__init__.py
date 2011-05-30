@@ -8,6 +8,10 @@ from commando import Application, command, subcommand, version, store, true, par
 
 from minty.main import make_main
 
+def get_bin_values(h):
+    xa = h.GetXaxis()
+    return [h[i] for i in xrange(1, xa.GetNbins()+1)]
+
 def mp_merge(args):
     from hmerge import merge_files
     merge_files(*args)
@@ -64,8 +68,8 @@ class Engine(Application):
         
         by_period = {}
         for p, files in sorted(by_subperiod.iteritems()):
-            by_period.setdefault(p[0], []).extend(files)
-            
+            by_period.setdefault(p[0], []).append("period%s.root" % p)
+              
         pool.map(mp_merge, [("period%s.root" % p, files) for p, files in by_period.iteritems()])
         
         from hmerge import merge_files
@@ -77,11 +81,22 @@ class Engine(Application):
     @subcommand('dump', help='Dump basic information')
     @param('files', nargs="+")
     def dump(self, params):
+        from DQUtils.ext.table_printer import pprint_table
+    
         from ROOT import TFile
-        for f in params.files:
-            f = TFile.Open(f)
-            h = f.cutflow; xa = h.GetXaxis()
-            pprint([(h[i], xa.GetBinLabel(i)) for i in xrange(1, xa.GetNbins()+1)])
+        files = [TFile.Open(f) for f in params.files]
+        cutflows = [f.cutflow for f in files]
+        axes = [c.GetXaxis() for c in cutflows]
+        labels = set(tuple(a.GetBinLabel(i) for i in xrange(1, a.GetNbins()+1))
+                     for a in axes)
+        assert len(labels) == 1
+        (labels,) = labels
+        numbers = [[f] + map(int, get_bin_values(h)) 
+                   for f, h in zip(params.files, cutflows)]
+        table = [["file"] + list(labels)] + numbers
+        from pprint import pprint
+        #pprint(table)
+        pprint_table(table)
         
 def main():
     Engine().run()
