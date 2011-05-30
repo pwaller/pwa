@@ -171,9 +171,8 @@ def do_cutflow(ana, event):
     
     ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
     
-    # Pass tightness
-    if sum(1 for ph in good_photons if ph.my_tight) >= 2:
-        counts(10)
+    # Dump all loose events
+    ana.should_dump = True
     
     ph1, ph2 = good_photons[:2]
     
