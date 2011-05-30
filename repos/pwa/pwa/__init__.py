@@ -31,6 +31,7 @@ class Engine(Application):
     
     make_datasets = datasets.make_datasets
     dsupdate = datasets.dsupdate
+    dsbuild = datasets.dsbuild
         
 def main():
     Engine().run()
