@@ -3,6 +3,7 @@
 import sys
 
 from commands import getstatusoutput
+from os.path import basename
 from pprint import pprint
 
 
@@ -47,13 +48,16 @@ class Engine(Application):
         
         for job in params.jobs:
             print job
+            job_name = basename(job).rpartition(".")[0]
+            
             job_info = load(open(job))
             #print job_info
             ds_info, ds_datasetinfo = datasets.ds_load(job_info["dataset"])
             ds_name = datasets.ds_name(job_info["dataset"])
             
             input_name = ds_info["container_name"]
-            progname = ".".join([job_info["progname"], get_tag()])
+            #progname = ".".join([job_info["progname"], get_tag()])
+            progname = ".".join([job_name, get_tag()])
             output_name = ds_info["outpattern"].format(progname=progname, user=datasets.user, dsname=ds_name, **ds_info)
             
             command = job_info["command"]
