@@ -5,4 +5,7 @@ source run_env/bin/activate
 
 python $(which pip) install analysis.pybundle
 
-python $(which pwa_graviton_counts) $@
+EXECUTABLE=$1
+shift
+
+python $(which $EXECUTABLE) $@

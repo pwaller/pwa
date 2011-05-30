@@ -2,7 +2,9 @@
 
 import sys
 
+from commands import getstatusoutput
 from pprint import pprint
+
 
 from commando import Application, command, subcommand, version, store, true, param
 
@@ -32,6 +34,20 @@ class Engine(Application):
     make_datasets = datasets.make_datasets
     dsupdate = datasets.dsupdate
     dsbuild = datasets.dsbuild
-        
+    
+    @subcommand('submit', help='Build a new dataset')
+    @param('jobs', nargs="+")
+    def submit(self, params):
+        from yaml import load
+        print get_tag()
+        for job in params.jobs:
+            pprint(load(open(job)))
+        #getstatusoutput(
+
+def get_tag():
+    status, output = getstatusoutput("git describe --tags --exact-match --dirty")
+    assert not status
+    return output.strip()
+
 def main():
     Engine().run()
