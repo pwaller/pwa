@@ -42,13 +42,13 @@ class Engine(Application):
         from subprocess import Popen
         print get_tag()
         
-        p = Popen(["prepare_submit.sh"])
+        p = Popen(["./prepare_submit.sh"])
         p.wait()
         
         for job in params.jobs:
             print job
             job_info = load(open(job))
-            print job_info
+            #print job_info
             ds_info, ds_datasetinfo = datasets.ds_load(job_info["dataset"])
             ds_name = datasets.ds_name(job_info["dataset"])
             
@@ -59,7 +59,7 @@ class Engine(Application):
             command = job_info["command"]
             
             
-            p = Popen(["echo", "subscripts/generic_submit.sh", 
+            p = Popen(["subscripts/generic_submit.sh", 
                        input_name, output_name, 
                        command, "tmpdirname", 
                        job_info.get("submit_extra", "")])
