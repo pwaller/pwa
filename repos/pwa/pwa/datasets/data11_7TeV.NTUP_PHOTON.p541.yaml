@@ -1,0 +1,12 @@
+pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_PHOTON.*_p541/
+container: user.{user}.{dsname}.v{version}/
+outpattern: user.{user}.{progname}.{container}/
+version: 0
+---
+datasets: [
+]
+
+datasets expanded: [
+]
+
+
