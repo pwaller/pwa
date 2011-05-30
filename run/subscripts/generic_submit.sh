@@ -22,4 +22,4 @@ prun                                                                            
     --writeInputToTxt=IN:inputs.txt                                             \
     --exec "$3 inputs.txt" \
     --tmpDir /tmp/pwaller/pass.${PASS}.$4/                                         \
-    --athenaTag=16.6.3                                                          
+    --athenaTag=16.6.3 $5

@@ -1,4 +1,4 @@
-{container: 'user.{user}.{dsname}.v{version}/', outpattern: 'user.{user}.{progname}.{container}/',
+{container: 'user.{user}.{dsname}.v{version}/', outpattern: 'user.{user}.{progname}.{dsname}.{version}/',
   pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_PHOTON.*_p555/, version: 1}
 ---
 datasets: [data11_7TeV.00177986.physics_Egamma.merge.NTUP_PHOTON.r2276_p516_p523_p554_p555/,

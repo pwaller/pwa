@@ -19,18 +19,19 @@ def make_datasets(self, params):
     for f in params.files:
         items = load_all(f)
 
+def ds_filename(x):
+    return resource_filename("pwa.datasets", x)
+def ds_name(x):
+    return x.rpartition(".")[0]
+def ds_load(x):
+    ds = ds_name(x)
+    with open(ds_filename(x)) as fd:
+        ds_info, ds_datasets = list(load_all(fd))
+        ds_info["container_name"] = ds_info["container"].format(
+            user=user, dsname=ds, **ds_info)
+        return ds_info, ds_datasets
+        
 def list_datasets():
-    def ds_filename(x):
-        return resource_filename("pwa.datasets", x)
-    def ds_name(x):
-        return x.rpartition(".")[0]
-    def ds_load(x):
-        ds = ds_name(x)
-        with open(ds_filename(x)) as fd:
-            ds_info, ds_datasets = list(load_all(fd))
-            ds_info["container_name"] = ds_info["container"].format(
-                user=user, dsname=ds, **ds_info)
-            return ds_info, ds_datasets 
             
     return [(ds_name(x), ds_filename(x), ds_load(x))
             for x in resource_listdir("pwa", "datasets") 
