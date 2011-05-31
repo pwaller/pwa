@@ -1,8 +1,8 @@
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.data10_7TeV.NTUP_PROMPTPHOT.p404.v1/
+container_name: user.PeterWaller.data10_7TeV.NTUP_PROMPTPHOT.p404.v2/
 pattern: data10_7TeV.*.physics_Egamma.merge.NTUP_PROMPTPHOT.*_p404/
 shortname: data10_7TeV.NTUP_PROMPTPHOT.p404
-version: 1
+version: 2
 ---
 datasets:
 - !!python/object:minty.metadata.ami.Dataset
