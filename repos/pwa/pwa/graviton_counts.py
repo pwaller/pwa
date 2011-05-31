@@ -99,7 +99,7 @@ def plot_boson_wconv(ana, name, ph1, ph2):
         plot_boson(ana, (name, "convneither"), ph1, ph2)
 
 CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "eta", "pt", 
-           "oq", "jetclean", "loose", "tight")
+           "oq", "jetclean", "loose", "tight", "tightar")
 def do_cutflow(ana, event):
     counts = ana.h.get("cutflow", b=[CUTFLOW])
         
@@ -177,8 +177,12 @@ def do_cutflow(ana, event):
     ph1, ph2 = good_photons[:2]
     
     # Pass tightness
-    if ph1.my_tight and ph2.my_tight:
+    if ph1.tight and ph2.tight:
         counts(10)
+        
+        # Pass AR
+        if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
+            counts(11)
     
     plot_kinematics (ana, "default/ph1", ph1)
     plot_kinematics (ana, "default/ph2", ph2)
