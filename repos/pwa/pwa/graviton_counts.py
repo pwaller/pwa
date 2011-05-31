@@ -158,7 +158,7 @@ def do_cutflow(ana, event):
         plot_shower    (ana, "all_phs/pre_loose", ph)
 
     # Pass looseness
-    good_photons = [ph for ph in good_photons if ph.my_loose]
+    good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
     counts(9)
     
