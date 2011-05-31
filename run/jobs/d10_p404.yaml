@@ -1,3 +1,3 @@
 progname: gravcount
-dataset: data10_7TeV.NTUP_PROMPTPHOT.p404
+dataset: data10_7TeV.NTUP_PROMPTPHOT.p404.yaml
 command: ./ana_run.sh pwa_graviton_counts --run-specific-output --release=rel16 --project=data10 -Ggrls/data10_7TeV.pro05.merged_LBSUMM_eg_standard_7TeV.xml
