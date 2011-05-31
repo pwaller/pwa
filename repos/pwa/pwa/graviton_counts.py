@@ -34,7 +34,7 @@ def plot_kinematics(ana, name, obj):
     
     
     hget(name, "phi",          b=[PHIBINS],          t=";#phi"          )(obj.phi)
-    hget(name, "eta_vs_phi",   b=[ana.etabins, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
+    hget(name, "eta_vs_phi",   b=[ana.etabins_many, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
 
 def plot_shower(ana, name, obj):
     hget = ana.h.get
