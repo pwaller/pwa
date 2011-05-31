@@ -1,0 +1,428 @@
+container: user.{user}.{dsname}.v{version}/
+container_name: user.PeterWaller.mc10a.Ggamgam.v2/
+pattern: mc10_7TeV.*Pythia_Ggammagamma*r2260_p548/
+shortname: mc10a.Ggamgam
+version: 2
+---
+datasets:
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:08:02'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115557
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4997
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220654
+  lastmodified: !!python/unicode '2011-05-30 14:07:18'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115557.Pythia_Ggammagamma_001_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115557.Pythia_Ggammagamma_001_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_001_700'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115557
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4997
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:08:04'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115558
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4999
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220656
+  lastmodified: !!python/unicode '2011-05-30 14:07:13'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115558.Pythia_Ggammagamma_003_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115558.Pythia_Ggammagamma_003_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_003_700'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115558
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4999
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:08:07'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115559
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4996
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220723
+  lastmodified: !!python/unicode '2011-05-30 14:07:12'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115559.Pythia_Ggammagamma_005_800.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115559.Pythia_Ggammagamma_005_800.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_005_800'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115559
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4996
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:06'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115560
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4998
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220725
+  lastmodified: !!python/unicode '2011-05-30 14:07:32'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115560.Pythia_Ggammagamma_003_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115560.Pythia_Ggammagamma_003_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_003_900'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115560
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4998
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:06'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115561
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4999
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220726
+  lastmodified: !!python/unicode '2011-05-30 14:07:29'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115561.Pythia_Ggammagamma_005_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115561.Pythia_Ggammagamma_005_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_005_900'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115561
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4999
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:08'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115562
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4999
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220728
+  lastmodified: !!python/unicode '2011-05-30 14:07:30'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115562.Pythia_Ggammagamma_007_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115562.Pythia_Ggammagamma_007_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_007_900'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115562
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4999
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:09'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115563
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4999
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220730
+  lastmodified: !!python/unicode '2011-05-30 14:07:11'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115563.Pythia_Ggammagamma_01_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115563.Pythia_Ggammagamma_01_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_01_900'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115563
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4999
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:11'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115564
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4996
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220733
+  lastmodified: !!python/unicode '2011-05-30 14:07:31'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115564.Pythia_Ggammagamma_005_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115564.Pythia_Ggammagamma_005_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_005_1100'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115564
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4996
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:14'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115565
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4997
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220735
+  lastmodified: !!python/unicode '2011-05-30 14:07:22'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115565.Pythia_Ggammagamma_007_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115565.Pythia_Ggammagamma_007_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_007_1100'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115565
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4997
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:16'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115566
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4998
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220616
+  lastmodified: !!python/unicode '2011-05-30 14:07:30'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115566.Pythia_Ggammagamma_01_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115566.Pythia_Ggammagamma_01_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_01_1100'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115566
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4998
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:16'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115567
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4997
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220617
+  lastmodified: !!python/unicode '2011-05-30 14:07:11'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115567.Pythia_Ggammagamma_02_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115567.Pythia_Ggammagamma_02_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_02_1100'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115567
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4997
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:19'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115568
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4998
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220620
+  lastmodified: !!python/unicode '2011-05-30 14:07:29'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115568.Pythia_Ggammagamma_007_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115568.Pythia_Ggammagamma_007_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_007_1250'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115568
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4998
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:20'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115569
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4996
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220622
+  lastmodified: !!python/unicode '2011-05-30 14:07:11'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115569.Pythia_Ggammagamma_015_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115569.Pythia_Ggammagamma_015_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_015_1250'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115569
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4996
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-30 16:09:21'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 115570
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4999
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 220736
+  lastmodified: !!python/unicode '2011-05-30 14:07:30'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.115570.Pythia_Ggammagamma_02_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.115570.Pythia_Ggammagamma_02_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548'
+  nfiles: 1
+  period: MC
+  physicsshort: !!python/unicode 'Pythia_Ggammagamma_02_1250'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 115570
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 4999
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e686_s933_s946_r2215_r2260_p548'
+datasets_expanded:
+- mc10_7TeV.115557.Pythia_Ggammagamma_001_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334737_00
+- mc10_7TeV.115558.Pythia_Ggammagamma_003_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334738_00
+- mc10_7TeV.115559.Pythia_Ggammagamma_005_800.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334739_00
+- mc10_7TeV.115560.Pythia_Ggammagamma_003_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334740_00
+- mc10_7TeV.115561.Pythia_Ggammagamma_005_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334741_00
+- mc10_7TeV.115562.Pythia_Ggammagamma_007_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334742_00
+- mc10_7TeV.115563.Pythia_Ggammagamma_01_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334743_00
+- mc10_7TeV.115564.Pythia_Ggammagamma_005_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334744_00
+- mc10_7TeV.115565.Pythia_Ggammagamma_007_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334745_00
+- mc10_7TeV.115566.Pythia_Ggammagamma_01_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334746_00
+- mc10_7TeV.115567.Pythia_Ggammagamma_02_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334747_00
+- mc10_7TeV.115568.Pythia_Ggammagamma_007_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334748_00
+- mc10_7TeV.115569.Pythia_Ggammagamma_015_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334749_00
+- mc10_7TeV.115570.Pythia_Ggammagamma_02_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334750_00

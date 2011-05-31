@@ -1,0 +1,6 @@
+container: user.PeterWaller.skims.Xabier.D4.NTUP_PHOTON.f368_m806_p541.DR_Skim_v{version}/
+outpattern: user.{user}.{progname}.{dsname}.v{version}/
+version: 2
+---
+datasets: []
+datasets_expanded: []

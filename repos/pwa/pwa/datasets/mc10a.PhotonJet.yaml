@@ -1,0 +1,159 @@
+container: user.{user}.{dsname}.v{version}/
+container_name: user.PeterWaller.mc10a.PhotonJet.v2/
+outpattern: user.{user}.{progname}.{dsname}.v{version}/
+pattern: mc10_7TeV.*PythiaPhotonJet*r2260_p548/
+shortname: mc10a.PhotonJet
+version: 2
+---
+datasets:
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-27 15:08:14'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 108081
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 999752
+  files: 100
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 208526
+  lastmodified: !!python/unicode '2011-05-30 13:41:53'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  nfiles: 100
+  period: MC
+  physicsshort: !!python/unicode 'PythiaPhotonJet_Unbinned35'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 108081
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 999752
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e598_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-27 15:08:15'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 108082
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 999675
+  files: 100
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 208509
+  lastmodified: !!python/unicode '2011-05-30 13:41:37'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  nfiles: 100
+  period: MC
+  physicsshort: !!python/unicode 'PythiaPhotonJet_Unbinned70'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 108082
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 999675
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e598_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-27 15:08:17'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 108083
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 999415
+  files: 100
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 208528
+  lastmodified: !!python/unicode '2011-05-30 13:41:26'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  nfiles: 100
+  period: MC
+  physicsshort: !!python/unicode 'PythiaPhotonJet_Unbinned140'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 108083
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 999415
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e598_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-27 15:08:19'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 108084
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 998898
+  files: 100
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 208530
+  lastmodified: !!python/unicode '2011-05-30 13:42:15'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  nfiles: 100
+  period: MC
+  physicsshort: !!python/unicode 'PythiaPhotonJet_Unbinned280'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 108084
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 998898
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e598_s933_s946_r2215_r2260_p548'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  atlasrelease: !!python/unicode '16.6.4'
+  created: !!python/unicode '2011-04-25 18:45:30'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
+  datasetnumber: 108087
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 999850
+  files: 100
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
+  good: true
+  identifier: 207461
+  lastmodified: !!python/unicode '2011-05-30 13:14:06'
+  logicaldatasetname: !!python/unicode 'mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548'
+  nfiles: 100
+  period: MC
+  physicsshort: !!python/unicode 'PythiaPhotonJet_Unbinned17'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  productionstep: !!python/unicode 'merge'
+  projectname: !!python/unicode 'mc10_7TeV'
+  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  run: 108087
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  totalevents: 999850
+  transformationpackage: !!python/unicode '16.6.4.2'
+  version: !!python/unicode 'e598_s933_s946_r2215_r2260_p548'
+datasets_expanded:
+- mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327612_00
+- mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327613_00
+- mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327614_00
+- mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327615_00
+- mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid326930_00

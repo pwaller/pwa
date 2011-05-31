@@ -1,5 +1,4 @@
 container: user.PeterWaller.HSG1SKIM.NTUP_PHOTON.f371_m824_p541_{version}/
-outpattern: user.{user}.{progname}.{dsname}.{version}/
 version: 'v0003-v0004'
 ---
 datasets: []
