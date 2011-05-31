@@ -1,6 +1,5 @@
 container: user.{user}.{dsname}.v{version}/
 container_name: user.PeterWaller.mc10a.hgg115.v1/
-outpattern: user.{user}.{progname}.{dsname}.v{version}/
 pattern: mc10_7TeV.*.McAtNlo_Jimmy_H115gamgam.*_r2260_p548/
 shortname: mc10a.hgg115
 version: 2
