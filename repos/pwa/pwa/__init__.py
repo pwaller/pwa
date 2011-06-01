@@ -29,6 +29,7 @@ class Engine(Application):
 
     mergeall = results.mergeall
     reduce = results.reduce
+    mergereduce = results.mergereduce
     dump = results.dump
     
     make_datasets = datasets.make_datasets
