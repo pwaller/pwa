@@ -1,8 +1,0 @@
-progname: gravcount
-dataset:
- - mc10.pythia_DP.yaml
- - mc10a.Ggamgam.yaml
- - mc10a.hgg115.yaml
- - mc10a.PhotonJet.yaml
- - mc10a.smdipho.yaml
-command: ./ana_run.sh pwa_graviton_counts --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml
