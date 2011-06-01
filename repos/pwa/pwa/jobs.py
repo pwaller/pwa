@@ -75,7 +75,7 @@ class Job(object):
         stdout, stderr = p.communicate()
         result = p.wait()
         if result:
-            print self.name, stderr
+            print self.name, stdout, stderr
             raise RuntimeError("Yuck..")
         print stdout
         self.save_for_reaper(stdout, output_name)
