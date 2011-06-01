@@ -41,6 +41,7 @@ class Job(object):
             jobset_info = load(open(jobset_filename)) if exists(jobset_filename) else {}
             
             jobset_info["tag"] = self.tag
+            jobset_info["name"] = self.name
             jobset_info.setdefault("datasets", set()).add(output_name)
             
             with open(jobset_filename, "w+") as fd:
@@ -74,7 +75,7 @@ class Job(object):
         stdout, stderr = p.communicate()
         result = p.wait()
         if result:
-            print 
+            print self.name, stderr
             raise RuntimeError("Yuck..")
         print stdout
         self.save_for_reaper(stdout, output_name)
