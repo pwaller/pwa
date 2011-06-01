@@ -108,12 +108,15 @@ def do_cutflow(ana, event):
         
     # Pass Trigger
     
-    # 2010 requirements:
-    # The above cut (event.RunNumber < 160889) also catches MC.
-    #trigger = any(ph.L1_e >= 14000 for ph in event.photons)
-    # Evan's cut:
-    #trigger = event.EF._2g15_loose or event.EF.e20_loose
-    trigger = event.EF._2g20_loose
+    if ana.project == "data10":
+        # 2010 requirements:
+        # The above cut (event.RunNumber < 160889) also catches MC.
+        if event.RunNumber < 160889:
+            trigger = any(ph.L1_e >= 14000 for ph in event.photons)
+        else:
+            trigger = event.EF._2g15_loose
+    elif ana.project == "data11":
+        trigger = event.EF._2g20_loose
     
     if not trigger: return
     counts(1)
