@@ -1,12 +1,17 @@
 
+import re
+
 from commands import getstatusoutput
-from os.path import basename
-from subprocess import Popen
+from os.path import basename, exists, join as pjoin
+from os import makedirs
+from subprocess import Popen, PIPE
 
 from commando import subcommand, param
-from yaml import load
+from yaml import load, dump
 
 import datasets
+
+RE_JOBSETID = re.compile("^\s*JobsetID\s*:\s*(\d+)\s*", re.M)
 
 def get_tag():
     status, output = getstatusoutput("git describe --tags --exact-match --dirty")
@@ -17,10 +22,29 @@ def get_tag():
     return output.strip()
 
 class Job(object):
-    def __init__(self, job_file):
+    def __init__(self, tag, job_file):
+        self.tag = tag
         self.name = basename(job_file).rpartition(".")[0]
         with open(job_file) as fd:
             self.job_info = load(fd)
+    
+    def save_for_reaper(self, output, output_name):
+        if not exists("need_reap"):
+            makedirs("need_reap")
+        jsid = RE_JOBSETID.search(output)
+        assert jsid
+        (jsid,) = jsid.groups()
+        jobset_filename = pjoin("need_reap", jsid + ".yaml")
+        
+        from lockfile import LockFile
+        with LockFile(jobset_filename):
+            jobset_info = load(open(jobset_filename)) if exists(jobset_filename) else {}
+            
+            jobset_info["tag"] = self.tag
+            jobset_info.setdefault("datasets", set()).add(output_name)
+            
+            with open(jobset_filename, "w+") as fd:
+                dump(jobset_info, fd)        
     
     def submit(self, dry_run=False):
         for ds in self.datasets:
@@ -31,7 +55,7 @@ class Job(object):
         ds_name = datasets.ds_name(dataset)
         
         input_name = ds_info["container_name"]
-        progname = ".".join([self.name, get_tag()])
+        progname = ".".join([self.name, self.tag])
         default_outpattern = "user.{user}.{progname}.{dsname}.v{version}/"
         outpattern = self.job_info.get("outpattern", default_outpattern)
         output_name = outpattern.format(progname=progname, user=datasets.user, dsname=ds_name, **ds_info)
@@ -40,18 +64,30 @@ class Job(object):
         
         tmpdirname = progname + "." + ds_name
         
-        p = Popen((["echo"] if dry_run else []) +
+        
+        p = Popen((["echo", "JobsetID : 1"] if dry_run else []) +
                   ["subscripts/generic_submit.sh", 
                    input_name, output_name, 
                    command, tmpdirname,
-                   self.job_info.get("submit_extra", "")])
-        p.wait()
+                   self.job_info.get("submit_extra", "")],
+                  stdout=PIPE, stderr=PIPE)
+        stdout, stderr = p.communicate()
+        result = p.wait()
+        if result:
+            print 
+            raise RuntimeError("Yuck..")
+        print stdout
+        self.save_for_reaper(stdout, output_name)
         
     @property
     def datasets(self):
         if isinstance(self.job_info["dataset"], list):
             return self.job_info["dataset"]
         return [self.job_info["dataset"]]
+
+def submit_job(args):
+    job, tag, dryrun = args
+    Job(tag, job).submit(dryrun)
 
 @subcommand('submit', help='Submit jobs')
 @param('jobs', nargs="+")
@@ -62,7 +98,10 @@ def submit(self, params):
         p = Popen(["./prepare_submit.sh"])
         assert not p.wait()
     
-    for job in params.jobs:
-        Job(job).submit(tag == "dryrun")
+    from multiprocessing import Pool
+    p = Pool(4)
+    
+    p.map(submit_job, [(job, tag, tag == "dryrun") for job in params.jobs])
+        
         
         
