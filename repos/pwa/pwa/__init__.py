@@ -39,4 +39,6 @@ class Engine(Application):
     submit = jobs.submit
 
 def main():
+    from minty.utils import init_root
+    init_root()
     Engine().run()
