@@ -1,8 +1,8 @@
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.data11_7TeV.NTUP_SMWZ.p580.v0/
+container_name: user.PeterWaller.data11_7TeV.NTUP_SMWZ.p580.v1/
 pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_SMWZ.*_p580/
 shortname: data11_7TeV.NTUP_SMWZ.p580
-version: 0
+version: 1
 ---
 datasets:
 - !!python/object:minty.metadata.ami.Dataset
