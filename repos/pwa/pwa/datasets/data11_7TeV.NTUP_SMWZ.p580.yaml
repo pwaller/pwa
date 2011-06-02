@@ -1,0 +1,6 @@
+container: user.{user}.{dsname}.v{version}/
+pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_SMWZ.*_p580/
+version: 0
+---
+datasets: []
+datasets_expanded: []
