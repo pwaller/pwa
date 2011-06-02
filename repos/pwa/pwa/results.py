@@ -1,4 +1,10 @@
+import re
+
+from os.path import basename
+
 from commando import Application, command, subcommand, version, store, true, param
+
+from yaml import load_all
 
 def get_bin_values(h):
     xa = h.GetXaxis()
@@ -73,8 +79,10 @@ def mergereduce(self, params):
 
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
+@param('--datasets')
 def dump(self, params):
     from DQUtils.ext.table_printer import pprint_table
+   
 
     from ROOT import TFile
     files = [TFile.Open(f) for f in params.files]
@@ -89,11 +97,46 @@ def dump(self, params):
     axes = [c.GetXaxis() for c in cutflows]
     labels = set(tuple(a.GetBinLabel(i) for i in xrange(1, a.GetNbins()+1))
                  for a in axes)
-    assert len(labels) == 1
+    assert len(labels) == 1, labels
     (labels,) = labels
-    numbers = [[f] + map(int, get_bin_values(h)) 
+    
+    if params.datasets:
+        _, data_info = load_all(open(params.datasets))
+        by_period, by_run = {}, {}
+        for d in data_info["datasets"]:
+            by_period.setdefault(d.period, []).append(d)
+            by_period.setdefault(d.period[0], []).append(d)
+            by_run.setdefault(d.run, []).append(d)
+            
+        def extra(f, h):
+            name = basename(f)
+            bad, events = "-", "N/A"
+            
+            if name.startswith("output"):
+                m = re.match("^output-P(.+)-R(\d+).root$", name)
+                if m:
+                    period, run = m.groups()
+                    events = sum(d.totalevents for d in by_run[int(run)])
+                
+                
+            elif name.startswith("period"):
+                period = name.split(".")[0][len("period"):]
+                if period in by_period:
+                    events = sum(d.totalevents for d in by_period[period])
+                    
+            elif name.startswith("all"):
+                ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
+                events = sum(d.totalevents for dd in ds for d in dd)
+            
+            if isinstance(events, int):
+                bad = "!" if events != h[1] else " "
+            return [bad, events]
+        extra_labels = ["?", "AMI events"]
+    else:
+        def extra(f, h): return []
+        extra_labels = []
+        
+    numbers = [[f] + extra(f, h) + map(int, get_bin_values(h)) 
                for f, h in zip([f.GetName() for f in files], cutflows)]
-    table = [["file"] + list(labels)] + numbers
-    from pprint import pprint
-    #pprint(table)
+    table = [["file"] + extra_labels + list(labels)] + numbers
     pprint_table(table)
