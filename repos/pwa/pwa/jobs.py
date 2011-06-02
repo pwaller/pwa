@@ -28,7 +28,7 @@ class Job(object):
         with open(job_file) as fd:
             self.job_info = load(fd)
     
-    def save_for_reaper(self, output, output_name):
+    def save_for_reaper(self, output, error, output_name):
         if not exists("need_reap"):
             makedirs("need_reap")
         jsid = RE_JOBSETID.search(output)
@@ -42,6 +42,8 @@ class Job(object):
             
             jobset_info["tag"] = self.tag
             jobset_info["name"] = self.name
+            jobset_info["output"] = output
+            jobset_info["error"] = output
             jobset_info.setdefault("datasets", set()).add(output_name)
             
             with open(jobset_filename, "w+") as fd:
@@ -77,8 +79,8 @@ class Job(object):
         if result:
             print self.name, stdout, stderr
             raise RuntimeError("Yuck..")
-        print stdout
-        self.save_for_reaper(stdout, output_name)
+        print stdout, stderr
+        self.save_for_reaper(stdout, stderr, output_name)
         
     @property
     def datasets(self):
