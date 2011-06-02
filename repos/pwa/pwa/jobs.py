@@ -105,6 +105,9 @@ def submit(self, params):
     p = Pool(4)
     
     p.map(submit_job, [(job, tag, tag == "dryrun") for job in params.jobs])
-        
-        
-        
+
+@subcommand('reaper', help='Wait for job to complete, download results')
+@param('jobs', nargs="+")
+def reaper(self, params):
+    from os import listdir
+    
