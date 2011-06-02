@@ -16,3 +16,6 @@
 [submodule "repos/commando"]
 	path = repos/commando
 	url = https://github.com/philips/commando.git
+[submodule "repos/hmerge"]
+	path = repos/hmerge
+	url = git@github.com:pwaller/hmerge.git
