@@ -1,23 +1,10 @@
 #! /usr/bin/env python
 
-from logging import getLogger; log = getLogger("pwa.graviton_counts")
-
-from math import cosh, sqrt
-
-from ROOT import gRandom, TNtuple
-
 from minty.base import AnalysisBase
 from minty.histograms import double_bins, mirror_bins, scale_bins
 from minty.main import make_main
 from minty.treedefs.egamma import Photon, Electron
 from minty.utils import delta_r
-
-def pairs_with_sum(inputs):
-    if len(inputs) < 2:
-        return
-    for i, o1 in enumerate(inputs):
-        for o2 in inputs[i+1:]:
-            yield o1+o2, (o1, o2)
 
 PHIBINS = 100, -3.1415, 3.1415
 def plot_kinematics(ana, name, obj):
@@ -115,6 +102,7 @@ def do_cutflow(ana, event):
             trigger = any(ph.L1_e >= 14000 for ph in event.photons)
         else:
             trigger = event.EF._2g15_loose
+            
     elif ana.project == "data11":
         trigger = event.EF._2g20_loose
     
@@ -137,11 +125,12 @@ def do_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(4)
     
+    # fiducal is abs(self.etas2) < 1.37 or 1.52 < abs(self.etas2) < 2.37
     good_photons = [ph for ph in good_photons if ph.pass_fiducial_eta]
     if len(good_photons) < 2: return
     counts(5)
     
-    good_photons = [ph for ph in good_photons if ph.pass_fiducial_pt]
+    good_photons = [ph for ph in good_photons if ph.cl.pt >= 25000]
     if len(good_photons) < 2: return
     counts(6)
     
@@ -171,9 +160,7 @@ def do_cutflow(ana, event):
         if ph.isConv:
             plot_kinematics(ana, "all_phs/post_loose/conv", ph)
             plot_shower    (ana, "all_phs/post_loose/conv", ph)
-    
-    ana.loose_events.add((event.RunNumber, event.LumiBlock, event.EventNumber))
-    
+        
     # Dump all loose events
     ana.should_dump = True
     
@@ -253,10 +240,6 @@ class GravitonAnalysis(AnalysisBase):
         
         super(GravitonAnalysis, self).flush()
 
-    def finalize(self):
-    
-        super(GravitonAnalysis, self).finalize()
-
-graviton_main = make_main(GravitonAnalysis)    
+graviton_main = make_main(GravitonAnalysis)
 if __name__ == "__main__":
     graviton_main()
