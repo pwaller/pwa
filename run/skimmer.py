@@ -5,13 +5,16 @@ from minty.main import make_main
 from math import cosh
 
 
-CUTFLOW = "named", "total", "vertex", ">2ph", ">2el", "passed", "1g1e"
-(                   TOTAL,   VERTEX,   GT2PH,  GT2EL,   PASSED,  OGOE) = range(len(CUTFLOW)-1)
+CUTFLOW = "named", "total", "2g20_loose", "vertex", ">2ph", ">2el", "passed", "1g1e"
+(                   TOTAL,   TRIGGER,     VERTEX,   GT2PH,  GT2EL,   PASSED,  OGOE) = range(len(CUTFLOW)-1)
 
 def do_skim(ana, event):
     counts = ana.h.get("cutflow", b=[CUTFLOW])
 
     counts(TOTAL)
+    
+    if not event.EF._2g20_loose: return
+    counts(TRIGGER)
     
     if not any(v.nTracks >= 3 for v in event.vertices): return
     counts(VERTEX)
