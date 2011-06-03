@@ -73,7 +73,7 @@ class Job(object):
                 input_dataset=input_name,
                 output_dataset=output_name,
                 tag=self.tag,
-                name=self.name)
+                name=self.name).split("\n").join("\\\n")
            
             p = Popen("prun " + prun, shell=True, stdout=PIPE, stderr=PIPE)
             
