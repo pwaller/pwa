@@ -85,16 +85,11 @@ def plot_boson_wconv(ana, name, ph1, ph2):
     else:
         plot_boson(ana, (name, "convneither"), ph1, ph2)
 
-CUTFLOW = ("named", "total", "trigger", "grl", "vertex", "nphot", "eta", "pt", 
-           "oq", "jetclean", "loose", "tight", "tightar")
-def do_cutflow(ana, event):
-    counts = ana.h.get("cutflow", b=[CUTFLOW])
-        
+def pass_event(counts, ana, event):
     # Total
     counts(0)
         
     # Pass Trigger
-    
     if ana.project == "data10":
         # 2010 requirements:
         # The above cut (event.RunNumber < 160889) also catches MC.
@@ -109,19 +104,27 @@ def do_cutflow(ana, event):
     if not trigger: return
     counts(1)
 
-    # Pass GRL
     if not event.is_grl: return
     counts(2)
     
-    # Pass vertex
     # Requirement for other paper: and v.z < 150. 
-    if not any(v.nTracks >= 3 for v in event.vertices):
-        return
+    if not any(v.nTracks >= 3 for v in event.vertices): return
     counts(3)
+    
+    return True
+
+PHOTON_CUTFLOW = (
+    "named", "total", "2g20_loose", "grl", "vertex", "nphot", "eta", "pt", 
+    "oq", "loose", "tight", "tightar", "larError", "jetcleaning")
+def do_photon_cutflow(ana, event):
+    counts = ana.h.get("photon_cutflow", b=[PHOTON_CUTFLOW])
+    
+    # Fills first four bins of `counts`
+    if not pass_event(counts, ana, event):
+        return
     
     good_photons = event.photons
     
-    # Pass nphot
     if len(good_photons) < 2: return
     counts(4)
     
@@ -134,25 +137,18 @@ def do_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(6)
     
-    # Pass object quality
     good_photons = [ph for ph in good_photons if ph.my_oq]
-    
     if len(good_photons) < 2: return
     counts(7)
     
-    # Pass jet cleaning
-    good_photons = [ph for ph in good_photons if ph.good_jet_quality]
-    if len(good_photons) < 2: return
-    counts(8)
-
+    # Plot kinematics and shower variables before loose cut, as well as after
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/pre_loose", ph)
         plot_shower    (ana, "all_phs/pre_loose", ph)
 
-    # Pass looseness
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
-    counts(9)
+    counts(8)
     
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/post_loose", ph)
@@ -160,20 +156,24 @@ def do_cutflow(ana, event):
         if ph.isConv:
             plot_kinematics(ana, "all_phs/post_loose/conv", ph)
             plot_shower    (ana, "all_phs/post_loose/conv", ph)
-        
-    # Dump all loose events
-    ana.should_dump = True
     
     ph1, ph2 = good_photons[:2]
     
-    # Pass tightness
-    if ph1.tight and ph2.tight:
-        counts(10)
+    # my_tight is robust_tight for data10, and "tight" for data11
+    if ph1.my_tight and ph2.my_tight:
+        counts(9)
         
-        # Pass AR
+        # Cuts for informational purposes.
         if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
-            counts(11)
+            counts(10)
+            
+            if not event.larError:
+                counts(11)
+                
+                if ph1.pass_jetcleaning and ph2.pass_jetcleaning:
+                    counts(12)
     
+    # Loose plots
     plot_kinematics (ana, "default/ph1", ph1)
     plot_kinematics (ana, "default/ph2", ph2)
     plot_shower     (ana, "default/ph1", ph1)
@@ -189,6 +189,7 @@ def do_cutflow(ana, event):
         ph1C = ph1.v15_corrections(vertex_z)
         ph2C = ph2.v15_corrections(vertex_z)
     
+    # Loose plots with corrections
     plot_kinematics (ana, "corrected/ph1", ph1C)
     plot_kinematics (ana, "corrected/ph2", ph2C)
     plot_boson_wconv(ana, "corrected", ph1C, ph2C)
@@ -205,7 +206,7 @@ def do_cutflow(ana, event):
             plot_shower    (ana, "all_phs/post_tight", ph)
             if ph.isConv:
                 plot_kinematics(ana, "all_phs/post_tight/conv", ph)
-                plot_shower    (ana, "all_phs/post_tight/conv", ph)    
+                plot_shower    (ana, "all_phs/post_tight/conv", ph)
     
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
@@ -225,7 +226,8 @@ class GravitonAnalysis(AnalysisBase):
         
         # Tasks to run in order
         self.tasks.extend([
-            do_cutflow,
+            do_photon_cutflow,
+            #do_electron_cutflow,
         ])
 
     def initialize_counters(self):
