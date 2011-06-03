@@ -17,8 +17,8 @@ def do_skim(ana, event):
     counts(VERTEX)
     
     good_phs = [ph for ph in event.photons
-                if ph.cl.E / cosh(ph.etas2) > 25000 and
-                   abs(ph.etas2) < 1.37 or 1.52 < abs(ph.etas2) < 2.37 and
+                if abs(ph.etas2) < 1.37 or 1.52 < abs(ph.etas2) < 2.37 and
+                   ph.cl.E / cosh(ph.etas2) > 25000 and
                    ph.loose and
                    not (ph.OQ & 34214)]
     
@@ -27,8 +27,8 @@ def do_skim(ana, event):
     # Hit dependent pt = cl_E / cosh(track eta) if >= 4 tracks else cl_pt
     good_els = [el for el in event.electrons
                 if el.author not in (1, 3) and
-                   el.hit_dependent_pt > 25000 and
                    abs(el.etas2) < 1.37 or 1.52 < abs(el.etas2) < 2.37 and
+                   el.hit_dependent_pt > 25000 and
                    el.loose and
                    not (el.OQ & 34214)]
                    
