@@ -1,0 +1,21 @@
+progname: skim
+dataset: data11_7TeV.NTUP_PHOTON.p541.yaml
+command: |
+    ./ana_run.sh ./skimmer.py 
+        --dump=skimmed.root 
+        --output=cf.root 
+        --run-specific-output 
+        --release=rel16 
+        --project=data11 
+        inputs.txt
+prun: |
+    --extFile=./analysis.pybundle
+    --outputs=cf-*.root*,skimmed.root
+    --exec="{command}"
+    --tmpDir=/tmp/pwaller/pass.{tag}.{name}/
+    --inDS={input_dataset}
+    --outDS={output_dataset}
+    --writeInputToTxt=IN:inputs.txt
+    --nGBPerJob=4
+    --athenaTag=16.6.3
+    --noBuild
