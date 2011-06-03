@@ -67,19 +67,36 @@ class Job(object):
         
         tmpdirname = progname + "." + ds_name
         
+        if "prun" in self.job_info:
+            prun = self.job_info["prun"].format(
+                command=command,
+                input_dataset=input_name,
+                output_dataset=output_name,
+                tag=self.tag,
+                name=self.name)
+           
+            p = Popen("prun " + prun, shell=True, stdout=PIPE, stderr=PIPE)
+            
+            stdout, stderr = p.communicate()
+            result = p.wait()
+            if result:
+                print self.name, stdout, stderr
+                raise RuntimeError("Yuck..")
+            print stdout, stderr
+        else:
         
-        p = Popen((["echo", "JobsetID : 1"] if dry_run else []) +
-                  ["subscripts/generic_submit.sh", 
-                   input_name, output_name, 
-                   command, tmpdirname,
-                   self.job_info.get("submit_extra", "")],
-                  stdout=PIPE, stderr=PIPE)
-        stdout, stderr = p.communicate()
-        result = p.wait()
-        if result:
-            print self.name, stdout, stderr
-            raise RuntimeError("Yuck..")
-        print stdout, stderr
+            p = Popen((["echo", "JobsetID : 1"] if dry_run else []) +
+                      ["subscripts/generic_submit.sh", 
+                       input_name, output_name, 
+                       command, tmpdirname,
+                       self.job_info.get("submit_extra", "")],
+                      stdout=PIPE, stderr=PIPE)
+            stdout, stderr = p.communicate()
+            result = p.wait()
+            if result:
+                print self.name, stdout, stderr
+                raise RuntimeError("Yuck..")
+            print stdout, stderr
         self.save_for_reaper(stdout, stderr, output_name)
         
     @property
