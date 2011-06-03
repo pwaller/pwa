@@ -69,12 +69,13 @@ class Job(object):
         
         if "prun" in self.job_info:
             prun = self.job_info["prun"].format(
-                command=command,
+                command=command.replace("\n", ""),
                 input_dataset=input_name,
                 output_dataset=output_name,
                 tag=self.tag,
-                name=self.name).split("\n").join("\\\n")
-           
+                name=self.name).replace("\n", " \\\n")
+            print prun
+            
             p = Popen("prun " + prun, shell=True, stdout=PIPE, stderr=PIPE)
             
             stdout, stderr = p.communicate()

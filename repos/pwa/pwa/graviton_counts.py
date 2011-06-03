@@ -208,6 +208,77 @@ def do_photon_cutflow(ana, event):
                 plot_kinematics(ana, "all_phs/post_tight/conv", ph)
                 plot_shower    (ana, "all_phs/post_tight/conv", ph)
     
+ELECTRON_CUTFLOW = (
+    "named", "total",  "2g20_loose", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
+    "oq",  "medium",  "tight",  "larError",  "jetcleaning")
+(            EL_TOTAL, EL_2G20L,     EL_GRL, EL_VTX,    EL_N, EL_AUTHOR,  EL_ETA, EL_PT, 
+    EL_OQ, EL_MEDIUM, EL_TIGHT, EL_LARERROR, EL_JETCLEANING) = range(len(ELECTRON_CUTFLOW)-1)
+def do_electron_cutflow(ana, event):
+    counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
+    
+    # Fills first four bins of `counts`
+    if not pass_event(counts, ana, event):
+        return
+    
+    good_electrons = event.electrons
+    
+    if len(good_electrons) < 2: return
+    counts(EL_N)
+    
+    good_electrons = [el for el in good_electrons if el.author not in (1, 3)]
+    counts(EL_AUTHOR)
+    
+    # fiducal is abs(self.etas2) < 1.37 or 1.52 < abs(self.etas2) < 2.37
+    good_electrons = [el for el in good_electrons if el.pass_fiducial_eta]
+    if len(good_electrons) < 2: return
+    counts(EL_ETA)
+    
+    good_electrons = [el for el in good_electrons if el.cl.pt >= 25000]
+    if len(good_electrons) < 2: return
+    counts(EL_PT)
+    
+    good_electrons = [el for el in good_electrons if el.my_oq]
+    if len(good_electrons) < 2: return
+    counts(EL_OQ)
+    
+    # Plot kinematics and shower variables before loose cut, as well as after
+    for el in good_electrons:
+        plot_kinematics(ana, "all_els/pre_loose", el)
+        plot_shower    (ana, "all_els/pre_loose", el)
+
+    good_electrons = [el for el in good_electrons if el.medium]
+    if len(good_electrons) < 2: return
+    counts(EL_MEDIUM)
+    
+    for el in good_electrons:
+        plot_kinematics(ana, "all_els/post_loose", el)
+        plot_shower    (ana, "all_els/post_loose", el)
+    
+    el1, el2 = good_electrons[:2]
+    
+    # my_tight is robust_tight for data10, and "tight" for data11
+    if el1.tight and el2.tight:
+        counts(EL_TIGHT)
+        
+        if not event.larError:
+            counts(EL_LARERROR)
+            
+            if el1.pass_jetcleaning and el2.pass_jetcleaning:
+                counts(EL_JETCLEANING)
+    
+    # Loose plots
+    plot_kinematics(ana, "default/el1", el1)
+    plot_kinematics(ana, "default/el2", el2)
+    plot_shower    (ana, "default/el1", el1)
+    plot_shower    (ana, "default/el2", el2)
+    plot_boson     (ana, "default", el1, el2)
+        
+    # Final tight plots
+    for el in good_electrons:
+        if el.tight:
+            plot_kinematics(ana, "all_els/post_tight", el)
+            plot_shower    (ana, "all_els/post_tight", el)
+
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
     
@@ -227,7 +298,7 @@ class GravitonAnalysis(AnalysisBase):
         # Tasks to run in order
         self.tasks.extend([
             do_photon_cutflow,
-            #do_electron_cutflow,
+            do_electron_cutflow,
         ])
 
     def initialize_counters(self):

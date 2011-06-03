@@ -79,6 +79,7 @@ def mergereduce(self, params):
 
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
+@param('--name', default="cutflow")
 @param('--datasets')
 def dump(self, params):
     from DQUtils.ext.table_printer import pprint_table
@@ -93,10 +94,11 @@ def dump(self, params):
         else:
             good_files.append(f)
     files = good_files
-    cutflows = [f.cutflow for f in files]
+    cutflows = [f.Get(params.name)  for f in files]
     axes = [c.GetXaxis() for c in cutflows]
     labels = set(tuple(a.GetBinLabel(i) for i in xrange(1, a.GetNbins()+1))
                  for a in axes)
+    print labels
     assert len(labels) == 1, labels
     (labels,) = labels
     
