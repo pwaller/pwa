@@ -225,7 +225,7 @@ def do_electron_cutflow(ana, event):
     if len(good_electrons) < 2: return
     counts(EL_N)
     
-    good_electrons = [el for el in good_electrons if el.author not in (1, 3)]
+    good_electrons = [el for el in good_electrons if el.author in (1, 3)]
     counts(EL_AUTHOR)
     
     # fiducal is abs(self.etas2) < 1.37 or 1.52 < abs(self.etas2) < 2.37

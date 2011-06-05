@@ -29,7 +29,7 @@ def do_skim(ana, event):
     
     # Hit dependent pt = cl_E / cosh(track eta) if >= 4 tracks else cl_pt
     good_els = [el for el in event.electrons
-                if el.author not in (1, 3) and
+                if el.author in (1, 3) and
                    abs(el.etas2) < 1.37 or 1.52 < abs(el.etas2) < 2.37 and
                    el.hit_dependent_pt > 25000 and
                    el.loose and
