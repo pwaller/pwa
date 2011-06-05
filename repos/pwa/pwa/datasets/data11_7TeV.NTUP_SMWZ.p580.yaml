@@ -1,8 +1,8 @@
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.data11_7TeV.NTUP_SMWZ.p580.v1/
+container_name: user.PeterWaller.data11_7TeV.NTUP_SMWZ.p580.v2/
 pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_SMWZ.*_p580/
 shortname: data11_7TeV.NTUP_SMWZ.p580
-version: 1
+version: 2
 ---
 datasets:
 - !!python/object:minty.metadata.ami.Dataset
@@ -18,7 +18,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56504
-  lastmodified: !!python/unicode '2011-05-28 17:58:05'
+  lastmodified: !!python/unicode '2011-06-04 12:09:38'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177531.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177531.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580'
@@ -142,7 +142,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56391
-  lastmodified: !!python/unicode '2011-05-29 04:37:26'
+  lastmodified: !!python/unicode '2011-06-04 12:09:45'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177682.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177682.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580'
@@ -204,7 +204,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56543
-  lastmodified: !!python/unicode '2011-05-28 17:58:18'
+  lastmodified: !!python/unicode '2011-06-04 14:02:01'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177924.physics_Egamma.merge.NTUP_SMWZ.f350_m760_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177924.physics_Egamma.merge.NTUP_SMWZ.f350_m760_p580'
@@ -235,7 +235,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56555
-  lastmodified: !!python/unicode '2011-05-28 17:58:40'
+  lastmodified: !!python/unicode '2011-06-04 14:01:59'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177929.physics_Egamma.merge.NTUP_SMWZ.f350_m760_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177929.physics_Egamma.merge.NTUP_SMWZ.f350_m760_p580'
@@ -266,7 +266,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56558
-  lastmodified: !!python/unicode '2011-05-28 17:58:44'
+  lastmodified: !!python/unicode '2011-06-04 11:54:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177965.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177965.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580'
@@ -297,7 +297,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56563
-  lastmodified: !!python/unicode '2011-05-28 16:52:16'
+  lastmodified: !!python/unicode '2011-06-04 11:54:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00177986.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00177986.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -359,7 +359,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56583
-  lastmodified: !!python/unicode '2011-05-28 16:54:39'
+  lastmodified: !!python/unicode '2011-06-04 10:03:51'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178020.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178020.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -390,7 +390,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56589
-  lastmodified: !!python/unicode '2011-05-28 16:54:39'
+  lastmodified: !!python/unicode '2011-06-04 08:14:09'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178021.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178021.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -408,6 +408,37 @@ datasets:
   streamname: !!python/unicode 'physics_Egamma'
   totalevents: 157208
   version: !!python/unicode 'r2276_p516_p523_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPS-004-04'
+  created: !!python/unicode '2011-05-27 05:31:35'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 105
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 56592
+  lastmodified: !!python/unicode '2011-06-03 14:22:10'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00178023.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00178023.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580'
+  nfiles: 1
+  period: UNK
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 178023
+  runnumber: 178023
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 105
+  version: !!python/unicode 'f351_m765_p580'
 - !!python/object:minty.metadata.ami.Dataset
   amistatus: !!python/unicode 'VALID'
   beamtype: !!python/unicode 'collisions'
@@ -452,7 +483,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56609
-  lastmodified: !!python/unicode '2011-05-28 16:54:40'
+  lastmodified: !!python/unicode '2011-06-04 10:03:56'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178026.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178026.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -483,7 +514,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56662
-  lastmodified: !!python/unicode '2011-05-28 16:54:44'
+  lastmodified: !!python/unicode '2011-06-04 08:45:15'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178044.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178044.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -514,7 +545,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56670
-  lastmodified: !!python/unicode '2011-05-28 16:54:41'
+  lastmodified: !!python/unicode '2011-06-04 12:09:47'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178047.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178047.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -545,7 +576,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56675
-  lastmodified: !!python/unicode '2011-05-28 17:58:37'
+  lastmodified: !!python/unicode '2011-06-04 14:01:51'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00178109.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00178109.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580'
@@ -607,7 +638,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56691
-  lastmodified: !!python/unicode '2011-05-28 18:02:14'
+  lastmodified: !!python/unicode '2011-06-04 14:02:21'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179710.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179710.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
@@ -638,7 +669,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56694
-  lastmodified: !!python/unicode '2011-05-28 18:02:02'
+  lastmodified: !!python/unicode '2011-06-04 14:02:10'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179725.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179725.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
@@ -669,7 +700,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56700
-  lastmodified: !!python/unicode '2011-05-28 18:02:07'
+  lastmodified: !!python/unicode '2011-06-04 14:02:18'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179739.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179739.physics_Egamma.merge.NTUP_SMWZ.f361_m796_p580'
@@ -700,7 +731,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56712
-  lastmodified: !!python/unicode '2011-05-28 18:02:13'
+  lastmodified: !!python/unicode '2011-06-04 12:09:38'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179771.physics_Egamma.merge.NTUP_SMWZ.f362_m801_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179771.physics_Egamma.merge.NTUP_SMWZ.f362_m801_p580'
@@ -731,7 +762,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56717
-  lastmodified: !!python/unicode '2011-05-28 18:04:05'
+  lastmodified: !!python/unicode '2011-06-04 11:54:10'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179804.physics_Egamma.merge.NTUP_SMWZ.f363_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179804.physics_Egamma.merge.NTUP_SMWZ.f363_m806_p580'
@@ -762,7 +793,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56724
-  lastmodified: !!python/unicode '2011-05-28 18:02:19'
+  lastmodified: !!python/unicode '2011-06-04 12:09:40'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179938.physics_Egamma.merge.NTUP_SMWZ.f365_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179938.physics_Egamma.merge.NTUP_SMWZ.f365_m806_p580'
@@ -793,7 +824,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56728
-  lastmodified: !!python/unicode '2011-05-28 18:03:59'
+  lastmodified: !!python/unicode '2011-06-04 14:02:21'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00179939.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00179939.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580'
@@ -815,6 +846,37 @@ datasets:
   amistatus: !!python/unicode 'VALID'
   beamtype: !!python/unicode 'collisions'
   conditionstag: !!python/unicode 'COMCOND-BLKPST-004-05'
+  created: !!python/unicode '2011-05-27 06:08:53'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 74341
+  files: 6
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 56740
+  lastmodified: !!python/unicode '2011-06-03 15:59:01'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00179940.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00179940.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580'
+  nfiles: 6
+  period: !!python/unicode 'D3'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 179940
+  runnumber: 179940
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 74341
+  version: !!python/unicode 'f366_m806_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-05'
   created: !!python/unicode '2011-05-27 06:08:55'
   createdby: !!python/unicode 'root'
   creationcomment: !!python/unicode 'group production SM WZ'
@@ -824,7 +886,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56742
-  lastmodified: !!python/unicode '2011-05-31 13:49:43'
+  lastmodified: !!python/unicode '2011-06-04 14:34:12'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180122.physics_Egamma.merge.NTUP_SMWZ.f367_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180122.physics_Egamma.merge.NTUP_SMWZ.f367_m806_p580'
@@ -855,7 +917,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56753
-  lastmodified: !!python/unicode '2011-05-30 04:27:14'
+  lastmodified: !!python/unicode '2011-06-04 12:25:39'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180124.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180124.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -886,7 +948,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56757
-  lastmodified: !!python/unicode '2011-05-28 18:04:08'
+  lastmodified: !!python/unicode '2011-06-04 12:25:39'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180139.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180139.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -917,7 +979,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56768
-  lastmodified: !!python/unicode '2011-05-28 18:03:25'
+  lastmodified: !!python/unicode '2011-06-04 14:02:06'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180144.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180144.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -948,7 +1010,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56773
-  lastmodified: !!python/unicode '2011-05-28 18:03:44'
+  lastmodified: !!python/unicode '2011-06-04 14:02:10'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180149.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180149.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -979,7 +1041,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56780
-  lastmodified: !!python/unicode '2011-05-28 18:04:09'
+  lastmodified: !!python/unicode '2011-06-04 11:54:09'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180153.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180153.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -996,6 +1058,68 @@ datasets:
   status: !!python/unicode 'EVENTS_AVAILABLE'
   streamname: !!python/unicode 'physics_Egamma'
   totalevents: 2008370
+  version: !!python/unicode 'f368_m806_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-05'
+  created: !!python/unicode '2011-05-27 06:09:13'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 4344169
+  files: 268
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 56783
+  lastmodified: !!python/unicode '2011-06-04 07:21:34'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00180164.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00180164.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
+  nfiles: 268
+  period: !!python/unicode 'D4'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 180164
+  runnumber: 180164
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 4344169
+  version: !!python/unicode 'f368_m806_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-05'
+  created: !!python/unicode '2011-05-27 06:09:15'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 23532
+  files: 2
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 56790
+  lastmodified: !!python/unicode '2011-06-03 15:59:03'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00180212.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00180212.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
+  nfiles: 2
+  period: !!python/unicode 'D4'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 180212
+  runnumber: 180212
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 23532
   version: !!python/unicode 'f368_m806_p580'
 - !!python/object:minty.metadata.ami.Dataset
   amistatus: !!python/unicode 'VALID'
@@ -1041,7 +1165,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56807
-  lastmodified: !!python/unicode '2011-05-28 18:05:04'
+  lastmodified: !!python/unicode '2011-06-04 09:00:58'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180225.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180225.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -1072,7 +1196,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56817
-  lastmodified: !!python/unicode '2011-05-28 18:04:34'
+  lastmodified: !!python/unicode '2011-06-04 14:02:23'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180241.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180241.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -1103,7 +1227,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56820
-  lastmodified: !!python/unicode '2011-05-29 08:07:08'
+  lastmodified: !!python/unicode '2011-06-04 14:02:17'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180242.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180242.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580'
@@ -1134,7 +1258,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56830
-  lastmodified: !!python/unicode '2011-05-28 18:04:53'
+  lastmodified: !!python/unicode '2011-06-04 10:03:52'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180309.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180309.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
@@ -1165,7 +1289,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56837
-  lastmodified: !!python/unicode '2011-05-28 18:05:32'
+  lastmodified: !!python/unicode '2011-06-04 11:54:12'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180400.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180400.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
@@ -1196,7 +1320,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56841
-  lastmodified: !!python/unicode '2011-05-28 18:04:20'
+  lastmodified: !!python/unicode '2011-06-04 14:02:18'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180448.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180448.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
@@ -1227,7 +1351,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56852
-  lastmodified: !!python/unicode '2011-05-28 22:43:03'
+  lastmodified: !!python/unicode '2011-06-04 14:02:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180481.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180481.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
@@ -1258,7 +1382,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56854
-  lastmodified: !!python/unicode '2011-05-28 18:04:53'
+  lastmodified: !!python/unicode '2011-06-04 10:36:19'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180614.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180614.physics_Egamma.merge.NTUP_SMWZ.f369_m812_p580'
@@ -1289,7 +1413,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56860
-  lastmodified: !!python/unicode '2011-05-29 08:08:01'
+  lastmodified: !!python/unicode '2011-06-04 14:02:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180636.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180636.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
@@ -1320,7 +1444,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56867
-  lastmodified: !!python/unicode '2011-05-28 22:42:09'
+  lastmodified: !!python/unicode '2011-06-04 14:02:12'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180664.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180664.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
@@ -1351,7 +1475,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56875
-  lastmodified: !!python/unicode '2011-05-28 18:05:13'
+  lastmodified: !!python/unicode '2011-06-04 10:03:59'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180710.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180710.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580'
@@ -1404,6 +1528,37 @@ datasets:
   amistatus: !!python/unicode 'VALID'
   beamtype: !!python/unicode 'collisions'
   conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-05-26 15:03:38'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 39108
+  files: 16
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 55835
+  lastmodified: !!python/unicode '2011-06-03 20:04:55'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00182013.physics_Egamma.merge.NTUP_SMWZ.f378_m841_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00182013.physics_Egamma.merge.NTUP_SMWZ.f378_m841_p580'
+  nfiles: 16
+  period: !!python/unicode 'F1'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 182013
+  runnumber: 182013
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 39108
+  version: !!python/unicode 'f378_m841_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
   created: !!python/unicode '2011-05-26 15:03:34'
   createdby: !!python/unicode 'root'
   creationcomment: !!python/unicode 'group production SM WZ'
@@ -1413,7 +1568,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 55829
-  lastmodified: !!python/unicode '2011-05-28 15:00:22'
+  lastmodified: !!python/unicode '2011-06-03 08:49:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182161.physics_Egamma.merge.NTUP_SMWZ.f379_m849_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182161.physics_Egamma.merge.NTUP_SMWZ.f379_m849_p580'
@@ -1444,7 +1599,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 55822
-  lastmodified: !!python/unicode '2011-05-28 15:00:46'
+  lastmodified: !!python/unicode '2011-06-03 08:33:09'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182284.physics_Egamma.merge.NTUP_SMWZ.f380_m855_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182284.physics_Egamma.merge.NTUP_SMWZ.f380_m855_p580'
@@ -1506,7 +1661,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 55806
-  lastmodified: !!python/unicode '2011-05-28 15:00:50'
+  lastmodified: !!python/unicode '2011-06-03 08:33:03'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182372.physics_Egamma.merge.NTUP_SMWZ.f380_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182372.physics_Egamma.merge.NTUP_SMWZ.f380_m861_p580'
@@ -1537,7 +1692,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 55801
-  lastmodified: !!python/unicode '2011-05-29 16:35:03'
+  lastmodified: !!python/unicode '2011-06-03 11:26:35'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182424.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182424.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1723,7 +1878,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 56419
-  lastmodified: !!python/unicode '2011-05-28 15:09:53'
+  lastmodified: !!python/unicode '2011-06-03 08:17:26'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182486.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182486.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1754,7 +1909,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 58815
-  lastmodified: !!python/unicode '2011-05-29 02:14:07'
+  lastmodified: !!python/unicode '2011-06-04 13:29:18'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182516.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182516.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1785,7 +1940,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 58809
-  lastmodified: !!python/unicode '2011-05-28 23:10:08'
+  lastmodified: !!python/unicode '2011-06-04 12:09:46'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182518.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182518.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1816,7 +1971,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 58799
-  lastmodified: !!python/unicode '2011-05-29 02:13:36'
+  lastmodified: !!python/unicode '2011-06-04 13:13:09'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182519.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182519.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1847,7 +2002,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 59739
-  lastmodified: !!python/unicode '2011-05-31 07:35:37'
+  lastmodified: !!python/unicode '2011-06-05 12:19:14'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182726.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182726.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580'
@@ -1878,7 +2033,7 @@ datasets:
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 60612
-  lastmodified: !!python/unicode '2011-06-01 07:24:22'
+  lastmodified: !!python/unicode '2011-06-05 12:19:11'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00182747.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00182747.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
@@ -1927,6 +2082,130 @@ datasets:
   streamname: !!python/unicode 'physics_Egamma'
   totalevents: 500898
   version: !!python/unicode 'f382_m866_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-01 13:24:48'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 3619975
+  files: 268
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 61276
+  lastmodified: !!python/unicode '2011-06-03 14:23:13'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00182787.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00182787.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  nfiles: 268
+  period: !!python/unicode 'G2'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 182787
+  runnumber: 182787
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 3619975
+  version: !!python/unicode 'f382_m866_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-03 01:57:56'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 3086902
+  files: 229
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 64789
+  lastmodified: !!python/unicode '2011-06-03 20:35:13'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00182796.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00182796.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  nfiles: 229
+  period: !!python/unicode 'G2'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 182796
+  runnumber: 182796
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 3086902
+  version: !!python/unicode 'f382_m866_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-03 01:57:54'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 535666
+  files: 40
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 64781
+  lastmodified: !!python/unicode '2011-06-03 13:47:46'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00182879.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00182879.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  nfiles: 40
+  period: !!python/unicode 'G2'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 182879
+  runnumber: 182879
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 535666
+  version: !!python/unicode 'f382_m866_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-03 01:57:52'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 445042
+  files: 34
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 64770
+  lastmodified: !!python/unicode '2011-06-03 17:50:27'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00182886.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00182886.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580'
+  nfiles: 34
+  period: !!python/unicode 'G2'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 182886
+  runnumber: 182886
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 445042
+  version: !!python/unicode 'f382_m866_p580'
 datasets_expanded:
 - data11_7TeV.00177531.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373524_00
 - data11_7TeV.00177539.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373525_00
@@ -1941,6 +2220,7 @@ datasets_expanded:
 - data11_7TeV.00178019.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580_tid373534_00
 - data11_7TeV.00178020.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580_tid373535_00
 - data11_7TeV.00178021.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580_tid373536_00
+- data11_7TeV.00178023.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580_tid373537_00
 - data11_7TeV.00178024.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580_tid373538_00
 - data11_7TeV.00178026.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580_tid373539_00
 - data11_7TeV.00178044.physics_Egamma.merge.NTUP_SMWZ.r2276_p516_p523_p580_tid373540_00
@@ -1954,12 +2234,15 @@ datasets_expanded:
 - data11_7TeV.00179804.physics_Egamma.merge.NTUP_SMWZ.f363_m806_p580_tid373548_00
 - data11_7TeV.00179938.physics_Egamma.merge.NTUP_SMWZ.f365_m806_p580_tid373549_00
 - data11_7TeV.00179939.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580_tid373550_00
+- data11_7TeV.00179940.physics_Egamma.merge.NTUP_SMWZ.f366_m806_p580_tid373551_00
 - data11_7TeV.00180122.physics_Egamma.merge.NTUP_SMWZ.f367_m806_p580_tid373552_00
 - data11_7TeV.00180124.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373553_00
 - data11_7TeV.00180139.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373554_00
 - data11_7TeV.00180144.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373555_00
 - data11_7TeV.00180149.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373556_00
 - data11_7TeV.00180153.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373557_00
+- data11_7TeV.00180164.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373558_00
+- data11_7TeV.00180212.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373559_00
 - data11_7TeV.00180224.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373560_00
 - data11_7TeV.00180225.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373561_00
 - data11_7TeV.00180241.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580_tid373562_00
@@ -1973,6 +2256,7 @@ datasets_expanded:
 - data11_7TeV.00180664.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580_tid373570_00
 - data11_7TeV.00180710.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580_tid373571_00
 - data11_7TeV.00180776.physics_Egamma.merge.NTUP_SMWZ.f371_m824_p580_tid369046_00
+- data11_7TeV.00182013.physics_Egamma.merge.NTUP_SMWZ.f378_m841_p580_tid371396_00
 - data11_7TeV.00182161.physics_Egamma.merge.NTUP_SMWZ.f379_m849_p580_tid371395_00
 - data11_7TeV.00182284.physics_Egamma.merge.NTUP_SMWZ.f380_m855_p580_tid371394_00
 - data11_7TeV.00182346.physics_Egamma.merge.NTUP_SMWZ.f380_m855_p580_tid371393_00
@@ -1990,3 +2274,7 @@ datasets_expanded:
 - data11_7TeV.00182726.physics_Egamma.merge.NTUP_SMWZ.f381_m861_p580_tid376538_00
 - data11_7TeV.00182747.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid377072_00
 - data11_7TeV.00182766.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid377252_00
+- data11_7TeV.00182787.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid383271_00
+- data11_7TeV.00182796.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384791_00
+- data11_7TeV.00182879.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384790_00
+- data11_7TeV.00182886.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384789_00
