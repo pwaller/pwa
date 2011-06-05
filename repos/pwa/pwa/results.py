@@ -38,11 +38,11 @@ def mergeall(self, params):
     pool.map(mp_merge, to_merge)
 
 @subcommand('reduce', help="Reduce many output- files to files by period.")
-@store('-d', '--dummy')
+@store('-p', '--prefix', default="output-")
 def reduce(self, params):
     from os import listdir
     files = [f for f in listdir(".") 
-             if f.startswith("output-") and f.endswith(".root")]
+             if f.startswith(params.prefix) and f.endswith(".root")]
     
     def get_period(s): return s.split("-")[1].split("_")[-1]
     
@@ -76,6 +76,27 @@ def reduce(self, params):
 def mergereduce(self, params):
     mergeall(self, params)
     reduce(self, params)
+    
+def custom_sort(inputs):
+    import re
+    priorities = [
+        lambda x: x == "all.root",
+        lambda x: bool(re.match(r"period[A-Z]+\.root", x)),
+        lambda x: bool(re.match(r"period[A-Z]+\d+\.root", x)),
+    ]
+    result = [[] for i in priorities] + [[]]
+    for name in inputs:
+        matched = False
+        for i, matcher in enumerate(priorities):
+            if matcher(name):
+                matched = i
+                break
+        if matched is False:
+            matched = len(priorities)
+        result[matched].append(name)
+    for r in result: r.sort()
+    from itertools import chain
+    return chain(*result)
 
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
@@ -84,12 +105,13 @@ def mergereduce(self, params):
 def dump(self, params):
     from DQUtils.ext.table_printer import pprint_table
    
+    inputs = custom_sort(params.files)
 
     from ROOT import TFile
-    files = [TFile.Open(f) for f in params.files]
+    files = [TFile.Open(f) for f in inputs]
     good_files = []
     for f in files:
-        if not f.cutflow:
+        if not f.Get(params.name):
             print "Warning, ignoring", f.GetName()
         else:
             good_files.append(f)
