@@ -157,6 +157,8 @@ def do_photon_cutflow(ana, event):
             plot_kinematics(ana, "all_phs/post_loose/conv", ph)
             plot_shower    (ana, "all_phs/post_loose/conv", ph)
     
+    good_photons.sort(key=lambda o: o.pt, reverse=True)
+    
     ph1, ph2 = good_photons[:2]
     
     # my_tight is robust_tight for data10, and "tight" for data11
@@ -265,6 +267,8 @@ def do_electron_cutflow(ana, event):
     good_electrons = [el for el in good_electrons if el.pass_blayer_check]
     if len(good_electrons) < 2: return
     counts(EL_BLAYER)
+    
+    good_electrons.sort(key=lambda o: o.pt, reverse=True)
     
     el1, el2 = good_electrons[:2]
     
