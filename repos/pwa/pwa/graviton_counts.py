@@ -174,11 +174,11 @@ def do_photon_cutflow(ana, event):
                     counts(12)
     
     # Loose plots
-    plot_kinematics (ana, "default/ph1", ph1)
-    plot_kinematics (ana, "default/ph2", ph2)
-    plot_shower     (ana, "default/ph1", ph1)
-    plot_shower     (ana, "default/ph2", ph2)
-    plot_boson_wconv(ana, "default", ph1, ph2)
+    plot_kinematics (ana, "default/ph/1", ph1)
+    plot_kinematics (ana, "default/ph/2", ph2)
+    plot_shower     (ana, "default/ph/1", ph1)
+    plot_shower     (ana, "default/ph/2", ph2)
+    plot_boson_wconv(ana, "default/ph", ph1, ph2)
     
     vertex_z = event.vertices[0].z
     
@@ -190,14 +190,14 @@ def do_photon_cutflow(ana, event):
         ph2C = ph2.v15_corrections(vertex_z)
     
     # Loose plots with corrections
-    plot_kinematics (ana, "corrected/ph1", ph1C)
-    plot_kinematics (ana, "corrected/ph2", ph2C)
-    plot_boson_wconv(ana, "corrected", ph1C, ph2C)
+    plot_kinematics (ana, "corrected/ph/1", ph1C)
+    plot_kinematics (ana, "corrected/ph/2", ph2C)
+    plot_boson_wconv(ana, "corrected/ph", ph1C, ph2C)
     
     if ph1.my_tight and ph2.my_tight:
-        plot_kinematics (ana, "corrected/mytight/ph1", ph1C)
-        plot_kinematics (ana, "corrected/mytight/ph2", ph2C)
-        plot_boson_wconv(ana, "corrected/mytight", ph1C, ph2C)
+        plot_kinematics (ana, "corrected/ph/tight/1", ph1C)
+        plot_kinematics (ana, "corrected/ph/tight/2", ph2C)
+        plot_boson_wconv(ana, "corrected/ph/tight", ph1C, ph2C)
         
     # Final tight plots
     for ph in good_photons:
@@ -210,9 +210,9 @@ def do_photon_cutflow(ana, event):
     
 ELECTRON_CUTFLOW = (
     "named", "total",  "2g20_loose", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
-    "oq",  "medium",  "tight",  "larError",  "jetcleaning")
+    "oq",  "loose",  "medium",  "blayer",  "larError",  "jetcleaning",  "tight")
 (            EL_TOTAL, EL_2G20L,     EL_GRL, EL_VTX,    EL_N, EL_AUTHOR,  EL_ETA, EL_PT, 
-    EL_OQ, EL_MEDIUM, EL_TIGHT, EL_LARERROR, EL_JETCLEANING) = range(len(ELECTRON_CUTFLOW)-1)
+    EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_LARERROR, EL_JETCLEANING, EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
 def do_electron_cutflow(ana, event):
     counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
     
@@ -246,32 +246,43 @@ def do_electron_cutflow(ana, event):
         plot_kinematics(ana, "all_els/pre_loose", el)
         plot_shower    (ana, "all_els/pre_loose", el)
 
-    good_electrons = [el for el in good_electrons if el.medium]
+    good_electrons = [el for el in good_electrons if el.loose]
     if len(good_electrons) < 2: return
-    counts(EL_MEDIUM)
+    counts(EL_LOOSE)
     
     for el in good_electrons:
         plot_kinematics(ana, "all_els/post_loose", el)
         plot_shower    (ana, "all_els/post_loose", el)
     
+    good_electrons = [el for el in good_electrons if el.medium]
+    if len(good_electrons) < 2: return
+    counts(EL_MEDIUM)
+    
+    for el in good_electrons:
+        plot_kinematics(ana, "all_els/post_medium", el)
+        plot_shower    (ana, "all_els/post_medium", el)
+    
+    good_electrons = [el for el in good_electrons if el.pass_blayer_check]
+    if len(good_electrons) < 2: return
+    counts(EL_BLAYER)
+    
     el1, el2 = good_electrons[:2]
     
-    # my_tight is robust_tight for data10, and "tight" for data11
-    if el1.tight and el2.tight:
-        counts(EL_TIGHT)
+    if not event.larError:
+        counts(EL_LARERROR)
         
-        if not event.larError:
-            counts(EL_LARERROR)
+        if el1.pass_jetcleaning and el2.pass_jetcleaning:
+            counts(EL_JETCLEANING)
             
-            if el1.pass_jetcleaning and el2.pass_jetcleaning:
-                counts(EL_JETCLEANING)
+            if el1.tight and el2.tight:
+                counts(EL_TIGHT)
     
-    # Loose plots
-    plot_kinematics(ana, "default/el1", el1)
-    plot_kinematics(ana, "default/el2", el2)
-    plot_shower    (ana, "default/el1", el1)
-    plot_shower    (ana, "default/el2", el2)
-    plot_boson     (ana, "default", el1, el2)
+    # Medium plots
+    plot_kinematics(ana, "default/el/1", el1)
+    plot_kinematics(ana, "default/el/2", el2)
+    plot_shower    (ana, "default/el/1", el1)
+    plot_shower    (ana, "default/el/2", el2)
+    plot_boson     (ana, "default/el", el1, el2)
         
     # Final tight plots
     for el in good_electrons:
