@@ -60,7 +60,7 @@ class Job(object):
             ds_name = datasets.ds_name(dataset)
         else:
             ds_info = dict(version="0", container_name=dataset)
-            ds_name = dataset
+            ds_name = dataset.rstrip("/")
         
         input_name = ds_info["container_name"]
         progname = ".".join([self.name, self.tag])
