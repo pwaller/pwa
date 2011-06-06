@@ -94,7 +94,7 @@ class Job(object):
             p = Popen((["echo", "JobsetID : 1"] if dry_run else []) +
                       ["subscripts/generic_submit.sh", 
                        input_name, output_name, 
-                       command, tmpdirname,
+                       command.replace("\n", " "), tmpdirname,
                        self.job_info.get("submit_extra", "")],
                       stdout=PIPE, stderr=PIPE)
             stdout, stderr = p.communicate()
