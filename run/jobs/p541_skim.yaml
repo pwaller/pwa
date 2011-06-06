@@ -3,6 +3,7 @@ dataset: data11_7TeV.NTUP_PHOTON.p541.yaml
 command: |
     ./ana_run.sh ./skimmer.py 
         --dump=skimmed.root 
+        --have-metadata
         --output=cf.root 
         --run-specific-output 
         --release=rel16 

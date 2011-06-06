@@ -1,3 +1,9 @@
 progname: gravcount
 dataset: data11_7TeV.NTUP_PHOTON.p541.yaml
-command: ./ana_run.sh pwa_graviton_counts --run-specific-output --release=rel16 --project=data11 -Ggrls/most_recent.xml
+command: |
+    ./ana_run.sh pwa_graviton_counts 
+        --run-specific-output 
+        --have-metadata
+        --release=rel16 
+        --project=data11 
+        -Ggrls/most_recent.xml
