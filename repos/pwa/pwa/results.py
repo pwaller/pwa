@@ -164,3 +164,29 @@ def dump(self, params):
                for f, h in zip([f.GetName() for f in files], cutflows)]
     table = [["file"] + extra_labels + list(labels)] + numbers
     pprint_table(table)
+
+
+@subcommand('status', help='Dump basic information')
+@param('files', nargs="+")
+def status(self, params):
+    from DQUtils.ext.table_printer import pprint_table
+    inputs = custom_sort(params.files)
+
+    from ROOT import TFile
+    files = [TFile.Open(f) for f in inputs]
+    
+    def get_info(f):
+        return [
+            f.exception_count.GetVal(),
+            f.cputime.GetVal(),
+            f.skimtime.GetVal() if f.Get("skimtime") else "N/A",
+            f.walltime.GetVal(),
+            f.processed_trees.GetVal(),
+            f.jobs_files.GetVal(),
+        ]
+       
+    labels = ["exceptions", "cputime", "skimtime", "walltime", "ntrees", "njf"]
+    numbers = [[f.GetName()] + get_info(f) for f in files]
+    table = [["file"] + list(labels)] + numbers
+    pprint_table(table) 
+    

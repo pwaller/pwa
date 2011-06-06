@@ -31,6 +31,7 @@ class Engine(Application):
     reduce = results.reduce
     mergereduce = results.mergereduce
     dump = results.dump
+    status = results.status
     
     make_datasets = datasets.make_datasets
     dsupdate = datasets.dsupdate
