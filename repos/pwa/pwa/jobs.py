@@ -81,7 +81,9 @@ class Job(object):
                 name=self.name).replace("\n", " \\\n")
             print prun
             
-            p = Popen("prun " + prun, shell=True, stdout=PIPE, stderr=PIPE)
+            prefix = "echo " if dry_run else ""
+            
+            p = Popen(prefix + "prun " + prun, shell=True, stdout=PIPE, stderr=PIPE)
             
             stdout, stderr = p.communicate()
             result = p.wait()
@@ -117,10 +119,11 @@ def submit_job(args):
 
 @subcommand('submit', help='Submit jobs')
 @param('jobs', nargs="+")
+@param('--dry-run', '-d', action="store_true")
 def submit(self, params):
     tag = get_tag()
     
-    if tag != "dryrun":
+    if tag != "dryrun" or params.dry_run:
         p = Popen(["./prepare_submit.sh"])
         assert not p.wait()
     
