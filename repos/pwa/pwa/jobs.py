@@ -54,8 +54,13 @@ class Job(object):
             self.submit_one(ds, dry_run)
     
     def submit_one(self, dataset, dry_run=False):
-        ds_info, ds_datasetinfo = datasets.ds_load(dataset)
-        ds_name = datasets.ds_name(dataset)
+        
+        if dataset.endswith(".yaml"):
+            ds_info, ds_datasetinfo = datasets.ds_load(dataset)
+            ds_name = datasets.ds_name(dataset)
+        else:
+            ds_info = dict(version="0", container_name=dataset)
+            ds_name = dataset
         
         input_name = ds_info["container_name"]
         progname = ".".join([self.name, self.tag])
