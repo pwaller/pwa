@@ -73,6 +73,7 @@ def reduce(self, params):
 
 @subcommand('mergereduce', help="Run merge reduce")
 @param('files', nargs="+")
+@param("-p", "--prefix", default="output")
 def mergereduce(self, params):
     mergeall(self, params)
     reduce(self, params)
@@ -136,12 +137,11 @@ def dump(self, params):
             name = basename(f)
             bad, events = "-", "N/A"
             
-            if name.startswith("output"):
-                m = re.match("^output-P(.+)-R(\d+).root$", name)
-                if m:
-                    period, run = m.groups()
-                    events = sum(d.totalevents for d in by_run[int(run)])
-                
+            matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
+            
+            if matchcounts:
+                period, run = matchcounts.groups()
+                events = sum(d.totalevents for d in by_run[int(run)])
                 
             elif name.startswith("period"):
                 period = name.split(".")[0][len("period"):]
