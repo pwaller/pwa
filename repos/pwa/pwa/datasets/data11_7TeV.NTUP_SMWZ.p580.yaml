@@ -2206,6 +2206,68 @@ datasets:
   streamname: !!python/unicode 'physics_Egamma'
   totalevents: 445042
   version: !!python/unicode 'f382_m866_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-07 12:53:58'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 115229
+  files: 9
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 69628
+  lastmodified: !!python/unicode '2011-06-07 22:01:43'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183038.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183038.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580'
+  nfiles: 9
+  period: !!python/unicode 'G4'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183038
+  runnumber: 183038
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 115229
+  version: !!python/unicode 'f383_m872_p580'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-07 13:05:18'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production SM WZ'
+  datatype: !!python/unicode 'NTUP_SMWZ'
+  events: 224572
+  files: 15
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 70021
+  lastmodified: !!python/unicode '2011-06-08 09:09:15'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183078.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183078.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580'
+  nfiles: 15
+  period: !!python/unicode 'G4'
+  physicistresponsible: !!python/unicode 'bertrand.brelier@cern.ch'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183078
+  runnumber: 183078
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 224572
+  version: !!python/unicode 'f383_m872_p580'
 datasets_expanded:
 - data11_7TeV.00177531.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373524_00
 - data11_7TeV.00177539.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373525_00
@@ -2278,3 +2340,4 @@ datasets_expanded:
 - data11_7TeV.00182796.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384791_00
 - data11_7TeV.00182879.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384790_00
 - data11_7TeV.00182886.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384789_00
+- data11_7TeV.00183038.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid413682_00
