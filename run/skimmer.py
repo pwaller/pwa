@@ -33,7 +33,7 @@ def do_skim(ana, event):
                    abs(el.etas2) < 1.37 or 1.52 < abs(el.etas2) < 2.37 and
                    el.hit_dependent_pt > 25000 and
                    el.loose and
-                   not (el.OQ & 34214)]
+                   not (el.OQ & 1446)]
                    
     if len(good_els) >= 2: counts(GT2EL)
                    
