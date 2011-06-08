@@ -12,6 +12,7 @@ from minty.main import make_main
 import results
 import datasets
 import jobs
+import plot
 
 class Engine(Application):
 
@@ -38,6 +39,8 @@ class Engine(Application):
     dsbuild = datasets.dsbuild
     
     submit = jobs.submit
+    
+    draw = plot.draw
 
 def main():
     from minty.utils import init_root
