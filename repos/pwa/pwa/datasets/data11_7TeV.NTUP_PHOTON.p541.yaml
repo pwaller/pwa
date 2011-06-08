@@ -726,12 +726,12 @@ datasets:
   createdby: !!python/unicode 'root'
   creationcomment: !!python/unicode 'group production for photon groups'
   datatype: !!python/unicode 'NTUP_PHOTON'
-  events: 4331151
+  events: 4344169
   files: 268
   geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
   good: true
   identifier: 42083
-  lastmodified: !!python/unicode '2011-05-30 14:03:13'
+  lastmodified: !!python/unicode '2011-06-08 13:54:07'
   logicaldatasetname: !!python/unicode 'data11_7TeV.00180164.physics_Egamma.merge.NTUP_PHOTON.f368_m806_p541'
   modifiedby: !!python/unicode 'root'
   name: !!python/unicode 'data11_7TeV.00180164.physics_Egamma.merge.NTUP_PHOTON.f368_m806_p541'
@@ -747,7 +747,7 @@ datasets:
   runnumber: 180164
   status: !!python/unicode 'EVENTS_AVAILABLE'
   streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 4331151
+  totalevents: 4344169
   version: !!python/unicode 'f368_m806_p541'
 - !!python/object:minty.metadata.ami.Dataset
   amistatus: !!python/unicode 'VALID'
