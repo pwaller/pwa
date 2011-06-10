@@ -4,6 +4,7 @@ from os.path import basename
 
 from commando import Application, command, subcommand, version, store, true, param
 
+from minty.utils.table_printer import pprint_table
 from yaml import load_all
 
 def get_bin_values(h):
@@ -104,7 +105,7 @@ def custom_sort(inputs):
 @param('--name', default="cutflow")
 @param('--datasets')
 def dump(self, params):
-    from DQUtils.ext.table_printer import pprint_table
+    
    
     inputs = custom_sort(params.files)
 
@@ -169,7 +170,6 @@ def dump(self, params):
 @subcommand('status', help='Dump basic information')
 @param('files', nargs="+")
 def status(self, params):
-    from DQUtils.ext.table_printer import pprint_table
     inputs = custom_sort(params.files)
 
     from ROOT import TFile
