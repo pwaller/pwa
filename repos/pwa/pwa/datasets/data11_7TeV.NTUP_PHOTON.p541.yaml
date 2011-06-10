@@ -1989,6 +1989,161 @@ datasets:
   streamname: !!python/unicode 'physics_Egamma'
   totalevents: 224572
   version: !!python/unicode 'f383_m872_p541'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-09 00:30:49'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production for photon groups'
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 4589779
+  files: 305
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 71452
+  lastmodified: !!python/unicode '2011-06-09 13:42:44'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183081.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183081.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  nfiles: 305
+  period: !!python/unicode 'G4'
+  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183081
+  runnumber: 183081
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 4589779
+  version: !!python/unicode 'f383_m872_p541'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-09 06:15:34'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production for photon groups'
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 30914
+  files: 2
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 71617
+  lastmodified: !!python/unicode '2011-06-09 10:36:45'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183112.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183112.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  nfiles: 2
+  period: UNK
+  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183112
+  runnumber: 183112
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 30914
+  version: !!python/unicode 'f383_m872_p541'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-09 08:55:10'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production for photon groups'
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 1273965
+  files: 105
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 72043
+  lastmodified: !!python/unicode '2011-06-09 19:25:32'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183127.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183127.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  nfiles: 105
+  period: !!python/unicode 'G4'
+  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183127
+  runnumber: 183127
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 1273965
+  version: !!python/unicode 'f383_m872_p541'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-09 08:55:09'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production for photon groups'
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 1097
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 72041
+  lastmodified: !!python/unicode '2011-06-09 12:42:24'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183128.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183128.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  nfiles: 1
+  period: UNK
+  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183128
+  runnumber: 183128
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 1097
+  version: !!python/unicode 'f383_m872_p541'
+- !!python/object:minty.metadata.ami.Dataset
+  amistatus: !!python/unicode 'VALID'
+  beamtype: !!python/unicode 'collisions'
+  conditionstag: !!python/unicode 'COMCOND-BLKPST-004-07'
+  created: !!python/unicode '2011-06-10 00:58:23'
+  createdby: !!python/unicode 'root'
+  creationcomment: !!python/unicode 'group production for photon groups'
+  datatype: !!python/unicode 'NTUP_PHOTON'
+  events: 2
+  files: 1
+  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-01'
+  good: true
+  identifier: 72943
+  lastmodified: !!python/unicode '2011-06-10 07:26:35'
+  logicaldatasetname: !!python/unicode 'data11_7TeV.00183213.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  modifiedby: !!python/unicode 'root'
+  name: !!python/unicode 'data11_7TeV.00183213.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541'
+  nfiles: 1
+  period: UNK
+  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
+  principalphysicsgroup: !!python/unicode 'gen-user'
+  prodstep: !!python/unicode 'merge'
+  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
+  projectname: !!python/unicode 'data11_7TeV'
+  relationalloaded: 0
+  run: 183213
+  runnumber: 183213
+  status: !!python/unicode 'EVENTS_AVAILABLE'
+  streamname: !!python/unicode 'physics_Egamma'
+  totalevents: 2
+  version: !!python/unicode 'f383_m872_p541'
 datasets_expanded:
 - data11_7TeV.00177682.physics_Egamma.merge.NTUP_PHOTON.f348_m760_p541_tid319619_00
 - data11_7TeV.00177986.physics_Egamma.merge.NTUP_PHOTON.r2276_p516_p523_p541_tid319620_00
@@ -2050,4 +2205,11 @@ datasets_expanded:
 - data11_7TeV.00182796.physics_Egamma.merge.NTUP_PHOTON.f382_m866_p541_tid384734_00
 - data11_7TeV.00182879.physics_Egamma.merge.NTUP_PHOTON.f382_m866_p541_tid384733_00
 - data11_7TeV.00182886.physics_Egamma.merge.NTUP_PHOTON.f382_m866_p541_tid384732_00
+- data11_7TeV.00183003.physics_Egamma.merge.NTUP_PHOTON.f382_m872_p541_tid413422_00
 - data11_7TeV.00183038.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid413634_00
+- data11_7TeV.00183045.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid413633_00
+- data11_7TeV.00183078.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414340_00
+- data11_7TeV.00183081.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414632_00
+- data11_7TeV.00183112.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414725_00
+- data11_7TeV.00183127.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414852_00
+- data11_7TeV.00183128.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414851_00
