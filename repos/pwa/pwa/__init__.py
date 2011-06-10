@@ -13,6 +13,7 @@ import results
 import datasets
 import jobs
 import plot
+import fit
 
 class Engine(Application):
 
@@ -41,6 +42,8 @@ class Engine(Application):
     submit = jobs.submit
     
     draw = plot.draw
+    
+    multifit = fit.multifit
 
 def main():
     from minty.utils import init_root
