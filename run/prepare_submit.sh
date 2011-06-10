@@ -1,9 +1,9 @@
 #! /usr/bin/env bash
 
-if ! minty-runperiod-mapping -c; then
-    echo "Refusing to continue, period mapping out of date"
-    exit
-fi
+#if ! minty-runperiod-mapping -c; then
+#    echo "Refusing to continue, period mapping out of date"
+#    exit
+#fi
 
 CURRENT_TAG=$(git describe --tags --exact-match --dirty 2> /dev/null)
 BUNDLE_TAG=$(cat bundle_tag)
