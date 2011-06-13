@@ -5,93 +5,117 @@ shortname: mc10a.pythia_DP
 version: 1
 ---
 datasets:
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  atlasrelease: !!python/unicode '16.6.4'
-  created: !!python/unicode '2011-04-27 15:08:21'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
-  datasetnumber: 115802
-  datatype: !!python/unicode 'NTUP_PHOTON'
-  events: 999858
-  files: 100
-  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
-  good: true
-  identifier: 208511
-  lastmodified: !!python/unicode '2011-05-30 13:42:14'
-  logicaldatasetname: !!python/unicode 'mc10_7TeV.115802.DP17_pythia_photon_filter.merge.NTUP_PHOTON.e574_s933_s946_r2216_r2260_p548'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'mc10_7TeV.115802.DP17_pythia_photon_filter.merge.NTUP_PHOTON.e574_s933_s946_r2216_r2260_p548'
-  nfiles: 100
-  period: MC
-  physicsshort: !!python/unicode 'DP17_pythia_photon_filter'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  productionstep: !!python/unicode 'merge'
-  projectname: !!python/unicode 'mc10_7TeV'
-  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  run: 115802
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  totalevents: 999858
-  transformationpackage: !!python/unicode '16.6.4.2'
-  version: !!python/unicode 'e574_s933_s946_r2216_r2260_p548'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  atlasrelease: !!python/unicode '16.6.4'
-  created: !!python/unicode '2011-04-27 15:08:21'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
-  datasetnumber: 115809
-  datatype: !!python/unicode 'NTUP_PHOTON'
-  events: 995633
-  files: 100
-  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
-  good: true
-  identifier: 208532
-  lastmodified: !!python/unicode '2011-05-30 13:42:15'
-  logicaldatasetname: !!python/unicode 'mc10_7TeV.115809.DP140_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'mc10_7TeV.115809.DP140_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548'
-  nfiles: 100
-  period: MC
-  physicsshort: !!python/unicode 'DP140_pythia_photon_filter'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  productionstep: !!python/unicode 'merge'
-  projectname: !!python/unicode 'mc10_7TeV'
-  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  run: 115809
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  totalevents: 995633
-  transformationpackage: !!python/unicode '16.6.4.2'
-  version: !!python/unicode 'e681_s933_s946_r2216_r2260_p548'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  atlasrelease: !!python/unicode '16.6.4'
-  created: !!python/unicode '2011-04-27 15:08:26'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SMDP Exotics UED HSG1'
-  datasetnumber: 115810
-  datatype: !!python/unicode 'NTUP_PHOTON'
-  events: 998707
-  files: 100
-  geometryversion: !!python/unicode 'ATLAS-GEO-16-00-00'
-  good: true
-  identifier: 208513
-  lastmodified: !!python/unicode '2011-05-30 13:42:43'
-  logicaldatasetname: !!python/unicode 'mc10_7TeV.115810.DP280_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'mc10_7TeV.115810.DP280_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548'
-  nfiles: 100
-  period: MC
-  physicsshort: !!python/unicode 'DP280_pythia_photon_filter'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  productionstep: !!python/unicode 'merge'
-  projectname: !!python/unicode 'mc10_7TeV'
-  requestedby: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  run: 115810
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  totalevents: 998707
-  transformationpackage: !!python/unicode '16.6.4.2'
-  version: !!python/unicode 'e681_s933_s946_r2216_r2260_p548'
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    atlasrelease: 16.6.4
+    created: '2011-04-27 15:08:21'
+    createdby: root
+    creationcomment: group production SMDP Exotics UED HSG1
+    datasetnumber: 115802
+    datatype: NTUP_PHOTON
+    geometryversion: ATLAS-GEO-16-00-00
+    identifier: 208511
+    jobconfig: ''
+    lastmodified: '2011-05-30 13:42:14'
+    logicaldatasetname: mc10_7TeV.115802.DP17_pythia_photon_filter.merge.NTUP_PHOTON.e574_s933_s946_r2216_r2260_p548
+    modifiedby: root
+    nfiles: 100
+    physicistresponsible: ''
+    physicscategory: ''
+    physicscomment: ''
+    physicsprocess: ''
+    physicsshort: DP17_pythia_photon_filter
+    physicssubcategory: ''
+    principalphysicsgroup: ''
+    prodsysstatus: EVENTS_AVAILABLE
+    productionhistory: ''
+    productionstep: merge
+    projectname: mc10_7TeV
+    relationalloaded: ''
+    requestedby: leonardo.carminati@mi.infn.it
+    totalevents: 999858
+    transformationpackage: 16.6.4.2
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    triggerconfig: ''
+    version: e574_s933_s946_r2216_r2260_p548
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    atlasrelease: 16.6.4
+    created: '2011-04-27 15:08:21'
+    createdby: root
+    creationcomment: group production SMDP Exotics UED HSG1
+    datasetnumber: 115809
+    datatype: NTUP_PHOTON
+    geometryversion: ATLAS-GEO-16-00-00
+    identifier: 208532
+    jobconfig: ''
+    lastmodified: '2011-05-30 13:42:15'
+    logicaldatasetname: mc10_7TeV.115809.DP140_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548
+    modifiedby: root
+    nfiles: 100
+    physicistresponsible: ''
+    physicscategory: ''
+    physicscomment: ''
+    physicsprocess: ''
+    physicsshort: DP140_pythia_photon_filter
+    physicssubcategory: ''
+    principalphysicsgroup: ''
+    prodsysstatus: EVENTS_AVAILABLE
+    productionhistory: ''
+    productionstep: merge
+    projectname: mc10_7TeV
+    relationalloaded: ''
+    requestedby: leonardo.carminati@mi.infn.it
+    totalevents: 995633
+    transformationpackage: 16.6.4.2
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    triggerconfig: ''
+    version: e681_s933_s946_r2216_r2260_p548
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    atlasrelease: 16.6.4
+    created: '2011-04-27 15:08:26'
+    createdby: root
+    creationcomment: group production SMDP Exotics UED HSG1
+    datasetnumber: 115810
+    datatype: NTUP_PHOTON
+    geometryversion: ATLAS-GEO-16-00-00
+    identifier: 208513
+    jobconfig: ''
+    lastmodified: '2011-05-30 13:42:43'
+    logicaldatasetname: mc10_7TeV.115810.DP280_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548
+    modifiedby: root
+    nfiles: 100
+    physicistresponsible: ''
+    physicscategory: ''
+    physicscomment: ''
+    physicsprocess: ''
+    physicsshort: DP280_pythia_photon_filter
+    physicssubcategory: ''
+    principalphysicsgroup: ''
+    prodsysstatus: EVENTS_AVAILABLE
+    productionhistory: ''
+    productionstep: merge
+    projectname: mc10_7TeV
+    relationalloaded: ''
+    requestedby: leonardo.carminati@mi.infn.it
+    totalevents: 998707
+    transformationpackage: 16.6.4.2
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    triggerconfig: ''
+    version: e681_s933_s946_r2216_r2260_p548
 datasets_expanded:
 - mc10_7TeV.115802.DP17_pythia_photon_filter.merge.NTUP_PHOTON.e574_s933_s946_r2216_r2260_p548_tid327616_00
 - mc10_7TeV.115809.DP140_pythia_photon_filter.merge.NTUP_PHOTON.e681_s933_s946_r2216_r2260_p548_tid327617_00

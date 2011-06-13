@@ -5,1978 +5,2114 @@ shortname: data10_7TeV.NTUP_PROMPTPHOT.p231
 version: 2
 ---
 datasets:
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:34:42'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2753534
-  files: 239
-  good: true
-  identifier: 87780
-  lastmodified: !!python/unicode '2010-08-26 11:26:03'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160387.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160387.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  nfiles: 239
-  period: !!python/unicode 'E1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160387
-  runnumber: 160387
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2753534
-  version: !!python/unicode 'f280_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:34:03'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3941475
-  files: 381
-  good: true
-  identifier: 87777
-  lastmodified: !!python/unicode '2010-08-26 13:22:18'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160472.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160472.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  nfiles: 381
-  period: !!python/unicode 'E1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160472
-  runnumber: 160472
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3941475
-  version: !!python/unicode 'f280_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:33:51'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 221597
-  files: 24
-  good: true
-  identifier: 87776
-  lastmodified: !!python/unicode '2010-08-25 07:33:48'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160479.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160479.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  nfiles: 24
-  period: !!python/unicode 'E1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160479
-  runnumber: 160479
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 221597
-  version: !!python/unicode 'f280_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:33:27'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 4751919
-  files: 437
-  good: true
-  identifier: 87774
-  lastmodified: !!python/unicode '2010-08-26 11:37:39'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160530.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160530.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231'
-  nfiles: 437
-  period: !!python/unicode 'E2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160530
-  runnumber: 160530
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 4751919
-  version: !!python/unicode 'f280_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:32:51'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1641747
-  files: 215
-  good: true
-  identifier: 87771
-  lastmodified: !!python/unicode '2010-08-26 11:06:16'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160613.physics_Egamma.merge.NTUP_PROMPTPHOT.f281_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160613.physics_Egamma.merge.NTUP_PROMPTPHOT.f281_p231'
-  nfiles: 215
-  period: !!python/unicode 'E3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160613
-  runnumber: 160613
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1641747
-  version: !!python/unicode 'f281_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:32:39'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 612414
-  files: 59
-  good: true
-  identifier: 87730
-  lastmodified: !!python/unicode '2010-08-26 11:37:10'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160736.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160736.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 59
-  period: !!python/unicode 'E3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160736
-  runnumber: 160736
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 612414
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:31:29'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 693530
-  files: 78
-  good: true
-  identifier: 87765
-  lastmodified: !!python/unicode '2010-08-26 13:21:50'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160800.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160800.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 78
-  period: !!python/unicode 'E3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160800
-  runnumber: 160800
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 693530
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:31:16'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 4353533
-  files: 409
-  good: true
-  identifier: 87764
-  lastmodified: !!python/unicode '2010-08-26 13:21:43'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160801.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160801.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 409
-  period: !!python/unicode 'E3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160801
-  runnumber: 160801
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 4353533
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:30:50'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 4012294
-  files: 453
-  good: true
-  identifier: 87762
-  lastmodified: !!python/unicode '2010-08-26 11:25:46'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160879.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160879.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 453
-  period: !!python/unicode 'E3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160879
-  runnumber: 160879
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 4012294
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:30:12'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 134583
-  files: 14
-  good: true
-  identifier: 87759
-  lastmodified: !!python/unicode '2010-08-26 11:06:01'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160899.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160899.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 14
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160899
-  runnumber: 160899
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 134583
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:30:00'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 595885
-  files: 59
-  good: true
-  identifier: 87758
-  lastmodified: !!python/unicode '2010-08-26 11:05:58'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160953.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160953.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 59
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160953
-  runnumber: 160953
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 595885
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:29:23'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1422493
-  files: 162
-  good: true
-  identifier: 87755
-  lastmodified: !!python/unicode '2010-08-26 11:05:53'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160954.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160954.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 162
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160954
-  runnumber: 160954
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1422493
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:29:10'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2010467
-  files: 225
-  good: true
-  identifier: 87754
-  lastmodified: !!python/unicode '2010-08-26 11:05:41'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160958.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160958.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 225
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160958
-  runnumber: 160958
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2010467
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:28:31'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 107159
-  files: 15
-  good: true
-  identifier: 87751
-  lastmodified: !!python/unicode '2010-08-25 07:33:45'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160963.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160963.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 15
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160963
-  runnumber: 160963
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 107159
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:28:00'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 115550
-  files: 16
-  good: true
-  identifier: 87749
-  lastmodified: !!python/unicode '2010-08-25 15:51:34'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160975.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160975.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 16
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160975
-  runnumber: 160975
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 115550
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:27:46'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 274956
-  files: 31
-  good: true
-  identifier: 87748
-  lastmodified: !!python/unicode '2010-08-26 11:05:24'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00160980.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00160980.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 31
-  period: !!python/unicode 'E4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 160980
-  runnumber: 160980
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 274956
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:27:21'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1642
-  files: 1
-  good: true
-  identifier: 87746
-  lastmodified: !!python/unicode '2010-08-25 07:33:43'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161114.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161114.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 1
-  period: UNK
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161114
-  runnumber: 161114
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1642
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:26:44'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1988
-  files: 1
-  good: true
-  identifier: 87743
-  lastmodified: !!python/unicode '2010-08-25 07:43:50'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161116.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161116.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 1
-  period: UNK
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161116
-  runnumber: 161116
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1988
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:26:30'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 945313
-  files: 97
-  good: true
-  identifier: 87742
-  lastmodified: !!python/unicode '2010-08-26 11:05:20'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161118.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161118.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 97
-  period: !!python/unicode 'E5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161118
-  runnumber: 161118
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 945313
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:25:53'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3371708
-  files: 386
-  good: true
-  identifier: 87739
-  lastmodified: !!python/unicode '2010-08-26 11:05:13'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161379.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161379.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 386
-  period: !!python/unicode 'E5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161379
-  runnumber: 161379
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3371708
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:25:28'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 847389
-  files: 102
-  good: true
-  identifier: 87737
-  lastmodified: !!python/unicode '2010-08-26 11:04:45'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161407.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161407.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231'
-  nfiles: 102
-  period: !!python/unicode 'E6'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161407
-  runnumber: 161407
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 847389
-  version: !!python/unicode 'f282_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:25:15'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3310862
-  files: 369
-  good: true
-  identifier: 87736
-  lastmodified: !!python/unicode '2010-08-26 11:25:15'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161520.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161520.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231'
-  nfiles: 369
-  period: !!python/unicode 'E6'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161520
-  runnumber: 161520
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3310862
-  version: !!python/unicode 'f283_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:24:28'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2549722
-  files: 297
-  good: true
-  identifier: 87733
-  lastmodified: !!python/unicode '2010-08-26 13:21:11'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161562.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161562.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231'
-  nfiles: 297
-  period: !!python/unicode 'E7'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161562
-  runnumber: 161562
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2549722
-  version: !!python/unicode 'f283_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:24:03'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3327024
-  files: 348
-  good: true
-  identifier: 87731
-  lastmodified: !!python/unicode '2010-08-26 11:04:36'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00161948.physics_Egamma.merge.NTUP_PROMPTPHOT.f286_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00161948.physics_Egamma.merge.NTUP_PROMPTPHOT.f286_p231'
-  nfiles: 348
-  period: !!python/unicode 'E7'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 161948
-  runnumber: 161948
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3327024
-  version: !!python/unicode 'f286_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-25 04:23:50'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 4566429
-  files: 429
-  good: true
-  identifier: 87710
-  lastmodified: !!python/unicode '2010-08-26 11:24:51'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162347.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162347.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 429
-  period: !!python/unicode 'F1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162347
-  runnumber: 162347
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 4566429
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-26 10:29:20'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3961912
-  files: 384
-  good: true
-  identifier: 88551
-  lastmodified: !!python/unicode '2010-08-27 13:12:06'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162526.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162526.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 384
-  period: !!python/unicode 'F1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162526
-  runnumber: 162526
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3961912
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-27 04:29:31'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 732930
-  files: 62
-  good: true
-  identifier: 89036
-  lastmodified: !!python/unicode '2010-08-27 18:39:50'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162576.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162576.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 62
-  period: !!python/unicode 'F1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162576
-  runnumber: 162576
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 732930
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-26 22:30:22'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 113052
-  files: 11
-  good: true
-  identifier: 88869
-  lastmodified: !!python/unicode '2010-08-27 13:12:08'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162577.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162577.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 11
-  period: !!python/unicode 'F1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162577
-  runnumber: 162577
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 113052
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-27 01:36:11'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 521834
-  files: 70
-  good: true
-  identifier: 88981
-  lastmodified: !!python/unicode '2010-08-28 06:47:17'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162620.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162620.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 70
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162620
-  runnumber: 162620
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 521834
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-28 07:28:56'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3889499
-  files: 330
-  good: true
-  identifier: 89527
-  lastmodified: !!python/unicode '2010-08-29 07:28:40'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162623.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162623.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 330
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162623
-  runnumber: 162623
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3889499
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-29 13:27:47'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2915802
-  files: 380
-  good: true
-  identifier: 90006
-  lastmodified: !!python/unicode '2010-08-29 19:26:48'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162690.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162690.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 380
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162690
-  runnumber: 162690
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2915802
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-30 04:30:33'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1373373
-  files: 122
-  good: true
-  identifier: 90137
-  lastmodified: !!python/unicode '2010-08-30 11:57:31'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162764.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162764.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 122
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162764
-  runnumber: 162764
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1373373
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-08-31 16:31:52'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3461144
-  files: 405
-  good: true
-  identifier: 90529
-  lastmodified: !!python/unicode '2010-09-01 01:22:33'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162843.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162843.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 405
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162843
-  runnumber: 162843
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3461144
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-01 16:53:16'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2332160
-  files: 328
-  good: true
-  identifier: 90550
-  lastmodified: !!python/unicode '2010-09-02 01:34:06'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00162882.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00162882.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231'
-  nfiles: 328
-  period: !!python/unicode 'F2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 162882
-  runnumber: 162882
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2332160
-  version: !!python/unicode 'f287_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-26 10:31:39'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3419936
-  files: 1943
-  good: true
-  identifier: 100225
-  lastmodified: !!python/unicode '2010-09-26 22:47:23'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165591.physics_Egamma.merge.NTUP_PROMPTPHOT.f292_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165591.physics_Egamma.merge.NTUP_PROMPTPHOT.f292_p231'
-  nfiles: 1943
-  period: !!python/unicode 'G1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165591
-  runnumber: 165591
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3419936
-  version: !!python/unicode 'f292_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-27 13:30:38'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2766234
-  files: 1989
-  good: true
-  identifier: 100558
-  lastmodified: !!python/unicode '2010-09-27 19:40:23'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165632.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165632.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 1989
-  period: !!python/unicode 'G1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165632
-  runnumber: 165632
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2766234
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-28 07:31:39'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 265341
-  files: 202
-  good: true
-  identifier: 100975
-  lastmodified: !!python/unicode '2010-09-28 13:28:33'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165703.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165703.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 202
-  period: !!python/unicode 'G2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165703
-  runnumber: 165703
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 265341
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-29 10:28:36'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3190412
-  files: 2083
-  good: true
-  identifier: 101279
-  lastmodified: !!python/unicode '2010-09-30 05:04:51'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165732.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165732.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 2083
-  period: !!python/unicode 'G2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165732
-  runnumber: 165732
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3190412
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-02 13:26:16'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2507500
-  files: 1813
-  good: true
-  identifier: 103051
-  lastmodified: !!python/unicode '2010-10-08 07:10:10'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165767.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165767.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 1813
-  period: !!python/unicode 'G3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165767
-  runnumber: 165767
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2507500
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-30 19:38:19'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 320675
-  files: 242
-  good: true
-  identifier: 102213
-  lastmodified: !!python/unicode '2010-09-30 23:01:30'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165815.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165815.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 242
-  period: !!python/unicode 'G3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165815
-  runnumber: 165815
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 320675
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-09-30 13:31:45'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1021
-  files: 1
-  good: true
-  identifier: 102111
-  lastmodified: !!python/unicode '2010-09-30 16:49:43'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165817.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165817.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 1
-  period: !!python/unicode 'G4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165817
-  runnumber: 165817
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1021
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-01 04:32:08'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 482329
-  files: 373
-  good: true
-  identifier: 102420
-  lastmodified: !!python/unicode '2010-10-07 08:06:39'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165818.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165818.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 373
-  period: !!python/unicode 'G4'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165818
-  runnumber: 165818
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 482329
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-01 01:29:39'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 579802
-  files: 413
-  good: true
-  identifier: 102360
-  lastmodified: !!python/unicode '2010-10-01 10:23:21'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165821.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165821.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231'
-  nfiles: 413
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165821
-  runnumber: 165821
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 579802
-  version: !!python/unicode 'f293_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-02 15:57:15'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 273060
-  files: 239
-  good: true
-  identifier: 103225
-  lastmodified: !!python/unicode '2010-10-02 22:37:37'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165954.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165954.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 239
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165954
-  runnumber: 165954
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 273060
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-02 15:53:19'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 122672
-  files: 97
-  good: true
-  identifier: 103212
-  lastmodified: !!python/unicode '2010-10-08 07:20:45'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00165956.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00165956.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 97
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 165956
-  runnumber: 165956
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 122672
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-04 04:31:42'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 174318
-  files: 183
-  good: true
-  identifier: 103572
-  lastmodified: !!python/unicode '2010-10-09 07:33:24'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166094.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166094.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 183
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166094
-  runnumber: 166094
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 174318
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-04 16:25:33'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 572777
-  files: 356
-  good: true
-  identifier: 103745
-  lastmodified: !!python/unicode '2010-10-10 07:24:42'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166097.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166097.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 356
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166097
-  runnumber: 166097
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 572777
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-06 01:31:08'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1100640
-  files: 737
-  good: true
-  identifier: 104231
-  lastmodified: !!python/unicode '2010-10-11 07:40:14'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166142.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166142.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 737
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166142
-  runnumber: 166142
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1100640
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-06 04:25:08'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 467041
-  files: 291
-  good: true
-  identifier: 104290
-  lastmodified: !!python/unicode '2010-10-11 07:40:16'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166143.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166143.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231'
-  nfiles: 291
-  period: !!python/unicode 'G5'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166143
-  runnumber: 166143
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 467041
-  version: !!python/unicode 'f294_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-07 19:40:16'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2899700
-  files: 1821
-  good: true
-  identifier: 105566
-  lastmodified: !!python/unicode '2010-10-13 07:44:36'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166198.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166198.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  nfiles: 1821
-  period: !!python/unicode 'VdM3'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166198
-  runnumber: 166198
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2899700
-  version: !!python/unicode 'f295_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-08 07:47:34'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 422661
-  files: 248
-  good: true
-  identifier: 105967
-  lastmodified: !!python/unicode '2010-10-13 07:13:03'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166305.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166305.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  nfiles: 248
-  period: !!python/unicode 'G6'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166305
-  runnumber: 166305
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 422661
-  version: !!python/unicode 'f295_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-10 10:36:46'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1503980
-  files: 903
-  good: true
-  identifier: 108294
-  lastmodified: !!python/unicode '2010-10-15 07:39:22'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166383.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166383.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  nfiles: 903
-  period: !!python/unicode 'G6'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166383
-  runnumber: 166383
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1503980
-  version: !!python/unicode 'f295_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-11 09:30:17'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1736028
-  files: 959
-  good: true
-  identifier: 108988
-  lastmodified: !!python/unicode '2010-10-16 07:29:52'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166466.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166466.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  nfiles: 959
-  period: !!python/unicode 'H1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166466
-  runnumber: 166466
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1736028
-  version: !!python/unicode 'f295_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-14 13:26:55'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2557120
-  files: 1404
-  good: true
-  identifier: 110351
-  lastmodified: !!python/unicode '2010-10-20 07:36:46'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166658.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166658.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231'
-  nfiles: 1404
-  period: !!python/unicode 'H1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166658
-  runnumber: 166658
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2557120
-  version: !!python/unicode 'f295_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-16 19:40:03'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2269679
-  files: 1280
-  good: true
-  identifier: 111113
-  lastmodified: !!python/unicode '2010-10-22 07:38:45'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166786.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166786.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 1280
-  period: !!python/unicode 'H1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166786
-  runnumber: 166786
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2269679
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-17 10:32:36'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 37165
-  files: 2
-  good: true
-  identifier: 111176
-  lastmodified: !!python/unicode '2010-10-22 07:17:38'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166850.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166850.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 2
-  period: !!python/unicode 'H1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166850
-  runnumber: 166850
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 37165
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-18 04:31:49'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 249684
-  files: 116
-  good: true
-  identifier: 111632
-  lastmodified: !!python/unicode '2010-10-27 07:55:24'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166856.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166856.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 116
-  period: !!python/unicode 'H2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166856
-  runnumber: 166856
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 249684
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-19 10:36:52'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 1451408
-  files: 748
-  good: true
-  identifier: 112429
-  lastmodified: !!python/unicode '2010-10-27 07:42:54'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166924.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166924.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 748
-  period: !!python/unicode 'H2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166924
-  runnumber: 166924
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 1451408
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-19 04:31:56'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 129621
-  files: 124
-  good: true
-  identifier: 112283
-  lastmodified: !!python/unicode '2010-10-27 07:42:35'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166925.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166925.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 124
-  period: !!python/unicode 'H2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166925
-  runnumber: 166925
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 129621
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-19 23:32:19'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 673635
-  files: 468
-  good: true
-  identifier: 112980
-  lastmodified: !!python/unicode '2010-10-27 07:55:27'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166927.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166927.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 468
-  period: !!python/unicode 'H2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166927
-  runnumber: 166927
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 673635
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-20 22:43:12'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 147374
-  files: 71
-  good: true
-  identifier: 113218
-  lastmodified: !!python/unicode '2010-10-27 07:44:48'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00166964.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00166964.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231'
-  nfiles: 71
-  period: !!python/unicode 'H2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 166964
-  runnumber: 166964
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 147374
-  version: !!python/unicode 'f296_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-26 14:39:11'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 82378
-  files: 43
-  good: true
-  identifier: 114540
-  lastmodified: !!python/unicode '2010-10-31 09:35:47'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167575.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167575.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  nfiles: 43
-  period: !!python/unicode 'I1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167575
-  runnumber: 167575
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 82378
-  version: !!python/unicode 'f298_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-27 13:52:25'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3618075
-  files: 1430
-  good: true
-  identifier: 115349
-  lastmodified: !!python/unicode '2010-11-01 09:14:16'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167576.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167576.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  nfiles: 1430
-  period: !!python/unicode 'I1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167576
-  runnumber: 167576
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3618075
-  version: !!python/unicode 'f298_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-29 13:47:33'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 3886539
-  files: 1671
-  good: true
-  identifier: 116206
-  lastmodified: !!python/unicode '2010-11-05 09:28:50'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167607.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167607.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231'
-  nfiles: 1671
-  period: !!python/unicode 'I1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167607
-  runnumber: 167607
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 3886539
-  version: !!python/unicode 'f298_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-29 22:50:02'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 899692
-  files: 328
-  good: true
-  identifier: 116917
-  lastmodified: !!python/unicode '2010-11-05 09:29:10'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167661.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167661.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  nfiles: 328
-  period: !!python/unicode 'I1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167661
-  runnumber: 167661
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 899692
-  version: !!python/unicode 'f299_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-29 22:48:34'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2548189
-  files: 1059
-  good: true
-  identifier: 116914
-  lastmodified: !!python/unicode '2010-11-04 09:32:46'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167680.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167680.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  nfiles: 1059
-  period: !!python/unicode 'I1'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167680
-  runnumber: 167680
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2548189
-  version: !!python/unicode 'f299_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-10-31 06:43:14'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 6130137
-  files: 2089
-  good: true
-  identifier: 119226
-  lastmodified: !!python/unicode '2010-11-05 09:18:21'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167776.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167776.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  nfiles: 2089
-  period: !!python/unicode 'I2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167776
-  runnumber: 167776
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 6130137
-  version: !!python/unicode 'f299_p231'
-- !!python/object:minty.metadata.ami.Dataset
-  amistatus: !!python/unicode 'VALID'
-  created: !!python/unicode '2010-11-01 15:44:17'
-  createdby: !!python/unicode 'root'
-  creationcomment: !!python/unicode 'group production SM direct photon and Exotics
-    UED'
-  datatype: !!python/unicode 'NTUP_PROMPTPHOT'
-  events: 2499045
-  files: 931
-  good: true
-  identifier: 122845
-  lastmodified: !!python/unicode '2010-11-03 21:46:21'
-  logicaldatasetname: !!python/unicode 'data10_7TeV.00167844.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  modifiedby: !!python/unicode 'root'
-  name: !!python/unicode 'data10_7TeV.00167844.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231'
-  nfiles: 931
-  period: !!python/unicode 'I2'
-  physicistresponsible: !!python/unicode 'leonardo.carminati@mi.infn.it'
-  principalphysicsgroup: !!python/unicode 'gen-user'
-  prodstep: !!python/unicode 'merge'
-  prodsysstatus: !!python/unicode 'EVENTS_AVAILABLE'
-  projectname: !!python/unicode 'data10_7TeV'
-  relationalloaded: 0
-  run: 167844
-  runnumber: 167844
-  status: !!python/unicode 'EVENTS_AVAILABLE'
-  streamname: !!python/unicode 'physics_Egamma'
-  totalevents: 2499045
-  version: !!python/unicode 'f299_p231'
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:34:42'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87780
+    lastmodified: '2010-08-26 11:26:03'
+    logicaldatasetname: data10_7TeV.00160387.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231
+    modifiedby: root
+    nfiles: 239
+    period: E1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160387
+    streamname: physics_Egamma
+    totalevents: 2753534
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f280_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:34:03'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87777
+    lastmodified: '2010-08-26 13:22:18'
+    logicaldatasetname: data10_7TeV.00160472.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231
+    modifiedby: root
+    nfiles: 381
+    period: E1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160472
+    streamname: physics_Egamma
+    totalevents: 3941475
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f280_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:33:51'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87776
+    lastmodified: '2010-08-25 07:33:48'
+    logicaldatasetname: data10_7TeV.00160479.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231
+    modifiedby: root
+    nfiles: 24
+    period: E1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160479
+    streamname: physics_Egamma
+    totalevents: 221597
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f280_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:33:27'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87774
+    lastmodified: '2010-08-26 11:37:39'
+    logicaldatasetname: data10_7TeV.00160530.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231
+    modifiedby: root
+    nfiles: 437
+    period: E2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160530
+    streamname: physics_Egamma
+    totalevents: 4751919
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f280_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:32:51'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87771
+    lastmodified: '2010-08-26 11:06:16'
+    logicaldatasetname: data10_7TeV.00160613.physics_Egamma.merge.NTUP_PROMPTPHOT.f281_p231
+    modifiedby: root
+    nfiles: 215
+    period: E3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160613
+    streamname: physics_Egamma
+    totalevents: 1641747
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f281_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:32:39'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87730
+    lastmodified: '2010-08-26 11:37:10'
+    logicaldatasetname: data10_7TeV.00160736.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 59
+    period: E3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160736
+    streamname: physics_Egamma
+    totalevents: 612414
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:31:29'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87765
+    lastmodified: '2010-08-26 13:21:50'
+    logicaldatasetname: data10_7TeV.00160800.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 78
+    period: E3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160800
+    streamname: physics_Egamma
+    totalevents: 693530
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:31:16'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87764
+    lastmodified: '2010-08-26 13:21:43'
+    logicaldatasetname: data10_7TeV.00160801.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 409
+    period: E3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160801
+    streamname: physics_Egamma
+    totalevents: 4353533
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:30:50'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87762
+    lastmodified: '2010-08-26 11:25:46'
+    logicaldatasetname: data10_7TeV.00160879.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 453
+    period: E3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160879
+    streamname: physics_Egamma
+    totalevents: 4012294
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:30:12'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87759
+    lastmodified: '2010-08-26 11:06:01'
+    logicaldatasetname: data10_7TeV.00160899.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 14
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160899
+    streamname: physics_Egamma
+    totalevents: 134583
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:30:00'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87758
+    lastmodified: '2010-08-26 11:05:58'
+    logicaldatasetname: data10_7TeV.00160953.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 59
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160953
+    streamname: physics_Egamma
+    totalevents: 595885
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:29:23'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87755
+    lastmodified: '2010-08-26 11:05:53'
+    logicaldatasetname: data10_7TeV.00160954.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 162
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160954
+    streamname: physics_Egamma
+    totalevents: 1422493
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:29:10'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87754
+    lastmodified: '2010-08-26 11:05:41'
+    logicaldatasetname: data10_7TeV.00160958.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 225
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160958
+    streamname: physics_Egamma
+    totalevents: 2010467
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:28:31'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87751
+    lastmodified: '2010-08-25 07:33:45'
+    logicaldatasetname: data10_7TeV.00160963.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 15
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160963
+    streamname: physics_Egamma
+    totalevents: 107159
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:28:00'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87749
+    lastmodified: '2010-08-25 15:51:34'
+    logicaldatasetname: data10_7TeV.00160975.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 16
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160975
+    streamname: physics_Egamma
+    totalevents: 115550
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:27:46'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87748
+    lastmodified: '2010-08-26 11:05:24'
+    logicaldatasetname: data10_7TeV.00160980.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 31
+    period: E4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 160980
+    streamname: physics_Egamma
+    totalevents: 274956
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:27:21'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87746
+    lastmodified: '2010-08-25 07:33:43'
+    logicaldatasetname: data10_7TeV.00161114.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 1
+    period: ''
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161114
+    streamname: physics_Egamma
+    totalevents: 1642
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:26:44'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87743
+    lastmodified: '2010-08-25 07:43:50'
+    logicaldatasetname: data10_7TeV.00161116.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 1
+    period: ''
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161116
+    streamname: physics_Egamma
+    totalevents: 1988
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:26:30'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87742
+    lastmodified: '2010-08-26 11:05:20'
+    logicaldatasetname: data10_7TeV.00161118.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 97
+    period: E5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161118
+    streamname: physics_Egamma
+    totalevents: 945313
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:25:53'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87739
+    lastmodified: '2010-08-26 11:05:13'
+    logicaldatasetname: data10_7TeV.00161379.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 386
+    period: E5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161379
+    streamname: physics_Egamma
+    totalevents: 3371708
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:25:28'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87737
+    lastmodified: '2010-08-26 11:04:45'
+    logicaldatasetname: data10_7TeV.00161407.physics_Egamma.merge.NTUP_PROMPTPHOT.f282_p231
+    modifiedby: root
+    nfiles: 102
+    period: E6
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161407
+    streamname: physics_Egamma
+    totalevents: 847389
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f282_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:25:15'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87736
+    lastmodified: '2010-08-26 11:25:15'
+    logicaldatasetname: data10_7TeV.00161520.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231
+    modifiedby: root
+    nfiles: 369
+    period: E6
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161520
+    streamname: physics_Egamma
+    totalevents: 3310862
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f283_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:24:28'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87733
+    lastmodified: '2010-08-26 13:21:11'
+    logicaldatasetname: data10_7TeV.00161562.physics_Egamma.merge.NTUP_PROMPTPHOT.f283_p231
+    modifiedby: root
+    nfiles: 297
+    period: E7
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161562
+    streamname: physics_Egamma
+    totalevents: 2549722
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f283_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:24:03'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87731
+    lastmodified: '2010-08-26 11:04:36'
+    logicaldatasetname: data10_7TeV.00161948.physics_Egamma.merge.NTUP_PROMPTPHOT.f286_p231
+    modifiedby: root
+    nfiles: 348
+    period: E7
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 161948
+    streamname: physics_Egamma
+    totalevents: 3327024
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f286_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-25 04:23:50'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 87710
+    lastmodified: '2010-08-26 11:24:51'
+    logicaldatasetname: data10_7TeV.00162347.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 429
+    period: F1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162347
+    streamname: physics_Egamma
+    totalevents: 4566429
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-26 10:29:20'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 88551
+    lastmodified: '2010-08-27 13:12:06'
+    logicaldatasetname: data10_7TeV.00162526.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 384
+    period: F1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162526
+    streamname: physics_Egamma
+    totalevents: 3961912
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-27 04:29:31'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 89036
+    lastmodified: '2010-08-27 18:39:50'
+    logicaldatasetname: data10_7TeV.00162576.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 62
+    period: F1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162576
+    streamname: physics_Egamma
+    totalevents: 732930
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-26 22:30:22'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 88869
+    lastmodified: '2010-08-27 13:12:08'
+    logicaldatasetname: data10_7TeV.00162577.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 11
+    period: F1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162577
+    streamname: physics_Egamma
+    totalevents: 113052
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-27 01:36:11'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 88981
+    lastmodified: '2010-08-28 06:47:17'
+    logicaldatasetname: data10_7TeV.00162620.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 70
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162620
+    streamname: physics_Egamma
+    totalevents: 521834
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-28 07:28:56'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 89527
+    lastmodified: '2010-08-29 07:28:40'
+    logicaldatasetname: data10_7TeV.00162623.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 330
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162623
+    streamname: physics_Egamma
+    totalevents: 3889499
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-29 13:27:47'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 90006
+    lastmodified: '2010-08-29 19:26:48'
+    logicaldatasetname: data10_7TeV.00162690.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 380
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162690
+    streamname: physics_Egamma
+    totalevents: 2915802
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-30 04:30:33'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 90137
+    lastmodified: '2010-08-30 11:57:31'
+    logicaldatasetname: data10_7TeV.00162764.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 122
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162764
+    streamname: physics_Egamma
+    totalevents: 1373373
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-08-31 16:31:52'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 90529
+    lastmodified: '2010-09-01 01:22:33'
+    logicaldatasetname: data10_7TeV.00162843.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 405
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162843
+    streamname: physics_Egamma
+    totalevents: 3461144
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-01 16:53:16'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 90550
+    lastmodified: '2010-09-02 01:34:06'
+    logicaldatasetname: data10_7TeV.00162882.physics_Egamma.merge.NTUP_PROMPTPHOT.f287_p231
+    modifiedby: root
+    nfiles: 328
+    period: F2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 162882
+    streamname: physics_Egamma
+    totalevents: 2332160
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f287_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-26 10:31:39'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 100225
+    lastmodified: '2010-09-26 22:47:23'
+    logicaldatasetname: data10_7TeV.00165591.physics_Egamma.merge.NTUP_PROMPTPHOT.f292_p231
+    modifiedby: root
+    nfiles: 1943
+    period: G1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165591
+    streamname: physics_Egamma
+    totalevents: 3419936
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f292_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-27 13:30:38'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 100558
+    lastmodified: '2010-09-27 19:40:23'
+    logicaldatasetname: data10_7TeV.00165632.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 1989
+    period: G1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165632
+    streamname: physics_Egamma
+    totalevents: 2766234
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-28 07:31:39'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 100975
+    lastmodified: '2010-09-28 13:28:33'
+    logicaldatasetname: data10_7TeV.00165703.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 202
+    period: G2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165703
+    streamname: physics_Egamma
+    totalevents: 265341
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-29 10:28:36'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 101279
+    lastmodified: '2010-09-30 05:04:51'
+    logicaldatasetname: data10_7TeV.00165732.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 2083
+    period: G2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165732
+    streamname: physics_Egamma
+    totalevents: 3190412
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-02 13:26:16'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 103051
+    lastmodified: '2010-10-08 07:10:10'
+    logicaldatasetname: data10_7TeV.00165767.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 1813
+    period: G3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165767
+    streamname: physics_Egamma
+    totalevents: 2507500
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-30 19:38:19'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 102213
+    lastmodified: '2010-09-30 23:01:30'
+    logicaldatasetname: data10_7TeV.00165815.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 242
+    period: G3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165815
+    streamname: physics_Egamma
+    totalevents: 320675
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-09-30 13:31:45'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 102111
+    lastmodified: '2010-09-30 16:49:43'
+    logicaldatasetname: data10_7TeV.00165817.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 1
+    period: G4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165817
+    streamname: physics_Egamma
+    totalevents: 1021
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-01 04:32:08'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 102420
+    lastmodified: '2010-10-07 08:06:39'
+    logicaldatasetname: data10_7TeV.00165818.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 373
+    period: G4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165818
+    streamname: physics_Egamma
+    totalevents: 482329
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-01 01:29:39'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 102360
+    lastmodified: '2010-10-01 10:23:21'
+    logicaldatasetname: data10_7TeV.00165821.physics_Egamma.merge.NTUP_PROMPTPHOT.f293_p231
+    modifiedby: root
+    nfiles: 413
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165821
+    streamname: physics_Egamma
+    totalevents: 579802
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f293_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-02 15:57:15'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 103225
+    lastmodified: '2010-10-02 22:37:37'
+    logicaldatasetname: data10_7TeV.00165954.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 239
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165954
+    streamname: physics_Egamma
+    totalevents: 273060
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-02 15:53:19'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 103212
+    lastmodified: '2010-10-08 07:20:45'
+    logicaldatasetname: data10_7TeV.00165956.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 97
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 165956
+    streamname: physics_Egamma
+    totalevents: 122672
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-04 04:31:42'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 103572
+    lastmodified: '2010-10-09 07:33:24'
+    logicaldatasetname: data10_7TeV.00166094.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 183
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166094
+    streamname: physics_Egamma
+    totalevents: 174318
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-04 16:25:33'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 103745
+    lastmodified: '2010-10-10 07:24:42'
+    logicaldatasetname: data10_7TeV.00166097.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 356
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166097
+    streamname: physics_Egamma
+    totalevents: 572777
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-06 01:31:08'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 104231
+    lastmodified: '2010-10-11 07:40:14'
+    logicaldatasetname: data10_7TeV.00166142.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 737
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166142
+    streamname: physics_Egamma
+    totalevents: 1100640
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-06 04:25:08'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 104290
+    lastmodified: '2010-10-11 07:40:16'
+    logicaldatasetname: data10_7TeV.00166143.physics_Egamma.merge.NTUP_PROMPTPHOT.f294_p231
+    modifiedby: root
+    nfiles: 291
+    period: G5
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166143
+    streamname: physics_Egamma
+    totalevents: 467041
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f294_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-07 19:40:16'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 105566
+    lastmodified: '2010-10-13 07:44:36'
+    logicaldatasetname: data10_7TeV.00166198.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231
+    modifiedby: root
+    nfiles: 1821
+    period: VdM3
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166198
+    streamname: physics_Egamma
+    totalevents: 2899700
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f295_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-08 07:47:34'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 105967
+    lastmodified: '2010-10-13 07:13:03'
+    logicaldatasetname: data10_7TeV.00166305.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231
+    modifiedby: root
+    nfiles: 248
+    period: G6
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166305
+    streamname: physics_Egamma
+    totalevents: 422661
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f295_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-10 10:36:46'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 108294
+    lastmodified: '2010-10-15 07:39:22'
+    logicaldatasetname: data10_7TeV.00166383.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231
+    modifiedby: root
+    nfiles: 903
+    period: G6
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166383
+    streamname: physics_Egamma
+    totalevents: 1503980
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f295_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-11 09:30:17'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 108988
+    lastmodified: '2010-10-16 07:29:52'
+    logicaldatasetname: data10_7TeV.00166466.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231
+    modifiedby: root
+    nfiles: 959
+    period: H1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166466
+    streamname: physics_Egamma
+    totalevents: 1736028
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f295_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-14 13:26:55'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 110351
+    lastmodified: '2010-10-20 07:36:46'
+    logicaldatasetname: data10_7TeV.00166658.physics_Egamma.merge.NTUP_PROMPTPHOT.f295_p231
+    modifiedby: root
+    nfiles: 1404
+    period: H1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166658
+    streamname: physics_Egamma
+    totalevents: 2557120
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f295_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-16 19:40:03'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 111113
+    lastmodified: '2010-10-22 07:38:45'
+    logicaldatasetname: data10_7TeV.00166786.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 1280
+    period: H1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166786
+    streamname: physics_Egamma
+    totalevents: 2269679
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-17 10:32:36'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 111176
+    lastmodified: '2010-10-22 07:17:38'
+    logicaldatasetname: data10_7TeV.00166850.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 2
+    period: H1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166850
+    streamname: physics_Egamma
+    totalevents: 37165
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-18 04:31:49'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 111632
+    lastmodified: '2010-10-27 07:55:24'
+    logicaldatasetname: data10_7TeV.00166856.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 116
+    period: H2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166856
+    streamname: physics_Egamma
+    totalevents: 249684
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-19 10:36:52'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 112429
+    lastmodified: '2010-10-27 07:42:54'
+    logicaldatasetname: data10_7TeV.00166924.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 748
+    period: H2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166924
+    streamname: physics_Egamma
+    totalevents: 1451408
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-19 04:31:56'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 112283
+    lastmodified: '2010-10-27 07:42:35'
+    logicaldatasetname: data10_7TeV.00166925.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 124
+    period: H2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166925
+    streamname: physics_Egamma
+    totalevents: 129621
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-19 23:32:19'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 112980
+    lastmodified: '2010-10-27 07:55:27'
+    logicaldatasetname: data10_7TeV.00166927.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 468
+    period: H2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166927
+    streamname: physics_Egamma
+    totalevents: 673635
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-20 22:43:12'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 113218
+    lastmodified: '2010-10-27 07:44:48'
+    logicaldatasetname: data10_7TeV.00166964.physics_Egamma.merge.NTUP_PROMPTPHOT.f296_p231
+    modifiedby: root
+    nfiles: 71
+    period: H2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 166964
+    streamname: physics_Egamma
+    totalevents: 147374
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f296_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-26 14:39:11'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 114540
+    lastmodified: '2010-10-31 09:35:47'
+    logicaldatasetname: data10_7TeV.00167575.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231
+    modifiedby: root
+    nfiles: 43
+    period: I1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167575
+    streamname: physics_Egamma
+    totalevents: 82378
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f298_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-27 13:52:25'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 115349
+    lastmodified: '2010-11-01 09:14:16'
+    logicaldatasetname: data10_7TeV.00167576.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231
+    modifiedby: root
+    nfiles: 1430
+    period: I1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167576
+    streamname: physics_Egamma
+    totalevents: 3618075
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f298_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-29 13:47:33'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 116206
+    lastmodified: '2010-11-05 09:28:50'
+    logicaldatasetname: data10_7TeV.00167607.physics_Egamma.merge.NTUP_PROMPTPHOT.f298_p231
+    modifiedby: root
+    nfiles: 1671
+    period: I1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167607
+    streamname: physics_Egamma
+    totalevents: 3886539
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f298_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-29 22:50:02'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 116917
+    lastmodified: '2010-11-05 09:29:10'
+    logicaldatasetname: data10_7TeV.00167661.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231
+    modifiedby: root
+    nfiles: 328
+    period: I1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167661
+    streamname: physics_Egamma
+    totalevents: 899692
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f299_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-29 22:48:34'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 116914
+    lastmodified: '2010-11-04 09:32:46'
+    logicaldatasetname: data10_7TeV.00167680.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231
+    modifiedby: root
+    nfiles: 1059
+    period: I1
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167680
+    streamname: physics_Egamma
+    totalevents: 2548189
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f299_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-10-31 06:43:14'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 119226
+    lastmodified: '2010-11-05 09:18:21'
+    logicaldatasetname: data10_7TeV.00167776.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231
+    modifiedby: root
+    nfiles: 2089
+    period: I2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167776
+    streamname: physics_Egamma
+    totalevents: 6130137
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f299_p231
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: ''
+    conditionstag: ''
+    created: '2010-11-01 15:44:17'
+    createdby: root
+    creationcomment: group production SM direct photon and Exotics UED
+    datatype: NTUP_PROMPTPHOT
+    geometryversion: ''
+    identifier: 122845
+    lastmodified: '2010-11-03 21:46:21'
+    logicaldatasetname: data10_7TeV.00167844.physics_Egamma.merge.NTUP_PROMPTPHOT.f299_p231
+    modifiedby: root
+    nfiles: 931
+    period: I2
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    physicscomment: ''
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data10_7TeV
+    relationalloaded: 0
+    runnumber: 167844
+    streamname: physics_Egamma
+    totalevents: 2499045
+    trashannotation: ''
+    trashdate: ''
+    trashedby: ''
+    trashtrigger: ''
+    version: f299_p231
 datasets_expanded:
 - data10_7TeV.00160387.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231_tid161210_00
 - data10_7TeV.00160472.physics_Egamma.merge.NTUP_PROMPTPHOT.f280_p231_tid161209_00
