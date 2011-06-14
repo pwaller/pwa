@@ -1,12 +1,15 @@
 #! /usr/bin/env python
 
+from math import tanh, pi
+twopi = 2*pi
+
 from minty.base import AnalysisBase
 from minty.histograms import double_bins, mirror_bins, scale_bins
 from minty.main import make_main
 from minty.treedefs.egamma import Photon, Electron
 from minty.utils import delta_r
 
-PHIBINS = 100, -3.1415, 3.1415
+PHIBINS = 100, -pi, pi
 def plot_kinematics(ana, name, obj):
     hget = ana.h.get
 
@@ -68,19 +71,24 @@ def plot_boson(ana, name, ph1, ph2):
         # Keep all high mass events!
         ana.should_dump = True
         
-    H(name, "boson/mass",      b=[(1000, 0, 500)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
-    H(name, "boson/mass_wide", b=[(4000, 0, 2000)], t=";M_{#gamma#gamma} [GeV]")(comb.m/1000)
-    H(name, "boson/eta",       b=[(100, -8, 8)])(comb.eta)
-    H(name, "boson/phi",       b=[(100, -3.1415, 3.1415)])(comb.phi)
-    H(name, "boson/deltar",    b=[(100, 0, 6.282)])(delta_r(ph1, ph2))
+    H(name, "boson/mass",           b=[(1000, 0, 500)],     t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "boson/mass_wide",      b=[(4000, 0, 2000)],    t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "boson/pt",             b=[(1000, 0, 2000)],    t="Boson p_{T};p_{T}_{#gamma#gamma} [GeV]")(comb.pt/1000)
+    H(name, "boson/eta",            b=[(100, -8, 8)],       t="Boson #eta;#eta_{#gamma#gamma}")(comb.eta)
+    H(name, "boson/phi",            b=[(100, -pi, pi)],     t="Boson #phi;#phi_{#gamma#gamma}")(comb.phi)
+    H(name, "boson/deltar",         b=[(100, 0, twopi)],    t="Boson #Delta r;#Delta r_{#gamma#gamma}")(delta_r(ph1, ph2))
+    H(name, "boson/deltaphi",       b=[(100, -pi, pi)],     t="Boson #Delta #phi;#Delta #phi_{#gamma#gamma}")(ph1.phi - ph2.phi)
+    H(name, "boson/deltaeta",       b=[(100, -4, 4)],       t="Boson #Delta #eta;#Delta #eta_{#gamma#gamma}")(ph1.eta - ph2.eta)
+    H(name, "boson/costhetastar",   b=[(100, -pi, pi)],     t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(tanh((ph1.eta - ph2.eta) / 2))
+    H(name, "boson/boost",          b=[(100, -pi, pi)],     t="Boson Boost;#beta_{Z}_{#gamma#gamma}")(tanh((ph1.eta + ph2.eta) / 2))
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
     if ph1.isConv and ph2.isConv:
         plot_boson(ana, (name, "convboth"), ph1, ph2)
-    elif ph1.isConv:
+    elif ph1.isConv and not ph2.isConv:
         plot_boson(ana, (name, "conv1"), ph1, ph2)
-    elif ph2.isConv:
+    elif ph2.isConv and not ph1.isConv:
         plot_boson(ana, (name, "conv2"), ph1, ph2)
     else:
         plot_boson(ana, (name, "convneither"), ph1, ph2)
@@ -145,6 +153,9 @@ def do_photon_cutflow(ana, event):
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/pre_loose", ph)
         plot_shower    (ana, "all_phs/pre_loose", ph)
+        if ph.isConv:
+            plot_kinematics(ana, "all_phs/pre_loose/conv", ph)
+            plot_shower    (ana, "all_phs/pre_loose/conv", ph)
 
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
