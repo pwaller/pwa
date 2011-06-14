@@ -22,7 +22,6 @@ datasets:
     nfiles: 19
     period: A1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -31,10 +30,6 @@ datasets:
     runnumber: 177682
     streamname: physics_Egamma
     totalevents: 4272
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p541
 - !Atlas.Dataset
   contents:
@@ -53,7 +48,6 @@ datasets:
     nfiles: 3
     period: B1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -62,10 +56,6 @@ datasets:
     runnumber: 177986
     streamname: physics_Egamma
     totalevents: 306958
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -84,7 +74,6 @@ datasets:
     nfiles: 1
     period: B1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -93,10 +82,6 @@ datasets:
     runnumber: 178020
     streamname: physics_Egamma
     totalevents: 50018
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -115,7 +100,6 @@ datasets:
     nfiles: 2
     period: B1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -124,10 +108,6 @@ datasets:
     runnumber: 178021
     streamname: physics_Egamma
     totalevents: 157208
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -146,7 +126,6 @@ datasets:
     nfiles: 1
     period: B1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -155,10 +134,6 @@ datasets:
     runnumber: 178026
     streamname: physics_Egamma
     totalevents: 43600
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -177,7 +152,6 @@ datasets:
     nfiles: 10
     period: B2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -186,10 +160,6 @@ datasets:
     runnumber: 178044
     streamname: physics_Egamma
     totalevents: 1127941
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -208,7 +178,6 @@ datasets:
     nfiles: 1
     period: B2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -217,10 +186,6 @@ datasets:
     runnumber: 178047
     streamname: physics_Egamma
     totalevents: 28850
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -239,7 +204,6 @@ datasets:
     nfiles: 12
     period: B2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -248,10 +212,6 @@ datasets:
     runnumber: 178109
     streamname: physics_Egamma
     totalevents: 1403438
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p541
 - !Atlas.Dataset
   contents:
@@ -268,9 +228,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00179691.physics_Egamma.merge.NTUP_PHOTON.f360_m796_p541
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -279,10 +237,6 @@ datasets:
     runnumber: 179691
     streamname: physics_Egamma
     totalevents: 3
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f360_m796_p541
 - !Atlas.Dataset
   contents:
@@ -301,7 +255,6 @@ datasets:
     nfiles: 106
     period: D1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -310,10 +263,6 @@ datasets:
     runnumber: 179710
     streamname: physics_Egamma
     totalevents: 1626614
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p541
 - !Atlas.Dataset
   contents:
@@ -332,7 +281,6 @@ datasets:
     nfiles: 57
     period: D1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -341,10 +289,6 @@ datasets:
     runnumber: 179725
     streamname: physics_Egamma
     totalevents: 750482
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p541
 - !Atlas.Dataset
   contents:
@@ -363,7 +307,6 @@ datasets:
     nfiles: 71
     period: D1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -372,10 +315,6 @@ datasets:
     runnumber: 179739
     streamname: physics_Egamma
     totalevents: 997197
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p541
 - !Atlas.Dataset
   contents:
@@ -394,7 +333,6 @@ datasets:
     nfiles: 41
     period: D2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -403,10 +341,6 @@ datasets:
     runnumber: 179771
     streamname: physics_Egamma
     totalevents: 450042
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f362_m801_p541
 - !Atlas.Dataset
   contents:
@@ -425,7 +359,6 @@ datasets:
     nfiles: 210
     period: D2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -434,10 +367,6 @@ datasets:
     runnumber: 179804
     streamname: physics_Egamma
     totalevents: 2608038
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f363_m806_p541
 - !Atlas.Dataset
   contents:
@@ -456,7 +385,6 @@ datasets:
     nfiles: 30
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -465,10 +393,6 @@ datasets:
     runnumber: 179938
     streamname: physics_Egamma
     totalevents: 405503
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f365_m806_p541
 - !Atlas.Dataset
   contents:
@@ -487,7 +411,6 @@ datasets:
     nfiles: 105
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -496,10 +419,6 @@ datasets:
     runnumber: 179939
     streamname: physics_Egamma
     totalevents: 1400167
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f366_m806_p541
 - !Atlas.Dataset
   contents:
@@ -518,7 +437,6 @@ datasets:
     nfiles: 6
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -527,10 +445,6 @@ datasets:
     runnumber: 179940
     streamname: physics_Egamma
     totalevents: 74341
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f366_m806_p541
 - !Atlas.Dataset
   contents:
@@ -549,7 +463,6 @@ datasets:
     nfiles: 72
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -558,10 +471,6 @@ datasets:
     runnumber: 180122
     streamname: physics_Egamma
     totalevents: 1346012
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f367_m806_p541
 - !Atlas.Dataset
   contents:
@@ -580,7 +489,6 @@ datasets:
     nfiles: 97
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -589,10 +497,6 @@ datasets:
     runnumber: 180124
     streamname: physics_Egamma
     totalevents: 1766023
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -611,7 +515,6 @@ datasets:
     nfiles: 114
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -620,10 +523,6 @@ datasets:
     runnumber: 180139
     streamname: physics_Egamma
     totalevents: 1741067
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -642,7 +541,6 @@ datasets:
     nfiles: 50
     period: D3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -651,10 +549,6 @@ datasets:
     runnumber: 180144
     streamname: physics_Egamma
     totalevents: 836746
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -673,7 +567,6 @@ datasets:
     nfiles: 60
     period: D4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -682,10 +575,6 @@ datasets:
     runnumber: 180149
     streamname: physics_Egamma
     totalevents: 832145
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -704,7 +593,6 @@ datasets:
     nfiles: 117
     period: D4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -713,10 +601,6 @@ datasets:
     runnumber: 180153
     streamname: physics_Egamma
     totalevents: 2008370
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -735,7 +619,6 @@ datasets:
     nfiles: 268
     period: D4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -744,10 +627,6 @@ datasets:
     runnumber: 180164
     streamname: physics_Egamma
     totalevents: 4344169
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -766,7 +645,6 @@ datasets:
     nfiles: 2
     period: D4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -775,10 +653,6 @@ datasets:
     runnumber: 180212
     streamname: physics_Egamma
     totalevents: 23532
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -795,9 +669,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00180224.physics_Egamma.merge.NTUP_PHOTON.f368_m806_p541
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -806,10 +678,6 @@ datasets:
     runnumber: 180224
     streamname: physics_Egamma
     totalevents: 109
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -828,7 +696,6 @@ datasets:
     nfiles: 217
     period: D5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -837,10 +704,6 @@ datasets:
     runnumber: 180225
     streamname: physics_Egamma
     totalevents: 3712777
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -859,7 +722,6 @@ datasets:
     nfiles: 70
     period: D5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -868,10 +730,6 @@ datasets:
     runnumber: 180241
     streamname: physics_Egamma
     totalevents: 1053455
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -890,7 +748,6 @@ datasets:
     nfiles: 86
     period: D5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -899,10 +756,6 @@ datasets:
     runnumber: 180242
     streamname: physics_Egamma
     totalevents: 1244123
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p541
 - !Atlas.Dataset
   contents:
@@ -921,7 +774,6 @@ datasets:
     nfiles: 141
     period: D6
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -930,10 +782,6 @@ datasets:
     runnumber: 180309
     streamname: physics_Egamma
     totalevents: 2078914
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p541
 - !Atlas.Dataset
   contents:
@@ -952,7 +800,6 @@ datasets:
     nfiles: 236
     period: D6
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -961,10 +808,6 @@ datasets:
     runnumber: 180400
     streamname: physics_Egamma
     totalevents: 3354971
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p541
 - !Atlas.Dataset
   contents:
@@ -983,7 +826,6 @@ datasets:
     nfiles: 19
     period: D6
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -992,10 +834,6 @@ datasets:
     runnumber: 180448
     streamname: physics_Egamma
     totalevents: 231808
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p541
 - !Atlas.Dataset
   contents:
@@ -1014,7 +852,6 @@ datasets:
     nfiles: 296
     period: D7
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1023,10 +860,6 @@ datasets:
     runnumber: 180481
     streamname: physics_Egamma
     totalevents: 4332056
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p541
 - !Atlas.Dataset
   contents:
@@ -1045,7 +878,6 @@ datasets:
     nfiles: 49
     period: E1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1054,10 +886,6 @@ datasets:
     runnumber: 180614
     streamname: physics_Egamma
     totalevents: 636175
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p541
 - !Atlas.Dataset
   contents:
@@ -1076,7 +904,6 @@ datasets:
     nfiles: 341
     period: E1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1085,10 +912,6 @@ datasets:
     runnumber: 180636
     streamname: physics_Egamma
     totalevents: 5167671
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p541
 - !Atlas.Dataset
   contents:
@@ -1107,7 +930,6 @@ datasets:
     nfiles: 32
     period: E1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1116,10 +938,6 @@ datasets:
     runnumber: 180664
     streamname: physics_Egamma
     totalevents: 432231
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p541
 - !Atlas.Dataset
   contents:
@@ -1138,7 +956,6 @@ datasets:
     nfiles: 137
     period: E1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1147,10 +964,6 @@ datasets:
     runnumber: 180710
     streamname: physics_Egamma
     totalevents: 1873829
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p541
 - !Atlas.Dataset
   contents:
@@ -1169,7 +982,6 @@ datasets:
     nfiles: 3
     period: E1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1178,10 +990,6 @@ datasets:
     runnumber: 180776
     streamname: physics_Egamma
     totalevents: 48085
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p541
 - !Atlas.Dataset
   contents:
@@ -1200,7 +1008,6 @@ datasets:
     nfiles: 16
     period: F1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1209,10 +1016,6 @@ datasets:
     runnumber: 182013
     streamname: physics_Egamma
     totalevents: 39108
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f378_m841_p541
 - !Atlas.Dataset
   contents:
@@ -1231,7 +1034,6 @@ datasets:
     nfiles: 26
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1240,10 +1042,6 @@ datasets:
     runnumber: 182161
     streamname: physics_Egamma
     totalevents: 398112
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f379_m849_p541
 - !Atlas.Dataset
   contents:
@@ -1262,7 +1060,6 @@ datasets:
     nfiles: 148
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1271,10 +1068,6 @@ datasets:
     runnumber: 182284
     streamname: physics_Egamma
     totalevents: 2223326
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m855_p541
 - !Atlas.Dataset
   contents:
@@ -1293,7 +1086,6 @@ datasets:
     nfiles: 18
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1302,10 +1094,6 @@ datasets:
     runnumber: 182346
     streamname: physics_Egamma
     totalevents: 248986
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m855_p541
 - !Atlas.Dataset
   contents:
@@ -1324,7 +1112,6 @@ datasets:
     nfiles: 151
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1333,10 +1120,6 @@ datasets:
     runnumber: 182372
     streamname: physics_Egamma
     totalevents: 2301740
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1355,7 +1138,6 @@ datasets:
     nfiles: 179
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1364,10 +1146,6 @@ datasets:
     runnumber: 182424
     streamname: physics_Egamma
     totalevents: 2915391
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1386,7 +1164,6 @@ datasets:
     nfiles: 37
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1395,10 +1172,6 @@ datasets:
     runnumber: 182449
     streamname: physics_Egamma
     totalevents: 452555
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1417,7 +1190,6 @@ datasets:
     nfiles: 14
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1426,10 +1198,6 @@ datasets:
     runnumber: 182450
     streamname: physics_Egamma
     totalevents: 225049
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1448,7 +1216,6 @@ datasets:
     nfiles: 84
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1457,10 +1224,6 @@ datasets:
     runnumber: 182454
     streamname: physics_Egamma
     totalevents: 1028303
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1479,7 +1242,6 @@ datasets:
     nfiles: 6
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1488,10 +1250,6 @@ datasets:
     runnumber: 182455
     streamname: physics_Egamma
     totalevents: 75121
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1510,7 +1268,6 @@ datasets:
     nfiles: 166
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1519,10 +1276,6 @@ datasets:
     runnumber: 182456
     streamname: physics_Egamma
     totalevents: 2644279
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1541,7 +1294,6 @@ datasets:
     nfiles: 230
     period: F2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1550,10 +1302,6 @@ datasets:
     runnumber: 182486
     streamname: physics_Egamma
     totalevents: 3255672
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1572,7 +1320,6 @@ datasets:
     nfiles: 91
     period: F3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1581,10 +1328,6 @@ datasets:
     runnumber: 182516
     streamname: physics_Egamma
     totalevents: 1069593
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1603,7 +1346,6 @@ datasets:
     nfiles: 19
     period: F3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1612,10 +1354,6 @@ datasets:
     runnumber: 182518
     streamname: physics_Egamma
     totalevents: 210199
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1634,7 +1372,6 @@ datasets:
     nfiles: 39
     period: F3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1643,10 +1380,6 @@ datasets:
     runnumber: 182519
     streamname: physics_Egamma
     totalevents: 498597
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1665,7 +1398,6 @@ datasets:
     nfiles: 48
     period: G1
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1674,10 +1406,6 @@ datasets:
     runnumber: 182726
     streamname: physics_Egamma
     totalevents: 575384
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p541
 - !Atlas.Dataset
   contents:
@@ -1696,7 +1424,6 @@ datasets:
     nfiles: 241
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1705,10 +1432,6 @@ datasets:
     runnumber: 182747
     streamname: physics_Egamma
     totalevents: 3391817
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1727,7 +1450,6 @@ datasets:
     nfiles: 43
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1736,10 +1458,6 @@ datasets:
     runnumber: 182766
     streamname: physics_Egamma
     totalevents: 500898
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1758,7 +1476,6 @@ datasets:
     nfiles: 268
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1767,10 +1484,6 @@ datasets:
     runnumber: 182787
     streamname: physics_Egamma
     totalevents: 3619975
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1789,7 +1502,6 @@ datasets:
     nfiles: 229
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1798,10 +1510,6 @@ datasets:
     runnumber: 182796
     streamname: physics_Egamma
     totalevents: 3086902
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1820,7 +1528,6 @@ datasets:
     nfiles: 40
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1829,10 +1536,6 @@ datasets:
     runnumber: 182879
     streamname: physics_Egamma
     totalevents: 535666
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1851,7 +1554,6 @@ datasets:
     nfiles: 34
     period: G2
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1860,10 +1562,6 @@ datasets:
     runnumber: 182886
     streamname: physics_Egamma
     totalevents: 445042
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1882,7 +1580,6 @@ datasets:
     nfiles: 30
     period: G3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1891,10 +1588,6 @@ datasets:
     runnumber: 182997
     streamname: physics_Egamma
     totalevents: 380090
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p541
 - !Atlas.Dataset
   contents:
@@ -1913,7 +1606,6 @@ datasets:
     nfiles: 320
     period: G3
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1922,10 +1614,6 @@ datasets:
     runnumber: 183003
     streamname: physics_Egamma
     totalevents: 4597927
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m872_p541
 - !Atlas.Dataset
   contents:
@@ -1944,7 +1632,6 @@ datasets:
     nfiles: 9
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1953,10 +1640,6 @@ datasets:
     runnumber: 183038
     streamname: physics_Egamma
     totalevents: 115229
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -1975,7 +1658,6 @@ datasets:
     nfiles: 131
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1984,10 +1666,6 @@ datasets:
     runnumber: 183045
     streamname: physics_Egamma
     totalevents: 1850856
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2006,7 +1684,6 @@ datasets:
     nfiles: 64
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2015,10 +1692,6 @@ datasets:
     runnumber: 183054
     streamname: physics_Egamma
     totalevents: 923002
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2037,7 +1710,6 @@ datasets:
     nfiles: 15
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2046,10 +1718,6 @@ datasets:
     runnumber: 183078
     streamname: physics_Egamma
     totalevents: 224572
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2068,7 +1736,6 @@ datasets:
     nfiles: 305
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2077,10 +1744,6 @@ datasets:
     runnumber: 183081
     streamname: physics_Egamma
     totalevents: 4589779
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2097,9 +1760,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00183112.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 2
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2108,10 +1769,6 @@ datasets:
     runnumber: 183112
     streamname: physics_Egamma
     totalevents: 30914
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2130,7 +1787,6 @@ datasets:
     nfiles: 105
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2139,10 +1795,6 @@ datasets:
     runnumber: 183127
     streamname: physics_Egamma
     totalevents: 1273965
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2159,9 +1811,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00183128.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2170,10 +1820,6 @@ datasets:
     runnumber: 183128
     streamname: physics_Egamma
     totalevents: 1097
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2192,7 +1838,6 @@ datasets:
     nfiles: 47
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2201,10 +1846,6 @@ datasets:
     runnumber: 183129
     streamname: physics_Egamma
     totalevents: 738686
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2223,7 +1864,6 @@ datasets:
     nfiles: 133
     period: G4
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2232,10 +1872,6 @@ datasets:
     runnumber: 183130
     streamname: physics_Egamma
     totalevents: 2166375
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2252,9 +1888,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00183210.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2263,10 +1897,6 @@ datasets:
     runnumber: 183210
     streamname: physics_Egamma
     totalevents: 1
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2283,9 +1913,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00183213.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2294,10 +1922,6 @@ datasets:
     runnumber: 183213
     streamname: physics_Egamma
     totalevents: 2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2316,7 +1940,6 @@ datasets:
     nfiles: 214
     period: G5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2325,10 +1948,6 @@ datasets:
     runnumber: 183216
     streamname: physics_Egamma
     totalevents: 3189806
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -2347,7 +1966,6 @@ datasets:
     nfiles: 97
     period: G5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2356,10 +1974,6 @@ datasets:
     runnumber: 183272
     streamname: physics_Egamma
     totalevents: 1303377
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f384_m878_p541
 - !Atlas.Dataset
   contents:
@@ -2378,7 +1992,6 @@ datasets:
     nfiles: 206
     period: G5
     physicistresponsible: leonardo.carminati@mi.infn.it
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2387,10 +2000,6 @@ datasets:
     runnumber: 183286
     streamname: physics_Egamma
     totalevents: 3118374
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f384_m878_p541
 datasets_expanded:
 - data11_7TeV.00177682.physics_Egamma.merge.NTUP_PHOTON.f348_m760_p541_tid319619_00
