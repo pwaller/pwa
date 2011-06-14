@@ -176,14 +176,17 @@ def status(self, params):
     files = [TFile.Open(f) for f in inputs]
     
     def get_info(f):
-        return [
-            f.exception_count.GetVal(),
-            f.cputime.GetVal(),
-            f.skimtime.GetVal() if f.Get("skimtime") else "N/A",
-            f.walltime.GetVal(),
-            f.processed_trees.GetVal(),
-            f.jobs_files.GetVal(),
-        ]
+        try:
+            return [
+                f.exception_count.GetVal(),
+                f.cputime.GetVal(),
+                f.skimtime.GetVal() if f.Get("skimtime") else "N/A",
+                f.walltime.GetVal(),
+                f.processed_trees.GetVal(),
+                f.jobs_files.GetVal(),
+            ]
+        except AttributeError:
+            return [None]*6
        
     labels = ["exceptions", "cputime", "skimtime", "walltime", "ntrees", "njf"]
     numbers = [[f.GetName()] + get_info(f) for f in files]
