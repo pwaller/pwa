@@ -147,7 +147,7 @@ def do_photon_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(PH_ETA)
     
-    good_photons = [ph for ph in good_photons if ph.cl.pt >= 25000]
+    good_photons = [ph for ph in good_photons if ph.pt_via_clE_etas2 >= 25000]
     if len(good_photons) < 2: return
     counts(PH_PT)
     
