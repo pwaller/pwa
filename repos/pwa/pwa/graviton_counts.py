@@ -27,7 +27,7 @@ def plot_kinematics(ana, name, obj):
     hget(name, "eta_vs_phi",   b=[ana.etabins_many, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
     
     if getattr(obj, "conv", None) and getattr(obj, "isConv", None):
-        hget(name, "Rconv",    b=[(100, 0, 1500)],   t="Conversion Radius;R_{conversion} [mm]")(obj.conv.R)
+        hget(name, "Rconv",    b=[(2000, 0, 1000)],   t="Conversion Radius;R_{conversion} [mm]")(obj.conv.R)
         
 
 def plot_shower(ana, name, obj):
