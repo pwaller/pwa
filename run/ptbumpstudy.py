@@ -130,7 +130,7 @@ def plot_photons(ana, event, name, counts, good_photons,
     
     ph1, ph2 = good_photons[:2]
     
-    if dphi_cut and abs(ph1.phi - ph2.phi) > 2:
+    if dphi_cut and abs(ph1.phi - ph2.phi) < 2:
         return
     
     if check_jet_lar:
