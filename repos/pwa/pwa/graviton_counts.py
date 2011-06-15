@@ -81,10 +81,10 @@ def plot_boson(ana, name, ph1, ph2):
     H(name, "boson/eta",            b=[(100, -8, 8)],       t="Boson #eta;#eta_{#gamma#gamma}")(comb.eta)
     H(name, "boson/phi",            b=[(100, -pi, pi)],     t="Boson #phi;#phi_{#gamma#gamma}")(comb.phi)
     H(name, "boson/deltar",         b=[(100, 0, twopi)],    t="Boson #Delta r;#Delta r_{#gamma#gamma}")(delta_r(ph1, ph2))
-    H(name, "boson/deltaphi",       b=[(100, -pi, pi)],     t="Boson #Delta #phi;#Delta #phi_{#gamma#gamma}")(ph1.phi - ph2.phi)
-    H(name, "boson/deltaeta",       b=[(100, -4, 4)],       t="Boson #Delta #eta;#Delta #eta_{#gamma#gamma}")(ph1.eta - ph2.eta)
-    H(name, "boson/costhetastar",   b=[(100, -pi, pi)],     t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(tanh((ph1.eta - ph2.eta) / 2))
-    H(name, "boson/boost",          b=[(100, -pi, pi)],     t="Boson Boost;#beta_{Z}_{#gamma#gamma}")(tanh((ph1.eta + ph2.eta) / 2))
+    H(name, "boson/deltaphi",       b=[(200, 0, twopi)],    t="Boson #Delta #phi;#Delta #phi_{#gamma#gamma}")(abs(ph1.phi - ph2.phi))
+    H(name, "boson/deltaeta",       b=[(100, -8, 8)],       t="Boson #Delta #eta;#Delta #eta_{#gamma#gamma}")(ph1.eta - ph2.eta)
+    H(name, "boson/costhetastar",   b=[(100, -1, 1)],       t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(tanh((ph1.eta - ph2.eta) / 2))
+    H(name, "boson/boost",          b=[(100, -1, 1)],       t="Boson Boost;#beta_{Z}_{#gamma#gamma}")(tanh((ph1.eta + ph2.eta) / 2))
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
