@@ -99,7 +99,7 @@ def plot_boson_wconv(ana, name, ph1, ph2):
 
 def pass_event(counts, ana, event):
     # Total
-    counts(0)
+    counts(PH_TOTAL)
         
     # Pass Trigger
     if ana.project == "data10":
@@ -114,20 +114,22 @@ def pass_event(counts, ana, event):
         trigger = event.EF._2g20_loose
     
     if not trigger: return
-    counts(1)
+    counts(PH_2G20L)
 
     if not event.is_grl: return
-    counts(2)
+    counts(PH_GRL)
     
     # Requirement for other paper: and v.z < 150. 
     if not any(v.nTracks >= 3 for v in event.vertices): return
-    counts(3)
+    counts(PH_VTX)
     
     return True
 
 PHOTON_CUTFLOW = (
-    "named", "total", "2g20_loose", "grl", "vertex", "nphot", "eta", "pt", 
-    "oq", "loose", "tight", "tightar", "larError", "jetcleaning")
+    "named", "total", "2g20_loose", "grl",  "vertex", "nphot", "eta", "pt", 
+    "oq", "loose",   "tight",  "tightar",  "larError",  "jetcleaning")
+(            PH_TOTAL, PH_2G20L,    PH_GRL, PH_VTX,   PH_N,    PH_ETA, PH_PT, 
+    PH_OQ, PH_LOOSE, PH_TIGHT, PH_TIGHTAR, PH_LARERROR, PH_JETCLEANING) = range(len(PHOTON_CUTFLOW)-1)
 def do_photon_cutflow(ana, event):
     counts = ana.h.get("photon_cutflow", b=[PHOTON_CUTFLOW])
     
@@ -138,20 +140,20 @@ def do_photon_cutflow(ana, event):
     good_photons = event.photons
     
     if len(good_photons) < 2: return
-    counts(4)
+    counts(PH_N)
     
     # fiducal is abs(self.etas2) < 1.37 or 1.52 < abs(self.etas2) < 2.37
     good_photons = [ph for ph in good_photons if ph.pass_fiducial_eta]
     if len(good_photons) < 2: return
-    counts(5)
+    counts(PH_ETA)
     
     good_photons = [ph for ph in good_photons if ph.cl.pt >= 25000]
     if len(good_photons) < 2: return
-    counts(6)
+    counts(PH_PT)
     
     good_photons = [ph for ph in good_photons if ph.my_oq]
     if len(good_photons) < 2: return
-    counts(7)
+    counts(PH_OQ)
     
     # Plot kinematics and shower variables before loose cut, as well as after
     for ph in good_photons:
@@ -163,7 +165,7 @@ def do_photon_cutflow(ana, event):
 
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
-    counts(8)
+    counts(PH_LOOSE)
     
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/post_loose", ph)
@@ -178,17 +180,17 @@ def do_photon_cutflow(ana, event):
     
     # my_tight is robust_tight for data10, and "tight" for data11
     if ph1.my_tight and ph2.my_tight:
-        counts(9)
+        counts(PH_TIGHT)
         
         # Cuts for informational purposes.
         if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
-            counts(10)
+            counts(PH_TIGHTAR)
             
             if not event.larError:
-                counts(11)
+                counts(PH_LARERROR)
                 
                 if ph1.pass_jetcleaning and ph2.pass_jetcleaning:
-                    counts(12)
+                    counts(PH_JETCLEANING)
     
     # Loose plots
     plot_kinematics (ana, "default/ph/1", ph1)
