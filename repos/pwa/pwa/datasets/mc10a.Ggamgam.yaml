@@ -1,8 +1,8 @@
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.mc10a.Ggamgam.v2/
+container_name: user.PeterWaller.mc10a.Ggamgam.v3/
 pattern: mc10_7TeV.*Pythia_Ggammagamma*r2260_p548/
 shortname: mc10a.Ggamgam
-version: 2
+version: 3
 ---
 datasets:
 - !Atlas.Dataset

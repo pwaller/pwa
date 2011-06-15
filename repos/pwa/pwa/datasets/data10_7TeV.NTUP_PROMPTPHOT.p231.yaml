@@ -1,8 +1,8 @@
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.data10_7TeV.NTUP_PROMPTPHOT.p231.v2/
+container_name: user.PeterWaller.data10_7TeV.NTUP_PROMPTPHOT.p231.v3/
 pattern: data10_7TeV.*.physics_Egamma.merge.NTUP_PROMPTPHOT.*_p231/
 shortname: data10_7TeV.NTUP_PROMPTPHOT.p231
-version: 2
+version: 3
 ---
 datasets:
 - !Atlas.Dataset
