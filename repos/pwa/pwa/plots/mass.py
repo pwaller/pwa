@@ -6,10 +6,11 @@ import ROOT as R
 
 def draw_conversions(directory):
     from minty.utils.brace_expand import get_expand
-    #gStyle.SetOptStat(1110)
-    gStyle.SetOptStat(11111111)
+    gStyle.SetOptStat(1110)
+    #gStyle.SetOptStat(11111111)
     variable = "eta"
-    variable = "mass_wide"
+    #variable = "mass_wide"
+    
     #variable = "deltar"
     hists = get_expand(directory, "conv{1,2,neither,both}/boson/%s" % variable)
     hists = map(meaningful_yaxis, hists)
@@ -20,8 +21,6 @@ def draw_conversions(directory):
               "Neither converted", 
               "Both converted"]
     
-    
-    
     for h, t in zip(hists, titles):
         
         h.SetTitle(t)
@@ -30,9 +29,9 @@ def draw_conversions(directory):
         #h.Scale(convn.Integral() / h.Integral())
         
         if variable == "mass_wide":
-            h.Rebin(4000 / 2000) # (4000 is original binning, 200 target)
-            h.GetXaxis().SetRangeUser(50, 200)
-            h.GetXaxis().SetRangeUser(80, 100)
+            h.Rebin(4000 / 800) # (4000 is original binning, 200 target)
+            h.GetXaxis().SetRangeUser(50, 300)
+            #h.GetXaxis().SetRangeUser(80, 100)
         if variable == "eta":
             h.Rebin(2)
     

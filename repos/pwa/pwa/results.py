@@ -109,6 +109,8 @@ def dump(self, params):
    
     inputs = custom_sort(params.files)
 
+    #inputs = [i for i in inputs if "PUNK" not in i and "periodP." not in i]
+    
     from ROOT import TFile
     files = [TFile.Open(f) for f in inputs]
     good_files = []
@@ -122,7 +124,7 @@ def dump(self, params):
     axes = [c.GetXaxis() for c in cutflows]
     labels = set(tuple(a.GetBinLabel(i) for i in xrange(1, a.GetNbins()+1))
                  for a in axes)
-    print labels
+    #print labels
     assert len(labels) == 1, labels
     (labels,) = labels
     
@@ -151,7 +153,7 @@ def dump(self, params):
                     
             elif name.startswith("all"):
                 ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
-                events = sum(d.totalevents for dd in ds for d in dd)
+                events = sum(d.totalevents for dd in ds for d in dd if d.period != "UNK")
             
             if isinstance(events, int):
                 bad = "!" if events != h[1] else " "
