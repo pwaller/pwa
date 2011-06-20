@@ -22,7 +22,6 @@ datasets:
     nfiles: 17
     period: A1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -31,10 +30,6 @@ datasets:
     runnumber: 177531
     streamname: physics_Egamma
     totalevents: 2898
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p580
 - !Atlas.Dataset
   contents:
@@ -53,7 +48,6 @@ datasets:
     nfiles: 6
     period: A1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -62,10 +56,6 @@ datasets:
     runnumber: 177539
     streamname: physics_Egamma
     totalevents: 1543
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p580
 - !Atlas.Dataset
   contents:
@@ -84,7 +74,6 @@ datasets:
     nfiles: 15
     period: A1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -93,10 +82,6 @@ datasets:
     runnumber: 177540
     streamname: physics_Egamma
     totalevents: 3481
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p580
 - !Atlas.Dataset
   contents:
@@ -115,7 +100,6 @@ datasets:
     nfiles: 8
     period: A1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -124,10 +108,6 @@ datasets:
     runnumber: 177593
     streamname: physics_Egamma
     totalevents: 1881
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p580
 - !Atlas.Dataset
   contents:
@@ -146,7 +126,6 @@ datasets:
     nfiles: 19
     period: A1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -155,10 +134,6 @@ datasets:
     runnumber: 177682
     streamname: physics_Egamma
     totalevents: 4272
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f348_m760_p580
 - !Atlas.Dataset
   contents:
@@ -177,7 +152,6 @@ datasets:
     nfiles: 1
     period: A2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -186,10 +160,6 @@ datasets:
     runnumber: 177904
     streamname: physics_Egamma
     totalevents: 913
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f349_m760_p580
 - !Atlas.Dataset
   contents:
@@ -208,7 +178,6 @@ datasets:
     nfiles: 20
     period: A2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -217,10 +186,6 @@ datasets:
     runnumber: 177924
     streamname: physics_Egamma
     totalevents: 98309
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f350_m760_p580
 - !Atlas.Dataset
   contents:
@@ -239,7 +204,6 @@ datasets:
     nfiles: 28
     period: A2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -248,10 +212,6 @@ datasets:
     runnumber: 177929
     streamname: physics_Egamma
     totalevents: 139290
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f350_m760_p580
 - !Atlas.Dataset
   contents:
@@ -270,7 +230,6 @@ datasets:
     nfiles: 36
     period: A2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -279,10 +238,6 @@ datasets:
     runnumber: 177965
     streamname: physics_Egamma
     totalevents: 178259
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f351_m765_p580
 - !Atlas.Dataset
   contents:
@@ -301,7 +256,6 @@ datasets:
     nfiles: 5
     period: B1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -310,10 +264,6 @@ datasets:
     runnumber: 177986
     streamname: physics_Egamma
     totalevents: 306958
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -330,9 +280,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00178019.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -341,10 +289,6 @@ datasets:
     runnumber: 178019
     streamname: physics_Egamma
     totalevents: 58
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f351_m765_p580
 - !Atlas.Dataset
   contents:
@@ -363,7 +307,6 @@ datasets:
     nfiles: 1
     period: B1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -372,10 +315,6 @@ datasets:
     runnumber: 178020
     streamname: physics_Egamma
     totalevents: 50018
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -394,7 +333,6 @@ datasets:
     nfiles: 3
     period: B1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -403,10 +341,6 @@ datasets:
     runnumber: 178021
     streamname: physics_Egamma
     totalevents: 157208
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -423,9 +357,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00178023.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -434,10 +366,6 @@ datasets:
     runnumber: 178023
     streamname: physics_Egamma
     totalevents: 105
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f351_m765_p580
 - !Atlas.Dataset
   contents:
@@ -454,9 +382,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00178024.physics_Egamma.merge.NTUP_SMWZ.f351_m765_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -465,10 +391,6 @@ datasets:
     runnumber: 178024
     streamname: physics_Egamma
     totalevents: 124
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f351_m765_p580
 - !Atlas.Dataset
   contents:
@@ -487,7 +409,6 @@ datasets:
     nfiles: 1
     period: B1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -496,10 +417,6 @@ datasets:
     runnumber: 178026
     streamname: physics_Egamma
     totalevents: 43600
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -518,7 +435,6 @@ datasets:
     nfiles: 21
     period: B2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -527,10 +443,6 @@ datasets:
     runnumber: 178044
     streamname: physics_Egamma
     totalevents: 1127941
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -549,7 +461,6 @@ datasets:
     nfiles: 1
     period: B2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -558,10 +469,6 @@ datasets:
     runnumber: 178047
     streamname: physics_Egamma
     totalevents: 28850
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -580,7 +487,6 @@ datasets:
     nfiles: 24
     period: B2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -589,10 +495,6 @@ datasets:
     runnumber: 178109
     streamname: physics_Egamma
     totalevents: 1403438
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: r2276_p516_p523_p580
 - !Atlas.Dataset
   contents:
@@ -609,9 +511,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00179691.physics_Egamma.merge.NTUP_SMWZ.f360_m796_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -620,10 +520,6 @@ datasets:
     runnumber: 179691
     streamname: physics_Egamma
     totalevents: 3
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f360_m796_p580
 - !Atlas.Dataset
   contents:
@@ -642,7 +538,6 @@ datasets:
     nfiles: 106
     period: D1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -651,10 +546,6 @@ datasets:
     runnumber: 179710
     streamname: physics_Egamma
     totalevents: 1626614
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p580
 - !Atlas.Dataset
   contents:
@@ -673,7 +564,6 @@ datasets:
     nfiles: 57
     period: D1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -682,10 +572,6 @@ datasets:
     runnumber: 179725
     streamname: physics_Egamma
     totalevents: 750482
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p580
 - !Atlas.Dataset
   contents:
@@ -704,7 +590,6 @@ datasets:
     nfiles: 71
     period: D1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -713,10 +598,6 @@ datasets:
     runnumber: 179739
     streamname: physics_Egamma
     totalevents: 997197
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f361_m796_p580
 - !Atlas.Dataset
   contents:
@@ -735,7 +616,6 @@ datasets:
     nfiles: 41
     period: D2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -744,10 +624,6 @@ datasets:
     runnumber: 179771
     streamname: physics_Egamma
     totalevents: 450042
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f362_m801_p580
 - !Atlas.Dataset
   contents:
@@ -766,7 +642,6 @@ datasets:
     nfiles: 210
     period: D2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -775,10 +650,6 @@ datasets:
     runnumber: 179804
     streamname: physics_Egamma
     totalevents: 2608038
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f363_m806_p580
 - !Atlas.Dataset
   contents:
@@ -797,7 +668,6 @@ datasets:
     nfiles: 30
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -806,10 +676,6 @@ datasets:
     runnumber: 179938
     streamname: physics_Egamma
     totalevents: 405503
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f365_m806_p580
 - !Atlas.Dataset
   contents:
@@ -828,7 +694,6 @@ datasets:
     nfiles: 105
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -837,10 +702,6 @@ datasets:
     runnumber: 179939
     streamname: physics_Egamma
     totalevents: 1400167
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f366_m806_p580
 - !Atlas.Dataset
   contents:
@@ -859,7 +720,6 @@ datasets:
     nfiles: 6
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -868,10 +728,6 @@ datasets:
     runnumber: 179940
     streamname: physics_Egamma
     totalevents: 74341
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f366_m806_p580
 - !Atlas.Dataset
   contents:
@@ -890,7 +746,6 @@ datasets:
     nfiles: 72
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -899,10 +754,6 @@ datasets:
     runnumber: 180122
     streamname: physics_Egamma
     totalevents: 1346013
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f367_m806_p580
 - !Atlas.Dataset
   contents:
@@ -921,7 +772,6 @@ datasets:
     nfiles: 97
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -930,10 +780,6 @@ datasets:
     runnumber: 180124
     streamname: physics_Egamma
     totalevents: 1766023
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -952,7 +798,6 @@ datasets:
     nfiles: 114
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -961,10 +806,6 @@ datasets:
     runnumber: 180139
     streamname: physics_Egamma
     totalevents: 1741067
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -983,7 +824,6 @@ datasets:
     nfiles: 50
     period: D3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -992,10 +832,6 @@ datasets:
     runnumber: 180144
     streamname: physics_Egamma
     totalevents: 836746
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1014,7 +850,6 @@ datasets:
     nfiles: 60
     period: D4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1023,10 +858,6 @@ datasets:
     runnumber: 180149
     streamname: physics_Egamma
     totalevents: 832145
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1045,7 +876,6 @@ datasets:
     nfiles: 117
     period: D4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1054,10 +884,6 @@ datasets:
     runnumber: 180153
     streamname: physics_Egamma
     totalevents: 2008370
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1076,7 +902,6 @@ datasets:
     nfiles: 268
     period: D4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1085,10 +910,6 @@ datasets:
     runnumber: 180164
     streamname: physics_Egamma
     totalevents: 4344169
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1107,7 +928,6 @@ datasets:
     nfiles: 2
     period: D4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1116,10 +936,6 @@ datasets:
     runnumber: 180212
     streamname: physics_Egamma
     totalevents: 23532
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1136,9 +952,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00180224.physics_Egamma.merge.NTUP_SMWZ.f368_m806_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1147,10 +961,6 @@ datasets:
     runnumber: 180224
     streamname: physics_Egamma
     totalevents: 109
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1169,7 +979,6 @@ datasets:
     nfiles: 217
     period: D5
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1178,10 +987,6 @@ datasets:
     runnumber: 180225
     streamname: physics_Egamma
     totalevents: 3712777
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1200,7 +1005,6 @@ datasets:
     nfiles: 70
     period: D5
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1209,10 +1013,6 @@ datasets:
     runnumber: 180241
     streamname: physics_Egamma
     totalevents: 1053455
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1231,7 +1031,6 @@ datasets:
     nfiles: 86
     period: D5
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1240,10 +1039,6 @@ datasets:
     runnumber: 180242
     streamname: physics_Egamma
     totalevents: 1244123
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f368_m806_p580
 - !Atlas.Dataset
   contents:
@@ -1262,7 +1057,6 @@ datasets:
     nfiles: 141
     period: D6
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1271,10 +1065,6 @@ datasets:
     runnumber: 180309
     streamname: physics_Egamma
     totalevents: 2078914
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p580
 - !Atlas.Dataset
   contents:
@@ -1293,7 +1083,6 @@ datasets:
     nfiles: 236
     period: D6
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1302,10 +1091,6 @@ datasets:
     runnumber: 180400
     streamname: physics_Egamma
     totalevents: 3354971
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p580
 - !Atlas.Dataset
   contents:
@@ -1324,7 +1109,6 @@ datasets:
     nfiles: 19
     period: D6
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1333,10 +1117,6 @@ datasets:
     runnumber: 180448
     streamname: physics_Egamma
     totalevents: 231808
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p580
 - !Atlas.Dataset
   contents:
@@ -1355,7 +1135,6 @@ datasets:
     nfiles: 296
     period: D7
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1364,10 +1143,6 @@ datasets:
     runnumber: 180481
     streamname: physics_Egamma
     totalevents: 4332056
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p580
 - !Atlas.Dataset
   contents:
@@ -1386,7 +1161,6 @@ datasets:
     nfiles: 49
     period: E1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1395,10 +1169,6 @@ datasets:
     runnumber: 180614
     streamname: physics_Egamma
     totalevents: 636175
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f369_m812_p580
 - !Atlas.Dataset
   contents:
@@ -1417,7 +1187,6 @@ datasets:
     nfiles: 341
     period: E1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1426,10 +1195,6 @@ datasets:
     runnumber: 180636
     streamname: physics_Egamma
     totalevents: 5167671
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p580
 - !Atlas.Dataset
   contents:
@@ -1448,7 +1213,6 @@ datasets:
     nfiles: 32
     period: E1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1457,10 +1221,6 @@ datasets:
     runnumber: 180664
     streamname: physics_Egamma
     totalevents: 432231
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p580
 - !Atlas.Dataset
   contents:
@@ -1479,7 +1239,6 @@ datasets:
     nfiles: 137
     period: E1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1488,10 +1247,6 @@ datasets:
     runnumber: 180710
     streamname: physics_Egamma
     totalevents: 1873829
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p580
 - !Atlas.Dataset
   contents:
@@ -1510,7 +1265,6 @@ datasets:
     nfiles: 3
     period: E1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1519,10 +1273,6 @@ datasets:
     runnumber: 180776
     streamname: physics_Egamma
     totalevents: 48085
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f371_m824_p580
 - !Atlas.Dataset
   contents:
@@ -1541,7 +1291,6 @@ datasets:
     nfiles: 16
     period: F1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1550,10 +1299,6 @@ datasets:
     runnumber: 182013
     streamname: physics_Egamma
     totalevents: 39108
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f378_m841_p580
 - !Atlas.Dataset
   contents:
@@ -1572,7 +1317,6 @@ datasets:
     nfiles: 26
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1581,10 +1325,6 @@ datasets:
     runnumber: 182161
     streamname: physics_Egamma
     totalevents: 398112
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f379_m849_p580
 - !Atlas.Dataset
   contents:
@@ -1603,7 +1343,6 @@ datasets:
     nfiles: 148
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1612,10 +1351,6 @@ datasets:
     runnumber: 182284
     streamname: physics_Egamma
     totalevents: 2223326
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m855_p580
 - !Atlas.Dataset
   contents:
@@ -1634,7 +1369,6 @@ datasets:
     nfiles: 18
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1643,10 +1377,6 @@ datasets:
     runnumber: 182346
     streamname: physics_Egamma
     totalevents: 248986
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m855_p580
 - !Atlas.Dataset
   contents:
@@ -1665,7 +1395,6 @@ datasets:
     nfiles: 151
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1674,10 +1403,6 @@ datasets:
     runnumber: 182372
     streamname: physics_Egamma
     totalevents: 2301740
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f380_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1696,7 +1421,6 @@ datasets:
     nfiles: 179
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1705,10 +1429,6 @@ datasets:
     runnumber: 182424
     streamname: physics_Egamma
     totalevents: 2915391
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1727,7 +1447,6 @@ datasets:
     nfiles: 37
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1736,10 +1455,6 @@ datasets:
     runnumber: 182449
     streamname: physics_Egamma
     totalevents: 452555
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1758,7 +1473,6 @@ datasets:
     nfiles: 14
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1767,10 +1481,6 @@ datasets:
     runnumber: 182450
     streamname: physics_Egamma
     totalevents: 225049
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1789,7 +1499,6 @@ datasets:
     nfiles: 84
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1798,10 +1507,6 @@ datasets:
     runnumber: 182454
     streamname: physics_Egamma
     totalevents: 1028303
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1820,7 +1525,6 @@ datasets:
     nfiles: 6
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1829,10 +1533,6 @@ datasets:
     runnumber: 182455
     streamname: physics_Egamma
     totalevents: 75121
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1851,7 +1551,6 @@ datasets:
     nfiles: 166
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1860,10 +1559,6 @@ datasets:
     runnumber: 182456
     streamname: physics_Egamma
     totalevents: 2644279
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1882,7 +1577,6 @@ datasets:
     nfiles: 230
     period: F2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1891,10 +1585,6 @@ datasets:
     runnumber: 182486
     streamname: physics_Egamma
     totalevents: 3255672
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1913,7 +1603,6 @@ datasets:
     nfiles: 91
     period: F3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1922,10 +1611,6 @@ datasets:
     runnumber: 182516
     streamname: physics_Egamma
     totalevents: 1069593
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1944,7 +1629,6 @@ datasets:
     nfiles: 19
     period: F3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1953,10 +1637,6 @@ datasets:
     runnumber: 182518
     streamname: physics_Egamma
     totalevents: 210199
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -1975,7 +1655,6 @@ datasets:
     nfiles: 39
     period: F3
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -1984,10 +1663,6 @@ datasets:
     runnumber: 182519
     streamname: physics_Egamma
     totalevents: 498597
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -2006,7 +1681,6 @@ datasets:
     nfiles: 48
     period: G1
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2015,10 +1689,6 @@ datasets:
     runnumber: 182726
     streamname: physics_Egamma
     totalevents: 575384
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f381_m861_p580
 - !Atlas.Dataset
   contents:
@@ -2037,7 +1707,6 @@ datasets:
     nfiles: 241
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2046,10 +1715,6 @@ datasets:
     runnumber: 182747
     streamname: physics_Egamma
     totalevents: 3391817
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2068,7 +1733,6 @@ datasets:
     nfiles: 43
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2077,10 +1741,6 @@ datasets:
     runnumber: 182766
     streamname: physics_Egamma
     totalevents: 500898
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2099,7 +1759,6 @@ datasets:
     nfiles: 268
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2108,10 +1767,6 @@ datasets:
     runnumber: 182787
     streamname: physics_Egamma
     totalevents: 3619975
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2130,7 +1785,6 @@ datasets:
     nfiles: 229
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2139,10 +1793,6 @@ datasets:
     runnumber: 182796
     streamname: physics_Egamma
     totalevents: 3086902
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2161,7 +1811,6 @@ datasets:
     nfiles: 40
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2170,10 +1819,6 @@ datasets:
     runnumber: 182879
     streamname: physics_Egamma
     totalevents: 535666
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2192,7 +1837,6 @@ datasets:
     nfiles: 34
     period: G2
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2201,10 +1845,32 @@ datasets:
     runnumber: 182886
     streamname: physics_Egamma
     totalevents: 445042
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
+    version: f382_m866_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-12 13:43:22'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 75287
+    lastmodified: '2011-06-18 09:24:42'
+    logicaldatasetname: data11_7TeV.00182997.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580
+    modifiedby: root
+    nfiles: 30
+    period: G3
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 182997
+    streamname: physics_Egamma
+    totalevents: 380090
     version: f382_m866_p580
 - !Atlas.Dataset
   contents:
@@ -2223,7 +1889,6 @@ datasets:
     nfiles: 9
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2232,10 +1897,6 @@ datasets:
     runnumber: 183038
     streamname: physics_Egamma
     totalevents: 115229
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2248,13 +1909,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 69624
-    lastmodified: '2011-06-08 13:33:11'
+    lastmodified: '2011-06-14 11:29:05'
     logicaldatasetname: data11_7TeV.00183045.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 131
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2263,10 +1923,6 @@ datasets:
     runnumber: 183045
     streamname: physics_Egamma
     totalevents: 1850856
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2279,13 +1935,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 70021
-    lastmodified: '2011-06-08 09:09:15'
+    lastmodified: '2011-06-14 12:32:37'
     logicaldatasetname: data11_7TeV.00183078.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 15
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2294,10 +1949,6 @@ datasets:
     runnumber: 183078
     streamname: physics_Egamma
     totalevents: 224572
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2310,13 +1961,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 71290
-    lastmodified: '2011-06-09 16:41:46'
+    lastmodified: '2011-06-15 10:20:55'
     logicaldatasetname: data11_7TeV.00183081.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 305
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2325,10 +1975,6 @@ datasets:
     runnumber: 183081
     streamname: physics_Egamma
     totalevents: 4589779
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2341,13 +1987,11 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 71787
-    lastmodified: '2011-06-09 12:42:16'
+    lastmodified: '2011-06-15 10:04:24'
     logicaldatasetname: data11_7TeV.00183112.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 2
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2356,10 +2000,6 @@ datasets:
     runnumber: 183112
     streamname: physics_Egamma
     totalevents: 30914
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2372,13 +2012,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 72153
-    lastmodified: '2011-06-10 05:23:49'
+    lastmodified: '2011-06-15 08:13:11'
     logicaldatasetname: data11_7TeV.00183127.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 105
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2387,10 +2026,6 @@ datasets:
     runnumber: 183127
     streamname: physics_Egamma
     totalevents: 1273965
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2403,13 +2038,11 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 71780
-    lastmodified: '2011-06-10 00:21:07'
+    lastmodified: '2011-06-15 09:00:58'
     logicaldatasetname: data11_7TeV.00183128.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2418,10 +2051,6 @@ datasets:
     runnumber: 183128
     streamname: physics_Egamma
     totalevents: 1097
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2434,13 +2063,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 72783
-    lastmodified: '2011-06-10 23:28:01'
+    lastmodified: '2011-06-16 07:35:17'
     logicaldatasetname: data11_7TeV.00183129.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 47
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2449,10 +2077,6 @@ datasets:
     runnumber: 183129
     streamname: physics_Egamma
     totalevents: 738686
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2465,13 +2089,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 73439
-    lastmodified: '2011-06-11 00:38:19'
+    lastmodified: '2011-06-16 10:13:16'
     logicaldatasetname: data11_7TeV.00183130.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 133
     period: G4
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2480,10 +2103,6 @@ datasets:
     runnumber: 183130
     streamname: physics_Egamma
     totalevents: 2166375
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2496,13 +2115,11 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 73091
-    lastmodified: '2011-06-10 05:27:25'
+    lastmodified: '2011-06-16 09:10:00'
     logicaldatasetname: data11_7TeV.00183210.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2511,10 +2128,6 @@ datasets:
     runnumber: 183210
     streamname: physics_Egamma
     totalevents: 1
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2527,13 +2140,11 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 73089
-    lastmodified: '2011-06-10 05:27:22'
+    lastmodified: '2011-06-16 09:41:31'
     logicaldatasetname: data11_7TeV.00183213.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 1
-    period: ''
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2542,10 +2153,6 @@ datasets:
     runnumber: 183213
     streamname: physics_Egamma
     totalevents: 2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
 - !Atlas.Dataset
   contents:
@@ -2558,13 +2165,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 75085
-    lastmodified: '2011-06-12 14:32:39'
+    lastmodified: '2011-06-17 14:20:18'
     logicaldatasetname: data11_7TeV.00183216.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580
     modifiedby: root
     nfiles: 214
     period: G5
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2573,11 +2179,33 @@ datasets:
     runnumber: 183216
     streamname: physics_Egamma
     totalevents: 3189806
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f383_m872_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-12 08:00:57'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 74679
+    lastmodified: '2011-06-20 09:51:06'
+    logicaldatasetname: data11_7TeV.00183272.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580
+    modifiedby: root
+    nfiles: 97
+    period: G5
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183272
+    streamname: physics_Egamma
+    totalevents: 1303377
+    version: f384_m878_p580
 - !Atlas.Dataset
   contents:
     amistatus: VALID
@@ -2589,13 +2217,12 @@ datasets:
     datatype: NTUP_SMWZ
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 75391
-    lastmodified: '2011-06-13 05:19:07'
+    lastmodified: '2011-06-18 08:21:48'
     logicaldatasetname: data11_7TeV.00183286.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580
     modifiedby: root
     nfiles: 206
     period: G5
     physicistresponsible: bertrand.brelier@cern.ch
-    physicscomment: ''
     principalphysicsgroup: gen-user
     prodstep: merge
     prodsysstatus: EVENTS_AVAILABLE
@@ -2604,11 +2231,137 @@ datasets:
     runnumber: 183286
     streamname: physics_Egamma
     totalevents: 3118374
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
     version: f384_m878_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-14 07:14:51'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 76234
+    lastmodified: '2011-06-20 09:04:03'
+    logicaldatasetname: data11_7TeV.00183347.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580
+    modifiedby: root
+    nfiles: 226
+    period: G5
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183347
+    streamname: physics_Egamma
+    totalevents: 3177655
+    version: f384_m878_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-14 19:41:05'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 76504
+    lastmodified: '2011-06-15 16:03:49'
+    logicaldatasetname: data11_7TeV.00183391.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580
+    modifiedby: root
+    nfiles: 171
+    period: G6
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183391
+    streamname: physics_Egamma
+    totalevents: 2324499
+    version: f384_m878_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-15 20:45:06'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 77478
+    lastmodified: '2011-06-17 10:18:47'
+    logicaldatasetname: data11_7TeV.00183407.physics_Egamma.merge.NTUP_SMWZ.f384_m884_p580
+    modifiedby: root
+    nfiles: 304
+    period: G6
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183407
+    streamname: physics_Egamma
+    totalevents: 4333193
+    version: f384_m884_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-16 07:28:15'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 78042
+    lastmodified: '2011-06-16 15:51:32'
+    logicaldatasetname: data11_7TeV.00183412.physics_Egamma.merge.NTUP_SMWZ.f385_m884_p580
+    modifiedby: root
+    nfiles: 8
+    period: G6
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183412
+    streamname: physics_Egamma
+    totalevents: 99022
+    version: f385_m884_p580
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-16 13:33:13'
+    createdby: root
+    creationcomment: group production SM WZ
+    datatype: NTUP_SMWZ
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 78235
+    lastmodified: '2011-06-17 15:54:30'
+    logicaldatasetname: data11_7TeV.00183426.physics_Egamma.merge.NTUP_SMWZ.f385_m884_p580
+    modifiedby: root
+    nfiles: 220
+    period: G6
+    physicistresponsible: bertrand.brelier@cern.ch
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183426
+    streamname: physics_Egamma
+    totalevents: 2946506
+    version: f385_m884_p580
 datasets_expanded:
 - data11_7TeV.00177531.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373524_00
 - data11_7TeV.00177539.physics_Egamma.merge.NTUP_SMWZ.f348_m760_p580_tid373525_00
@@ -2681,6 +2434,7 @@ datasets_expanded:
 - data11_7TeV.00182796.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384791_00
 - data11_7TeV.00182879.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384790_00
 - data11_7TeV.00182886.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid384789_00
+- data11_7TeV.00182997.physics_Egamma.merge.NTUP_SMWZ.f382_m866_p580_tid420645_00
 - data11_7TeV.00183038.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid413682_00
 - data11_7TeV.00183045.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid413681_00
 - data11_7TeV.00183078.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid414369_00
@@ -2693,4 +2447,10 @@ datasets_expanded:
 - data11_7TeV.00183210.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid415076_00
 - data11_7TeV.00183213.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid415075_00
 - data11_7TeV.00183216.physics_Egamma.merge.NTUP_SMWZ.f383_m872_p580_tid420252_00
+- data11_7TeV.00183272.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580_tid420362_00
 - data11_7TeV.00183286.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580_tid420672_00
+- data11_7TeV.00183347.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580_tid422016_00
+- data11_7TeV.00183391.physics_Egamma.merge.NTUP_SMWZ.f384_m878_p580_tid422183_00
+- data11_7TeV.00183407.physics_Egamma.merge.NTUP_SMWZ.f384_m884_p580_tid422614_00
+- data11_7TeV.00183412.physics_Egamma.merge.NTUP_SMWZ.f385_m884_p580_tid422692_00
+- data11_7TeV.00183426.physics_Egamma.merge.NTUP_SMWZ.f385_m884_p580_tid422730_00
