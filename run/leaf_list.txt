@@ -86,7 +86,7 @@ el_cl_E
 el_cl_eta
 el_cl_phi
 el_cl_pt
-el_cl_time
+el_time
 el_convFlag
 el_emaxs1
 el_eta
@@ -97,6 +97,8 @@ el_etas2
 el_etas3
 el_expectBLayerHit
 el_expectHitInBLayer
+el_nSCTHits
+el_nPixHits
 el_f1
 el_f1core
 el_f3
@@ -148,7 +150,7 @@ ph_cl_E
 ph_cl_eta
 ph_cl_phi
 ph_cl_pt
-ph_cl_time
+ph_time
 ph_convFlag
 ph_deltaEmax2
 ph_deltaEs
