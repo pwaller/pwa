@@ -1600,7 +1600,7 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 68839
-    lastmodified: '2011-06-14 11:29:04'
+    lastmodified: '2011-06-21 10:42:30'
     logicaldatasetname: data11_7TeV.00183003.physics_Egamma.merge.NTUP_PHOTON.f382_m872_p541
     modifiedby: root
     nfiles: 320
@@ -1678,7 +1678,7 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 69412
-    lastmodified: '2011-06-14 09:37:04'
+    lastmodified: '2011-06-21 10:42:38'
     logicaldatasetname: data11_7TeV.00183045.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 131
@@ -1730,7 +1730,7 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 69943
-    lastmodified: '2011-06-14 11:13:05'
+    lastmodified: '2011-06-21 10:44:14'
     logicaldatasetname: data11_7TeV.00183078.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 15
@@ -1744,6 +1744,32 @@ datasets:
     runnumber: 183078
     streamname: physics_Egamma
     totalevents: 224572
+    version: f383_m872_p541
+- !Atlas.Dataset
+  contents:
+    amistatus: VALID
+    beamtype: collisions
+    conditionstag: COMCOND-BLKPST-004-07
+    created: '2011-06-07 13:11:45'
+    createdby: root
+    creationcomment: group production for photon groups
+    datatype: NTUP_PHOTON
+    geometryversion: ATLAS-GEO-16-00-01
+    identifier: 70140
+    lastmodified: '2011-06-21 10:08:36'
+    logicaldatasetname: data11_7TeV.00183079.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
+    modifiedby: root
+    nfiles: 12
+    period: G4
+    physicistresponsible: leonardo.carminati@mi.infn.it
+    principalphysicsgroup: gen-user
+    prodstep: merge
+    prodsysstatus: EVENTS_AVAILABLE
+    projectname: data11_7TeV
+    relationalloaded: 0
+    runnumber: 183079
+    streamname: physics_Egamma
+    totalevents: 150835
     version: f383_m872_p541
 - !Atlas.Dataset
   contents:
@@ -1960,7 +1986,7 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 75098
-    lastmodified: '2011-06-17 13:15:52'
+    lastmodified: '2011-06-21 12:23:35'
     logicaldatasetname: data11_7TeV.00183216.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541
     modifiedby: root
     nfiles: 214
@@ -2090,7 +2116,7 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-01
     identifier: 77446
-    lastmodified: '2011-06-16 15:48:09'
+    lastmodified: '2011-06-21 11:02:36'
     logicaldatasetname: data11_7TeV.00183407.physics_Egamma.merge.NTUP_PHOTON.f384_m884_p541
     modifiedby: root
     nfiles: 304
@@ -2354,6 +2380,7 @@ datasets_expanded:
 - data11_7TeV.00183045.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid413633_00
 - data11_7TeV.00183054.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid413726_00
 - data11_7TeV.00183078.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414340_00
+- data11_7TeV.00183079.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414395_00
 - data11_7TeV.00183081.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414632_00
 - data11_7TeV.00183112.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414725_00
 - data11_7TeV.00183127.physics_Egamma.merge.NTUP_PHOTON.f383_m872_p541_tid414852_00
@@ -2373,3 +2400,5 @@ datasets_expanded:
 - data11_7TeV.00183462.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541_tid423564_00
 - data11_7TeV.00183544.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541_tid424094_00
 - data11_7TeV.00183580.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541_tid424127_00
+- data11_7TeV.00183581.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541_tid424368_00
+- data11_7TeV.00183602.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541_tid424592_00
