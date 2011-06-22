@@ -2302,6 +2302,7 @@ datasets:
     logicaldatasetname: data11_7TeV.00183602.physics_Egamma.merge.NTUP_PHOTON.f385_m884_p541
     modifiedby: root
     nfiles: 7
+    period: H1
     physicistresponsible: leonardo.carminati@mi.infn.it
     principalphysicsgroup: gen-user
     prodstep: merge
