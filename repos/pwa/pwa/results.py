@@ -1,11 +1,17 @@
 import re
+import ROOT as R
 
+from cPickle import loads
+from os import listdir
 from os.path import basename
 
 from commando import Application, command, subcommand, version, store, true, param
 
-from minty.utils.table_printer import pprint_table
 from yaml import load_all
+
+
+from minty.utils.table_printer import pprint_table
+
 
 def get_bin_values(h):
     xa = h.GetXaxis()
@@ -168,6 +174,63 @@ def dump(self, params):
     table = [["file"] + extra_labels + list(labels)] + numbers
     pprint_table(table)
 
+
+@subcommand('kick', help="Remove datasets which aren't in the period")
+@param('--dataset')
+def kick(self, params):
+    """
+    Dump a list of datasets which need to be kicked
+    """
+    
+    if not params.dataset:
+        print "Please specify --datasets"
+        raise SystemExit
+    
+    match = re.compile("^.*?-P(.+)-R(\d+).root$").match
+    matches = ((f, match(f)) for f in listdir("."))
+    files = [(name, f.groups()) for name, f in matches if f]
+    files = sorted([(name, int(run), period.split("_")[-1]) for name, (period, run) in files])
+    
+    print files[:2]
+    _, data_info = load_all(open(params.dataset))
+    by_period, by_run = {}, {}
+    for d in data_info["datasets"]:
+        by_period.setdefault(d.period, []).append(d)
+        by_period.setdefault(d.period[0], []).append(d)
+        assert not d.run in by_run
+        by_run[d.run] = d
+           
+        #by_run.setdefault(d.run, []).append(d)
+    
+    for name, run, period in files:
+        if period != by_run[run].period:
+            print name, period, by_run[run].period
+    
+@subcommand('dump_grl', help="Dump a grl from input datasets")
+@param('-o', "--output", default="output.xml")
+@param('files', nargs="+")
+def dump_grl(self, params):
+    from DQUtils import IOVSet
+    
+    total = IOVSet()
+    for f in params.files:
+        f = R.TFile.Open(f)
+        grls = loads(f.file_metadata.GetString().Data())
+        for grl in grls:
+            grl = IOVSet.from_grl_string(grl)
+            assert not grl & total
+            total |= grl
+    print total, "lumiblocks:", total.lb_counts
+    total.to_grl(params.output)
+    
+@subcommand('dump_files', help="Dump list of files processed by a dataset")
+@param('files', nargs="+")
+def dump_files(self, params):
+    for f in params.files:
+        f = R.TFile.Open(f)
+        file_list = loads(f.file_processed_list.GetString().Data())
+        #print "\n".join(file_list)
+        print type(file_list)
 
 @subcommand('status', help='Dump basic information')
 @param('files', nargs="+")
