@@ -1,18 +1,50 @@
 #! /usr/bin/env python
 
 from commands import getstatusoutput
-from os.path import abspath
+from os.path import abspath, basename, isfile
 from pkg_resources import resource_listdir, resource_filename
 from pprint import pprint
 from subprocess import Popen, PIPE
 
 from commando import Application, command, subcommand, version, store, true, param
 
-from yaml import load_all, dump_all
+from yaml import load, load_all, dump_all
 
 from minty.metadata.ami import query_datasets
 
 user = "PeterWaller"
+
+class PwaDataset(object):
+    def __init__(self, name, info, datasets):
+        args = name, info, datasets["datasets"], datasets["datasets_expanded"]
+        self.name, self.info, self.datasets, self.datasets_expanded = args
+        info["shortname"] = name
+    
+    @property
+    def container_name(self):
+        i = self.info
+        return i["container"].format(user=user, dsname=x["shortname"], **i)
+    
+    @classmethod
+    def from_file(cls, filename):
+        if not isfile(filename):
+            filename = resource_filename("pwa.datasets", filename)
+            assert isfile(filename), "Can't find dataset '{0}'".format(filename)
+    
+        name, _, ext = basename(filename).rpartition(".")
+        with open(filename) as fd:
+            info, datasets = list(load_all(fd))
+        return cls(name, info, datasets)
+    
+    def to_file(self, filename):
+        for dataset in self.datasets:
+            dataset.clean()
+    
+        with open(filename, "w") as fd:
+            datasets = dict(datasets=self.datasets, 
+                            datasets_expanded=self.datasets_expanded)
+            data = [self.info, datasets]
+            fd.write(dump_all(data, default_flow_style=False))
 
 @subcommand('make_datasets', help='Build a new dataset')
 @param('files', nargs="+")
@@ -97,6 +129,20 @@ def dsbuild(self, params):
         
         with open(ds_filename, "w") as fd:
             fd.write(dump_all([ds_info, ds_datasets], default_flow_style=False))  
+
+@subcommand('dsmcinfo', help='Update dataset info')
+@param('files', nargs="*")
+def dsmcinfo(self, params):
+    for filename in params.files:
+        ds = PwaDataset.from_file(filename)
+        for mcds in ds.datasets:
+            mcds.mc_info
+        ds.to_file(filename)
+        #print ds.datasets[0].mc_info
+        
+        #print ds
+        #print ds.info
+        #print ds.datasets
 
 def dq2_register_container(container_name, datasets):
     cmd = "dq2-register-container {0}".format(container_name)
