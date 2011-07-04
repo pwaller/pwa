@@ -16,31 +16,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 208526
-    jobconfig: ''
     lastmodified: '2011-05-30 13:41:53'
     logicaldatasetname: mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 17.558
+        crosssection_mean: 17.309999999999999
+        crosssection_min: 17.105899999999998
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 108081
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 0.62034699999999998
+        genfilteff_mean: 0.60441999999999996
+        genfilteff_min: 0.593754
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.evgen.EVNT.e598
+        nfiles: 200
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 1000000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 100
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: PythiaPhotonJet_Unbinned35
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 999752
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -53,31 +67,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 208509
-    jobconfig: ''
     lastmodified: '2011-05-30 13:41:37'
     logicaldatasetname: mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 1.54789
+        crosssection_mean: 1.5212000000000001
+        crosssection_min: 1.4955499999999999
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 108082
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 0.68343399999999999
+        genfilteff_mean: 0.66278999999999999
+        genfilteff_min: 0.65019499999999997
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.evgen.EVNT.e598
+        nfiles: 200
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 1000000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 100
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: PythiaPhotonJet_Unbinned70
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 999675
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -90,31 +118,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 208528
-    jobconfig: ''
     lastmodified: '2011-05-30 13:41:26'
     logicaldatasetname: mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.085043199999999999
+        crosssection_mean: 0.083546999999999996
+        crosssection_min: 0.081834699999999996
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 108083
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 0.81142499999999995
+        genfilteff_mean: 0.79786000000000001
+        genfilteff_min: 0.78003100000000003
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.evgen.EVNT.e598
+        nfiles: 200
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 1000000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 100
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: PythiaPhotonJet_Unbinned140
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 999415
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -127,31 +169,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 208530
-    jobconfig: ''
     lastmodified: '2011-05-30 13:42:15'
     logicaldatasetname: mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.0033083100000000001
+        crosssection_mean: 0.0032537
+        crosssection_min: 0.0031897900000000001
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 108084
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 0.86730300000000005
+        genfilteff_mean: 0.85577000000000003
+        genfilteff_min: 0.84459499999999998
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.evgen.EVNT.e598
+        nfiles: 200
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 1000000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 100
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: PythiaPhotonJet_Unbinned280
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 998898
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -164,31 +220,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 207461
-    jobconfig: ''
     lastmodified: '2011-05-30 13:14:06'
     logicaldatasetname: mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 228.54599999999999
+        crosssection_mean: 226.12
+        crosssection_min: 223.69
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 108087
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 0.47560200000000002
+        genfilteff_mean: 0.46145000000000003
+        genfilteff_min: 0.447187
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.evgen.EVNT.e598
+        nfiles: 200
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 1000000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 100
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: PythiaPhotonJet_Unbinned17
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 999850
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 datasets_expanded:
 - mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327612_00

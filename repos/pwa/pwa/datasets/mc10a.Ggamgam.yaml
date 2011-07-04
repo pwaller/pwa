@@ -16,31 +16,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220654
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:18'
     logicaldatasetname: mc10_7TeV.115557.Pythia_Ggammagamma_001_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 1.30353e-05
+        crosssection_mean: 1.3035e-05
+        crosssection_min: 1.30353e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115557
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115557.Pythia_Ggammagamma_001_700.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_001_700
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4997
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -53,31 +67,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220656
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:13'
     logicaldatasetname: mc10_7TeV.115558.Pythia_Ggammagamma_003_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.000117998
+        crosssection_mean: 0.000118
+        crosssection_min: 0.000117998
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115558
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115558.Pythia_Ggammagamma_003_700.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_003_700
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4999
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -90,31 +118,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220723
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:12'
     logicaldatasetname: mc10_7TeV.115559.Pythia_Ggammagamma_005_800.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.00014888799999999999
+        crosssection_mean: 0.00014888999999999999
+        crosssection_min: 0.00014888799999999999
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115559
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115559.Pythia_Ggammagamma_005_800.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_005_800
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4996
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -127,31 +169,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220725
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:32'
     logicaldatasetname: mc10_7TeV.115560.Pythia_Ggammagamma_003_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 2.6376e-05
+        crosssection_mean: 2.6376e-05
+        crosssection_min: 2.6376e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115560
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115560.Pythia_Ggammagamma_003_900.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_003_900
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4998
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -164,31 +220,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220726
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:29'
     logicaldatasetname: mc10_7TeV.115561.Pythia_Ggammagamma_005_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 7.3090799999999995e-05
+        crosssection_mean: 7.3090999999999995e-05
+        crosssection_min: 7.3090799999999995e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115561
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115561.Pythia_Ggammagamma_005_900.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_005_900
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4999
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -201,31 +271,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220728
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:30'
     logicaldatasetname: mc10_7TeV.115562.Pythia_Ggammagamma_007_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.000146806
+        crosssection_mean: 0.00014681000000000001
+        crosssection_min: 0.000146806
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115562
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115562.Pythia_Ggammagamma_007_900.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_007_900
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4999
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -238,31 +322,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220730
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:11'
     logicaldatasetname: mc10_7TeV.115563.Pythia_Ggammagamma_01_900.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.00029449899999999999
+        crosssection_mean: 0.0002945
+        crosssection_min: 0.00029449899999999999
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115563
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115563.Pythia_Ggammagamma_01_900.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_01_900
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4999
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -275,31 +373,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220733
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:31'
     logicaldatasetname: mc10_7TeV.115564.Pythia_Ggammagamma_005_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 2.1348999999999998e-05
+        crosssection_mean: 2.1348999999999998e-05
+        crosssection_min: 2.1348999999999998e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115564
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115564.Pythia_Ggammagamma_005_1100.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_005_1100
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4996
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -312,31 +424,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220735
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:22'
     logicaldatasetname: mc10_7TeV.115565.Pythia_Ggammagamma_007_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 4.1443200000000003e-05
+        crosssection_mean: 4.1443000000000003e-05
+        crosssection_min: 4.1443200000000003e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115565
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115565.Pythia_Ggammagamma_007_1100.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_007_1100
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4997
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -349,31 +475,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220616
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:30'
     logicaldatasetname: mc10_7TeV.115566.Pythia_Ggammagamma_01_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 8.5398100000000005e-05
+        crosssection_mean: 8.5397999999999998e-05
+        crosssection_min: 8.5398100000000005e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115566
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115566.Pythia_Ggammagamma_01_1100.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_01_1100
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4998
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -386,31 +526,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220617
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:11'
     logicaldatasetname: mc10_7TeV.115567.Pythia_Ggammagamma_02_1100.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.00032509699999999999
+        crosssection_mean: 0.00032509999999999999
+        crosssection_min: 0.00032509699999999999
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115567
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115567.Pythia_Ggammagamma_02_1100.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_02_1100
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4997
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -423,31 +577,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220620
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:29'
     logicaldatasetname: mc10_7TeV.115568.Pythia_Ggammagamma_007_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 1.7868700000000001e-05
+        crosssection_mean: 1.7869000000000001e-05
+        crosssection_min: 1.7868700000000001e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115568
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115568.Pythia_Ggammagamma_007_1250.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_007_1250
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4998
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -460,31 +628,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220622
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:11'
     logicaldatasetname: mc10_7TeV.115569.Pythia_Ggammagamma_015_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 8.2796599999999999e-05
+        crosssection_mean: 8.2797e-05
+        crosssection_min: 8.2796599999999999e-05
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115569
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115569.Pythia_Ggammagamma_015_1250.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_015_1250
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4996
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 - !Atlas.Dataset
   contents:
@@ -497,31 +679,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 220736
-    jobconfig: ''
     lastmodified: '2011-05-30 14:07:30'
     logicaldatasetname: mc10_7TeV.115570.Pythia_Ggammagamma_02_1250.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.00014274700000000001
+        crosssection_mean: 0.00014275
+        crosssection_min: 0.00014274700000000001
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 115570
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-01-13.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: None
+        logicaldatasetname: mc10_7TeV.115570.Pythia_Ggammagamma_02_1250.evgen.EVNT.e686
+        nfiles: 1
+        pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 5000
+        transformationpackage: 15.6.14.3
+        version: e686
+        weighting: 1
     modifiedby: root
     nfiles: 1
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: Pythia_Ggammagamma_02_1250
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 4999
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e686_s933_s946_r2215_r2260_p548
 datasets_expanded:
 - mc10_7TeV.115557.Pythia_Ggammagamma_001_700.merge.NTUP_PHOTON.e686_s933_s946_r2215_r2260_p548_tid334737_00

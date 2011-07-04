@@ -16,31 +16,45 @@ datasets:
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
     identifier: 207511
-    jobconfig: ''
     lastmodified: '2011-05-30 13:14:12'
     logicaldatasetname: mc10_7TeV.109057.McAtNlo_Jimmy_H115gamgam.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    mc_info: !Atlas.MonteCarloInfo
+      contents:
+        crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
+        crosssection_max: 0.0120635
+        crosssection_mean: 0.011936
+        crosssection_min: 0.0118309
+        crosssection_type: num
+        crosssection_unit: nano barn
+        datasetnumber: 109057
+        datatype: EVNT
+        ecmenergy: 7000.0
+        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        filetype: evgen
+        genfilteff_desc: Generator Filter Efficiency
+        genfilteff_max: 1
+        genfilteff_mean: 1.0
+        genfilteff_min: 1
+        genfilteff_type: num
+        input file base: group09.phys-gener.mcatnlo341.109057.h115gamgam_7TeV.TXT.v1/
+        logicaldatasetname: mc10_7TeV.109057.McAtNlo_Jimmy_H115gamgam.evgen.EVNT.e598
+        nfiles: 20
+        pdf: +CTEQ6.6
+        prodsysstatus: EVENTS_AVAILABLE
+        seedoffset: 0
+        totalevents: 100000
+        transformationpackage: 15.6.12.5
+        version: e598
+        weighting: 1
     modifiedby: root
     nfiles: 10
-    physicistresponsible: ''
-    physicscategory: ''
-    physicscomment: ''
-    physicsprocess: ''
     physicsshort: McAtNlo_Jimmy_H115gamgam
-    physicssubcategory: ''
-    principalphysicsgroup: ''
     prodsysstatus: EVENTS_AVAILABLE
-    productionhistory: ''
     productionstep: merge
     projectname: mc10_7TeV
-    relationalloaded: ''
     requestedby: leonardo.carminati@mi.infn.it
     totalevents: 99978
     transformationpackage: 16.6.4.2
-    trashannotation: ''
-    trashdate: ''
-    trashedby: ''
-    trashtrigger: ''
-    triggerconfig: ''
     version: e598_s933_s946_r2215_r2260_p548
 datasets_expanded:
 - mc10_7TeV.109057.McAtNlo_Jimmy_H115gamgam.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid326928_00
