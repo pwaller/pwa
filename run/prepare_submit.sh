@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+# For safety, abort on error or unset
+set -o errexit -o nounset
 
 #if ! minty-runperiod-mapping -c; then
 #    echo "Refusing to continue, period mapping out of date"

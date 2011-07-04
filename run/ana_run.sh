@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+# For safety, abort on error or unset
+set -o errexit -o nounset
 
 # Peter Waller <peter.waller@cern.ch> circa 2011 Licensed under GPLv3.
 # The purpose of this script is to bootstrap the analysis environment and run

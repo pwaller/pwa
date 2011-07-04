@@ -1,7 +1,6 @@
-#! /usr/bin/env bash 
-
-set -u
-set -e
+#! /usr/bin/env bash
+# For safety, abort on error or unset
+set -o errexit -o nounset
 
 source /afs/cern.ch/atlas/offline/external/GRID/DA/panda-client/latest/etc/panda/panda_setup.sh
 
