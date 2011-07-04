@@ -40,6 +40,7 @@ class Engine(Application):
     
     make_datasets = datasets.make_datasets
     dsupdate = datasets.dsupdate
+    dsmcinfo = datasets.dsmcinfo
     dsbuild = datasets.dsbuild
     
     submit = jobs.submit
