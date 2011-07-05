@@ -10,6 +10,7 @@ from commando import Application, command, subcommand, version, store, true, par
 from yaml import load_all
 
 
+from minty.metadata.lumicalc_parse import LumiInfo
 from minty.utils.table_printer import pprint_table
 
 
@@ -129,9 +130,11 @@ def dump(self, params):
     axes = [c.GetXaxis() for c in cutflows]
     labels = set(tuple(a.GetBinLabel(i) for i in xrange(1, a.GetNbins()+1))
                  for a in axes)
-    #print labels
+    
     assert len(labels) == 1, labels
     (labels,) = labels
+    
+    lumi = lambda f: []
     
     if params.datasets:
         _, data_info = load_all(open(params.datasets))
@@ -164,6 +167,34 @@ def dump(self, params):
                 bad = "!" if events != h[1] else " "
             return [bad, events]
         extra_labels = ["?", "AMI events"]
+        
+        lumi = lambda f: []
+        if exists("lumi.yaml"):
+            extra_labels.insert(0, "lumi[/pb]")
+            
+            lumi_info = LumiInfo.from_file("lumi.yaml")
+            lumi_by_run = lumi_info.total_per_run
+            def u_to_p(x): return x / 1e6
+            def lumi(f):
+                name = basename(f)
+                matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
+                
+                lumi = "-"
+                if matchcounts:
+                    period, run = matchcounts.groups()
+                    lumi = lumi_by_run[int(run)]
+                    
+                elif name.startswith("period"):
+                    period = name.split(".")[0][len("period"):]
+                    if period in by_period:
+                        lumi = sum(lumi_by_run[d.run] for d in by_period[period])
+                        
+                elif name.startswith("all"):
+                    ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
+                    lumi = sum(lumi_by_run[d.run] for dd in ds for d in dd if d.period != "UNK")
+                
+                return ["{0:.2f}".format(u_to_p(lumi))]
+                
     else:
         def extra(f, h): return []
         extra_labels = []
@@ -177,8 +208,10 @@ def dump(self, params):
         p, r = f.split("_")[-1].split("-")
         return "{0}:{1}".format(p, r.lstrip("R"))
     
+        
+    
     header = [["what"] + extra_labels + list(labels)]
-    numbers = [[pretty_file(f)] + extra(f, h) + map(int, get_bin_values(h)) 
+    numbers = [[pretty_file(f)] + lumi(f) + extra(f, h) + map(int, get_bin_values(h)) 
                for f, h in zip([f.GetName() for f in files], cutflows)]
     table = header + numbers
     pprint_table(table)
