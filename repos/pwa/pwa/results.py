@@ -2,8 +2,8 @@ import re
 import ROOT as R
 
 from cPickle import loads
-from os import listdir
-from os.path import basename
+from os import listdir, makedirs, rename
+from os.path import basename, exists, join as pjoin
 
 from commando import Application, command, subcommand, version, store, true, param
 
@@ -112,7 +112,6 @@ def custom_sort(inputs):
 @param('--datasets')
 def dump(self, params):
     
-   
     inputs = custom_sort(params.files)
 
     #inputs = [i for i in inputs if "PUNK" not in i and "periodP." not in i]
@@ -191,7 +190,6 @@ def kick(self, params):
     files = [(name, f.groups()) for name, f in matches if f]
     files = sorted([(name, int(run), period.split("_")[-1]) for name, (period, run) in files])
     
-    print files[:2]
     _, data_info = load_all(open(params.dataset))
     by_period, by_run = {}, {}
     for d in data_info["datasets"]:
@@ -201,10 +199,15 @@ def kick(self, params):
         by_run[d.run] = d
            
         #by_run.setdefault(d.run, []).append(d)
+        
+    if not exists("kicked"):
+        makedirs("kicked")
     
     for name, run, period in files:
-        if period != by_run[run].period:
+        if period != by_run[run].period or period == "UNK":
             print name, period, by_run[run].period
+            rename(name, pjoin("kicked", name))
+            
     
 @subcommand('dump_grl', help="Dump a grl from input datasets")
 @param('-o', "--output", default="output.xml")
