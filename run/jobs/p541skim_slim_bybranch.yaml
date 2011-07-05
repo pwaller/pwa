@@ -6,6 +6,7 @@ command: |
         --vars-file leaf_list.txt
         --clone-option SortBasketsByBranch
         --output-file photon_skimmed_slimmed.root
+        inputs.txt
 prun: |
     --extFile=./analysis.pybundle
     --outputs=photon_skimmed_slimmed.root
