@@ -29,7 +29,11 @@ START=$(timer)
 echo "--- Starting. The time is:" $(date)
 
 ./ana_bootstrap.py -v --distribute --never-download run_env
+
+# virtualenv activate doesn't respect nounset
+set +o nounset
 source run_env/bin/activate
+set -o nounset
 
 # Sometimes installed scripts don't have correct Shebang, so we run them with
 # env's python with $(which X)
