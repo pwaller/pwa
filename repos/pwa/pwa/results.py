@@ -182,16 +182,18 @@ def dump(self, params):
                 lumi = "-"
                 if matchcounts:
                     period, run = matchcounts.groups()
-                    lumi = lumi_by_run[int(run)]
+                    lumi = lumi_by_run.get(int(run), 0)
                     
                 elif name.startswith("period"):
                     period = name.split(".")[0][len("period"):]
                     if period in by_period:
-                        lumi = sum(lumi_by_run[d.run] for d in by_period[period])
-                        
+                        lumi = sum(lumi_by_run[d.run] for d in by_period[period] 
+                                   if d.run in lumi_by_run)
+                    
                 elif name.startswith("all"):
                     ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
-                    lumi = sum(lumi_by_run[d.run] for dd in ds for d in dd if d.period != "UNK")
+                    lumi = sum(lumi_by_run[d.run] for dd in ds for d in dd 
+                               if d.period != "UNK" and d.run in lumi_by_run)
                 
                 return ["{0:.2f}".format(u_to_p(lumi))]
                 
