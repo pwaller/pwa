@@ -1,0 +1,9 @@
+progname: slim
+dataset: user.PeterWaller.p541_skim.pass_52.1.data11_7TeV.NTUP_PHOTON.p541.v9/
+command: |
+    ./ana_run.sh minty-slim
+        --tree-name photon
+        --vars-file leaf_list.txt
+        --clone-option SortBasketsByBranch
+        --output-file output.root
+submit_extra: --match *skimmed.root

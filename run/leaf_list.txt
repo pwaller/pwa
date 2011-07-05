@@ -13,9 +13,6 @@ L2_g80_loose
 
 PV_nTracks
 PV_z
-vxp_n
-vxp_nTracks
-vxp_z
 
 diphoton_HPV_cosTh
 diphoton_HPV_cosThCS
