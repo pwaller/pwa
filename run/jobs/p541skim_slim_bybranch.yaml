@@ -5,5 +5,15 @@ command: |
         --tree-name photon
         --vars-file leaf_list.txt
         --clone-option SortBasketsByBranch
-        --output-file output.root
-submit_extra: --match *skimmed.root
+        --output-file photon_skimmed_slimmed.root
+prun: |
+    --extFile=./analysis.pybundle
+    --outputs=photon_skimmed_slimmed.root
+    --exec="{command}"
+    --tmpDir=/tmp/pwaller/pass.{tag}.{name}/
+    --inDS={input_dataset}
+    --outDS={output_dataset}
+    --writeInputToTxt=IN:inputs.txt
+    --nGBPerJob=4
+    --athenaTag=16.6.3
+    --noBuild
