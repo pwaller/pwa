@@ -167,10 +167,20 @@ def dump(self, params):
     else:
         def extra(f, h): return []
         extra_labels = []
-        
-    numbers = [[f] + extra(f, h) + map(int, get_bin_values(h)) 
+    
+    def pretty_file(f):
+        if "all" in f:
+            return "Total"
+        f, _, ext = f.rpartition(".")
+        if f.startswith("period"):
+            return "period " + f[len("period"):]
+        p, r = f.split("_")[-1].split("-")
+        return "{0}:{1}".format(p, r.lstrip("R"))
+    
+    header = [["what"] + extra_labels + list(labels)]
+    numbers = [[pretty_file(f)] + extra(f, h) + map(int, get_bin_values(h)) 
                for f, h in zip([f.GetName() for f in files], cutflows)]
-    table = [["file"] + extra_labels + list(labels)] + numbers
+    table = header + numbers
     pprint_table(table)
 
 
