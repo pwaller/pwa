@@ -129,20 +129,7 @@ def dsbuild(self, params):
         
         with open(ds_filename, "w") as fd:
             fd.write(dump_all([ds_info, ds_datasets], default_flow_style=False))  
-
-@subcommand('dsmcinfo', help='Update dataset info')
-@param('files', nargs="*")
-def dsmcinfo(self, params):
-    for filename in params.files:
-        ds = PwaDataset.from_file(filename)
-        for mcds in ds.datasets:
-            mcds.mc_info
-        ds.to_file(filename)
-        #print ds.datasets[0].mc_info
-        
-        #print ds
-        #print ds.info
-        #print ds.datasets
+    
 
 def dq2_register_container(container_name, datasets):
     cmd = "dq2-register-container {0}".format(container_name)

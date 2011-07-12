@@ -305,4 +305,19 @@ def status(self, params):
     numbers = [[f.GetName()] + get_info(f) for f in files]
     table = [["file"] + list(labels)] + numbers
     pprint_table(table) 
-    
+
+@subcommand('mcupdateinfo', help='Update dataset info')
+@param('files', nargs="*")
+def mcupdateinfo(self, params):
+    for filename in params.files:
+        ds = PwaDataset.from_file(filename)
+        for mcds in ds.datasets:
+            mcds.mc_info
+        ds.to_file(filename)
+
+@subcommand('mcrescale', help="Scale datasets to montecarlo")
+@param('files', nargs="*")
+def mcrescale(self, params):
+    for filename in params.files:
+        
+        pass
