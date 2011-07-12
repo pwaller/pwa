@@ -168,14 +168,13 @@ def dump(self, params):
             return [bad, events]
         extra_labels = ["?", "AMI events"]
         
-        lumi = lambda f: []
+        lumi = lambda f, h: []
         if exists("lumi.yaml"):
-            extra_labels.insert(0, "lumi[/pb]")
+            extra_labels[:0] = ["lumi[1/pb]", "yield[per 1/pb]"]
             
             lumi_info = LumiInfo.from_file("lumi.yaml")
             lumi_by_run = lumi_info.total_per_run
-            def u_to_p(x): return x / 1e6
-            def lumi(f):
+            def lumi(f, h):
                 name = basename(f)
                 matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
                 
@@ -194,8 +193,20 @@ def dump(self, params):
                     ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
                     lumi = sum(lumi_by_run[d.run] for dd in ds for d in dd 
                                if d.period != "UNK" and d.run in lumi_by_run)
+                               
+                def u_to_p(x): return x / 1e6
+                lumi = u_to_p(lumi)
                 
-                return ["{0:.2f}".format(u_to_p(lumi))]
+                if lumi:
+                    final_count = h[h.GetNbinsX()]
+                    from uncertainties import ufloat
+                    from math import sqrt
+                    final_count = ufloat((final_count, sqrt(final_count))) / lumi
+                    args = final_count.nominal_value, final_count.std_dev()
+                    final_count = "{0:6.2f}+-{1:6.2f}".format(*args)
+                else:
+                    final_count = "0"
+                return ["{0:.2f}".format(lumi), final_count]
                 
     else:
         def extra(f, h): return []
@@ -213,7 +224,7 @@ def dump(self, params):
         
     
     header = [["what"] + extra_labels + list(labels)]
-    numbers = [[pretty_file(f)] + lumi(f) + extra(f, h) + map(int, get_bin_values(h)) 
+    numbers = [[pretty_file(f)] + lumi(f, h) + extra(f, h) + map(int, get_bin_values(h)) 
                for f, h in zip([f.GetName() for f in files], cutflows)]
     table = header + numbers
     pprint_table(table)
