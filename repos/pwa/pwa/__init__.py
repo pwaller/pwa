@@ -38,9 +38,11 @@ class Engine(Application):
     status = results.status
     kick = results.kick
     
+    mcupdateinfo = results.mcupdateinfo
+    mcrescale = results.mcrescale
+    
     make_datasets = datasets.make_datasets
     dsupdate = datasets.dsupdate
-    dsmcinfo = datasets.dsmcinfo
     dsbuild = datasets.dsbuild
     
     submit = jobs.submit
