@@ -26,7 +26,7 @@ def plot_kinematics(ana, name, obj):
     hget(name, "phi",          b=[PHIBINS],          t=";#phi"          )(obj.phi)
     hget(name, "eta_vs_phi",   b=[ana.etabins_many, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
     
-    if getattr(obj, "conv", None) and getattr(obj, "isConv", None):
+    if getattr(obj, "conv", None) and getattr(obj, "isConv", None) and hasattr(obj.conv, "R"):
         hget(name, "Rconv",    b=[(2000, 0, 1000)],   t="Conversion Radius;R_{conversion} [mm]")(obj.conv.R)
     
     if ana.mc:
@@ -64,12 +64,12 @@ def plot_shower(ana, name, obj):
     hget(name, "ws3",       b=[(60, 0, 1)]+B,     t=";w_{s3}"+T     )(obj.ws3, *V)
     hget(name, "fside",     b=[(80, 0, 1.25)]+B,  t=";F_{side}"+T   )(obj.fside, *V)
     
-    hget(name, "Etcone20",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20} [MeV]"+T)(obj.Etcone20, *V)
-    hget(name, "Etcone30",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30} [MeV]"+T)(obj.Etcone30, *V)
+    #hget(name, "Etcone20",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20} [MeV]"+T)(obj.Etcone20, *V)
+    #hget(name, "Etcone30",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30} [MeV]"+T)(obj.Etcone30, *V)
     hget(name, "Etcone40",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40} [MeV]"+T)(obj.Etcone40, *V)
     
-    hget(name, "Etcone20_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.Etcone20_pt_corrected, *V)
-    hget(name, "Etcone30_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.Etcone30_pt_corrected, *V)
+    #hget(name, "Etcone20_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.Etcone20_pt_corrected, *V)
+    #hget(name, "Etcone30_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.Etcone30_pt_corrected, *V)
     hget(name, "Etcone40_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.Etcone40_pt_corrected, *V)
 
 def plot_boson(ana, name, ph1, ph2):

@@ -229,7 +229,6 @@ def dump(self, params):
     table = header + numbers
     pprint_table(table)
 
-
 @subcommand('kick', help="Remove datasets which aren't in the period")
 @param('--dataset')
 def kick(self, params):
