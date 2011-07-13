@@ -45,6 +45,8 @@ class Engine(Application):
     dsupdate = datasets.dsupdate
     dsbuild = datasets.dsbuild
     
+    dscheck = datasets.dscheck
+    
     submit = jobs.submit
     
     draw = plot.draw

@@ -26,7 +26,7 @@ class PwaDataset(object):
     @property
     def container_name(self):
         i = self.info
-        return i["container"].format(user=user, dsname=x["shortname"], **i)
+        return i["container"].format(user=user, dsname=self.name, **i)
     
     @classmethod
     def from_file(cls, filename):
@@ -52,6 +52,13 @@ class PwaDataset(object):
         with open(filename, "w") as fd:
             fd.write(content)
     
+    def check(self):
+        cont = dq2_expand_containers([self.container_name])
+        known_locally = set(self.datasets_expanded) 
+        known_grid = set(cont) if cont else None
+        good = known_locally == known_grid
+        return good, known_locally, known_grid
+
     def update_datasets(self):
         # Find datasets matching pattern (which are VALID and EVENTS_AVAILABLE)
         pattern = self.info["pattern"]
@@ -72,6 +79,23 @@ class PwaDataset(object):
                 if "mc_info" in dataset.contents:
                     del dataset.contents["mc_info"]
                 dataset.mc_info
+                
+    def update_container(self):
+    
+        good, _, _ = self.check()
+        
+        if good:
+            log.info("Skipping dataset, already consistent with grid {0}"
+                     .format(self.name))
+            return
+        
+        self.info["version"] = self.info.get("version", 0) + 1
+        
+        x = dq2_ls(self.container_name)
+        assert not x, "Version number already exists?"
+        
+        dq2_register_container(self.container_name, self.datasets_expanded)
+        log.info("Updated container {0}".format(self.container_name))
 
 @subcommand('make_datasets', help='Build a new dataset')
 @param('files', nargs="+")
@@ -116,30 +140,27 @@ def dsupdate(self, params):
         dataset.update_datasets()
         
         dataset.to_file(filename)
+        
+@subcommand('dscheck', help='Check datasets are uptodate')
+@param('files', nargs="*")
+def dscheck(self, params):
+    for filename in params.files:
+        dataset = PwaDataset.from_file(filename)
+        
+        good, known_locally, known_grid = dataset.check()
+        log.info("{0:30} : {1} : {2}".format(filename, good, dataset.container_name))
+        
             
 @subcommand('dsbuild', help='Update dataset info')
 @param('files', nargs="*")
 def dsbuild(self, params):
-    fileset = set(abspath(p) for p in params.files)
     
-    for ds, ds_filename, (ds_info, ds_datasets) in list_datasets():
-        if fileset and ds_filename not in fileset:
-            continue
+    for filename in params.files:
+        ds = PwaDataset.from_file(filename)
+        ds.update_container()
+        ds.to_file(filename)
         
-        ds_info["version"] = ds_info.get("version", 0) + 1
-        ds_containername(ds_info)
-        
-        cont = ds_info["container_name"]
-        x = dq2_ls(cont)
-        if x:
-            print "Skipping", ds, "- it already exists. Bump the version number"
-            continue
-        
-        dq2_register_container(cont, ds_datasets["datasets_expanded"])
-        
-        with open(ds_filename, "w") as fd:
-            fd.write(dump_all([ds_info, ds_datasets], default_flow_style=False))  
-    
+        log.info("Updated {0}".format(filename))
 
 def dq2_register_container(container_name, datasets):
     cmd = "dq2-register-container {0}".format(container_name)
@@ -164,7 +185,9 @@ def dq2_expand_containers(cs):
               stdin=PIPE, stdout=PIPE)
     stdout, stderr = p.communicate("\n".join(cs))
     result = p.wait()
-    assert not result
+    if result:
+        # Dataset doesn't exist?
+        return None
     return sorted([x for x in stdout.split("\n") if x])
         
 def dq2_ls(pattern):
