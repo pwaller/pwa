@@ -1,197 +1,196 @@
-comment: SM Photon+Jet Samples, Unbinned
+comment: SM Inclusive QCD Dijet Samples, Unbinned
 container: user.{user}.{dsname}.v{version}/
-container_name: user.PeterWaller.mc10a.PhotonJet.v2/
-pattern: mc10_7TeV.*PythiaPhotonJet*r2260_p548/
-shortname: mc10a.PhotonJet
-version: 2
+pattern: mc10_7TeV.*.JF*_pythia_jet_filter.merge.NTUP_PHOTON.*_s933_s946_r1835_r2040_p548/
+shortname: mc10.pythia_JF
+version: 1
 ---
 datasets:
 - !Atlas.Dataset
   contents:
     amistatus: VALID
     atlasrelease: 16.6.4
-    created: '2011-04-27 15:08:14'
+    created: '2011-04-27 22:19:17'
     createdby: root
     creationcomment: group production SMDP Exotics UED HSG1
-    datasetnumber: 108081
+    datasetnumber: 105802
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
-    identifier: 208526
-    lastmodified: '2011-05-30 13:41:53'
-    logicaldatasetname: mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    identifier: 208595
+    lastmodified: '2011-05-30 14:03:33'
+    logicaldatasetname: mc10_7TeV.105802.JF17_pythia_jet_filter.merge.NTUP_PHOTON.e574_s933_s946_r1835_r2040_p548
     mc_info: !Atlas.MonteCarloInfo
       contents:
         crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
-        crosssection_max: 17.558
-        crosssection_mean: 17.309999999999999
-        crosssection_min: 17.105899999999998
+        crosssection_max: 1155300
+        crosssection_mean: 1147200.0
+        crosssection_min: 1140150
         crosssection_type: num
         crosssection_unit: nano barn
-        datasetnumber: 108081
+        datasetnumber: 105802
         datatype: EVNT
         ecmenergy: 7000.0
-        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        evgenjobopts: MC10JobOpts-00-00-03.tar.gz
         filetype: evgen
         genfilteff_desc: Generator Filter Efficiency
-        genfilteff_max: 0.62034699999999998
-        genfilteff_mean: 0.60441999999999996
-        genfilteff_min: 0.593754
+        genfilteff_max: 0.077404169999999994
+        genfilteff_mean: 0.074075000000000002
+        genfilteff_min: 0.070839589999999994
         genfilteff_type: num
         input file base: None
-        logicaldatasetname: mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.evgen.EVNT.e598
-        nfiles: 200
+        logicaldatasetname: mc10_7TeV.105802.JF17_pythia_jet_filter.evgen.EVNT.e574
+        nfiles: 2000
         pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
         prodsysstatus: EVENTS_AVAILABLE
         seedoffset: 0
-        totalevents: 1000000
-        transformationpackage: 15.6.12.5
-        version: e598
+        totalevents: 10000000
+        transformationpackage: 15.6.11.1
+        version: e574
         weighting: 1
     modifiedby: root
-    nfiles: 100
-    physicsshort: PythiaPhotonJet_Unbinned35
+    nfiles: 999
+    physicsshort: JF17_pythia_jet_filter
     prodsysstatus: EVENTS_AVAILABLE
     productionstep: merge
     projectname: mc10_7TeV
     requestedby: leonardo.carminati@mi.infn.it
-    totalevents: 999752
+    totalevents: 9981031
     transformationpackage: 16.6.4.2
-    version: e598_s933_s946_r2215_r2260_p548
+    version: e574_s933_s946_r1835_r2040_p548
 - !Atlas.Dataset
   contents:
     amistatus: VALID
     atlasrelease: 16.6.4
-    created: '2011-04-27 15:08:15'
+    created: '2011-04-27 22:19:18'
     createdby: root
     creationcomment: group production SMDP Exotics UED HSG1
-    datasetnumber: 108082
+    datasetnumber: 105807
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
-    identifier: 208509
-    lastmodified: '2011-05-30 13:41:37'
-    logicaldatasetname: mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    identifier: 208596
+    lastmodified: '2011-05-30 13:47:06'
+    logicaldatasetname: mc10_7TeV.105807.JF35_pythia_jet_filter.merge.NTUP_PHOTON.e574_s933_s946_r1835_r2040_p548
     mc_info: !Atlas.MonteCarloInfo
       contents:
         crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
-        crosssection_max: 1.54789
-        crosssection_mean: 1.5212000000000001
-        crosssection_min: 1.4955499999999999
+        crosssection_max: 55400
+        crosssection_mean: 54966.0
+        crosssection_min: 54514.300000000003
         crosssection_type: num
         crosssection_unit: nano barn
-        datasetnumber: 108082
+        datasetnumber: 105807
         datatype: EVNT
         ecmenergy: 7000.0
-        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        evgenjobopts: MC10JobOpts-00-00-03.tar.gz
         filetype: evgen
         genfilteff_desc: Generator Filter Efficiency
-        genfilteff_max: 0.68343399999999999
-        genfilteff_mean: 0.66278999999999999
-        genfilteff_min: 0.65019499999999997
+        genfilteff_max: 0.14685580000000001
+        genfilteff_mean: 0.14149
+        genfilteff_min: 0.1347382
         genfilteff_type: num
         input file base: None
-        logicaldatasetname: mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.evgen.EVNT.e598
-        nfiles: 200
+        logicaldatasetname: mc10_7TeV.105807.JF35_pythia_jet_filter.evgen.EVNT.e574
+        nfiles: 1000
         pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
         prodsysstatus: EVENTS_AVAILABLE
         seedoffset: 0
-        totalevents: 1000000
-        transformationpackage: 15.6.12.5
-        version: e598
+        totalevents: 5000000
+        transformationpackage: 15.6.11.1
+        version: e574
         weighting: 1
     modifiedby: root
-    nfiles: 100
-    physicsshort: PythiaPhotonJet_Unbinned70
+    nfiles: 500
+    physicsshort: JF35_pythia_jet_filter
     prodsysstatus: EVENTS_AVAILABLE
     productionstep: merge
     projectname: mc10_7TeV
     requestedby: leonardo.carminati@mi.infn.it
-    totalevents: 999675
+    totalevents: 4992260
     transformationpackage: 16.6.4.2
-    version: e598_s933_s946_r2215_r2260_p548
+    version: e574_s933_s946_r1835_r2040_p548
 - !Atlas.Dataset
   contents:
     amistatus: VALID
     atlasrelease: 16.6.4
-    created: '2011-04-27 15:08:17'
+    created: '2011-04-27 22:19:23'
     createdby: root
     creationcomment: group production SMDP Exotics UED HSG1
-    datasetnumber: 108083
+    datasetnumber: 105812
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
-    identifier: 208528
-    lastmodified: '2011-05-30 13:41:26'
-    logicaldatasetname: mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    identifier: 208602
+    lastmodified: '2011-05-30 13:51:41'
+    logicaldatasetname: mc10_7TeV.105812.JF240_pythia_jet_filter.merge.NTUP_PHOTON.e640_s933_s946_r1835_r2040_p548
     mc_info: !Atlas.MonteCarloInfo
       contents:
         crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
-        crosssection_max: 0.085043199999999999
-        crosssection_mean: 0.083546999999999996
-        crosssection_min: 0.081834699999999996
+        crosssection_max: 6.3341500000000002
+        crosssection_mean: 6.2664
+        crosssection_min: 6.18283
         crosssection_type: num
         crosssection_unit: nano barn
-        datasetnumber: 108083
+        datasetnumber: 105812
         datatype: EVNT
         ecmenergy: 7000.0
-        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        evgenjobopts: MC10JobOpts-00-00-71.tar.gz
         filetype: evgen
         genfilteff_desc: Generator Filter Efficiency
-        genfilteff_max: 0.81142499999999995
-        genfilteff_mean: 0.79786000000000001
-        genfilteff_min: 0.78003100000000003
+        genfilteff_max: 0.445434
+        genfilteff_mean: 0.43295
+        genfilteff_min: 0.41971000000000003
         genfilteff_type: num
         input file base: None
-        logicaldatasetname: mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.evgen.EVNT.e598
+        logicaldatasetname: mc10_7TeV.105812.JF240_pythia_jet_filter.evgen.EVNT.e640
         nfiles: 200
         pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
         prodsysstatus: EVENTS_AVAILABLE
         seedoffset: 0
         totalevents: 1000000
-        transformationpackage: 15.6.12.5
-        version: e598
+        transformationpackage: 15.6.13.9
+        version: e640
         weighting: 1
     modifiedby: root
     nfiles: 100
-    physicsshort: PythiaPhotonJet_Unbinned140
+    physicsshort: JF240_pythia_jet_filter
     prodsysstatus: EVENTS_AVAILABLE
     productionstep: merge
     projectname: mc10_7TeV
     requestedby: leonardo.carminati@mi.infn.it
-    totalevents: 999415
+    totalevents: 997917
     transformationpackage: 16.6.4.2
-    version: e598_s933_s946_r2215_r2260_p548
+    version: e640_s933_s946_r1835_r2040_p548
 - !Atlas.Dataset
   contents:
     amistatus: VALID
     atlasrelease: 16.6.4
-    created: '2011-04-27 15:08:19'
+    created: '2011-04-27 22:19:21'
     createdby: root
     creationcomment: group production SMDP Exotics UED HSG1
-    datasetnumber: 108084
+    datasetnumber: 105814
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
-    identifier: 208530
-    lastmodified: '2011-05-30 13:42:15'
-    logicaldatasetname: mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    identifier: 208599
+    lastmodified: '2011-05-30 14:03:38'
+    logicaldatasetname: mc10_7TeV.105814.JF70_pythia_jet_filter.merge.NTUP_PHOTON.e598_s933_s946_r1835_r2040_p548
     mc_info: !Atlas.MonteCarloInfo
       contents:
         crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
-        crosssection_max: 0.0033083100000000001
-        crosssection_mean: 0.0032537
-        crosssection_min: 0.0031897900000000001
+        crosssection_max: 3200.1599999999999
+        crosssection_mean: 3167.3000000000002
+        crosssection_min: 3137.6900000000001
         crosssection_type: num
         crosssection_unit: nano barn
-        datasetnumber: 108084
+        datasetnumber: 105814
         datatype: EVNT
         ecmenergy: 7000.0
         evgenjobopts: MC10JobOpts-00-00-17.tar.gz
         filetype: evgen
         genfilteff_desc: Generator Filter Efficiency
-        genfilteff_max: 0.86730300000000005
-        genfilteff_mean: 0.85577000000000003
-        genfilteff_min: 0.84459499999999998
+        genfilteff_max: 0.21110400000000001
+        genfilteff_mean: 0.20505999999999999
+        genfilteff_min: 0.19848399999999999
         genfilteff_type: num
         input file base: None
-        logicaldatasetname: mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.evgen.EVNT.e598
+        logicaldatasetname: mc10_7TeV.105814.JF70_pythia_jet_filter.evgen.EVNT.e598
         nfiles: 200
         pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
         prodsysstatus: EVENTS_AVAILABLE
@@ -202,68 +201,68 @@ datasets:
         weighting: 1
     modifiedby: root
     nfiles: 100
-    physicsshort: PythiaPhotonJet_Unbinned280
+    physicsshort: JF70_pythia_jet_filter
     prodsysstatus: EVENTS_AVAILABLE
     productionstep: merge
     projectname: mc10_7TeV
     requestedby: leonardo.carminati@mi.infn.it
-    totalevents: 998898
+    totalevents: 998167
     transformationpackage: 16.6.4.2
-    version: e598_s933_s946_r2215_r2260_p548
+    version: e598_s933_s946_r1835_r2040_p548
 - !Atlas.Dataset
   contents:
     amistatus: VALID
     atlasrelease: 16.6.4
-    created: '2011-04-25 18:45:30'
+    created: '2011-04-27 22:19:22'
     createdby: root
     creationcomment: group production SMDP Exotics UED HSG1
-    datasetnumber: 108087
+    datasetnumber: 105815
     datatype: NTUP_PHOTON
     geometryversion: ATLAS-GEO-16-00-00
-    identifier: 207461
-    lastmodified: '2011-05-30 13:14:06'
-    logicaldatasetname: mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548
+    identifier: 208601
+    lastmodified: '2011-05-30 13:54:56'
+    logicaldatasetname: mc10_7TeV.105815.JF140_pythia_jet_filter.merge.NTUP_PHOTON.e640_s933_s946_r1835_r2040_p548
     mc_info: !Atlas.MonteCarloInfo
       contents:
         crosssection_desc: cross-section in nano barn returned by prodDB (may be unreliable)
-        crosssection_max: 228.54599999999999
-        crosssection_mean: 226.12
-        crosssection_min: 223.69
+        crosssection_max: 108.80800000000001
+        crosssection_mean: 107.79000000000001
+        crosssection_min: 106.586
         crosssection_type: num
         crosssection_unit: nano barn
-        datasetnumber: 108087
+        datasetnumber: 105815
         datatype: EVNT
         ecmenergy: 7000.0
-        evgenjobopts: MC10JobOpts-00-00-17.tar.gz
+        evgenjobopts: MC10JobOpts-00-00-71.tar.gz
         filetype: evgen
         genfilteff_desc: Generator Filter Efficiency
-        genfilteff_max: 0.47560200000000002
-        genfilteff_mean: 0.46145000000000003
-        genfilteff_min: 0.447187
+        genfilteff_max: 0.346188
+        genfilteff_mean: 0.33551999999999998
+        genfilteff_min: 0.32516099999999998
         genfilteff_type: num
         input file base: None
-        logicaldatasetname: mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.evgen.EVNT.e598
+        logicaldatasetname: mc10_7TeV.105815.JF140_pythia_jet_filter.evgen.EVNT.e640
         nfiles: 200
         pdf: +MRST+fit:+arXiv:0711.2473v2+-+LOmod
         prodsysstatus: EVENTS_AVAILABLE
         seedoffset: 0
         totalevents: 1000000
-        transformationpackage: 15.6.12.5
-        version: e598
+        transformationpackage: 15.6.13.9
+        version: e640
         weighting: 1
     modifiedby: root
     nfiles: 100
-    physicsshort: PythiaPhotonJet_Unbinned17
+    physicsshort: JF140_pythia_jet_filter
     prodsysstatus: EVENTS_AVAILABLE
     productionstep: merge
     projectname: mc10_7TeV
     requestedby: leonardo.carminati@mi.infn.it
-    totalevents: 999850
+    totalevents: 994687
     transformationpackage: 16.6.4.2
-    version: e598_s933_s946_r2215_r2260_p548
+    version: e640_s933_s946_r1835_r2040_p548
 datasets_expanded:
-- mc10_7TeV.108081.PythiaPhotonJet_Unbinned35.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327612_00
-- mc10_7TeV.108082.PythiaPhotonJet_Unbinned70.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327613_00
-- mc10_7TeV.108083.PythiaPhotonJet_Unbinned140.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327614_00
-- mc10_7TeV.108084.PythiaPhotonJet_Unbinned280.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid327615_00
-- mc10_7TeV.108087.PythiaPhotonJet_Unbinned17.merge.NTUP_PHOTON.e598_s933_s946_r2215_r2260_p548_tid326930_00
+- mc10_7TeV.105802.JF17_pythia_jet_filter.merge.NTUP_PHOTON.e574_s933_s946_r1835_r2040_p548_tid328067_00
+- mc10_7TeV.105807.JF35_pythia_jet_filter.merge.NTUP_PHOTON.e574_s933_s946_r1835_r2040_p548_tid328068_00
+- mc10_7TeV.105812.JF240_pythia_jet_filter.merge.NTUP_PHOTON.e640_s933_s946_r1835_r2040_p548_tid328071_00
+- mc10_7TeV.105814.JF70_pythia_jet_filter.merge.NTUP_PHOTON.e598_s933_s946_r1835_r2040_p548_tid328069_00
+- mc10_7TeV.105815.JF140_pythia_jet_filter.merge.NTUP_PHOTON.e640_s933_s946_r1835_r2040_p548_tid328070_00
