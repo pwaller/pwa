@@ -40,11 +40,33 @@ class PwaDataset(object):
         for dataset in self.datasets:
             dataset.clean()
     
+        datasets = dict(datasets=self.datasets, 
+                        datasets_expanded=self.datasets_expanded)
+        data = [self.info, datasets]
+        content = dump_all(data, default_flow_style=False)
         with open(filename, "w") as fd:
-            datasets = dict(datasets=self.datasets, 
-                            datasets_expanded=self.datasets_expanded)
-            data = [self.info, datasets]
-            fd.write(dump_all(data, default_flow_style=False))
+            fd.write(content)
+    
+    def update_mcinfo(self):
+        for dataset in self.datasets:
+            if "mc_info" in dataset.contents:
+                del dataset.contents["mc_info"]
+            # Trigger property loading
+            dataset.mc_info
+    
+    def update_datasets(self):
+        # Find datasets matching pattern (which are VALID and EVENTS_AVAILABLE)
+        pattern = self.info["pattern"]
+        datasets = query_datasets(pattern)
+        if not datasets:
+            # Fallback to dq2-ls
+            log.warning("Couldn't find dataset for pattern {0}".format(pattern))
+            log.warning("on AMI. Falling back to dq2-ls.")
+            datasets = dq2_ls(pattern)
+            
+        # Expand containers
+        self.datasets = datasets        
+        self.datasets_expanded = dq2_expand_containers(d.name for d in datasets)
 
 @subcommand('make_datasets', help='Build a new dataset')
 @param('files', nargs="+")
