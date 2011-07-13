@@ -4,7 +4,7 @@ from math import tanh, pi
 twopi = 2*pi
 
 from minty.base import AnalysisBase
-from minty.histograms import double_bins, mirror_bins, scale_bins
+from minty.histograms import double_bins, mirror_bins, scale_bins, log_binning
 from minty.main import make_main
 from minty.treedefs.egamma import Photon, Electron
 from minty.utils import delta_r
@@ -322,6 +322,8 @@ class GravitonAnalysis(AnalysisBase):
         
         self.ptbins_wide = "var", 15, 45, 60, 80, 120, 200, 400, 1000
         self.ptbins_wide = scale_bins(self.ptbins_wide, 1000)
+        
+        self.mass_log_bins = double_bins(log_binning(100, 70, 3000), 3)
         
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
         self.etabins = mirror_bins(self.etabins_sym)
