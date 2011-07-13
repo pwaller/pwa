@@ -92,6 +92,7 @@ def get_dataset_mapping(pattern="*"):
     return result    
 
 @subcommand('dsupdate', help='Update dataset info')
+@param('--mc', action="store_true")
 @param('files', nargs="*")
 def dsupdate(self, params):
     fileset = set(abspath(p) for p in params.files)
@@ -99,29 +100,20 @@ def dsupdate(self, params):
     from IPython.Shell import IPShellEmbed
     ip = IPShellEmbed(["-pdb"])
 
-    for ds, ds_filename, (ds_info, ds_datasets) in list_datasets():
-        if fileset and ds_filename not in fileset:
+    for filename in fileset:
+        dataset = PwaDataset.from_file(filename)
+        
+        if "pattern" not in dataset.info:
+            print "Skipping dataset (no pattern):", filename
             continue
-
-        if "pattern" not in ds_info:
-            continue
         
-        print "Updating dataset:", ds_filename
+        print "Updating dataset:", filename
         
-        # Find datasets matching pattern (which are VALID and EVENTS_AVAILABLE)
-        datasets = query_datasets(ds_info["pattern"])
-        if not datasets:
-            # Fallback to dq2-ls
-            log.warning("Couldn't find dataset for pattern %s" % ds_info["pattern"])
-            log.warning("on AMI. Falling back to dq2-ls.")
-            datasets = dq2_ls(ds_info["pattern"])
-            
-        # Expand containers
-        expanded = dq2_expand_containers([d.name for d in datasets])
+        dataset.update_datasets()
+        if params.mc:
+            dataset.update_mcinfo()
         
-        with open(ds_filename, "w") as fd:
-            ds_datasets = dict(datasets=datasets, datasets_expanded=expanded)
-            fd.write(dump_all([ds_info, ds_datasets], default_flow_style=False))
+        dataset.to_file(filename)
             
 @subcommand('dsbuild', help='Update dataset info')
 @param('files', nargs="*")
