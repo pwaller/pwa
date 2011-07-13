@@ -2,8 +2,8 @@ comment: SM Inclusive QCD Dijet Samples, Unbinned
 container: user.{user}.{dsname}.v{version}/
 pattern: mc10_7TeV.*.JF*_pythia_jet_filter.merge.NTUP_PHOTON.*_s933_s946_r1835_r2040_p548/
 shortname: mc10.pythia_JF
-update_time: 2011-07-13 15:57:08.863367
-version: 1
+update_time: 2011-07-13 19:19:17.076218
+version: 2
 ---
 datasets:
 - !Atlas.Dataset
