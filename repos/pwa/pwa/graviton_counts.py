@@ -28,7 +28,12 @@ def plot_kinematics(ana, name, obj):
     
     if getattr(obj, "conv", None) and getattr(obj, "isConv", None):
         hget(name, "Rconv",    b=[(2000, 0, 1000)],   t="Conversion Radius;R_{conversion} [mm]")(obj.conv.R)
-        
+    
+    if ana.mc:
+        if "truth" in name or not hasattr(obj, "truth"): return
+        namet = name, "truth"
+        objt = obj.truth
+        plot_kinematics(ana, namet, objt)
 
 def plot_shower(ana, name, obj):
     hget = ana.h.get
@@ -75,16 +80,30 @@ def plot_boson(ana, name, ph1, ph2):
         # Keep all high mass events!
         ana.should_dump = True
         
-    H(name, "boson/mass",           b=[(1000, 0, 500)],     t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
-    H(name, "boson/mass_wide",      b=[(4000, 0, 2000)],    t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
-    H(name, "boson/pt",             b=[(1000, 0, 2000)],    t="Boson p_{T};p_{T}_{#gamma#gamma} [GeV]")(comb.pt/1000)
-    H(name, "boson/eta",            b=[(100, -8, 8)],       t="Boson #eta;#eta_{#gamma#gamma}")(comb.eta)
-    H(name, "boson/phi",            b=[(100, -pi, pi)],     t="Boson #phi;#phi_{#gamma#gamma}")(comb.phi)
-    H(name, "boson/deltar",         b=[(100, 0, twopi)],    t="Boson #Delta r;#Delta r_{#gamma#gamma}")(delta_r(ph1, ph2))
-    H(name, "boson/deltaphi",       b=[(200, 0, twopi)],    t="Boson #Delta #phi;#Delta #phi_{#gamma#gamma}")(abs(ph1.phi - ph2.phi))
-    H(name, "boson/deltaeta",       b=[(100, -8, 8)],       t="Boson #Delta #eta;#Delta #eta_{#gamma#gamma}")(ph1.eta - ph2.eta)
-    H(name, "boson/costhetastar",   b=[(100, -1, 1)],       t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(tanh((ph1.eta - ph2.eta) / 2))
-    H(name, "boson/boost",          b=[(100, -1, 1)],       t="Boson Boost;#beta_{Z}_{#gamma#gamma}")(tanh((ph1.eta + ph2.eta) / 2))
+    costhetastar = tanh((ph1.eta - ph2.eta) / 2)
+        
+    H(name, "mass",           b=[(1000, 0, 500)],     t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "mass_wide",      b=[(4000, 0, 2000)],    t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "mass_logbins",   b=[ana.mass_log_bins], t="Boson Mass;M_{#gamma#gamma} [GeV]")(comb.m/1000)
+    H(name, "pt",             b=[(1000, 0, 2000)],    t="Boson p_{T};p_{T}_{#gamma#gamma} [GeV]")(comb.pt/1000)
+    H(name, "eta",            b=[(100, -8, 8)],       t="Boson #eta;#eta_{#gamma#gamma}")(comb.eta)
+    H(name, "phi",            b=[(100, -pi, pi)],     t="Boson #phi;#phi_{#gamma#gamma}")(comb.phi)
+    H(name, "deltar",         b=[(100, 0, twopi)],    t="Boson #Delta r;#Delta r_{#gamma#gamma}")(delta_r(ph1, ph2))
+    H(name, "deltaphi",       b=[(200, 0, twopi)],    t="Boson #Delta #phi;#Delta #phi_{#gamma#gamma}")(abs(ph1.phi - ph2.phi))
+    H(name, "deltaeta",       b=[(100, -8, 8)],       t="Boson #Delta #eta;#Delta #eta_{#gamma#gamma}")(ph1.eta - ph2.eta)
+    H(name, "costhetastar",   b=[(100, -1, 1)],       t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(costhetastar)
+    H(name, "boost",          b=[(100, -1, 1)],       t="Boson Boost;#beta_{Z}_{#gamma#gamma}")(tanh((ph1.eta + ph2.eta) / 2))
+    
+    H(name, "mass_vs_cts",   b=[ana.mass_log_bins, (50, -1, 1)], t="Boson Mass vs cos(theta*);M_{#gamma#gamma} [GeV];cos(#theta^{*})_{#gamma#gamma}")(comb.m/1000, costhetastar)
+    
+    H(name, "costhetastar",   b=[(100, -1, 1)],       t="Boson cos(#theta^{*});cos(#theta^{*})_{#gamma#gamma}")(tanh((ph1.eta - ph2.eta) / 2))
+
+    if ana.mc:
+        if "truth" in name or not hasattr(ph1, "truth"):
+            return
+        ph1t, ph2t = ph1.truth, ph2.truth
+        namet = name, "truth"
+        plot_boson(ana, namet, ph1t, ph2t)
 
 def plot_boson_wconv(ana, name, ph1, ph2):
     plot_boson(ana, name, ph1, ph2)
@@ -110,7 +129,7 @@ def pass_event(counts, ana, event):
         else:
             trigger = event.EF._2g15_loose
             
-    elif ana.project == "data11":
+    elif ana.project == "data11" or ana.project == "mc10":
         trigger = event.EF._2g20_loose
     
     if not trigger: return
@@ -197,7 +216,7 @@ def do_photon_cutflow(ana, event):
     plot_kinematics (ana, "default/ph/2", ph2)
     plot_shower     (ana, "default/ph/1", ph1)
     plot_shower     (ana, "default/ph/2", ph2)
-    plot_boson_wconv(ana, "default/ph", ph1, ph2)
+    plot_boson_wconv(ana, "default/ph/boson", ph1, ph2)
     
     vertex_z = event.vertices[0].z
     
@@ -211,12 +230,12 @@ def do_photon_cutflow(ana, event):
     # Loose plots with corrections
     plot_kinematics (ana, "corrected/ph/1", ph1C)
     plot_kinematics (ana, "corrected/ph/2", ph2C)
-    plot_boson_wconv(ana, "corrected/ph", ph1C, ph2C)
+    plot_boson_wconv(ana, "corrected/ph/boson", ph1C, ph2C)
     
     if ph1.my_tight and ph2.my_tight:
         plot_kinematics (ana, "corrected/ph/tight/1", ph1C)
         plot_kinematics (ana, "corrected/ph/tight/2", ph2C)
-        plot_boson_wconv(ana, "corrected/ph/tight", ph1C, ph2C)
+        plot_boson_wconv(ana, "corrected/ph/tight/boson", ph1C, ph2C)
         
     # Final tight plots
     for ph in good_photons:
