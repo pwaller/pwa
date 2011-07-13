@@ -3,6 +3,7 @@ container: user.{user}.{dsname}.v{version}/
 container_name: user.PeterWaller.mc10a.PhotonJet.v2/
 pattern: mc10_7TeV.*PythiaPhotonJet*r2260_p548/
 shortname: mc10a.PhotonJet
+update_time: 2011-07-13 15:58:42.792471
 version: 2
 ---
 datasets:

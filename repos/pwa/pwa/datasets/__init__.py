@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+from datetime import datetime
 from commands import getstatusoutput
 from os.path import abspath, basename, isfile
 from pkg_resources import resource_listdir, resource_filename
@@ -40,19 +41,14 @@ class PwaDataset(object):
         for dataset in self.datasets:
             dataset.clean()
     
+        self.info["update_time"] = datetime.now()
+    
         datasets = dict(datasets=self.datasets, 
                         datasets_expanded=self.datasets_expanded)
         data = [self.info, datasets]
         content = dump_all(data, default_flow_style=False)
         with open(filename, "w") as fd:
             fd.write(content)
-    
-    def update_mcinfo(self):
-        for dataset in self.datasets:
-            if "mc_info" in dataset.contents:
-                del dataset.contents["mc_info"]
-            # Trigger property loading
-            dataset.mc_info
     
     def update_datasets(self):
         # Find datasets matching pattern (which are VALID and EVENTS_AVAILABLE)
@@ -63,10 +59,17 @@ class PwaDataset(object):
             log.warning("Couldn't find dataset for pattern {0}".format(pattern))
             log.warning("on AMI. Falling back to dq2-ls.")
             datasets = dq2_ls(pattern)
-            
+                
         # Expand containers
         self.datasets = datasets        
         self.datasets_expanded = dq2_expand_containers(d.name for d in datasets)
+        
+        for dataset in self.datasets:
+            if dataset.contents.get("projectname", "").startswith("mc"):
+                # Trigger re-loading of mc_info
+                if "mc_info" in dataset.contents:
+                    del dataset.contents["mc_info"]
+                dataset.mc_info
 
 @subcommand('make_datasets', help='Build a new dataset')
 @param('files', nargs="+")
@@ -92,7 +95,6 @@ def get_dataset_mapping(pattern="*"):
     return result    
 
 @subcommand('dsupdate', help='Update dataset info')
-@param('--mc', action="store_true")
 @param('files', nargs="*")
 def dsupdate(self, params):
     fileset = set(abspath(p) for p in params.files)
@@ -110,8 +112,6 @@ def dsupdate(self, params):
         print "Updating dataset:", filename
         
         dataset.update_datasets()
-        if params.mc:
-            dataset.update_mcinfo()
         
         dataset.to_file(filename)
             
