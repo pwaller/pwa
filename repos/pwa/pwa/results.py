@@ -326,9 +326,52 @@ def mcupdateinfo(self, params):
             mcds.mc_info
         ds.to_file(filename)
 
+def save_ufloat(name, value):
+    v = R.TParameter(float)("{0}_value".format(name), value.nominal_value)
+    e = R.TParameter(float)("{0}_err".format(name), value.std_dev())
+    v.Write()
+    e.Write()
+    
 @subcommand('mcrescale', help="Scale datasets to montecarlo")
+@param('-l', '--lumi', type=float, help="Luminosity")
+@param('-u', '--uncert', default=None, type=float, help="Luminosity uncertainty percentage")
 @param('files', nargs="*")
 def mcrescale(self, params):
+    from pwa.datasets import get_dataset_mapping
+    from uncertainties import ufloat
+    datasets = get_dataset_mapping("mc*")
+    
+    if not exists("pre_rescale"):
+        makedirs("pre_rescale")
+    
+    match = re.compile("^.*?-P(.+)-R(\d+).root$").match
+    lumi = params.lumi
+    
+    if params.uncert:
+        lumi = ufloat((lumi, lumi * (params.uncert / 100.)))
+    
     for filename in params.files:
+        m = match(filename)
+        if not m:
+            print "Skipping", filename
+            continue
         
-        pass
+        period, run = m.groups()
+        dataset = datasets[int(run)]
+        effective_lumi = dataset.effective_luminosity
+        factor = dataset.reweight_factor(lumi)
+        print "Processing", filename, period, run, dataset.physicsshort, effective_lumi, factor
+        
+        target_name = "mc_{d.run}_{d.physicsshort}.root".format(d=dataset)
+        prerescale_path = pjoin("pre_rescale", filename)
+        
+        rename(filename, prerescale_path)
+        f_in = R.TFile(prerescale_path, "read")
+        f_out = R.TFile(target_name, "recreate")
+        
+        from minty.tools.minty_rescale import rescale_dir
+        rescale_dir(f_in, f_out, factor.nominal_value)
+        
+        f_out.cd()
+        save_ufloat("effective_lumi", effective_lumi)
+        save_ufloat("mc_weight", factor)

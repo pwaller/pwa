@@ -67,7 +67,7 @@ def get_dataset_mapping(pattern="*"):
         for ds in dsf.datasets:
             assert not ds.run in result
             result[ds.run] = ds
-    return datasets    
+    return result    
 
 @subcommand('dsupdate', help='Update dataset info')
 @param('files', nargs="*")
