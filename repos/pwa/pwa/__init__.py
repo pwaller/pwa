@@ -53,5 +53,8 @@ class Engine(Application):
 
 def main():
     from minty.utils import init_root
-    init_root()
-    Engine().run()
+    from minty.utils.logger import log_level
+    from logging import DEBUG
+    with log_level(DEBUG):
+        init_root()
+        Engine().run()

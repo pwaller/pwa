@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 
+from logging import getLogger; log = getLogger("pwa.datasets")
+
 from datetime import datetime
 from commands import getstatusoutput
 from os.path import abspath, basename, isfile
