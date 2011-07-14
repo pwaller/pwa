@@ -7,3 +7,14 @@ dataset:
  - mc10a.PhotonJet.yaml
  - mc10a.smdipho.yaml
 command: ./ana_run.sh pwa_graviton_counts --mc --run-specific-output --release=rel16 --project=data11
+prun: |
+    --extFile=./analysis.pybundle
+    --outputs=output-*.root*
+    --exec="{command} inputs.txt"
+    --tmpDir=/tmp/pwaller/pass.{tag}.{name}/
+    --inDS={input_dataset}
+    --outDS=user.PeterWaller.{name}.{tag}.many/
+    --writeInputToTxt=IN:inputs.txt
+    --nGBPerJob=8
+    --athenaTag=16.6.3
+    --noBuild
