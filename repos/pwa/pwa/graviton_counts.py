@@ -152,11 +152,15 @@ PHOTON_CUTFLOW = (
 def do_photon_cutflow(ana, event):
     counts = ana.h.get("photon_cutflow", b=[PHOTON_CUTFLOW])
     
+    good_photons = event.photons
+    
+    for ph in good_photons:
+        plot_kinematics(ana, "all_phs/pre_everything", ph)
+        plot_shower    (ana, "all_phs/pre_everything", ph)
+        
     # Fills first four bins of `counts`
     if not pass_event(counts, ana, event):
         return
-    
-    good_photons = event.photons
     
     if len(good_photons) < 2: return
     counts(PH_N)
