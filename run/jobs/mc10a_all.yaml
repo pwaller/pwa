@@ -15,6 +15,6 @@ prun: |
     --inDS={input_dataset}
     --outDS=user.PeterWaller.{name}.{tag}.many/
     --writeInputToTxt=IN:inputs.txt
-    --nGBPerJob=8
+    --nGBPerJob=5
     --athenaTag=16.6.3
     --noBuild
