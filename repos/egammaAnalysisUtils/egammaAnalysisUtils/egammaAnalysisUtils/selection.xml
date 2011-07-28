@@ -1,0 +1,5 @@
+<lcgdict>
+  <class name="egammaSFclass" />
+  <class name="eg2011::EnergyRescaler" />
+  <class name="egammaOQ" />
+</lcgdict>
