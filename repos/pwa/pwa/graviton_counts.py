@@ -228,12 +228,8 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     
     vertex_z = event.vertices[0].z
     
-    if ana.release_16:
-        ph1C = ph1.v16_corrections()
-        ph2C = ph2.v16_corrections()
-    else:
-        ph1C = ph1.v15_corrections(vertex_z)
-        ph2C = ph2.v15_corrections(vertex_z)
+    ph1C = ph1.corrected_fourvec(vertex_z)
+    ph2C = ph2.corrected_fourvec(vertex_z)
     
     # Loose plots with corrections
     plot_kinematics (ana, "corrected/ph/1", ph1C)
