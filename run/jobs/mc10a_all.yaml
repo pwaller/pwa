@@ -16,5 +16,5 @@ prun: |
     --outDS=user.PeterWaller.{name}.{tag}.many/
     --writeInputToTxt=IN:inputs.txt
     --nGBPerJob=5
-    --athenaTag=16.6.3
+    --athenaTag=17.0.1
     --noBuild
