@@ -4,3 +4,4 @@ CaloIsoCorrection = deferred_root_loader("CaloIsoCorrection.cxx", "CaloIsoCorrec
 
 calo_iso_correction = make_deferred_instance(CaloIsoCorrection)
 GetPtEDCorrectedIsolation = calo_iso_correction.GetPtEDCorrectedIsolation
+GetPtNPVCorrectedIsolation = calo_iso_correction.GetPtNPVCorrectedIsolation
