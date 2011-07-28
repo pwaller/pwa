@@ -13,7 +13,7 @@ from commando import Application, command, subcommand, version, store, true, par
 
 from yaml import load, load_all, dump_all
 
-from minty.metadata.ami import query_datasets
+from minty.metadata.ami import query_datasets, dataset_from_name
 
 user = "PeterWaller"
 
@@ -22,6 +22,10 @@ class PwaDataset(object):
         args = name, info, datasets["datasets"], datasets["datasets_expanded"]
         self.name, self.info, self.datasets, self.datasets_expanded = args
         info["shortname"] = name
+    
+    @property
+    def ami_disabled(self):
+        return self.info.get("ami_disabled", False)
     
     @property
     def container_name(self):
@@ -62,12 +66,15 @@ class PwaDataset(object):
     def update_datasets(self):
         # Find datasets matching pattern (which are VALID and EVENTS_AVAILABLE)
         pattern = self.info["pattern"]
-        datasets = query_datasets(pattern)
+        if self.ami_disabled:
+            datasets = []
+        else:
+            datasets = query_datasets(pattern)
         if not datasets:
             # Fallback to dq2-ls
             log.warning("Couldn't find dataset for pattern {0}".format(pattern))
             log.warning("on AMI. Falling back to dq2-ls.")
-            datasets = dq2_ls(pattern)
+            datasets = map(dataset_from_name, dq2_ls(pattern))
                 
         # Expand containers
         self.datasets = datasets        
