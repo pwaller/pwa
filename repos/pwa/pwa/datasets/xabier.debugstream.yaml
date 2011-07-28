@@ -1,0 +1,66 @@
+ami_disabled: true
+container: user.{user}.{dsname}.v{version}/
+pattern: user.XabierAnduaga.data11_7TeV.*.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+shortname: xabier.debugstream
+update_time: 2011-07-28 10:55:05.560073
+version: 1
+---
+datasets:
+- !Atlas.Dataset
+  contents:
+    logicaldatasetname: user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+- !Atlas.Dataset
+  contents:
+    logicaldatasetname: user.XabierAnduaga.data11_7TeV.periodE.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+- !Atlas.Dataset
+  contents:
+    logicaldatasetname: user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+- !Atlas.Dataset
+  contents:
+    logicaldatasetname: user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+- !Atlas.Dataset
+  contents:
+    logicaldatasetname: user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1/
+datasets_expanded:
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181426
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181510
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181553
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181636
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181716
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181808
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181849
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181939
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182028
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182118
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182210
+- user.XabierAnduaga.data11_7TeV.periodD.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182255
+- user.XabierAnduaga.data11_7TeV.periodE.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181426
+- user.XabierAnduaga.data11_7TeV.periodE.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181504
+- user.XabierAnduaga.data11_7TeV.periodE.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181545
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181428
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181504
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181544
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181636
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181712
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181757
+- user.XabierAnduaga.data11_7TeV.periodF.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181850
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181429
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181517
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181559
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181638
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181717
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181802
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181842
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181926
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182015
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182059
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182152
+- user.XabierAnduaga.data11_7TeV.periodG.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721182237
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181424
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181506
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181540
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181637
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181716
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181802
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181843
+- user.XabierAnduaga.data11_7TeV.periodH.debugrec_hltacc.PhysCont.AOD.t0pro08_v01.16642.phD3PD-00-01-31.v1.110721181921
