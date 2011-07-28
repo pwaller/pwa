@@ -2,8 +2,8 @@ container: user.{user}.{dsname}.v{version}/
 container_name: user.PeterWaller.data11_7TeV.NTUP_PHOTON.p541.v9/
 pattern: data11_7TeV.*.physics_Egamma.merge.NTUP_PHOTON.*_p541/
 shortname: data11_7TeV.NTUP_PHOTON.p541
-update_time: 2011-07-28 10:59:49.854911
-version: 9
+update_time: 2011-07-28 20:15:31.937344
+version: 10
 ---
 datasets:
 - !Atlas.Dataset
