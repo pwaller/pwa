@@ -146,10 +146,10 @@ def pass_event(counts, ana, event):
 
 PHOTON_CUTFLOW = (
     "named", "total", "2g20_loose", "grl",  "vertex", "nphot", "eta", "pt", 
-    "oq", "loose",   "tight",  "tightar",  "larError",  "jetcleaning")
+    "oq", "phcleaning",       "loose",   "tight",  "iso < 5 GeV", "Remove ee", "mass > 120 GeV", "larError", "tightar")
 (            PH_TOTAL, PH_2G20L,    PH_GRL, PH_VTX,   PH_N,    PH_ETA, PH_PT, 
-    PH_OQ, PH_LOOSE, PH_TIGHT, PH_TIGHTAR, PH_LARERROR, PH_JETCLEANING) = range(len(PHOTON_CUTFLOW)-1)
-def do_photon_cutflow(ana, event):
+    PH_OQ, PH_PHOTONCLEANING, PH_LOOSE, PH_TIGHT,  PH_ISOLATION,  PH_NOT_EE,   PH_MASS,          PH_LARERROR, PH_TIGHTAR) = range(len(PHOTON_CUTFLOW)-1)
+def do_photon_cutflow(ana, event, is_ee_candidate):
     counts = ana.h.get("photon_cutflow", b=[PHOTON_CUTFLOW])
     
     good_photons = event.photons
@@ -178,6 +178,10 @@ def do_photon_cutflow(ana, event):
     if len(good_photons) < 2: return
     counts(PH_OQ)
     
+    good_photons = [ph for ph in good_photons if ph.pass_photoncleaning]
+    if len(good_photons) < 2: return
+    counts(PH_PHOTONCLEANING)    
+    
     # Plot kinematics and shower variables before loose cut, as well as after
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/pre_loose", ph)
@@ -197,23 +201,23 @@ def do_photon_cutflow(ana, event):
             plot_kinematics(ana, "all_phs/post_loose/conv", ph)
             plot_shower    (ana, "all_phs/post_loose/conv", ph)
     
+    # my_tight is robust_tight for data10, and "tight" for data11
+    good_photons = [ph for ph in good_photons if ph.my_tight]
+    if len(good_photons) < 2: return
+    counts(PH_TIGHT)
+    
+    good_photons = [ph for ph in good_photons if ph.Etcone40_PtED_corrected() < 5000]
+    if len(good_photons) < 2: return
+    counts(PH_ISOLATION)
+    
+    if is_ee_candidate: 
+        ana.gg_cand_has_ee.append((event.RunNumber, event.EventNumber))
+        return
+    counts(PH_NOT_EE)
+    
     good_photons.sort(key=lambda o: o.pt, reverse=True)
     
     ph1, ph2 = good_photons[:2]
-    
-    # my_tight is robust_tight for data10, and "tight" for data11
-    if ph1.my_tight and ph2.my_tight:
-        counts(PH_TIGHT)
-        
-        # Cuts for informational purposes.
-        if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
-            counts(PH_TIGHTAR)
-            
-            if not event.larError:
-                counts(PH_LARERROR)
-                
-                if ph1.pass_jetcleaning and ph2.pass_jetcleaning:
-                    counts(PH_JETCLEANING)
     
     # Loose plots
     plot_kinematics (ana, "default/ph/1", ph1)
@@ -241,6 +245,20 @@ def do_photon_cutflow(ana, event):
         plot_kinematics (ana, "corrected/ph/tight/2", ph2C)
         plot_boson_wconv(ana, "corrected/ph/tight/boson", ph1C, ph2C)
         
+        mass = (ph1C + ph2C).m
+        
+        if mass >= 120000:
+            counts(PH_MASS)
+            ana.good_events.append((event.RunNumber, event.EventNumber))
+            ana.mass_values.append(mass)
+            
+    # Cuts for informational purposes.
+    if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
+        counts(PH_TIGHTAR)
+        
+        if not event.larError:
+            counts(PH_LARERROR)
+            
     # Final tight plots
     for ph in good_photons:
         if ph.my_tight:
@@ -252,9 +270,9 @@ def do_photon_cutflow(ana, event):
     
 ELECTRON_CUTFLOW = (
     "named", "total",  "2g20_loose", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
-    "oq",  "loose",  "medium",  "blayer",  "larError",  "jetcleaning",  "tight")
+    "oq",  "loose",  "medium",  "blayer",  "larError",  "iso < 7 GeV", "mass > 120 GeV", "tight")
 (            EL_TOTAL, EL_2G20L,     EL_GRL, EL_VTX,    EL_N, EL_AUTHOR,  EL_ETA, EL_PT, 
-    EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_LARERROR, EL_JETCLEANING, EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
+    EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_LARERROR, EL_ISOLATION,  EL_MASS,          EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
 def do_electron_cutflow(ana, event):
     counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
     
@@ -308,18 +326,25 @@ def do_electron_cutflow(ana, event):
     if len(good_electrons) < 2: return
     counts(EL_BLAYER)
     
+    nvx_with_tracks = sum(1 for v in event.vertices if v.nTracks >= 2)
+    
+    good_electrons = [el for el in good_electrons 
+                      if el.EtCone20_ptNPV_corrected(nvx_with_tracks) < 7000]
+    if len(good_electrons) < 2: return
+    counts(EL_ISOLATION)
+    
     good_electrons.sort(key=lambda o: o.pt, reverse=True)
     
     el1, el2 = good_electrons[:2]
     
+    if (el1 + el2).m < 120000: return
+    counts(EL_MASS)
+    
     if not event.larError:
         counts(EL_LARERROR)
-        
-        if el1.pass_jetcleaning and el2.pass_jetcleaning:
-            counts(EL_JETCLEANING)
             
-            if el1.tight and el2.tight:
-                counts(EL_TIGHT)
+        if el1.tight and el2.tight:
+            counts(EL_TIGHT)
     
     # Medium plots
     plot_kinematics(ana, "default/el/1", el1)
@@ -333,6 +358,13 @@ def do_electron_cutflow(ana, event):
         if el.tight:
             plot_kinematics(ana, "all_els/post_tight", el)
             plot_shower    (ana, "all_els/post_tight", el)
+            
+    return True
+
+def do_cutflows(ana, event):
+    is_ee_candidate = do_electron_cutflow(ana, event)
+    do_photon_cutflow(ana, event, is_ee_candidate)
+    
 
 class GravitonAnalysis(AnalysisBase):
     def __init__(self, tree, options):
@@ -354,19 +386,24 @@ class GravitonAnalysis(AnalysisBase):
         
         # Tasks to run in order
         self.tasks.extend([
-            do_photon_cutflow,
-            do_electron_cutflow,
+            do_cutflows,
         ])
 
     def initialize_counters(self):
         self.loose_events = set()
         self.interesting_indexes = []
+        self.gg_cand_has_ee = []
+        self.good_events = []
+        self.mass_values = []
         
         super(GravitonAnalysis, self).initialize_counters()
         
     def flush(self):
         self.h.write_object("loose_event_indexes", self.loose_events)
         self.h.write_object("interesting", self.interesting_indexes)
+        self.h.write_object("gg_cand_has_ee", self.gg_cand_has_ee)
+        self.h.write_object("good_events", self.good_events)
+        self.h.write_object("mass_values", self.mass_values)
         
         super(GravitonAnalysis, self).flush()
 
