@@ -90,6 +90,7 @@ def custom_sort(inputs):
     import re
     priorities = [
         lambda x: x == "all.root",
+        lambda x: bool(re.match(r"period[A-Z]to[A-Z]+\.root", x)),
         lambda x: bool(re.match(r"period[A-Z]+\.root", x)),
         lambda x: bool(re.match(r"period[A-Z]+\d+\.root", x)),
     ]
@@ -134,7 +135,7 @@ def dump(self, params):
     assert len(labels) == 1, labels
     (labels,) = labels
     
-    lumi = lambda f: []
+    lumi = lambda f, h: []
     
     if params.datasets:
         _, data_info = load_all(open(params.datasets))
@@ -156,7 +157,15 @@ def dump(self, params):
                 
             elif name.startswith("period"):
                 period = name.split(".")[0][len("period"):]
-                if period in by_period:
+                
+                if "to" in period:
+                    chars = "".join(chr(x) for x in xrange(ord(period[0]), ord(period[-1])+1))
+                    events = 0
+                    for p in chars:
+                        if p in by_period:
+                            events += sum(d.totalevents for d in by_period[p])
+                    
+                elif period in by_period:
                     events = sum(d.totalevents for d in by_period[period])
                     
             elif name.startswith("all"):
