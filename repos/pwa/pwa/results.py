@@ -110,7 +110,7 @@ def custom_sort(inputs):
 
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
-@param('--name', default="cutflow")
+@param('--name', default="photon_cutflow")
 @param('--datasets')
 def dump(self, params):
     
