@@ -134,7 +134,8 @@ def pass_event(counts, ana, event):
     
     if not trigger: return
     counts(PH_2G20L)
-
+    
+    # In good run list
     if not event.is_grl: return
     counts(PH_GRL)
     
@@ -157,7 +158,8 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     for ph in good_photons:
         plot_kinematics(ana, "all_phs/pre_everything", ph)
         plot_shower    (ana, "all_phs/pre_everything", ph)
-        
+    
+    # Event cuts
     # Fills first four bins of `counts`
     if not pass_event(counts, ana, event):
         return
@@ -170,14 +172,17 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     if len(good_photons) < 2: return
     counts(PH_ETA)
     
+    # 25 GeV pt cut
     good_photons = [ph for ph in good_photons if ph.pt_via_clE_etas2 >= 25000]
     if len(good_photons) < 2: return
     counts(PH_PT)
     
+    # OTX check
     good_photons = [ph for ph in good_photons if ph.my_oq]
     if len(good_photons) < 2: return
     counts(PH_OQ)
     
+    # Check photon cleaning
     good_photons = [ph for ph in good_photons if ph.pass_photoncleaning]
     if len(good_photons) < 2: return
     counts(PH_PHOTONCLEANING)    
@@ -190,6 +195,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
             plot_kinematics(ana, "all_phs/pre_loose/conv", ph)
             plot_shower    (ana, "all_phs/pre_loose/conv", ph)
 
+    # Remove non-loose candidates
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
     counts(PH_LOOSE)
@@ -201,22 +207,9 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
             plot_kinematics(ana, "all_phs/post_loose/conv", ph)
             plot_shower    (ana, "all_phs/post_loose/conv", ph)
     
-    # my_tight is robust_tight for data10, and "tight" for data11
-    good_photons = [ph for ph in good_photons if ph.my_tight]
-    if len(good_photons) < 2: return
-    counts(PH_TIGHT)
-    
-    good_photons = [ph for ph in good_photons if ph.Etcone40_PtED_corrected() < 5000]
-    if len(good_photons) < 2: return
-    counts(PH_ISOLATION)
-    
-    if is_ee_candidate: 
-        ana.gg_cand_has_ee.append((event.RunNumber, event.EventNumber))
-        return
-    counts(PH_NOT_EE)
-    
     good_photons.sort(key=lambda o: o.pt, reverse=True)
     
+    ## Diphoton plots
     ph1, ph2 = good_photons[:2]
     
     # Loose plots
@@ -226,12 +219,33 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     plot_shower     (ana, "default/ph/2", ph2)
     plot_boson_wconv(ana, "default/ph/boson", ph1, ph2)
     
-    vertex_z = event.vertices[0].z
+    ## More cuts
     
+    # my_tight is robust_tight for data10, and "tight" for data11
+    good_photons = [ph for ph in good_photons if ph.my_tight]
+    if len(good_photons) < 2: return
+    counts(PH_TIGHT)
+    
+    # Isolation cut
+    good_photons = [ph for ph in good_photons if ph.Etcone40_PtED_corrected() < 5000]
+    if len(good_photons) < 2: return
+    counts(PH_ISOLATION)
+    
+    # Remove ee candidates, record run/event
+    if is_ee_candidate: 
+        ana.gg_cand_has_ee.append((event.RunNumber, event.EventNumber))
+        return
+    counts(PH_NOT_EE)
+    
+    ## Select best diphoton pair again (leading an subleading due to sort earlier)
+    ph1, ph2 = good_photons[:2]
+    
+    # Vertex and enery correction
+    vertex_z = event.vertices[0].z
     ph1C = ph1.corrected_fourvec(vertex_z)
     ph2C = ph2.corrected_fourvec(vertex_z)
     
-    # Loose plots with corrections
+    # Tight plots with corrections
     plot_kinematics (ana, "corrected/ph/1", ph1C)
     plot_kinematics (ana, "corrected/ph/2", ph2C)
     plot_boson_wconv(ana, "corrected/ph/boson", ph1C, ph2C)
@@ -264,11 +278,13 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
                 plot_kinematics(ana, "all_phs/post_tight/conv", ph)
                 plot_shower    (ana, "all_phs/post_tight/conv", ph)
     
+    return True
+    
 ELECTRON_CUTFLOW = (
     "named", "total",  "2g20_loose", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
-    "oq",  "loose",  "medium",  "blayer",  "larError",  "iso < 7 GeV", "mass > 120 GeV", "tight")
+    "oq",  "loose",  "medium",  "blayer",  "iso < 7 GeV", "mass > 120 GeV",  "larError",  "tight")
 (            EL_TOTAL, EL_2G20L,     EL_GRL, EL_VTX,    EL_N, EL_AUTHOR,  EL_ETA, EL_PT, 
-    EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_LARERROR, EL_ISOLATION,  EL_MASS,          EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
+    EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_ISOLATION,  EL_MASS,           EL_LARERROR, EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
 def do_electron_cutflow(ana, event):
     counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
     
@@ -375,7 +391,9 @@ class GravitonAnalysis(AnalysisBase):
         self.ptbins_wide = "var", 15, 45, 60, 80, 120, 200, 400, 1000
         self.ptbins_wide = scale_bins(self.ptbins_wide, 1000)
         
-        self.mass_log_bins = double_bins(log_binning(100, 70, 3000), 3)
+        self.mass_log_bins_smaller = log_binning(10, 70, 3000)
+        self.mass_log_bins_small = log_binning(100, 70, 3000)
+        self.mass_log_bins = double_bins(self.mass_log_bins_small, 3)
         
         self.etabins_sym = "var", 0., 0.60, 1.37, 1.52, 1.81, 2.37
         self.etabins = mirror_bins(self.etabins_sym)
