@@ -82,8 +82,11 @@ def reduce(self, params):
 @subcommand('mergereduce', help="Run merge reduce")
 @param('files', nargs="+")
 @param("-p", "--prefix", default="output")
+@param("--dataset", default=None)
 def mergereduce(self, params):
     mergeall(self, params)
+    if params.dataset:
+        kick(self, params)
     reduce(self, params)
     
 def custom_sort(inputs):
@@ -111,7 +114,7 @@ def custom_sort(inputs):
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
 @param('--name', default="photon_cutflow")
-@param('--datasets')
+@param('--dataset')
 def dump(self, params):
     
     inputs = custom_sort(params.files)
@@ -137,8 +140,8 @@ def dump(self, params):
     
     lumi = lambda f, h: []
     
-    if params.datasets:
-        _, data_info = load_all(open(params.datasets))
+    if params.dataset:
+        _, data_info = load_all(open(params.dataset))
         by_period, by_run = {}, {}
         for d in data_info["datasets"]:
             by_period.setdefault(d.period, []).append(d)
@@ -246,7 +249,7 @@ def kick(self, params):
     """
     
     if not params.dataset:
-        print "Please specify --datasets"
+        print "Please specify --dataset"
         raise SystemExit
     
     match = re.compile("^.*?-P(.+)-R(\d+).root$").match
