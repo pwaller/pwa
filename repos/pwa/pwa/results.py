@@ -310,6 +310,9 @@ def status(self, params):
     from ROOT import TFile
     files = [TFile.Open(f) for f in inputs]
     
+    def depickle_rootstring(s):
+        return loads(s.GetString().Data())
+    
     def get_info(f):
         try:
             return [
@@ -319,11 +322,12 @@ def status(self, params):
                 f.walltime.GetVal(),
                 f.processed_trees.GetVal(),
                 f.jobs_files.GetVal(),
+                len(depickle_rootstring(f.file_processed_list)),
             ]
         except AttributeError:
             return [None]*6
        
-    labels = ["exceptions", "cputime", "skimtime", "walltime", "ntrees", "njf"]
+    labels = ["exceptions", "cputime", "skimtime", "walltime", "ntrees", "njf", "nfiles"]
     numbers = [[f.GetName()] + get_info(f) for f in files]
     table = [["file"] + list(labels)] + numbers
     pprint_table(table) 
