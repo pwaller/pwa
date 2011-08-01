@@ -7,6 +7,8 @@ from pprint import pprint
 
 from commando import Application, command, subcommand, version, store, true, param
 
+import ROOT as R
+
 from minty.main import make_main
 
 import results
@@ -52,6 +54,18 @@ class Engine(Application):
     draw = plot.draw
     
     multifit = fit.multifit
+    
+    @subcommand('browse', help='Start a TBrowser')
+    @param('files', nargs="*")
+    def browse(self, params):
+        from IPython.Shell import IPShellEmbed as IP
+        files = params.files
+        if not files:
+            files = ["all.root"]
+        all_files = [R.TFile(f) for f in files]
+        browsers = [R.TBrowser(f.GetName(), f) for f in all_files]
+        # Start ipython
+        IP()()
 
 def main():
     from minty.utils import init_root
