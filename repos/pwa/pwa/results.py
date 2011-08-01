@@ -383,3 +383,37 @@ def mcrescale(self, params):
         f_out.cd()
         save_ufloat("effective_lumi", effective_lumi)
         save_ufloat("mc_weight", factor)
+
+@subcommand('logexplore', help="Find problems in log files")
+@param('-d', default=None, help='dummy option')
+def logexplore(self, params):
+    from os import walk
+    from os.path import join as pjoin
+    from tarfile import open as tarfile_open
+    from contextlib import closing
+    
+    to_process = []
+    for path, dirs, files in walk('.'):
+        for filename in files:
+            if "log" in filename and "tgz" in filename:
+                to_process.append(pjoin(path, filename))
+    
+    bad_files = []
+    for f in to_process:
+        with closing(tarfile_open(f)) as tar:
+            for member in tar.getmembers():
+                if "stdout" not in member.path:
+                    continue
+                contents = tar.extractfile(member).read()
+                if not ("ERROR" in contents or "EXCEPTION" in contents):
+                    continue
+                tar.extract(member, path="tmp")
+                bad_files.append((f, member, contents))
+    
+    if not bad_files:
+        print "No bad files found"
+    else:
+        print len(bad_files), "bad files found"
+    
+    for f, member, contents in bad_files:
+        print f, member.path, len(contents)

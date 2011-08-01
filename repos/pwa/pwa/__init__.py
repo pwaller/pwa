@@ -39,6 +39,7 @@ class Engine(Application):
     dump_files = results.dump_files
     status = results.status
     kick = results.kick
+    logexplore = results.logexplore
     
     mcupdateinfo = results.mcupdateinfo
     mcrescale = results.mcrescale
