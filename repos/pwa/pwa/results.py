@@ -39,8 +39,8 @@ def mergeall(self, params):
             for rootfile in tar.getmembers():
                 output_files.setdefault(rootfile.path, set()).add(f)
     
-    from multiprocessing import Pool
-    pool = Pool(4)
+    from multiprocessing import Pool, cpu_count
+    pool = Pool(cpu_count())
     to_merge = [(output, sorted(inputs), output)
                 for output, inputs in sorted(output_files.iteritems())]
     pool.map(mp_merge, to_merge)
@@ -61,8 +61,8 @@ def reduce(self, params):
     from pprint import pprint
     pprint(by_subperiod)
         
-    from multiprocessing import Pool
-    pool = Pool(4)
+    from multiprocessing import Pool, cpu_count
+    pool = Pool(cpu_count())
     
     pool.map(mp_merge, [("period%s.root" % p, files) for p, files in by_subperiod.iteritems()])
     
