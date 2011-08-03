@@ -14,6 +14,31 @@ from minty.metadata.lumicalc_parse import LumiInfo
 from minty.utils.table_printer import pprint_table
 
 
+def get_run_period(filename):
+
+    if not filename.endswith(".root"):
+        return
+
+    name = basename(filename[:-len(".root")])
+    if name == "all":
+        return "all", None
+    
+    matchcounts = re.match("^.*?-P(.+)-R(\d+)$", name)
+    
+    if matchcounts:
+        period, run = matchcounts.groups()
+        return period, int(run)
+        
+    elif name.startswith("period"):
+        period = name[len("period"):]
+        if "to" in period:
+            start, end = period[0], period[-1]
+            periods = map(chr, xrange(ord(start), ord(end) + 1))
+            return periods, None
+        return period, None
+    
+    raise RuntimeError("Can't parse {0}".format(filename))
+
 def get_bin_values(h):
     xa = h.GetXaxis()
     return [h[i] for i in xrange(1, xa.GetNbins()+1)]
@@ -149,31 +174,29 @@ def dump(self, params):
             by_run.setdefault(d.run, []).append(d)
             
         def extra(f, h):
-            name = basename(f)
             bad, events = "-", "N/A"
             
-            matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
+            period, run = get_run_period(f)
             
-            if matchcounts:
-                period, run = matchcounts.groups()
-                events = sum(d.totalevents for d in by_run[int(run)])
+            if period == "all":
+                ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
+                events = sum(d.totalevents for dd in ds for d in dd if d.period != "UNK")
                 
-            elif name.startswith("period"):
-                period = name.split(".")[0][len("period"):]
-                
-                if "to" in period:
-                    chars = "".join(chr(x) for x in xrange(ord(period[0]), ord(period[-1])+1))
+            elif run is None:
+                # A period or period list
+                if isinstance(period, list):
+                    periods = period
                     events = 0
-                    for p in chars:
-                        if p in by_period:
-                            events += sum(d.totalevents for d in by_period[p])
+                    for period in (p for p in periods if p in by_period):
+                        events += sum(d.totalevents for d in by_period[period])
                     
                 elif period in by_period:
                     events = sum(d.totalevents for d in by_period[period])
-                    
-            elif name.startswith("all"):
-                ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
-                events = sum(d.totalevents for dd in ds for d in dd if d.period != "UNK")
+                else:
+                    raise RuntimeError("Unknown period {0}".format(period))
+
+            elif run:
+                events = sum(d.totalevents for d in by_run[run])
             
             if isinstance(events, int):
                 bad = "!" if events != h[1] else " "
@@ -186,25 +209,31 @@ def dump(self, params):
             
             lumi_info = LumiInfo.from_file("lumi.yaml")
             lumi_by_run = lumi_info.total_per_run
-            def lumi(f, h):
-                name = basename(f)
-                matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
+            def lumi(f, h):                
+                period, run = get_run_period(f)
                 
                 lumi = None
-                if matchcounts:
-                    period, run = matchcounts.groups()
-                    lumi = lumi_by_run.get(int(run), 0)
-                    
-                elif name.startswith("period"):
-                    period = name.split(".")[0][len("period"):]
-                    if period in by_period:
-                        lumi = sum(lumi_by_run[d.run] for d in by_period[period] 
-                                   if d.run in lumi_by_run)
-                    
-                elif name.startswith("all"):
+                if period == "all":
                     ds = [ds for name, ds in by_period.iteritems() if len(name) == 1]
                     lumi = sum(lumi_by_run[d.run] for dd in ds for d in dd 
                                if d.period != "UNK" and d.run in lumi_by_run)
+                    
+                elif run is None:
+                    def get_period_lumi(period):
+                        if period not in by_period:
+                            return 0
+                        return sum(lumi_by_run[d.run] for d in by_period[period] 
+                                   if d.run in lumi_by_run)
+                    
+                    # Period
+                    if isinstance(period, list):
+                        periods = period
+                        lumi = sum(get_period_lumi(p) for p in periods)
+                    elif period in by_period:
+                        lumi = get_period_lumi(period)
+                    
+                else:
+                    lumi = lumi_by_run.get(int(run), 0)
                                
                 def u_to_p(x): return x / 1e6
                 

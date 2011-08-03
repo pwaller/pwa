@@ -262,12 +262,12 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
             ana.good_events.append((event.RunNumber, event.EventNumber))
             ana.mass_values.append(mass)
             
-    # Cuts for informational purposes.
-    if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
-        counts(PH_TIGHTAR)
-        
-        if not event.larError:
-            counts(PH_LARERROR)
+            # Cuts for informational purposes.
+            if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
+                counts(PH_TIGHTAR)
+                
+                if not event.larError:
+                    counts(PH_LARERROR)
             
     # Final tight plots
     for ph in good_photons:
