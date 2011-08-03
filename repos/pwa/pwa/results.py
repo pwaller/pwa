@@ -190,7 +190,7 @@ def dump(self, params):
                 name = basename(f)
                 matchcounts = re.match("^.*?-P(.+)-R(\d+).root$", name)
                 
-                lumi = "-"
+                lumi = None
                 if matchcounts:
                     period, run = matchcounts.groups()
                     lumi = lumi_by_run.get(int(run), 0)
@@ -207,18 +207,20 @@ def dump(self, params):
                                if d.period != "UNK" and d.run in lumi_by_run)
                                
                 def u_to_p(x): return x / 1e6
-                lumi = u_to_p(lumi)
                 
                 if lumi:
+                    lumi = u_to_p(lumi)
                     final_count = h[h.GetNbinsX()]
                     from uncertainties import ufloat
                     from math import sqrt
                     final_count = ufloat((final_count, sqrt(final_count))) / lumi
                     args = final_count.nominal_value, final_count.std_dev()
                     final_count = "{0:6.2f}+-{1:6.2f}".format(*args)
+                    
+                    lumi = "{0:.2f}".format(lumi)
                 else:
                     final_count = "0"
-                return ["{0:.2f}".format(lumi), final_count]
+                return [lumi, final_count]
                 
     else:
         def extra(f, h): return []
