@@ -48,7 +48,8 @@ class PwaDataset(object):
             dataset.clean()
     
         self.info["update_time"] = datetime.now()
-    
+        self.info["container_name"] = self.container_name
+        
         datasets = dict(datasets=self.datasets, 
                         datasets_expanded=self.datasets_expanded)
         data = [self.info, datasets]
