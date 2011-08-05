@@ -116,7 +116,7 @@ def plot_boson_wconv(ana, name, ph1, ph2):
     else:
         plot_boson(ana, (name, "convneither"), ph1, ph2)
 
-def pass_event(counts, ana, event):
+def pass_event(counts, ana, event, electron=False):
     # Total
     counts(PH_TOTAL)
         
@@ -130,7 +130,8 @@ def pass_event(counts, ana, event):
             trigger = event.EF._2g15_loose
             
     elif ana.project == "data11" or ana.project == "mc10":
-        trigger = event.EF._2g20_loose
+        EF = event.EF
+        trigger = EF.e20_medium if electron else EF._2g20_loose
     
     if not trigger: return
     counts(PH_2G20L)
@@ -281,7 +282,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     return True
     
 ELECTRON_CUTFLOW = (
-    "named", "total",  "2g20_loose", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
+    "named", "total",  "e20_medium", "grl",  "vertex",  "nel", "author", "eta",  "pt", 
     "oq",  "loose",  "medium",  "blayer",  "iso < 7 GeV", "mass > 120 GeV",  "larError",  "tight")
 (            EL_TOTAL, EL_2G20L,     EL_GRL, EL_VTX,    EL_N, EL_AUTHOR,  EL_ETA, EL_PT, 
     EL_OQ, EL_LOOSE, EL_MEDIUM, EL_BLAYER, EL_ISOLATION,  EL_MASS,           EL_LARERROR, EL_TIGHT) = range(len(ELECTRON_CUTFLOW)-1)
@@ -289,7 +290,7 @@ def do_electron_cutflow(ana, event):
     counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
     
     # Fills first four bins of `counts`
-    if not pass_event(counts, ana, event):
+    if not pass_event(counts, ana, event, electron=True):
         return
     
     good_electrons = event.electrons
