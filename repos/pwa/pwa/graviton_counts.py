@@ -173,8 +173,13 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     if len(good_photons) < 2: return
     counts(PH_ETA)
     
+    # Compute the corrections
+    vertex_z = event.vertices[0].z
+    for ph in good_photons:
+        ph.compute_corrected(vertex_z)
+    
     # 25 GeV pt cut
-    good_photons = [ph for ph in good_photons if ph.pt_via_clE_etas2 >= 25000]
+    good_photons = [ph for ph in good_photons if ph.corrected.pt >= 25000]
     if len(good_photons) < 2: return
     counts(PH_PT)
     
@@ -242,10 +247,8 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     ph1, ph2 = good_photons[:2]
     
     # Vertex and enery correction
-    vertex_z = event.vertices[0].z
-    ph1C = ph1.corrected_fourvec(vertex_z)
-    ph2C = ph2.corrected_fourvec(vertex_z)
-    
+    ph1C, ph2C = ph1.corrected, ph2.corrected
+        
     # Tight plots with corrections
     plot_kinematics (ana, "corrected/ph/1", ph1C)
     plot_kinematics (ana, "corrected/ph/2", ph2C)
