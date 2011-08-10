@@ -146,6 +146,14 @@ def pass_event(counts, ana, event, electron=False):
     
     return True
 
+def plot_all(ana, name, ph1, ph2):
+
+    plot_kinematics (ana, ("default/ph", name, "1"), ph1)
+    plot_kinematics (ana, ("default/ph", name, "2"), ph2)
+    plot_shower     (ana, ("default/ph", name, "1"), ph1)
+    plot_shower     (ana, ("default/ph", name, "2"), ph2)
+    plot_boson_wconv(ana, ("default/ph", name, "boson"), ph1, ph2)
+
 PHOTON_CUTFLOW = (
     "named", "total", "2g20_loose", "grl",  "vertex", "nphot", "eta", "pt", 
     "oq", "phcleaning",       "loose",   "tight",  "iso < 5 GeV", "Remove ee", "mass > 120 GeV", "larError", "tightar")
@@ -219,16 +227,25 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     ph1, ph2 = good_photons[:2]
     
     # Loose plots
-    plot_kinematics (ana, "default/ph/1", ph1)
-    plot_kinematics (ana, "default/ph/2", ph2)
-    plot_shower     (ana, "default/ph/1", ph1)
-    plot_shower     (ana, "default/ph/2", ph2)
-    plot_boson_wconv(ana, "default/ph/boson", ph1, ph2)
+    plot_all(ana, "loose", ph1, ph2)
     
+    nontight = [ph for ph in good_photons if ph.nontight]
+       
+    if len(nontight) > 2:
+        ph1, ph2 = nontight[:2]
+        # Plot nontight-nontight
+        plot_all(ana, "nontight_nontight", ph1, ph2)
+        
     ## More cuts
     
     # my_tight is robust_tight for data10, and "tight" for data11
     good_photons = [ph for ph in good_photons if ph.my_tight]
+    
+    if nontight and good_photons:
+        # Plot tight-antitight
+        ph1, ph2 = good_photons[0], nontight[0]
+        plot_all(ana, "tight_nontight", ph1, ph2)
+    
     if len(good_photons) < 2: return
     counts(PH_TIGHT)
     
