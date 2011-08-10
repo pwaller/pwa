@@ -263,6 +263,8 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     ## Select best diphoton pair again (leading an subleading due to sort earlier)
     ph1, ph2 = good_photons[:2]
     
+    plot_all(ana, "tight", ph1, ph2)
+    
     # Vertex and enery correction
     ph1C, ph2C = ph1.corrected, ph2.corrected
         
