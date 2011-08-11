@@ -239,8 +239,8 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     plot_all(ana, "loose", ph1, ph2)
     
     nontight = [ph for ph in good_photons if ph.nontight and not ph.my_tight]
-       
-    if len(nontight) > 2:
+    
+    if len(nontight) >= 2:
         ph1, ph2 = nontight[:2]
         # Plot nontight-nontight
         plot_all(ana, "nontight_nontight", ph1, ph2)
