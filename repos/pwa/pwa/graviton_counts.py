@@ -294,6 +294,11 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
             ana.good_events.append((event.RunNumber, event.EventNumber))
             ana.mass_values.append(mass)
             
+            plot_all(ana, "mass_cut", ph1, ph2)
+            plot_kinematics (ana, "corrected/ph/mass_cut/1", ph1C)
+            plot_kinematics (ana, "corrected/ph/mass_cut/2", ph2C)
+            plot_boson_wconv(ana, "corrected/ph/mass_cut/boson", ph1C, ph2C)
+            
             if not event.larError:
                 counts(PH_LARERROR)
                 
