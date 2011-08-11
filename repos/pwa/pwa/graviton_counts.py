@@ -22,7 +22,6 @@ def plot_kinematics(ana, name, obj):
     hget(name, "eta",          b=[ana.etabins],      t=";#eta"          )(obj.eta)
     hget(name, "eta_many",     b=[ana.etabins_many], t=";#eta"          )(obj.eta)
     
-    
     hget(name, "phi",          b=[PHIBINS],          t=";#phi"          )(obj.phi)
     hget(name, "eta_vs_phi",   b=[ana.etabins_many, PHIBINS], t=";#eta;#phi" )(obj.eta, obj.phi)
     
@@ -44,11 +43,14 @@ def plot_shower(ana, name, obj):
     
     hget(name, "et",        b=[ana.ptbins], t=";E_{T} [MeV]"          )(obj.et)
     hget(name, "cl_pt",     b=[ana.ptbins], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
-    hget(name, "cl_pt_many",     b=[(500, 0, 200e3)], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
+    hget(name, "cl_pt_many",      b=[(500, 0, 200e3)],  t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
+    hget(name, "cl_pt_many_wide", b=[(2500, 0,   1e6)], t=";p_{T} (cluster) [MeV]")(obj.cl.pt)
     
-    hget(name, "etas2",     b=[ana.etabins], t=";#eta_{s2}"           )(obj.etas2)
-    hget(name, "etas2_many",     b=[ana.etabins_many], t=";#eta_{s2}"           )(obj.etas2)
+    hget(name, "etas2",           b=[ana.etabins],       t=";#eta_{s2}"           )(obj.etas2)
+    hget(name, "etas2_many",      b=[ana.etabins_many],  t=";#eta_{s2}"           )(obj.etas2)
+    hget(name, "etas2_very_many", b=[(1000, -2.5, 2.5)], t=";#eta_{s2}"           )(obj.etas2)
     
+    hget(name, "etas2_vs_phi",  b=[ana.etabins_many, PHIBINS], t=";#eta;#phi" )(obj.etas2, obj.phi)
     hget(name, "clpt_vs_etas2", b=[ana.ptbins, ana.etabins], t=";p_{T} (cluster) [MeV];#eta_{s2}")(obj.cl.pt, obj.etas2)
     
     hget(name, "Rhad",      b=[(100, -0.5, 0.75)]+B,   t=";raphad"+T       )(obj.Rhad, *V)
@@ -71,6 +73,9 @@ def plot_shower(ana, name, obj):
     #hget(name, "Etcone20_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone20 (corrected)} [MeV]"+T)(obj.Etcone20_pt_corrected, *V)
     #hget(name, "Etcone30_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone30 (corrected)} [MeV]"+T)(obj.Etcone30_pt_corrected, *V)
     hget(name, "Etcone40_pt_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.Etcone40_pt_corrected, *V)
+   
+    if hasattr(obj, "Etcone40_PtED_corrected"):
+        hget(name, "Etcone40_pt_ed_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.Etcone40_PtED_corrected(), *V)
 
 def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
