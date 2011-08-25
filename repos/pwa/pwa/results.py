@@ -136,6 +136,15 @@ def custom_sort(inputs):
     from itertools import chain
     return chain(*result)
 
+all_ds = None
+def get_mc_name(run):
+    global all_ds
+    if all_ds is None:
+        from pwa.datasets import get_dataset_mapping
+        all_ds = get_dataset_mapping("mc*")
+    dataset = all_ds[int(run)]
+    return "{d.run}_{d.physicsshort}".format(d=dataset)
+
 @subcommand('dump', help='Dump basic information')
 @param('files', nargs="+")
 @param('--name', default="photon_cutflow")
@@ -256,15 +265,21 @@ def dump(self, params):
         extra_labels = []
     
     def pretty_file(f):
+        if "mc" in f:
+            return f[3:-len(".root")]
+    
         if "all" in f:
             return "Total"
         f, _, ext = f.rpartition(".")
         if f.startswith("period"):
             return "period " + f[len("period"):]
-        p, r = f.split("_")[-1].split("-")
-        return "{0}:{1}".format(p, r.lstrip("R"))
+        if "data" in f:
+            p, r = f.split("_")[-1].split("-")
+            return "{0}:{1}".format(p, r.lstrip("R"))
+        x = get_mc_name(f.split("-")[-1].lstrip("R"))
+        return x
     
-        
+    #formatter = lambda s: "{0:.2f}".format(s)
     
     header = [["what"] + extra_labels + list(labels)]
     numbers = [[pretty_file(f)] + lumi(f, h) + extra(f, h) + map(int, get_bin_values(h)) 
