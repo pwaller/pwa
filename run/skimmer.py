@@ -19,9 +19,14 @@ def do_skim(ana, event):
     if not any(v.nTracks >= 3 for v in event.vertices): return
     counts(VERTEX)
     
+    # Computes ph.corrected for all photons
+    vertex_z = event.vertices[0].z
+    for ph in event.photons:
+        ph.compute_corrected(vertex_z)
+    
     good_phs = [ph for ph in event.photons
                 if abs(ph.etas2) < 1.37 or 1.52 < abs(ph.etas2) < 2.37 and
-                   ph.cl.E / cosh(ph.etas2) > 25000 and
+                   ph.corrected.pt > 25000 and
                    ph.loose and
                    not (ph.OQ & 34214)]
     
