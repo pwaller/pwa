@@ -152,12 +152,26 @@ def pass_event(counts, ana, event, electron=False):
     return True
 
 def plot_all(ana, name, ph1, ph2):
-
     plot_kinematics (ana, ("default/ph", name, "1"), ph1)
     plot_kinematics (ana, ("default/ph", name, "2"), ph2)
     plot_shower     (ana, ("default/ph", name, "1"), ph1)
     plot_shower     (ana, ("default/ph", name, "2"), ph2)
     plot_boson_wconv(ana, ("default/ph", name, "boson"), ph1, ph2)
+    
+def plot_all_el(ana, name, ph1, ph2):
+    plot_kinematics(ana, ("default/el", name, "1"), ph1)
+    plot_kinematics(ana, ("default/el", name, "2"), ph2)
+    plot_shower    (ana, ("default/el", name, "1"), ph1)
+    plot_shower    (ana, ("default/el", name, "2"), ph2)
+    plot_boson     (ana, ("default/el", name, "boson"), ph1, ph2)
+
+def plot_kinematics_shower(ana, name, obj, conv=False):
+    plot_kinematics(ana, name, obj)
+    plot_shower    (ana, name, obj)
+    if conv:
+        conv = "conv" if obj.isConv else "unconv"
+        plot_kinematics(ana, (name, conv), obj)
+        plot_shower    (ana, (name, conv), obj)    
 
 PHOTON_CUTFLOW = (
     "named", "total", "2g20_loose", "grl",  "vertex", "nphot", "eta", "pt", 
@@ -170,8 +184,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     good_photons = event.photons
     
     for ph in good_photons:
-        plot_kinematics(ana, "all_phs/pre_everything", ph)
-        plot_shower    (ana, "all_phs/pre_everything", ph)
+        plot_kinematics_shower(ana, "all_phs/0_pre_everything", ph, True)
     
     # Event cuts
     # Fills first four bins of `counts`
@@ -179,8 +192,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
         return
         
     for ph in good_photons:
-        plot_kinematics(ana, "all_phs/pre_fiducial", ph)
-        plot_shower    (ana, "all_phs/pre_fiducial", ph)
+        plot_kinematics_shower(ana, "all_phs/1_pre_fiducial", ph, True)
     
     if len(good_photons) < 2: return
     counts(PH_N)
@@ -212,11 +224,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     
     # Plot kinematics and shower variables before loose cut, as well as after
     for ph in good_photons:
-        plot_kinematics(ana, "all_phs/pre_loose", ph)
-        plot_shower    (ana, "all_phs/pre_loose", ph)
-        if ph.isConv:
-            plot_kinematics(ana, "all_phs/pre_loose/conv", ph)
-            plot_shower    (ana, "all_phs/pre_loose/conv", ph)
+        plot_kinematics_shower(ana, "all_phs/2_pre_loose", ph, True)
 
     # Remove non-loose candidates
     good_photons = [ph for ph in good_photons if ph.loose]
@@ -224,11 +232,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     counts(PH_LOOSE)
     
     for ph in good_photons:
-        plot_kinematics(ana, "all_phs/post_loose", ph)
-        plot_shower    (ana, "all_phs/post_loose", ph)
-        if ph.isConv:
-            plot_kinematics(ana, "all_phs/post_loose/conv", ph)
-            plot_shower    (ana, "all_phs/post_loose/conv", ph)
+        plot_kinematics_shower(ana, "all_phs/3_post_loose", ph, True)
     
     good_photons.sort(key=lambda o: o.pt, reverse=True)
     
@@ -250,6 +254,9 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     # my_tight is robust_tight for data10, and "tight" for data11
     good_photons = [ph for ph in good_photons if ph.my_tight]
     
+    for ph in good_photons:
+        plot_kinematics_shower(ana, "all_phs/4_post_tight", ph, True)
+    
     if nontight and good_photons:
         # Plot tight-antitight
         ph1, ph2 = good_photons[0], nontight[0]
@@ -263,8 +270,11 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     if len(good_photons) < 2: return
     counts(PH_ISOLATION)
     
+    for ph in good_photons:
+        plot_kinematics_shower(ana, "all_phs/5_post_iso", ph, True)
+        
     # Remove ee candidates, record run/event
-    if is_ee_candidate: 
+    if is_ee_candidate:
         ana.gg_cand_has_ee.append((event.RunNumber, event.EventNumber))
         return
     counts(PH_NOT_EE)
@@ -276,11 +286,6 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     
     # Vertex and enery correction
     ph1C, ph2C = ph1.corrected, ph2.corrected
-        
-    # Tight plots with corrections
-    plot_kinematics (ana, "corrected/ph/1", ph1C)
-    plot_kinematics (ana, "corrected/ph/2", ph2C)
-    plot_boson_wconv(ana, "corrected/ph/boson", ph1C, ph2C)
     
     if ph1.my_tight and ph2.my_tight:
         plot_kinematics (ana, "corrected/ph/tight/1", ph1C)
@@ -306,15 +311,6 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
                 if ph1.ambiguity_resolved and ph2.ambiguity_resolved:
                     counts(PH_TIGHTAR)
     
-    # Final tight plots
-    for ph in good_photons:
-        if ph.my_tight:
-            plot_kinematics(ana, "all_phs/post_tight", ph)
-            plot_shower    (ana, "all_phs/post_tight", ph)
-            if ph.isConv:
-                plot_kinematics(ana, "all_phs/post_tight/conv", ph)
-                plot_shower    (ana, "all_phs/post_tight/conv", ph)
-    
     return True
     
 ELECTRON_CUTFLOW = (
@@ -325,11 +321,14 @@ ELECTRON_CUTFLOW = (
 def do_electron_cutflow(ana, event):
     counts = ana.h.get("electron_cutflow", b=[ELECTRON_CUTFLOW])
     
+    good_electrons = event.electrons
+    
+    for el in good_electrons:
+        plot_kinematics_shower(ana, "all_els/0_pre_everything", el)
+        
     # Fills first four bins of `counts`
     if not pass_event(counts, ana, event, electron=True):
         return
-    
-    good_electrons = event.electrons
     
     if len(good_electrons) < 2: return
     counts(EL_N)
@@ -353,24 +352,25 @@ def do_electron_cutflow(ana, event):
     
     # Plot kinematics and shower variables before loose cut, as well as after
     for el in good_electrons:
-        plot_kinematics(ana, "all_els/pre_loose", el)
-        plot_shower    (ana, "all_els/pre_loose", el)
+        plot_kinematics_shower(ana, "all_els/1_pre_loose", el)
 
     good_electrons = [el for el in good_electrons if el.loose]
     if len(good_electrons) < 2: return
     counts(EL_LOOSE)
     
     for el in good_electrons:
-        plot_kinematics(ana, "all_els/post_loose", el)
-        plot_shower    (ana, "all_els/post_loose", el)
+        plot_kinematics_shower(ana, "all_els/2_post_loose", el)
+    
+    good_electrons.sort(key=lambda o: o.pt, reverse=True)
+    el1, el2 = good_electrons[:2]
+    plot_all_el(ana, "loose", el1, el2)
     
     good_electrons = [el for el in good_electrons if el.medium]
     if len(good_electrons) < 2: return
     counts(EL_MEDIUM)
     
     for el in good_electrons:
-        plot_kinematics(ana, "all_els/post_medium", el)
-        plot_shower    (ana, "all_els/post_medium", el)
+        plot_kinematics_shower(ana, "all_els/3_post_medium", el)
     
     good_electrons = [el for el in good_electrons if el.pass_blayer_check]
     if len(good_electrons) < 2: return
@@ -383,8 +383,6 @@ def do_electron_cutflow(ana, event):
     if len(good_electrons) < 2: return
     counts(EL_ISOLATION)
     
-    good_electrons.sort(key=lambda o: o.pt, reverse=True)
-    
     el1, el2 = good_electrons[:2]
     
     if (el1 + el2).m < 120000: return
@@ -396,18 +394,12 @@ def do_electron_cutflow(ana, event):
         if el1.tight and el2.tight:
             counts(EL_TIGHT)
     
-    # Medium plots
-    plot_kinematics(ana, "default/el/1", el1)
-    plot_kinematics(ana, "default/el/2", el2)
-    plot_shower    (ana, "default/el/1", el1)
-    plot_shower    (ana, "default/el/2", el2)
-    plot_boson     (ana, "default/el", el1, el2)
-        
+    plot_all_el(ana, "medium", el1, el2)
+    
     # Final tight plots
     for el in good_electrons:
         if el.tight:
-            plot_kinematics(ana, "all_els/post_tight", el)
-            plot_shower    (ana, "all_els/post_tight", el)
+            plot_kinematics_shower(ana, "all_els/4_post_tight", el)
             
     return True
 
