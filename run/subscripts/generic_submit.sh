@@ -17,7 +17,7 @@ prun                                                                            
     --extFile=./analysis.pybundle                                                 \
     --noBuild                                                                   \
     --outputs output\*.root\*                                \
-    --nGBPerJob=MAX                                                               \
+    --nGBPerJob=4                                                               \
     --writeInputToTxt=IN:inputs.txt                                             \
     --exec "$3 inputs.txt" \
     --tmpDir /tmp/pwaller/pass.${PASS}.$4/                                         \
