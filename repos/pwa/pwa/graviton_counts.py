@@ -30,9 +30,18 @@ def plot_kinematics(ana, name, obj):
     
     if ana.mc:
         if "truth" in name or not hasattr(obj, "truth"): return
-        namet = name, "truth"
         objt = obj.truth
-        plot_kinematics(ana, namet, objt)
+        if objt.matched:
+            namet = name, "truth"
+            plot_kinematics(ana, namet, objt)
+            hget(namet, "mothertypes", asdict=True)(objt.mothertype)
+            hget(namet, "types", asdict=True)(objt.type)
+            if hasattr(objt, "deltaRRecPhoton"):
+                hget(namet, "deltar", b=[(400, 0, pi)], t="Truth match #Delta r;#Delta r")(objt.deltaRRecPhoton)
+            #namet = namet, str(objt.mothertype)
+            #plot_kinematics(ana, namet, objt)
+
+SIGNAL_PDGIDS = set((22, 5000039))
 
 def plot_shower(ana, name, obj):
     hget = ana.h.get
@@ -77,6 +86,15 @@ def plot_shower(ana, name, obj):
     if hasattr(obj, "Etcone40_PtED_corrected"):
         hget(name, "Etcone40_pt_ed_corrected",  b=[(100, -5000, 50000)]+B, t=";E_{T}^{cone40 (corrected)} [MeV]"+T)(obj.Etcone40_PtED_corrected(), *V)
 
+    if ana.mc:
+        if "truth" in name or not hasattr(obj, "truth"): return
+        objt = obj.truth
+        if objt.matched:
+            namet = "background"
+            if objt.type in SIGNAL_PDGIDS or objt.mothertype in SIGNAL_PDGIDS:
+                namet = "signal"
+            plot_shower(ana, (name, "truth", namet), obj)
+        
 def plot_boson(ana, name, ph1, ph2):
     comb = ph1 + ph2
     #print comb.m
