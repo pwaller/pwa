@@ -49,6 +49,7 @@ class Engine(Application):
     dsbuild = datasets.dsbuild
     
     dscheck = datasets.dscheck
+    dsdiff = datasets.dsdiff
     
     submit = jobs.submit
     

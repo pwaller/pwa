@@ -346,7 +346,7 @@ def dump_files(self, params):
         f = R.TFile.Open(f)
         file_list = loads(f.file_processed_list.GetString().Data())
         #print "\n".join(file_list)
-        print type(file_list)
+        print type(file_list), len(file_list)
 
 @subcommand('status', help='Dump basic information')
 @param('files', nargs="+")

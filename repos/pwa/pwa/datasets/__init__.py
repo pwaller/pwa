@@ -57,10 +57,14 @@ class PwaDataset(object):
         with open(filename, "w") as fd:
             fd.write(content)
     
-    def check(self):
+    @property
+    def container_datasets(self):
         cont = dq2_expand_containers([self.container_name])
+        return set(cont) if cont else None
+        
+    def check(self):
         known_locally = set(self.datasets_expanded) 
-        known_grid = set(cont) if cont else None
+        known_grid = self.container_datasets
         good = known_locally == known_grid
         return good, known_locally, known_grid
 
@@ -156,9 +160,30 @@ def dscheck(self, params):
         dataset = PwaDataset.from_file(filename)
         
         good, known_locally, known_grid = dataset.check()
-        log.info("{0:30} : {1} : {2}".format(filename, good, dataset.container_name))
-        
-            
+        olocal = len(known_locally - known_grid)
+        ogrid = len(known_grid - known_locally)
+        args = filename, good, dataset.container_name, olocal, ogrid
+        log.info("{0:30} : {1} : {2} : local only({3}) remote only({4})".format(*args))
+
+@subcommand('dsdiff', help='Diff this dataset against the last one')
+@param('file')
+def dsdiff(self, params):
+    dataset = PwaDataset.from_file(params.file)
+    current = dataset.container_datasets
+    dataset.info["version"] -= 1
+    previous = dataset.container_datasets
+    previous_name = dataset.container_name.rstrip("/")
+    dataset.info["version"] += 1
+    
+    new_name = "{0}_to_v{1}/".format(previous_name, dataset.info["version"])
+    datasets = sorted(current - previous)
+    
+    dq2_register_container(new_name, datasets)
+    print "Registered", new_name, "datasets:", len(datasets)
+    
+    dataset.info["diff_ds"] = new_name
+    dataset.to_file(params.file)
+
 @subcommand('dsbuild', help='Update dataset info')
 @param('files', nargs="*")
 def dsbuild(self, params):
