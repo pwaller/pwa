@@ -90,9 +90,11 @@ def plot_shower(ana, name, obj):
         if "truth" in name or not hasattr(obj, "truth"): return
         objt = obj.truth
         if objt.matched:
-            namet = "background"
-            if objt.type in SIGNAL_PDGIDS or objt.mothertype in SIGNAL_PDGIDS:
+            namet = "fakes"
+            if objt.mothertype in SIGNAL_PDGIDS:
                 namet = "signal"
+            elif objt.type == 22:
+                namet = "nonsig_photon"
             plot_shower(ana, (name, "truth", namet), obj)
         
 def plot_boson(ana, name, ph1, ph2):
