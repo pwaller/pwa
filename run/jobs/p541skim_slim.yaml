@@ -1,5 +1,5 @@
 progname: slim
-dataset: user.PeterWaller.p541_skim.pass_52.1.data11_7TeV.NTUP_PHOTON.p541.v9/
+dataset: user.PeterWaller.data11_7TeV.NTUP_PHOTON.skim.v13/
 command: |
     ./ana_run.sh minty-slim
         --tree-name photon
