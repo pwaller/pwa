@@ -228,7 +228,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
         ph.compute_corrected(vertex_z)
     
     # 25 GeV pt cut
-    good_photons = [ph for ph in good_photons if ph.corrected.pt >= 25000]
+    good_photons = [ph for ph in good_photons if ph.corrected.pt > 25000]
     if len(good_photons) < 2: return
     counts(PH_PT)
     
