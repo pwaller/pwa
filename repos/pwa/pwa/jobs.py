@@ -55,20 +55,24 @@ class Job(object):
     
     def submit_one(self, dataset, dry_run=False):
         
+        progname = ".".join([self.name, self.tag])
+        default_outpattern = "user.{user}.{progname}.{dsname}/"
+        outpattern = self.job_info.get("outpattern", default_outpattern)
+        
         if dataset.endswith(".yaml"):
             ds = datasets.PwaDataset.from_file(dataset)
+            
+            input_name = ds.container_name
+            dsname = "{dsname}.v{version}".format(dsname=ds.name, version=ds.info["version"])
+            output_name = outpattern.format(progname=progname, user=datasets.user, dsname=dsname, **ds.info)
         else:
-            raise RuntimeError("I don't know what to do with {0}".format(dataset))
+            input_name = dataset
+            dsname = input_name.rstrip("/")
+            output_name = outpattern.format(progname=progname, user=datasets.user, dsname=dsname)
+            
+        tmpdirname = progname + "." + dsname
         
-        input_name = ds.container_name
-        progname = ".".join([self.name, self.tag])
-        default_outpattern = "user.{user}.{progname}.{dsname}.v{version}/"
-        outpattern = self.job_info.get("outpattern", default_outpattern)
-        output_name = outpattern.format(progname=progname, user=datasets.user, dsname=ds.name, **ds.info)
-    
         command = self.job_info["command"]
-        
-        tmpdirname = progname + "." + ds.name
         
         if "prun" in self.job_info:
             prun = self.job_info["prun"].format(
