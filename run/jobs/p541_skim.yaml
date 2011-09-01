@@ -5,7 +5,7 @@ command: |
         --dump=skimmed.root 
         --have-metadata
         --output=cf.root 
-        --run-specific-output 
+        --period-specific-output 
         --release=rel16 
         --project=data11 
         inputs.txt
