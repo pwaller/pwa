@@ -193,6 +193,11 @@ def plot_kinematics_shower(ana, name, obj, conv=False):
         plot_kinematics(ana, (name, conv), obj)
         plot_shower    (ana, (name, conv), obj)    
 
+def plot_all_kinematics_shower(ana, name, objs, conv=False):
+    ana.h.get(name, "count", b=[(100, 0, 100)])(len(objs))
+    for obj in objs:
+        plot_kinematics_shower(ana, name, obj, conv)
+
 PHOTON_CUTFLOW = (
     "named", "total", "2g20_loose", "grl",  "vertex", "nphot", "eta", "pt", 
     "oq", "phcleaning",       "loose",   "tight",  "iso < 5 GeV", "Remove ee", "mass > 120 GeV", "larError", "tightar")
@@ -203,16 +208,14 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     
     good_photons = event.photons
     
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/0_pre_everything", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/0_pre_everything", good_photons, True)
     
     # Event cuts
     # Fills first four bins of `counts`
     if not pass_event(counts, ana, event):
         return
         
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/1_pre_fiducial", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/1_pre_fiducial", good_photons, True)
     
     if len(good_photons) < 2: return
     counts(PH_N)
@@ -243,16 +246,14 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     counts(PH_PHOTONCLEANING)    
     
     # Plot kinematics and shower variables before loose cut, as well as after
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/2_pre_loose", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/2_pre_loose", good_photons, True)
 
     # Remove non-loose candidates
     good_photons = [ph for ph in good_photons if ph.loose]
     if len(good_photons) < 2: return
     counts(PH_LOOSE)
     
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/3_post_loose", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/3_post_loose", good_photons, True)
     
     good_photons.sort(key=lambda o: o.pt, reverse=True)
     
@@ -274,8 +275,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     # my_tight is robust_tight for data10, and "tight" for data11
     good_photons = [ph for ph in good_photons if ph.my_tight]
     
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/4_post_tight", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/4_post_tight", good_photons, True)
     
     if nontight and good_photons:
         # Plot tight-antitight
@@ -290,8 +290,7 @@ def do_photon_cutflow(ana, event, is_ee_candidate):
     if len(good_photons) < 2: return
     counts(PH_ISOLATION)
     
-    for ph in good_photons:
-        plot_kinematics_shower(ana, "all_phs/5_post_iso", ph, True)
+    plot_all_kinematics_shower(ana, "all_phs/5_post_iso", good_photons, True)
         
     # Remove ee candidates, record run/event
     if is_ee_candidate:
