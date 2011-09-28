@@ -156,7 +156,7 @@ def pass_event(counts, ana, event, electron=False):
             
     elif ana.project == "data11" or ana.project == "mc10":
         EF = event.EF
-        trigger = EF.e20_medium if electron else EF._2g20_loose
+        trigger = EF.e40_medium if electron else EF._2g20_loose
     
     if not trigger: return
     counts(PH_2G20L)
